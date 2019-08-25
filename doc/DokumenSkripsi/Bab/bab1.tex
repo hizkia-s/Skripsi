@@ -1,12 +1,12 @@
 %versi 2 (8-10-2016) 
 \chapter{Pendahuluan}
-\label{chap:intro}
+\label{chap:pendahuluan}
    
 \section{Latar Belakang}
 \label{sec:latarbelakang}
-BlueTape merupakan aplikasi berbasis web yang dibuat untuk memudahkan berbagai urusan administrasi di Fakultas Teknologi Informasi dan Sains Universitas Katolik Parahyangan. Konsep aplikasi ini yaitu membuat urusan-urusan administrasi dapat dikerjakan melalui situs web sehingga mengurangi penggunaan kertas. Aplikasi ini disediakan untuk digunakan oleh mahasiswa, staf tata usaha, dan dosen. Fitur-fitur yang tersedia pada BlueTape yaitu manajemen cetak transkrip dan manajemen perubahan jadwal kuliah.
+BlueTape \footnote{https://github.com/ftisunpar/BlueTape} merupakan aplikasi berbasis web yang dibuat untuk memudahkan berbagai urusan administrasi di Fakultas Teknologi Informasi dan Sains Universitas Katolik Parahyangan. Konsep aplikasi ini yaitu membuat urusan-urusan administrasi dapat dikerjakan melalui situs web sehingga mengurangi penggunaan kertas. Aplikasi ini disediakan untuk digunakan oleh mahasiswa, staf tata usaha, dan dosen. Fitur-fitur yang tersedia pada BlueTape yaitu manajemen cetak transkrip dan manajemen perubahan jadwal kuliah.
 
-Aplikasi BlueTape yang berbasis web mungkin saja digunakan oleh orang-orang yang memiliki keterbatasan. Oleh karena itu perlu dipastikan bahwa aplikasi ini dapat digunakan dengan mudah oleh setiap subjek yang mengaksesnya. W3C (World Wide Web Consortium) memiliki rekomendasi bernama \textit{WCAG} 2.1 (\textit{Web Content Accessibility Guidelines}) yang merupakan panduan untuk membuat konten web yang dapat diakses dengan mudah oleh semua orang termasuk mereka yang memiliki keterbatasan.
+\textit{Web Content Accessibility Guidelines (WCAG)} adalah panduan yang berisi rekomendasi-rekomendasi untuk membuat konten web lebih mudah diakses dan digunakan oleh orang-orang, termasuk mereka yang memiliki keterbatasan. Keterbatasan yang tercakup dalam panduan ini yaitu keterbatasan visual, keterbatasan pendengaran, keterbatasan gerak, keterbatasan berbicara dan berbahasa, keterbatasan belajar, fotosensitif, keterbatasan kognitif, dan kombinasi dari beberapa keterbatasan yang telah disebutkan. \textit{WCAG} dikembangkan oleh World Wide Web Consortium (W3C) melalui kerja sama dengan individu dan organisasi di seluruh dunia, dengan tujuan memberikan standar bersama untuk aksesibilitas konten web yang memenuhi kebutuhan individu, organisasi, dan pemerintah internasional. Versi pertama dari \textit{WCAG} adalah \textit{WCAG} 1.0 yang dirilis pada tanggal 5 Mei 1999, versi kedua adalah \textit{WCAG} 2.0 yang dirilis pada tanggal 11 Desember 2008, dan versi ketiga adalah \textit{WCAG} 2.1 yang dirilis pada tanggal 5 Juni 2018. Dalam \textit{WCAG} terdapat 3 kriteria sukses yaitu A, AA, dan AAA. Kriteria sukses tersebut akan menjadi acuan untuk menilai tingkat kepatuhan sebuah situs web terhadap \textit{WCAG}. Kepatuhan tingkat A adalah tingkat kepatuhan terendah yang diperoleh jika seluruh kriteria sukses level A terpenuhi atau versi alternatif yang sesuai tersedia. Kepatuhan tingkat AA adalah tingkat kepatuhan yang diperoleh jika seluruh kriteria sukses level A dan level AA terpenuhi atau versi alternatif level AA yang sesuai tersedia. Kepatuhan tingkat AAA adalah tingkat kepatuhan tertinggi yang diperoleh jika seluruh kriteria sukses level A, level AA, dan level AAA terpenuhi atau versi alternatif level AAA yang sesuai tersedia.
 
 Pada skripsi ini, akan dilihat sejauh mana tingkat kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1 dan rekomendasi apa saja yang perlu dilakukan untuk menaikkan tingkat kepatuhannya. Selain itu, akan dilakukan pengujian pada situs web tersebut dengan beberapa kondisi keterbatasan yang terdapat dalam \textit{WCAG} 2.1 seperti keterbatasan visual, keterbatasan gerak, keterbatasan pendengaran, dan keterbatasan bahasa.
 
@@ -32,8 +32,7 @@ Tujuan yang ingin dicapai dalam penelitian ini adalah:
 \label{sec:batasan}
 Pada penelitian ini ditetapkan batasan-batasan masalah sebagai berikut:
 \begin{enumerate}
-	\item Pengujian aplikasi hanya dilakukan pada perangkat laptop.
-	\item Kondisi keterbatasan yang diujikan hanya meliputi keterbatasan visual, keterbatasan gerak, keterbatasan pendengaran, dan keterbatasan bahasa.
+	\item Kondisi keterbatasan yang diujikan hanya meliputi keterbatasan visual dan keterbatasan pendengaran.
 	\item Kondisi keterbatasan yang diujikan tidak meliputi kombinasi dari beberapa keterbatasan.
 \end{enumerate}
 
@@ -54,7 +53,7 @@ Metode penelitian yang digunakan dalam skripsi ini adalah:
 Skrpsi ini akan memiliki sistematika pembahasan sebagai berikut: 
 \begin{enumerate}
 	\item Bab 1: Pendahuluan, akan membahas gambaran umum dari skripsi ini. Bab ini berisi latar belakang, rumusan masalah, tujuan, batasan masalah, metode penelitian, dan sistematika pembahasan.
-	\item Bab 2: Landasan Teori, akan membahas dasar teori yang menjadi acuan dalam pembuatan skripsi ini. Dasar teori yang digunakan yaitu \textit{WCAG} 2.1.
+	\item Bab 2: Landasan Teori, akan membahas dasar teori yang menjadi acuan dalam pembuatan skripsi ini. Dasar teori yang digunakan yaitu \textit{WCAG} 2.1 dan BlueTape.
 	\item Bab 3: Analisis, akan membahas hasil analisis mengenai tingkat kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1.
 	\item Bab 4: Perancangan, akan membahas mengenai perubahan-perubahan yang dapat dilakukan untuk meningkatkan kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1.
 	\item Bab 5: Implementasi dan Pengujian, akan membahas hasil implementasi dan pengujian yang telah dilakukan pada situs web BlueTape.

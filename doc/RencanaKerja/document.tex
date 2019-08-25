@@ -16,7 +16,7 @@
 \makeatletter
 \renewcommand{\@maketitle} {\begin{center} {\LARGE \textbf{ \textsc{\@title}} \par} \bigskip {\large \textbf{\textsc{\@author}} }\end{center} }
 \renewcommand{\thispagestyle}[1]{}
-\markright{\textbf{\textsc{AIF401/AIF402 \textemdash Rencana Kerja Skripsi \textemdash Sem. Ganjil 2019/2020}}}
+\markright{\textbf{\textsc{AIF184001/AIF184002 \textemdash Rencana Kerja Skripsi \textemdash Sem. Ganjil 2019/2020}}}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.4mm}}
 \renewcommand{\baselinestretch}{1}
@@ -35,7 +35,7 @@
 \newcommand{\@npm}{2015730020}
 \newcommand{\@judultopik}{Kepatuhan dan Rekomendasi Perbaikan Web Content Accessibility Guideline untuk Aplikasi BlueTape} % Judul/topik anda
 \newcommand{\jumpemb}{1} % Jumlah pembimbing, 1 atau 2
-\newcommand{\tanggal}{01/01/1900}
+\newcommand{\tanggal}{25/08/2019}
 
 % Dokumen hasil template ini harus dicetak bolak-balik !!!!
 
@@ -46,29 +46,29 @@
 \section{Deskripsi}
 BlueTape merupakan aplikasi berbasis web yang dibuat untuk memudahkan berbagai urusan administrasi di Fakultas Teknologi Informasi dan Sains Universitas Katolik Parahyangan. Konsep aplikasi ini yaitu membuat urusan-urusan administrasi dapat dikerjakan melalui situs web sehingga mengurangi penggunaan kertas. Aplikasi ini disediakan untuk digunakan oleh mahasiswa, staf tata usaha, dan dosen. Fitur-fitur yang tersedia pada BlueTape yaitu manajemen cetak transkrip dan manajemen perubahan jadwal kuliah.
 
-Aplikasi BlueTape yang berbasis web mungkin saja digunakan oleh orang-orang yang memiliki keterbatasan. Oleh karena itu perlu dipastikan bahwa aplikasi ini dapat digunakan dengan mudah oleh setiap subjek yang mengaksesnya. W3C (World Wide Web Consortium) memiliki rekomendasi bernama \textit{WCAG} 2.1 (\textit{Web Content Accessibility Guidelines}) yang merupakan panduan untuk membuat konten web yang dapat diakses dengan mudah oleh semua orang termasuk mereka yang memiliki keterbatasan.
+\textit{Web Content Accessibility Guidelines (WCAG)} adalah panduan yang berisi rekomendasi-rekomendasi untuk membuat konten web lebih mudah diakses dan digunakan oleh orang-orang, termasuk mereka yang memiliki keterbatasan. Keterbatasan yang tercakup dalam panduan ini yaitu keterbatasan visual, keterbatasan pendengaran, keterbatasan gerak, keterbatasan berbicara dan berbahasa, keterbatasan belajar, fotosensitif, keterbatasan kognitif, dan kombinasi dari beberapa keterbatasan yang telah disebutkan. \textit{WCAG} dikembangkan oleh World Wide Web Consortium (W3C) melalui kerja sama dengan individu dan organisasi di seluruh dunia, dengan tujuan memberikan standar bersama untuk aksesibilitas konten web yang memenuhi kebutuhan individu, organisasi, dan pemerintah internasional. Versi pertama dari \textit{WCAG} adalah \textit{WCAG} 1.0 yang dirilis pada tanggal 5 Mei 1999, versi kedua adalah \textit{WCAG} 2.0 yang dirilis pada tanggal 11 Desember 2008, dan versi ketiga adalah \textit{WCAG} 2.1 yang dirilis pada tanggal 5 Juni 2018. Dalam \textit{WCAG} terdapat 3 kriteria sukses yaitu A, AA, dan AAA. Kriteria sukses tersebut akan menjadi acuan untuk menilai tingkat kepatuhan sebuah situs web terhadap \textit{WCAG}. Kepatuhan tingkat A adalah tingkat kepatuhan terendah yang diperoleh jika seluruh kriteria sukses level A terpenuhi atau versi alternatif yang sesuai tersedia. Kepatuhan tingkat AA adalah tingkat kepatuhan yang diperoleh jika seluruh kriteria sukses level A dan level AA terpenuhi atau versi alternatif level AA yang sesuai tersedia. Kepatuhan tingkat AAA adalah tingkat kepatuhan tertinggi yang diperoleh jika seluruh kriteria sukses level A, level AA, dan level AAA terpenuhi atau versi alternatif level AAA yang sesuai tersedia.
 
-Pada skripsi ini, akan dilihat sejauh mana tingkat kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1 dan rekomendasi apa saja yang perlu dilakukan untuk menaikkan tingkat kepatuhannya. Selain itu, akan dilakukan pengujian pada situs web tersebut dengan beberapa kondisi keterbatasan yang terdapat dalam \textit{WCAG} 2.1 seperti keterbatasan visual, keterbatasan gerak, keterbatasan pendengaran, dan keterbatasan bahasa.
+Pada skripsi ini, akan dilihat sejauh mana tingkat kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1 dan rekomendasi apa saja yang perlu dilakukan untuk menaikkan tingkat kepatuhannya. Selain itu, akan dilakukan pengujian pada situs web tersebut dengan beberapa kondisi keterbatasan yang terdapat dalam \textit{WCAG} 2.1 seperti keterbatasan visual dan keterbatasan pendengaran.
 
 \section{Rumusan Masalah}
 \begin{itemize}
 	\item Bagaimana tingkat kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1?
-	\item Rekomendasi apa saja (dalam bentuk perubahan kode) yang perlu dilakukan terhadap situs web BlueTape untuk menaikkan tingkat kepatuhannya?  
-	\item Bagaimana pengalaman menggunakan situs web BlueTape dengan berbagai kondisi keterbatasan seperti yang terdapat dalam \textit{WCAG} 2.1?
+	\item Bagaimana meningkatkan level kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1?  
+	\item Bagaimana pengalaman menggunakan situs web BlueTape yang telah diperbarui dengan berbagai kondisi keterbatasan seperti yang terdapat dalam \textit{WCAG} 2.1?
 \end{itemize}
 
 \section{Tujuan}
 \begin{itemize}
 	\item Mendapatkan tingkat kepatuhan situs web Bluetape terhadap \textit{WCAG} 2.1.
 	\item Meningkatkan level kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1.
-	\item Mendapatkan pengalaman menggunakan situs web BlueTape dengan berbagai kondisi keterbatasan seperti yang terdapat dalam \textit{WCAG} 2.1.
+	\item Mendapatkan pengalaman menggunakan situs web BlueTape yang telah diperbarui dengan berbagai kondisi keterbatasan seperti yang terdapat dalam \textit{WCAG} 2.1.
 \end{itemize}
 
 \section{Deskripsi Perangkat Lunak}
 Aplikasi akhir yang akan dibuat memiliki fitur minimal sebagai berikut:
 \begin{itemize}
 	\item Memiliki fitur yang sama atau lebih dari aplikasi yang sudah ada saat ini.
-	\item Memiliki tingkat kepatuhan terhadap \textit{WCAG} 2.1 yang lebih tinggi dari aplikasi yang sudah ada saat ini.
+	\item Memiliki tingkat kepatuhan terhadap \textit{WCAG} 2.1 yang sama atau lebih tinggi dari aplikasi yang sudah ada saat ini.
 \end{itemize}
 
 \section{Detail Pengerjaan Skripsi}
