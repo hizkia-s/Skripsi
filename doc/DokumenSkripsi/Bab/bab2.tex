@@ -9,7 +9,7 @@
 \label{sec:wcag_2.1} 
 \textit{Web Content Accessibility Guidelines (WCAG)} 2.1 adalah versi ketiga dari \textit{WCAG} yang dirilis pada tanggal 5 Juni 2018. Versi pertama dari \textit{WCAG} adalah \textit{WCAG} 1.0 yang dirilis pada tanggal 5 Mei 1999 dan versi kedua adalah \textit{WCAG} 2.0 yang dirilis pada tanggal 11 Desember 2008. \textit{WCAG} 2.1 dikembangkan oleh World Wide Web Consortium (W3C) melalui kerja sama dengan individu dan organisasi di seluruh dunia, dengan tujuan memberikan standar bersama untuk aksesibilitas konten web yang memenuhi kebutuhan individu, organisasi, dan pemerintah internasional. 
 
-\textit{WCAG} 2.1 dibuat untuk meningkatkan versi sebelumnya yaitu \textit{WCAG} 2.0. Pada \textit{WCAG} 2.1 terdapat penambahan kriteria sukses baru beserta definisi-definisi pendukungnya, pedoman untuk mengatur penambahan, dan beberapa tambahan pada bagian tingkat kepatuhan. Dalam \textit{WCAG} 2.1 terdapat 3 level kriteria sukses yaitu A, AA, dan AAA yang digunakan sebagai acuan untuk menilai tingkat kepatuhan sebuah situs web terhadap \textit{WCAG} 2.1.
+\textit{WCAG} 2.1 dibuat untuk meningkatkan versi sebelumnya yaitu \textit{WCAG} 2.0. Pada \textit{WCAG} 2.1 terdapat penambahan kriteria sukses baru beserta definisi-definisi pendukungnya, pedoman untuk mengatur penambahan, dan beberapa tambahan pada bagian tingkat kepatuhan. Dalam \textit{WCAG} 2.1 terdapat 3 tingkat kriteria sukses yaitu A, AA, dan AAA yang digunakan sebagai acuan untuk menilai tingkat kepatuhan sebuah situs web terhadap \textit{WCAG} 2.1.
 
 %2.1.1 Perceivable%
 \subsection{\textit{Perceivable}}
@@ -161,7 +161,7 @@ Warna tidak digunakan sebagai satu-satunya cara visual untuk menyampaikan inform
 \label{sec:kriteria_sukses_1.4.2}
 (Level A)\\
 
-Jika ada audio apa pun di halaman web yang diputar otomatis selama lebih dari 3 detik, maka harus tersedia mekanisme untuk memberi jeda atau memberhentikan audio tersebut, atau mengendalikan volume audio yang terpisah dari level volume sistem secara keseluruhan.
+Jika ada audio apa pun di halaman web yang diputar otomatis selama lebih dari 3 detik, maka harus tersedia mekanisme untuk memberi jeda atau memberhentikan audio tersebut, atau mengendalikan volume audio yang terpisah dari tingkat volume sistem secara keseluruhan.
 
 \paragraph{Kriteria Sukses 1.4.3 \textit{Contrast (Minimum)}}
 \label{sec:kriteria_sukses_1.4.3}
@@ -652,21 +652,21 @@ Layanan yang tersedia saat ini yaitu:
 
 \subsection{\textit{Login}}
 \label{sec:bluetape_login}
-Untuk masuk ke aplikasi, bukalah https://bluetape.azurewebsites.net dan klik pada tombol "\textit{Login} with Google". Anda akan dibawa ke halaman \textit{login} milik Google, dan tergantung kondisi Anda:
+Pengguna dapat mengakses aplikasi melalui https://bluetape.azurewebsites.net lalu menekan tombol \textit{Login} with Google. Selanjutnya pengguna akan dibawa ke halaman \textit{login} milik Google. Terdapat tiga kondisi yang mungkin dihadapi pengguna yaitu:
 \begin{itemize}
-	\item Belum pernah \textit{login} menggunakan akun UNPAR: Masukkan \textit{email} UNPAR Anda (xxx@student.unpar.ac.id atau yyy@unpar.ac.id) dan masukkan \textit{password} jika diperlukan.
-	\item Sudah pernah \textit{login} menggunakan akun UNPAR: Pilihlah akun UNPAR Anda, dan masukkan \textit{password} jika diperlukan.
-	\item Anda terhubung otomatis dengan akun @gmail.com Anda (dan ditolak BlueTape): Buka GMail, klik avatar Anda di kanan atas, dan pilihlah akun UNPAR yang tepat atau \textit{"Add Account"}.
+	\item Belum pernah \textit{login} menggunakan akun UNPAR: Pengguna harus memasukkan alamat surel UNPAR miliknya \footnote{xxx@student.unpar.ac.id atau yyy@unpar.ac.id} dan memasukkan \textit{password} jika diperlukan.
+	\item Sudah pernah \textit{login} menggunakan akun UNPAR: Pengguna harus memilih akun UNPAR miliknya, dan memasukkan \textit{password} jika diperlukan.
+	\item Pengguna terhubung otomatis dengan akun @gmail.com miliknya (dan ditolak BlueTape): Pengguna harus membuka GMail lalu menekan bagian avatar yang terdapat di kanan atas. Selanjutnya pengguna dapat memilih akun UNPAR yang tepat atau memilih bagian \textit{Add Account}.
 \end{itemize}
 
-Setelah \textit{login}, Anda akan menemui beberapa menu, tergantung apakah Anda adalah mahasiswa, staf TU, dll.
+Setelah \textit{login}, pengguna akan menemui beberapa menu, tergantung apakah pengguna adalah mahasiswa, staf TU, dll.
 
-\subsection{Untuk Dosen}
+\subsection{Pengguna Merupakan Dosen}
 \label{sec:bluetape_dosen}
 
 \subsubsection{Perubahan Kuliah}
 \label{sec:bluetape_perubahan_kuliah}
-Ada kalanya Anda sebagai dosen harus mengubah jadwal kuliah secara insidentil. Anda dapat menggunakan modul ini untuk mengirimkan permintaan tersebut kepada Tata Usaha. Isilah kolom-kolom berikut seakurat mungkin:
+Ada kalanya dosen harus mengubah jadwal kuliah secara mendadak. Pengguna dapat menggunakan modul ini untuk mengirimkan permintaan tersebut kepada Tata Usaha. Pengguna perlu mengisi kolom-kolom berikut seakurat mungkin:
 \begin{itemize}
 	\item Kode MK (Mata Kuliah)
 	\item Nama Mata Kuliah
@@ -676,62 +676,70 @@ Ada kalanya Anda sebagai dosen harus mengubah jadwal kuliah secara insidentil. A
 	\item Keterangan.
 \end{itemize}
 
-Jika ada kolom yang belum dapat diisi (misal, dipindah ke ruang mana belum diketahui), silakan dikosongkan saja.
+Jika ada kolom yang belum dapat diisi (misalnya, ruangan baru masih belum diketahui), pengguna dapat mengosongkannya saja.
 
-Anda juga dapat membuat lebih dari 1 kelas pengganti, dengan mengklik tombol "Tambah Pertemuan Ekstra".
+Pengguna juga dapat membuat lebih dari satu kelas pengganti, caranya yaitu dengan menekan tombol \textit{Tambah Pertemuan Ekstra}.
 
-Setelah Anda klik "Kirim Permohonan", maka permohonan akan dikirimkan kepada Tata Usaha untuk diperiksa, disetujui, dan dicetak sebagai pengumuman. Jika Tata Usaha telah selesai mengonfirmasi (atau menolak), maka Anda akan mendapatkan \textit{email} notifikasi.
+Setelah pengguna menekan bagian \textit{Kirim Permohonan}, maka permohonan akan dikirimkan kepada Tata Usaha untuk diperiksa, disetujui, dan dicetak sebagai pengumuman. Jika Tata Usaha telah selesai mengonfirmasi (atau menolak), maka pengguna akan mendapatkan notifikasi melalui surel.
 
-Untuk saat ini, Anda tidak bisa mengubah atau membatalkan permohonan. Silakan menghubungi Tata Usaha secara langsung untuk memintanya menolak permohonan yang lama, dan Anda dapat membuat permohonan baru.
+Untuk saat ini, pengguna tidak bisa mengubah atau membatalkan permohonan yang sudah dibuat. Untuk mengubah atau membatalkan permohonan, pengguna harus menghubungi Tata Usaha secara langsung untuk menolak permohonan tersebut. Pengguna kemudian dapat membuat permohonan yang baru.
 
-\subsection{Untuk Dosen Informatika}
+\subsection{Pengguna Merupakan Dosen Informatika}
 \label{sec:bluetape_dosen_informatika}
 
 \subsubsection{Entri Jadwal Dosen}
 \label{sec:bluetape_entri_jadwal_dosen}
-Anda dapat menggunakan menu ini untuk mengisikan jadwal mingguan Anda. Hasilnya dapat diekspor ke XLS, atau dapat dilihat oleh mahasiswa Informatika melalui portal BlueTape.
+Pengguna dapat menggunakan menu ini untuk mengisi jadwal mingguan miliknya. Hasilnya dapat diekspor ke dalam dokumen XLS, atau dapat dilihat oleh mahasiswa Informatika melalui portal BlueTape.
 
 \paragraph{Tambah Jadwal}
 \label{sec:bluetape_tambah_jadwal}
-Bagian paling atas adalah formulir untuk menambahkan entri jadwal, di mana Anda bisa mengisikan hari, jam mulai, durasi, label, dan jenisnya. Berikut adalah penjelasan jenis yang dapat dipilih:
+\phantom{blank}\\
+
+Bagian paling atas adalah formulir untuk menambahkan entri jadwal, pada bagian tersebut pengguna bisa mengisikan hari, jam mulai, durasi, label, dan jenisnya. Berikut adalah penjelasan jenis yang dapat dipilih:
 \begin{itemize}
-	\item Konsultasi: Waktu yang Anda siapkan untuk konsultasi mahasiswa. Pada tabel akan diberi latar belakang warna kuning.
-	\item Terjadwal: Kegiatan mingguan lain Anda yang telah terjadwal. Misalnya, rapat jurusan.
+	\item Konsultasi: Waktu yang pengguna siapkan untuk konsultasi mahasiswa. Pada tabel bagian ini akan diberi latar belakang warna kuning.
+	\item Terjadwal: Kegiatan mingguan lain milik pengguna yang telah terjadwal, contohnya rapat jurusan.
 	\item Kelas: Kelas kuliah maupun praktikum.
 \end{itemize}
 
-Klik pada tombol "Tambah" untuk menambahkan.
+Pengguna dapat menambahkan entri baru dengan menekan tombol \textit{Tambah}.
 
 \paragraph{Ubah/Hapus Jadwal}
 \label{sec:bluetape_ubah_hapus_jadwal}
-Klik pada jadwal yang tertera pada tabel untuk mengubahnya. \textit{Pop-up window} akan terbuka dengan pilihan-pilihan yang sama seperti saat menambah jadwal baru. Pada \textit{pop-up} yang sama, Anda juga bisa klik tombol "Hapus" untuk menghapus jadwal tersebut.
+\phantom{blank}\\
+
+Pengguna dapat menekan jadwal yang tertera pada tabel untuk mengubahnya. \textit{Pop-up window} akan terbuka dengan pilihan-pilihan yang sama seperti saat menambah jadwal baru. Pada \textit{pop-up} yang sama, pengguna juga bisa menekan tombol \textit{Hapus} untuk menghapus jadwal tersebut.
 
 \paragraph{Hapus Semua}
 \label{sec:bluetape_hapus_semua}
-Klik tombol \textit{"Delete All"} untuk secara cepat menghapus seluruh jadwal yang telah Anda buat. Biasanya ini digunakan pada awal semester, di mana jadwal Anda benar-benar baru.
+\phantom{blank}\\
+
+Pengguna dapat menekan tombol \textit{Delete All} untuk secara cepat menghapus seluruh jadwal yang telah dibuat. Bagian ini umumnya digunakan pada awal semester, ketika jadwal pengguna benar-benar baru.
 
 \paragraph{Ekspor ke XLS}
 \label{sec:bluetape_ekspor_ke_xls}
-Klik tombol "Ekspor ke XLS" untuk membuatkan file XLS untuk jadwal Anda.
+\phantom{blank}\\
 
-\subsection{Untuk Mahasiswa}
+Pengguna dapat menekan tombol \textit{Ekspor ke XLS} untuk membuat dokumen XLS untuk jadwal miliknya.\footnote{Pada saat skripsi ini dibuat, terdapat \textit{bug} yang menyebabkan dokumen hasil ekspor korup}
+
+\subsection{Pengguna Merupakan Mahasiswa}
 \label{sec:bluetape_mahasiswa}
 
 \subsubsection{Cetak Transkrip}
 \label{sec:bluetape_cetak_transkrip}
-Anda dapat menggunakan menu ini untuk mengirimkan permohonan cetak transkrip.
+Pengguna dapat menggunakan menu ini untuk mengirimkan permohonan cetak transkrip.
 
-Untuk mengirimkan permohonan pencetakan transkrip, Anda dapat mengisikan kolom-kolom pada formulir "Permohonan Baru". Jangan lupa mengisi kolom "Keperluan" karena akan menentukan apakah permohonan Anda disetujui oleh Tata Usaha atau tidak.
+Untuk mengirimkan permohonan pencetakan transkrip, pengguna dapat mengisikan kolom-kolom pada formulir \textit{Permohonan Baru}. Pengguna harus mengisi kolom \textit{Keperluan} karena bagian tersebut akan menentukan apakah permohonan pengguna disetujui oleh Tata Usaha atau tidak.
 
-Anda hanya dapat mengirimkan permohonan:
+Pengguna hanya dapat mengirimkan permohonan:
 \begin{itemize}
-	\item Maksimal 1x dalam satu semester (kecuali jika permohonan ditolak).
+	\item Maksimal satu kali dalam satu semester (kecuali jika permohonan ditolak).
 	\item Jika masih ada permohonan yang belum dijawab.
 \end{itemize}
 
-Biasanya, Tata Usaha akan mencetakkan transkrip Anda dalam waktu 1 hari kerja. Jika ada kesulitan, dapat menghubungi petugas Tata Usaha. Setelah permohonan Anda disetujui dan dicetak (atau ditolak), Anda akan mendapatkan notifikasi melalui \textit{email}.
+Umumnya, Tata Usaha akan mencetakkan transkrip mahasiswa dalam waktu satu hari kerja. Jika pengguna mengalami kesulitan, pengguna dapat menghubungi petugas Tata Usaha. Setelah permohonan pengguna disetujui dan dicetak (atau ditolak), pengguna akan mendapatkan notifikasi melalui surel.
 
-\subsection{Untuk Mahasiswa Informatika}
+\subsection{Pengguna Merupakan Mahasiswa Informatika}
 \label{sec:bluetape_mahasiswa_informatika}
 
 \subsubsection{Lihat Jadwal Dosen}
@@ -739,176 +747,36 @@ Biasanya, Tata Usaha akan mencetakkan transkrip Anda dalam waktu 1 hari kerja. J
 
 Modul ini digunakan untuk melihat jadwal mingguan seluruh dosen Informatika yang telah mendaftarkan jadwalnya.
 
-Pilihlah dosen yang ingin Anda lihat jadwalnya pada seleksi tab di atas, dan jadwal dosen ybs. akan ditampilkan pada tabel di bawahnya. Di bawah tabel tersebut, terdapat informasi kapan dosen tersebut terakhir mengupdate jadwalnya. Informasi ini dapat membantu menentukan, apakah jadwal yang terlihat merupakan jadwal semester lalu, atau sudah diupdate pada semester ini.
+Pengguna dapat melihat jadwal dosen dengan memilih dosen ybs. pada seleksi tab di bagian atas, jadwal dosen ybs. akan ditampilkan pada tabel di bagian bawah. Di bawah tabel tersebut, terdapat informasi mengenai waktu terakhir jadwal tersebut diperbarui oleh dosen yang bersangkutan. Informasi ini dapat membantu untuk menentukan, apakah jadwal yang terlihat merupakan jadwal semester lalu, atau sudah diperbarui pada semester ini.
 
-Klik tombol "Ekspor ke XLS" untuk mendapatkan jadwal tersebut dalam format XLS, yang dapat Anda simpan atau cetak.
+Pengguna dapat menekan tombol \textit{Ekspor ke XLS} untuk mendapatkan jadwal tersebut dalam format XLS, yang kemudian dapat disimpan atau dicetak.
 
-\subsection{Untuk Staf Tata Usaha}
+\subsection{Pengguna Merupakan Staf Tata Usaha}
 \label{sec:bluetape_staf_tata_usaha}
 
 \subsubsection{Manajemen Perubahan Kuliah}
 \label{sec:bluetape_manajemen_perubahan_kuliah}
-Modul ini berguna untuk melakukan manajemen permintaan perubahan kuliah. Saat Anda memasuki modul ini, tabel akan menampilkan daftar permohonan, terurut tanggal.
+Modul ini berguna untuk melakukan manajemen permintaan perubahan kuliah. Saat pengguna memasuki modul ini, tabel akan menampilkan daftar permohonan, terurut tanggal.
 
 Ada beberapa tombol yang tersedia untuk setiap permohonan:
 \begin{itemize}
 	\item Tombol dengan ikon mata, untuk melihat detail permohonan, berguna untuk memahami permohonan lebih lanjut dan menentukan apakah permohonan disetujui atau tidak.
-	\item Tombol dengan ikon mesin cetak, untuk membuka \textit{pop-up} untuk mencetak \textit{print-out} pengumuman. Cetaklah sebanyak yang dibutuhkan, serta edarkan ke staf/pekarya terkait.
+	\item Tombol dengan ikon mesin cetak, untuk membuka \textit{pop-up} untuk mencetak \textit{print-out} pengumuman. Pengguna cukup mencetak sebanyak yang dibutuhkan, serta mengedarkan ke staf/pekarya terkait.
 	\item Tombol dengan ikon ibu jari mengarah ke atas, untuk mengonfirmasi bahwa pengumuman sudah dicetak dan disebarkan.
-	\item Tombol dengan ikon ibu jari mengarah ke bawah, untuk menyatakan bahwa permohonan ini ditolak. Jangan lupa mengisikan alasan jika permohonan ini ditolak, sehingga tidak membingungkan pemohon.
-	\item Tombol dengan ikon keranjang, untuk menghapus permohonan secara permanen. Usahakan untuk tidak pernah menggunakan tombol ini kecuali terpaksa.
+	\item Tombol dengan ikon ibu jari mengarah ke bawah, untuk menyatakan bahwa permohonan ini ditolak. Jika permohonan ditolak, maka pengguna harus mengisi bagian alasan agar tidak membingungkan pemohon.
+	\item Tombol dengan ikon keranjang, untuk menghapus permohonan secara permanen. Pengguna disarankan untuk tidak pernah menggunakan tombol ini kecuali jika terpaksa.
 \end{itemize}
 
 \subsubsection{Manajemen Cetak Transkrip}
 \label{sec:bluetape_manajemen_cetak_transkrip}
-Daftar permintaan transkrip disajikan dalam bentuk tabel. Hanya informasi penting saja yang ditampilkan, sedangkan untuk melihat selebihnya menggunakan tombol dengan ikon mata (detail). Ada dua pilihan jawaban yaitu tolak (tombol dengan ikon ibu jari mengarah ke bawah) dan cetak (tombol dengan ikon mesin cetak). Masing-masing memerlukan keterangan tambahan (kenapa ditolak atau komentar cetak). Jika memungkinkan, BlueTape akan menampilkan tautan ke halaman DPS mahasiswa yang bersangkutan di dialog cetak.
+Daftar permintaan transkrip disajikan dalam bentuk tabel. Hanya informasi penting saja yang ditampilkan, sedangkan untuk melihat detil yang lebih lengkap pengguna dapat menekan tombol dengan ikon mata (detail). Terdapat dua pilihan jawaban yaitu tolak (tombol dengan ikon ibu jari mengarah ke bawah) dan cetak (tombol dengan ikon mesin cetak). Masing-masing memerlukan keterangan tambahan (alasan ditolak atau komentar cetak). Jika memungkinkan, BlueTape akan menampilkan tautan ke halaman DPS mahasiswa yang bersangkutan di dialog cetak.
 
-Modul ini berguna untuk melakukan manajemen permohonan pencetakan transkrip. Saat Anda memasuki modul ini, tabel akan menampilkan daftar permohonan, terurut tanggal. Anda juga bisa mencari permintaan berdasarkan NPM nya.
+Modul ini berguna untuk melakukan manajemen permohonan pencetakan transkrip. Saat pengguna memasuki modul ini, tabel akan menampilkan daftar permohonan, terurut tanggal. Pengguna juga bisa mencari permintaan berdasarkan NPM.
 
 Ada beberapa tombol yang tersedia untuk setiap permohonan:
 \begin{itemize}
 	\item Tombol dengan ikon mata, untuk melihat detail permohonan, berguna untuk memahami permohonan lebih lanjut dan menentukan apakah permohonan disetujui atau tidak.
-	\item Tombol dengan ikon ibu jari mengarah ke bawah, untuk menyatakan bahwa permohonan ini ditolak. Jangan lupa mengisikan alasan jika permohonan ini ditolak, sehingga tidak membingungkan pemohon.
+	\item Tombol dengan ikon ibu jari mengarah ke bawah, untuk menyatakan bahwa permohonan ini ditolak. Jika permohonan ditolak, maka pengguna harus mengisi bagian alasan agar tidak membingungkan pemohon.
 	\item Tombol dengan ikon mesin cetak, untuk membuka \textit{pop-up} untuk untuk mengonfirmasi bahwa transkrip telah tercetak. Di \textit{pop-up} ini juga akan tersedia tautan menuju halaman pencetakan transkrip pada SIAkad.
-	\item Tombol dengan ikon keranjang, untuk menghapus permohonan secara permanen. Usahakan untuk tidak pernah menggunakan tombol ini kecuali terpaksa.
-\end{itemize}
-
-\section{Template Skripsi FTIS UNPAR}
-\label{sec:template}
- 
-Akan dipaparkan bagaimana menggunakan template ini, termasuk petunjuk singkat membuat referensi, gambar dan tabel.
-Juga hal-hal lain yang belum terpikir sampai saat ini. 
- 
-\dtext{15-16}
-
-\subsection{Tabel}  
-Berikut adalah contoh pembuatan tabel. 
-Penempatan tabel dan gambar secara umum diatur otomatis oleh \LaTeX{}, perhatikan contoh di file bab2.tex untuk melihat bagaimana cara memaksa tabel ditempatkan sesuai keinginan kita.
-
-Perhatikan bawa berbeda dengan penempatan judul gambar gambar, keterangan tabel harus diletakkan di atas tabel!!
-Lihat Tabel~\ref{tab:contoh1} berikut ini:
-
-\begin{table}[H] %atau h saja untuk "kira kira di sini"
-	\centering 
-	\caption{Tabel contoh}
-	\label{tab:contoh1}
-	\begin{tabular}{cccc}
-		\toprule
-		& $v_{start}$ & $\mathcal{S}_{1}$ & $v_{end}$\\
-
-		\midrule
-		$\tau_{1}$ & 1 & 12& 20\\
-		$\tau_{2}$ & 1 &  & 20\\
-		$\tau_{3}$ & 1 & 9 & 20\\
-		$\tau_{4}$ & 1 &  & 20\\
-
-		\bottomrule
-		
-	\end{tabular} 
-\end{table}
-Tabel~\ref{tab:cthwarna1} dan Tabel~\ref{tab:cthwarna2} berikut ini adalah tabel dengan sel yang berwarna dan ada dua tabel yang bersebelahan. 
-\begin{table}[H]
-	\begin{minipage}[c]{0.49\linewidth}
-		\centering
-		\caption{Tabel bewarna(1)}
-		\label{tab:cthwarna1}
-		\begin{tabular}{ccccc}
-			\toprule
-			 & $v_{start}$ & $\mathcal{S}_{2}$ & $\mathcal{S}_{1}$ & $v_{end}$\\
-			
-			\midrule
-			$\tau_{1}$ & 1 & 5 \cellcolor{green}& 12& 20\\
-			$\tau_{2}$ & 1 & 8 \cellcolor{green}& & 20\\
-			$\tau_{3}$ & 1 & 2/8/17 \cellcolor{green}& 9 & 20\\
-			$\tau_{4}$ & 1 & \cellcolor{red}& & 20\\
-			
-			\bottomrule
-
-		\end{tabular}
-	\end{minipage}
-	\begin{minipage}[c]{0.49\linewidth}
-		
-		\centering 
-		\caption{Tabel bewarna(2)}
-		\label{tab:cthwarna2}
-		\begin{tabular}{ccccc}
-			\toprule
-			 & $v_{start}$ & $\mathcal{S}_{1}$ & $\mathcal{S}_{2}$ & $v_{end}$\\
-			
-			\midrule
-			$\tau_{1}$ & 1 & 12& 5 \cellcolor{red} &20\\
-			$\tau_{2}$ & 1 &  &  8 \cellcolor{green} &20\\
-			$\tau_{3}$ & 1 & 9 & 2/8/17 \cellcolor{green} &20\\
-			$\tau_{4}$ & 1 &   & \cellcolor{red} &20\\
-			
-			\bottomrule
-		
-		\end{tabular}
-	\end{minipage}
-\end{table}
-
- 
-\subsection{Kutipan}
-\label{subs:kutipan} 
-Berikut contoh kutipan dari berbagai sumber, untuk keterangan lebih lengkap, silahkan membaca file referensi.bib yang disediakan juga di template ini.
-Contoh kutipan:
-\begin{itemize}
-	\item Buku:~\cite{berg:08:compgeom} 
-	\item Bab dalam buku:~\cite{kreveld:04:GIS}
-	\item Artikel dari Jurnal:~\cite{buchin:13:median}
-	\item Artikel dari prosiding seminar/konferensi:~\cite{kreveld:11:median}
-	\item Skripsi/Thesis/Disertasi:~\cite{lionov:02:animasi}~\cite{wiratma:10:following}~\cite{wiratma:22:later}
-	\item Technical/Scientific Report:~\cite{kreveld:07:watertight}
-	\item RFC (Request For Comments):~\cite{RFC1654}
-	\item Technical Documentation/Technical Manual:~\cite{Z.500}~\cite{unicode:16:stdv9}~\cite{google:16:and7}
-	\item Paten:~\cite{webb:12:comm}
-	\item Tidak dipublikasikan:~\cite{wiratma:09:median}~\cite{lionov:11:cpoly}
-	\item Laman web:~\cite{erickson:03:cgmodel}  
-	\item Lain-lain:~\cite{agung:12:tango}
-\end{itemize}    
-  
-\subsection{Gambar}
-
-Pada hampir semua editor, penempatan gambar di dalam dokumen \LaTeX{} tidak dapat dilakukan melalui proses {\it drag and drop}.
-Perhatikan contoh pada file bab2.tex untuk melihat bagaimana cara menempatkan gambar.
-Beberapa hal yang harus diperhatikan pada saat menempatkan gambar:
-\begin{itemize}
-	\item Setiap gambar {\bf harus} diacu di dalam teks (gunakan {\it field} {\sc label})
-	\item {\it Field} {\sc caption} digunakan untuk teks pengantar pada gambar. Terdapat dua bagian yaitu yang ada di antara tanda $[$ dan $]$ dan yang ada di antara tanda $\{$ dan $\}$. Yang pertama akan muncul di Daftar Gambar, sedangkan yang kedua akan muncul di teks pengantar gambar. Untuk skripsi ini, samakan isi keduanya.
-	\item Jenis file yang dapat digunakan sebagai gambar cukup banyak, tetapi yang paling populer adalah tipe {\sc png} (lihat Gambar~\ref{fig:ularpng}), tipe {\sc jpg} (Gambar~\ref{fig:ularjpg}) dan tipe {\sc pdf} (Gambar~\ref{fig:ularpdf})
-	\item Besarnya gambar dapat diatur dengan {\it field} {\sc scale}.
-	\item Penempatan gambar diatur menggunakan {\it placement specifier} (di antara tanda  $[$ dan $]$ setelah deklarasi gambar.
-	Yang umum digunakan adalah {\bf H} untuk menempatkan gambar {\bf sesuai} penempatannya di file .tex atau  {\bf h} yang berarti "kira-kira" di sini. \\
-	Jika tidak menggunakan {\it placement specifier}, \LaTeX{} akan menempatkan gambar otomatis untuk menghindari bagian kosong pada dokumen anda.
-	Walaupun cara ini sangat mudah, hindarkan terjadinya penempatan dua gambar secara berurutan. 	
-	\begin{itemize}
-		\item Gambar~\ref{fig:ularpng} ditempatkan di bagian atas halaman, walaupun penempatannya dilakukan setelah penulisan 3 paragraf setelah penjelasan ini.
-		\item Gambar~\ref{fig:ularjpg} dengan skala 0.5 ditempatkan di antara dua buah paragraf. Perhatikan penulisannya di dalam file bab2.tex!
-		\item Gambar~\ref{fig:ularpdf} ditempatkan menggunakan {\it specifier} {\bf h}.
-	\end{itemize}
-\end{itemize}
- 
-\dtext{17-18}
-\begin{figure} 
-	\centering  
-	\includegraphics[scale=1]{ular-png}  
-	\caption[Gambar {\it Serpentes} dalam format png]{Gambar {\it Serpentes} dalam format png} 
-	\label{fig:ularpng} 
-\end{figure} 
-
-\dtext{19-20}
-\begin{figure}[H]
-	\centering  
-	\includegraphics[scale=0.5]{ular-jpg}  
-	\caption[Ular kecil]{Ular kecil} 
-	\label{fig:ularjpg} 
-\end{figure} 
-\dtext{21-22}
-
-\begin{figure}[ht] 
-	\centering  
-	\includegraphics[scale=1]{ular-pdf}  
-	\caption[ {\it Serpentes} betina]{ {\it Serpentes} jantan} 
-	\label{fig:ularpdf} 
-\end{figure} 
- 
+	\item Tombol dengan ikon keranjang, untuk menghapus permohonan secara permanen. Pengguna disarankan untuk tidak pernah menggunakan tombol ini kecuali jika terpaksa.
+\end{itemize} 
