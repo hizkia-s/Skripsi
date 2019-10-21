@@ -74,16 +74,16 @@ Sukses atau tidaknya aplikasi BlueTape dalam mematuhi kriteria-kriteria sukses d
         & 2.4.3 & A & Tidak Sukses \\
         & 2.4.4 & A & Tidak Sukses \\
         & 2.4.5 & AA & Tidak Sukses \\
-        & 2.4.6 & AA & \\
-        & 2.4.7 & AA & \\
-        & 2.4.8 & AAA & \\
-        & 2.4.9 & AAA & \\
-        & 2.4.10 & AAA & \\
-        & 2.5.1 & A & \\
-        & 2.5.2 & A & \\
+        & 2.4.6 & AA & Tidak Sukses \\
+        & 2.4.7 & AA & Tidak Sukses \\
+        & 2.4.8 & AAA & Sukses \\
+        & 2.4.9 & AAA & Tidak Sukses \\
+        & 2.4.10 & AAA & Tidak Sukses \\
+        & 2.5.1 & A & Sukses \\
+        & 2.5.2 & A & Sukses \\
         & 2.5.3 & A & \\
-        & 2.5.4 & A & \\
-        & 2.5.5 & AAA & \\
+        & 2.5.4 & A & Sukses \\
+        & 2.5.5 & AAA & Tidak Sukses \\
         & 2.5.6 & AAA & \\
 
         \bottomrule
@@ -476,12 +476,83 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape hanya tersed
 
 \paragraph{Kriteria Sukses 2.4.6 \textit{Headings and Labels}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.4.6}
+(Tidak Sukses)\\
+
+Kriteria ini tidak sukses dipatuhi karena pada halaman entri jadwal dosen, setiap elemen masukan tidak memiliki label yang menjelaskan tujuan dari elemen tersebut.
+
+\paragraph{Kriteria Sukses 2.4.7 \textit{Focus Visible}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_2.4.7}
+(Tidak Sukses)\\
+
+Kriteria ini tidak sukses dipatuhi karena setiap halaman web BlueTape memiliki komponen tombol dengan warna latar belakang yang sama dengan warna indikator fokus dari \textit{keyboard}.
+
+\paragraph{Kriteria Sukses 2.4.8 \textit{Location}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_2.4.8}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena pada menu navigasi terdapat indikator yang menunjukkan halaman yang sedang dipilih oleh pengguna, indikator ini berupa penebalan ukuran tulisan.
+
+\paragraph{Kriteria Sukses 2.4.9 \textit{Link Purpose (Link Only)}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_2.4.9}
+(Tidak Sukses)\\
+
+Kriteria ini tidak sukses dipatuhi karena pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah terdapat tautan yang berisi konten bukan teks dan tidak terdapat teks yang dapat menjelaskan tujuan tautan tersebut.
+
+\paragraph{Kriteria Sukses 2.4.10 \textit{Section Headings}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_2.4.10}
+(Tidak Sukses)\\
+
+Kriteria ini tidak sukses dipatuhi karena terdapat penggunaan \textit{tag heading} yang tidak tepat secara struktur pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, manajemen perubahan kuliah, dan entri jadwal dosen.
+
+\subsubsection{\textit{Input Modalities}}
+\label{subsubsec:kepatuhan_bluetape_input_modalities}
+
+\paragraph{Kriteria Sukses 2.5.1 \textit{Pointer Gestures}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_2.5.1}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat fungsionalitas yang harus dijalankan dengan menggunakan \textit{multipoint} atau gestur berbasis \textit{path}.
+
+\paragraph{Kriteria Sukses 2.5.2 \textit{Pointer Cancellation}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_2.5.2}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena setiap fungsionalitas yang dapat dioperasikan dengan kursor tunggal tidak memiliki \textit{down-event}.
+
+\paragraph{Kriteria Sukses 2.5.3 \textit{Label in Name}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_2.5.3}
+()\\
+
+
+
+\paragraph{Kriteria Sukses 2.5.4 \textit{Motion Actuation}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_2.5.4}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena tidak terdapat fungsionalitas yang dapat dioperasikan oleh gerakan perangkat atau gerakan pengguna.
+
+\paragraph{Kriteria Sukses 2.5.5 \textit{Target Size}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_2.5.5}
+(Tidak Sukses)\\
+
+Kriteria ini tidak sukses dipatuhi karena terdapat banyak elemen yang dapat menerima masukan kursor memiliki ukuran kurang dari 44 kali 44 piksel \textit{CSS}. 
+
+\paragraph{Kriteria Sukses 2.5.6 \textit{Concurrent Input Mechanisms}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_2.5.6}
 ()\\
 
 
 
 \subsection{\textit{Understandable}}
 \label{subsec:kepatuhan_bluetape_understandable}
+
+\subsubsection{\textit{Readable}}
+\label{subsubsec:kepatuhan_bluetape_readable}
+
+\paragraph{Kriteria Sukses 3.1.1 \textit{Language of Page}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.1.1}
+()\\
+
 
 \subsection{\textit{Robust}}
 \label{subsec:kepatuhan_bluetape_robust}
