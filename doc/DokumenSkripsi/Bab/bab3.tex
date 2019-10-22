@@ -100,23 +100,23 @@ Sukses atau tidaknya aplikasi BlueTape dalam mematuhi kriteria-kriteria sukses d
         & Kriteria Sukses & Tingkat Kepatuhan & Hasil (sukses/tidak)\\
 
         \midrule
-        & 3.1.1 & A & \\
-        & 3.1.2 & AA & \\
-        & 3.1.3 & AAA & \\
-        & 3.1.4 & AAA & \\
-        & 3.1.5 & AAA & \\
-        & 3.1.6 & AAA & \\
-        & 3.2.1 & A & \\
-        & 3.2.2 & A & \\
-        & 3.2.3 & AA & \\
+        & 3.1.1 & A & Tidak Sukses \\
+        & 3.1.2 & AA & Tidak Sukses \\
+        & 3.1.3 & AAA & Tidak Sukses \\
+        & 3.1.4 & AAA & Tidak Sukses \\
+        & 3.1.5 & AAA & Sukses \\
+        & 3.1.6 & AAA & Sukses \\
+        & 3.2.1 & A & Sukses \\
+        & 3.2.2 & A & Sukses \\
+        & 3.2.3 & AA & Sukses \\
         & 3.2.4 & AA & \\
-        & 3.2.5 & AAA & \\
-        & 3.3.1 & A & \\
-        & 3.3.2 & A & \\
-        & 3.3.3 & AA & \\
-        & 3.3.4 & AA & \\
+        & 3.2.5 & AAA & Sukses \\
+        & 3.3.1 & A & Sukses \\
+        & 3.3.2 & A & Tidak Sukses\\
+        & 3.3.3 & AA & Sukses \\
+        & 3.3.4 & AA & Sukses \\
         & 3.3.5 & AAA & \\
-        & 3.3.6 & AAA & \\
+        & 3.3.6 & AAA & Sukses \\
 
         \bottomrule
 
@@ -131,7 +131,7 @@ Sukses atau tidaknya aplikasi BlueTape dalam mematuhi kriteria-kriteria sukses d
         & Kriteria Sukses & Tingkat Kepatuhan & Hasil (sukses/tidak)\\
 
         \midrule
-        & 4.1.1 & A & \\
+        & 4.1.1 & A & Tidak Sukses \\
         & 4.1.2 & A & \\
         & 4.1.3 & AA & \\
 
@@ -551,8 +551,139 @@ Kriteria ini tidak sukses dipatuhi karena terdapat banyak elemen yang dapat mene
 
 \paragraph{Kriteria Sukses 3.1.1 \textit{Language of Page}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.1.1}
+(Tidak Sukses)\\
+
+Kriteria ini tidak sukses dipatuhi karena bahasa manusia \textit{default} yang digunakan pada halaman web BlueTape kurang sesuai dengan konten yang disajikan pada halaman tersebut.
+
+\paragraph{Kriteria Sukses 3.1.2 \textit{Language of Parts}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.1.2}
+(Tidak Sukses)\\
+
+Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat konten teks dalam bahasa Inggris namun konten tersebut tidak memiliki atribut \textit{lang}. Konten yang dimaksud adalah:
+
+\begin{itemize}
+    \item Pada bagian navigasi menu terdapat elemen dengan teks "Logout".
+    \item Pada halaman entri jadwal dosen terdapat tombol dengan teks "Delete All".
+    \item Pada halaman entri jadwal dosen bagian "Edit Jadwal" terdapat tombol dengan teks "Save" dan tombol dengan teks "Delete".
+\end{itemize}
+
+\paragraph{Kriteria Sukses 3.1.3 \textit{Unusual Words}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.1.3}
+(Tidak Sukses)\\
+
+Kriteria ini tidak sukses dipatuhi karena terdapat kata-kata yang digunakan dengan cara yang tidak lazim atau terbatas namun tidak tersedia mekanisme untuk mengidentifikasi definisi spesifik dari kata-kata tersebut. Kata-kata yang dimaksud adalah:
+
+\begin{itemize}
+    \item Pada halaman perubahan kuliah, tombol dengan teks "Tambah Pertemuan Ekstra".
+    \item Pada halaman entri jadwal dosen, tombol dengan teks "Ekspor ke XLS".
+    \item Pada halaman lihat jadwal dosen, tombol dengan teks "Ekspor ke XLS".
+\end{itemize}
+
+\paragraph{Kriteria Sukses 3.1.4 \textit{Abbreviations}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.1.4}
+(Tidak Sukses)\\
+
+Kriteria ini tidak sukses dipatuhi karena tidak tersedia mekanisme untuk mengidentifikasi kepanjangan dari singkatan. Singkatan-singkatan yang terdapat pada halaman web BlueTape, antara lain:
+
+\begin{itemize}
+    \item Pada halaman cetak transkrip terdapat singkatan "NPM" dan "DPS".
+    \item Pada halaman manajemen cetak transkrip terdapat singkatan "NPM".
+    \item Pada halaman perubahan kuliah terdapat singkatan "MK".
+    \item Pada halaman manajemen perubahan kuliah terdapat singkatan "MK".
+    \item Pada halaman entri jadwal dosen terdapat singkatan "XLS".
+    \item Pada halaman lihat jadwal dosen terdapat singkatan "XLS".
+\end{itemize}
+
+\paragraph{Kriteria Sukses 3.1.5 \textit{Reading Level}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.1.5}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat teks yang cukup kompleks dan membutuhkan kemampuan membaca yang lebih tinggi dari rata-rata.
+
+\paragraph{Kriteria Sukses 3.1.6 \textit{Pronunciation}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.1.6}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena pada halaman web BlueTape setiap kata dapat dimengerti artinya tanpa pengguna perlu mengetahui cara mengucapkan kata tersebut.
+
+\subsubsection{\textit{Predictable}}
+\label{subsubsec:kepatuhan_bluetape_predictable}
+
+\paragraph{Kriteria Sukses 3.2.1 \textit{On Focus}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.2.1}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena setiap komponen antarmuka pengguna yang menerima fokus, tidak menyebabkan perubahan konteks.
+
+\paragraph{Kriteria Sukses 3.2.2 \textit{On Input}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.2.2}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena ketika pengguna mengubah setelan komponen antarmuka pengguna tidak terjadi perubahan konteks otomatis.
+
+\paragraph{Kriteria Sukses 3.2.3 \textit{Consistent Navigation}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.2.3}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena bagian navigasi menu yang muncul berulang pada tiap halaman web BlueTape, muncul dalam urutan relatif yang sama setiap kali tampak.
+
+\paragraph{Kriteria Sukses 3.2.4 \textit{Consistent Identification}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.2.4}
 ()\\
 
 
+
+\paragraph{Kriteria Sukses 3.2.5 \textit{Change on Request}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.2.5}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena setiap perubahan konteks hanya terjadi bila dilakukan oleh pengguna.
+
+\subsubsection{\textit{Input Assistance}}
+\label{subsubsec:kepatuhan_bluetape_input_assistance}
+
+\paragraph{Kriteria Sukses 3.3.1 \textit{Error Identification}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.3.1}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena ketika terdapat eror masukan yang terdeteksi otomatis, \textit{item} yang eror diidentifikasi dan eror dijabarkan kepada pengguna dalam bentuk teks.
+
+\paragraph{Kriteria Sukses 3.3.2 \textit{Labels or Instructions}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.3.2}
+(Tidak Sukses)\\
+
+Kriteria ini tidak sukses dipatuhi karena pada halaman entri jadwal dosen, setiap elemen masukan tidak memiliki label yang menjelaskan tujuan dari elemen tersebut.
+
+\paragraph{Kriteria Sukses 3.3.3 \textit{Error Suggestion}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.3.3}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena ketika terdapat eror masukan yang terdeteksi otomatis, saran untuk mengoreksi eror tersebut disajikan kepada pengguna.
+
+\paragraph{Kriteria Sukses 3.3.4 \textit{Error Prevention (Legal, Financial, Data)\\}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.3.4}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena pada halaman yang mengirim tanggapan pengguna, data yang dimasukkan oleh pengguna diperiksa terkait eror masukan dan pengguna dipersilakan untuk mengoreksinya.
+
+\paragraph{Kriteria Sukses 3.3.5 \textit{Help}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.3.5}
+()\\
+
+
+
+\paragraph{Kriteria Sukses 3.3.6 \textit{Error Prevention (All)}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_3.3.6}
+(Sukses)\\
+
+Kriteria ini sukses dipatuhi karena pada halaman yang mewajibkan pengguna mengirim informasi, data yang dimasukkan oleh pengguna diperiksa terkait eror masukan dan pengguna dipersilakan untuk mengoreksinya.
+
 \subsection{\textit{Robust}}
 \label{subsec:kepatuhan_bluetape_robust}
+
+\subsubsection{\textit{Compatible}}
+\label{subsubsec:kepatuhan_bluetape_compatible}
+
+\paragraph{Kriteria Sukses 4.1.1 \textit{Parsing}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_4.1.1}
+(Tidak Sukses)\\
