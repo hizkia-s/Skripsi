@@ -24,10 +24,10 @@ Sukses atau tidaknya aplikasi BlueTape dalam mematuhi kriteria-kriteria sukses d
         & 1.2.8 & AAA & Sukses \\
         & 1.2.9 & AAA & Sukses \\
         & 1.3.1 & A & Tidak Sukses \\
-        & 1.3.2 & A & Tidak Sukses \\
+        & 1.3.2 & A & Sukses \\
         & 1.3.3 & A & Tidak Sukses \\
         & 1.3.4 & AA & Sukses \\
-        & 1.3.5 & AA & Sukses \\
+        & 1.3.5 & AA & Tidak Sukses \\
         & 1.3.6 & AAA & Tidak Sukses \\
         & 1.4.1 & A & Sukses \\
         & 1.4.2 & A & Sukses \\
@@ -150,7 +150,25 @@ Sukses atau tidaknya aplikasi BlueTape dalam mematuhi kriteria-kriteria sukses d
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.1.1}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada tampilan \textit{mobile}, di setiap halaman selain halaman \textit{login} terdapat tombol yang tidak memiliki alternatif teks yang dapat ditafsirkan oleh teknologi alat bantu. Tombol yang dimaksud hanya menampilkan tiga garis horizontal berwarna putih dan berfungsi untuk menampilkan bagian menu ketika ditekan.
+Kriteria ini tidak sukses dipatuhi karena pada tampilan \textit{mobile}, di setiap halaman selain halaman \textit{login} terdapat tombol yang berperan sebagai kontrol namun tidak memiliki nama yang menjelaskan tujuannya. Tombol yang dimaksud hanya menampilkan tiga garis horizontal berwarna putih dan berfungsi untuk menampilkan bagian menu ketika ditekan. Bagian yang bermasalah dapat dilihat pada potongan kode \ref{lst:1.1.1_tombol_tanpa_nama}. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.1.1_non_text_content}.
+
+\begin{lstlisting}[label={lst:1.1.1_tombol_tanpa_nama}, language=HTML, caption=Kriteria Sukses 1.1.1 - Tombol Tanpa Nama]
+    <div class="title-bar" data-responsive-toggle="navigation-menu" 
+    data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title"><img src="/public/img/logo.png" 
+        class="textsized" alt="B"/></div>
+    </div>
+\end{lstlisting}
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.5]{kriteria-sukses-1-1-1-non-text-content}  
+    \caption[Kriteria Sukses 1.1.1 - Tombol Tanpa Nama]{Kriteria Sukses 1.1.1 - Tombol Tanpa Nama}
+    \label{fig:1.1.1_non_text_content}  
+\end{figure} 
+
+Contoh tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripRequest}.
 
 \subsubsection{\textit{Time-based Media}}
 \label{subsubsec:kepatuhan_bluetape_time_based_media}
@@ -218,23 +236,76 @@ Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat kon
 
 Kriteria ini tidak sukses dipatuhi karena:
 \begin{itemize}
-    \item Terdapat penggunaan \textit{tag heading} yang tidak tepat secara struktur pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, manajemen perubahan kuliah, dan entri jadwal dosen.
-    \item Pada halaman manajemen cetak transkrip, kolom masukan NPM tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom masukan tersebut.
-    \item Pada halaman entri jadwal dosen, setiap kolom masukkan tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom-kolom masukan tersebut.
-    \item Pada halaman lihat jadwal dosen, terdapat elemen yang tidak tepat secara struktur pada bagian \textit{list}.
+    \item Terdapat penggunaan \textit{tag heading} yang tidak tepat secara struktur pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, manajemen perubahan kuliah, dan entri jadwal dosen. Contohnya dapat dilihat pada potongan kode \ref{lst:1.3.1_heading_tidak_tepat} yang menampilkan kesalahan penggunaan \textit{tag heading} pada halaman cetak transkrip.
+    \begin{lstlisting}[label={lst:1.3.1_heading_tidak_tepat}, language=HTML, caption=Kriteria Sukses 1.3.1 - Penggunaan \textit{Heading} Tidak Tepat]
+        <div class="callout">
+            <h5>Permohonan Baru</h5>
+            <?php if (is_array($forbiddenTypes)): ?>
+    \end{lstlisting}
+    Contoh tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripRequest}.
+
+    \item Pada halaman manajemen cetak transkrip, kolom masukan NPM tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom masukan tersebut. Kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.1_label_masukan_manajemen_cetak_transkrip}.
+    \begin{lstlisting}[label={lst:1.3.1_label_masukan_manajemen_cetak_transkrip}, language=HTML, caption=Kriteria Sukses 1.3.1 - Tidak Terdapat Label Pada Kolom Masukan di Halaman Manajemen Cetak Transkrip]
+        <span class="input-group-label">Cari NPM:</span>
+        <input name="npm" class="input-group-field" type="text"
+        placeholder="2013730013" maxlength="10" minlength="10"
+        <?= $npmQuery === NULL ? '' : " value='$npmQuery'" ?>/>
+        <div class="input-group-button">
+    \end{lstlisting}
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripManage}.
+
+    \item Pada halaman entri jadwal dosen, setiap kolom masukkan tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom-kolom masukan tersebut. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.1_label_masukan_entri_jadwal_dosen}.
+    \begin{lstlisting}[label={lst:1.3.1_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 1.3.1 - Tidak Terdapat Label Pada Kolom Masukan di Halaman Entri Jadwal Dosen]
+        <input type="hidden" 
+        name="<?= $this->security->get_csrf_token_name() ?>"
+        value="<?= $this->security->get_csrf_hash() ?>" />
+        Hari
+        <select name="hari">
+    \end{lstlisting}
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
 \end{itemize} 
 
 \paragraph{Kriteria Sukses 1.3.2 \textit{Meaningful Sequence}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.2}
-(Tidak Sukses)\\
+(Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman perubahan kuliah di bagian "Permohonan Baru", urutan baca dan urutan navigasi kurang tepat. 
+Kriteria ini sukses dipatuhi karena pada setiap halaman web BlueTape sudah memiiliki urutan membaca yang benar dan dapat ditentukan secara terprogram. 
 
 \paragraph{Kriteria Sukses 1.3.3 \textit{Sensory Characteristics}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.3}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah terdapat satu atau lebih komponen untuk mengoperasikan konten yang hanya mengandalkan satu komponen karakteristik indra yaitu bentuk. Komponen-komponen ini terletak pada kolom "Aksi" dan hanya ditampilkan dalam rupa ikon tanpa memiliki keterangan lebih detail.
+Kriteria ini tidak sukses dipatuhi karena pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah terdapat satu atau lebih komponen untuk mengoperasikan konten yang hanya mengandalkan satu komponen karakteristik indra yaitu bentuk. Komponen-komponen ini terletak pada kolom "Aksi" dan hanya ditampilkan dalam rupa ikon tanpa memiliki keterangan lebih detail. Contohnya dapat dilihat pada potongan kode \ref{lst:1.3.3_ikon_tanpa_keterangan}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.3.3_sensory_characteristics}.
+
+\begin{lstlisting}[label={lst:1.3.3_ikon_tanpa_keterangan}, language=HTML, caption=Kriteria Sukses 1.3.3 - Ikon Tanpa Keterangan]
+    <td>
+        <a data-open="detail<?= $request->id ?>">
+            <i class="fi-eye"></i>
+        </a>
+        <a target="_blank" 
+        href="/PerubahanKuliahManage/printview/<?= $request->id ?>">
+            <i class="fi-print"></i>
+        </a>
+        <a data-open="konfirmasi<?= $request->id ?>">
+            <i class="fi-like"></i>
+        </a>  
+        <a data-open="tolak<?= $request->id ?>">
+            <i class="fi-dislike"></i>
+        </a>
+        <a data-open="hapus<?= $request->id ?>">
+            <i class="fi-trash"></i>
+        </a>
+    </td>
+\end{lstlisting}
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.5]{kriteria-sukses-1-3-3-sensory-characteristics}  
+    \caption[Kriteria Sukses 1.3.3 - Ikon Pada Bagian Aksi]{Kriteria Sukses 1.3.3 - Ikon Pada Bagian Aksi}
+    \label{fig:1.3.3_sensory_characteristics}  
+\end{figure} 
+
+Contoh tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
 
 \paragraph{Kriteria Sukses 1.3.4 \textit{Orientation}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.4}
@@ -244,9 +315,30 @@ Kriteria ini sukses dipatuhi karena konten pada halaman web BlueTape dapat disaj
 
 \paragraph{Kriteria Sukses 1.3.5 \textit{Identify Input Purpose}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.5}
-(Sukses)\\
+(Tidak Sukses)\\
 
-Kriteria ini sukses dipatuhi karena setiap kolom masukan yang mengumpulkan informasi tentang pengguna sudah terisi otomatis.
+Kriteria ini tidak sukses dipatuhi karena terdapat kolom-kolom masukan yang tidak memiliki label yang terasosiasi dengan kolom-kolom tersebut, meskipun setiap kolom masukan sudah memiliki atribut \textit{"autocomplete"} yang aktif. Bagian-bagian yang bermasalah, antara lain:
+\begin{itemize}
+    \item Pada halaman manajemen cetak transkrip, kolom masukan NPM tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom masukan tersebut. Kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.5_label_masukan_manajemen_cetak_transkrip}.
+    \begin{lstlisting}[label={lst:1.3.5_label_masukan_manajemen_cetak_transkrip}, language=HTML, caption=Kriteria Sukses 1.3.5 - Tidak Terdapat Label Pada Kolom Masukan di Halaman Manajemen Cetak Transkrip]
+        <span class="input-group-label">Cari NPM:</span>
+        <input name="npm" class="input-group-field" type="text"
+        placeholder="2013730013" maxlength="10" minlength="10"
+        <?= $npmQuery === NULL ? '' : " value='$npmQuery'" ?>/>
+        <div class="input-group-button">
+    \end{lstlisting}
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripManage}.
+
+    \item Pada halaman entri jadwal dosen, setiap kolom masukkan tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom-kolom masukan tersebut. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.5_label_masukan_entri_jadwal_dosen}.
+    \begin{lstlisting}[label={lst:1.3.5_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 1.3.5 - Tidak Terdapat Label Pada Kolom Masukan di Halaman Entri Jadwal Dosen]
+        <input type="hidden" 
+        name="<?= $this->security->get_csrf_token_name() ?>"
+        value="<?= $this->security->get_csrf_hash() ?>" />
+        Hari
+        <select name="hari">
+    \end{lstlisting}
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+\end{itemize}
 
 \paragraph{Kriteria Sukses 1.3.6 \textit{Identify Purpose}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.6}
