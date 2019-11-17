@@ -344,7 +344,13 @@ Kriteria ini tidak sukses dipatuhi karena terdapat kolom-kolom masukan yang tida
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.6}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena terdapat elemen \textit{HTML}5 yang seharusnya dapat digunakan namun tidak digunakan, contohnya pada bagian navigasi.
+Kriteria ini tidak sukses dipatuhi karena terdapat elemen \textit{HTML}5 yang seharusnya dapat digunakan namun tidak digunakan, contohnya pada bagian navigasi. Kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.6_navigasi}.
+
+\begin{lstlisting}[label={lst:1.3.6_navigasi}, language=HTML, caption=Kriteria Sukses 1.3.6 - Navigasi]
+    </div>
+    <div class="top-bar" id="navigation-menu">
+        <div class="top-bar-left">
+\end{lstlisting}
 
 \subsubsection{\textit{Distinguishable}}
 \label{subsubsec:kepatuhan_bluetape_distinguishable}
@@ -368,13 +374,68 @@ Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat kon
 Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beberapa teks dengan rasio kontras kurang dari 4,5:1 untuk teks yang berukuran kurang dari 24 piksel dan tidak \textit{bold}, antara lain:
 
 \begin{itemize}
-    \item Halaman \textit{login}: Teks "\textit{Login} dengan Google" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Petunjuk Penggunaan" memiliki rasio kontras 3.06:1 terhadap warna latar belakangnya.
-    \item Halaman cetak transkrip: Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4,44:1 terhadap warna latar belakangnya.
-    \item Halaman manajemen cetak transkrip: Teks "Cari" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1,84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3,47:1 terhadap warna latar belakangnya.
-    \item Halaman perubahan kuliah: Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tambah Pertemuan Ekstra" memiliki rasio kontras 4,47:1 terhadap warna latar belakangnya. Teks "Hapus" memiliki rasio kontras 4,47:1 terhadap warna latar belakangnya. Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4,44:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Terkonfirmasi" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya.
-    \item Halaman manajemen perubahan kuliah: Teks "Terkonfirmasi" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1,84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3,47:1 terhadap warna latar belakangnya.
-    \item Halaman entri jadwal dosen: Teks "Tambah" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete All" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
-    \item Halaman lihat jadwal dosen: Teks nama dosen di atas tabel yang sedang dipilih pengguna memiliki rasio kontras 2,47:1 terhadap warna latar belakangnya. Teks nama dosen di atas tabel yang sedang tidak dipilih pengguna memiliki rasio kontras 3,06:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+    \item Halaman \textit{login}: Teks "\textit{Login} dengan Google" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Petunjuk Penggunaan" memiliki rasio kontras 3.06:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_1}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-1}  
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman \textit{login}]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman \textit{login}}
+        \label{fig:1.4.3_contrast_minimum_1}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net}.
+
+    \item Halaman cetak transkrip: Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4,44:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_2}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-2}  
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Cetak Transkrip]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Cetak Transkrip}
+        \label{fig:1.4.3_contrast_minimum_2}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripRequest}.
+
+    \item Halaman manajemen cetak transkrip: Teks "Cari" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1,84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3,47:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_3}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-3}  
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Manajemen Cetak Transkrip]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Manajemen Cetak Transkrip}
+        \label{fig:1.4.3_contrast_minimum_3}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripManage}.
+
+    \item Halaman perubahan kuliah: Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tambah Pertemuan Ekstra" memiliki rasio kontras 4,47:1 terhadap warna latar belakangnya. Teks "Hapus" memiliki rasio kontras 4,47:1 terhadap warna latar belakangnya. Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4,44:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Terkonfirmasi" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_4}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-4}  
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Perubahan Kuliah]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Perubahan Kuliah}
+        \label{fig:1.4.3_contrast_minimum_4}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/PerubahanKuliahRequest}.
+    
+    \item Halaman manajemen perubahan kuliah: Teks "Terkonfirmasi" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1,84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3,47:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_5}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-5}  
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Manajemen Perubahan Kuliah]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Manajemen Perubahan Kuliah}
+        \label{fig:1.4.3_contrast_minimum_5}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
+
+    \item Halaman entri jadwal dosen: Teks "Tambah" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete All" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Save" pada bagian "Edit Jadwal" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_6}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-6}  
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Entri Jadwal Dosen]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Entri Jadwal Dosen}
+        \label{fig:1.4.3_contrast_minimum_6}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+    
+    \item Halaman lihat jadwal dosen: Teks nama dosen di atas tabel yang sedang dipilih pengguna memiliki rasio kontras 2,47:1 terhadap warna latar belakangnya. Teks nama dosen di atas tabel yang sedang tidak dipilih pengguna memiliki rasio kontras 3,06:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_7}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-7}  
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Lihat Jadwal Dosen]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Lihat Jadwal Dosen}
+        \label{fig:1.4.3_contrast_minimum_7}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
 \end{itemize}
 
 \paragraph{Kriteria Sukses 1.4.4 \textit{Resize text}}
@@ -390,19 +451,74 @@ Kriteria ini sukses dipatuhi karena setiap halaman web BlueTape dapat tetap terb
 Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat gambar teks selain logo.
 
 \paragraph{Kriteria Sukses 1.4.6 \textit{Contrast (Enhanced)}}
-\label{par:kepatuhan_bluetape_kriteria_sukses_1.4.2}
+\label{par:kepatuhan_bluetape_kriteria_sukses_1.4.6}
 (Tidak Sukses)\\
 
 Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beberapa teks dengan rasio kontras kurang dari 7:1 untuk teks yang berukuran kurang dari 24 piksel dan tidak \textit{bold}, antara lain:
 
 \begin{itemize}
-    \item Halaman \textit{login}: Teks "\textit{Login} dengan Google" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Petunjuk Penggunaan" memiliki rasio kontras 3.06:1 terhadap warna latar belakangnya.
-    \item Halaman cetak transkrip: Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4,44:1 terhadap warna latar belakangnya.
-    \item Halaman manajemen cetak transkrip: Teks "Cari" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1,84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3,47:1 terhadap warna latar belakangnya.
-    \item Halaman perubahan kuliah: Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tambah Pertemuan Ekstra" memiliki rasio kontras 4,47:1 terhadap warna latar belakangnya. Teks "Hapus" memiliki rasio kontras 4,47:1 terhadap warna latar belakangnya. Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4,44:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Terkonfirmasi" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya.
-    \item Halaman manajemen perubahan kuliah: Teks "Terkonfirmasi" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1,84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3,47:1 terhadap warna latar belakangnya.
-    \item Halaman entri jadwal dosen: Teks "Tambah" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete All" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
-    \item Halaman lihat jadwal dosen: Teks nama dosen di atas tabel yang sedang dipilih pengguna memiliki rasio kontras 2,47:1 terhadap warna latar belakangnya. Teks nama dosen di atas tabel yang sedang tidak dipilih pengguna memiliki rasio kontras 3,06:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+    \item Halaman \textit{login}: Teks "\textit{Login} dengan Google" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Petunjuk Penggunaan" memiliki rasio kontras 3.06:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_1}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-1}  
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman \textit{login}]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman \textit{login}}
+        \label{fig:1.4.6_contrast_enchanced_1}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net}.
+
+    \item Halaman cetak transkrip: Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4,44:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_2}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-2}  
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Cetak Transkrip]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Cetak Transkrip}
+        \label{fig:1.4.6_contrast_enchanced_2}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripRequest}.
+
+    \item Halaman manajemen cetak transkrip: Teks "Cari" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1,84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3,47:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_3}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-3}  
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Manajemen Cetak Transkrip]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Manajemen Cetak Transkrip}
+        \label{fig:1.4.6_contrast_enchanced_3}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripManage}.
+
+    \item Halaman perubahan kuliah: Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tambah Pertemuan Ekstra" memiliki rasio kontras 4,47:1 terhadap warna latar belakangnya. Teks "Hapus" memiliki rasio kontras 4,47:1 terhadap warna latar belakangnya. Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4,44:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Terkonfirmasi" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_4}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-4}  
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Perubahan Kuliah]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Perubahan Kuliah}
+        \label{fig:1.4.6_contrast_enchanced_4}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/PerubahanKuliahRequest}.
+    
+    \item Halaman manajemen perubahan kuliah: Teks "Terkonfirmasi" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1,84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3,47:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_5}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-5}  
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Manajemen Perubahan Kuliah]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Manajemen Perubahan Kuliah}
+        \label{fig:1.4.6_contrast_enchanced_5}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
+
+    \item Halaman entri jadwal dosen: Teks "Tambah" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete All" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Save" pada bagian "Edit Jadwal" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_6}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-6}  
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Entri Jadwal Dosen]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Entri Jadwal Dosen}
+        \label{fig:1.4.6_contrast_enchanced_6}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+    
+    \item Halaman lihat jadwal dosen: Teks nama dosen di atas tabel yang sedang dipilih pengguna memiliki rasio kontras 2,47:1 terhadap warna latar belakangnya. Teks nama dosen di atas tabel yang sedang tidak dipilih pengguna memiliki rasio kontras 3,06:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Tampilan pada website dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_7}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-7}  
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Lihat Jadwal Dosen]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Lihat Jadwal Dosen}
+        \label{fig:1.4.6_contrast_enchanced_7}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
 \end{itemize}
 
 \paragraph{Kriteria Sukses 1.4.7 \textit{Low or No Background Audio}}
