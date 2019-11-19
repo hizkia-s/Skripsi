@@ -81,10 +81,10 @@ Sukses atau tidaknya aplikasi BlueTape dalam mematuhi kriteria-kriteria sukses d
         & 2.4.10 & AAA & Tidak Sukses \\
         & 2.5.1 & A & Sukses \\
         & 2.5.2 & A & Sukses \\
-        & 2.5.3 & A & \\
+        & 2.5.3 & A & Tidak Sukses\\
         & 2.5.4 & A & Sukses \\
         & 2.5.5 & AAA & Tidak Sukses \\
-        & 2.5.6 & AAA & \\
+        & 2.5.6 & AAA & Sukses \\
 
         \bottomrule
     
@@ -840,9 +840,18 @@ Kriteria ini sukses dipatuhi karena setiap fungsionalitas yang dapat dioperasika
 
 \paragraph{Kriteria Sukses 2.5.3 \textit{Label in Name}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.5.3}
-()\\
+(Tidak Sukses)\\
 
+Kriteria ini tidak sukses dipatuhi karena setiap komponen masukan yang memiliki label yang menyertakan teks, nama komponen tersebut tidak mengandung teks yang disajikan secara visual. Contohnya dapat dilihat pada potongan kode \ref{lst:2.5.3_teks_label_pada_nama}.
 
+\begin{lstlisting}[label={lst:2.5.3_teks_label_pada_nama}, language=HTML, caption=Kriteria Sukses 2.5.3 - Teks Label Pada Atribut Nama]
+    <div class="large-4 column">
+        <label>Yang memohon:
+            <input type="email" name="requestByEmail" value="<?= $requestByEmail ?>" readonly="readonly"/>
+        </label>
+    </div>
+\end{lstlisting}
+Contoh tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripRequest}.
 
 \paragraph{Kriteria Sukses 2.5.4 \textit{Motion Actuation}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.5.4}
@@ -854,13 +863,21 @@ Kriteria ini sukses dipatuhi karena tidak terdapat fungsionalitas yang dapat dio
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.5.5}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena terdapat banyak elemen yang dapat menerima masukan kursor memiliki ukuran kurang dari 44 kali 44 piksel \textit{CSS}. 
+Kriteria ini tidak sukses dipatuhi karena terdapat banyak elemen yang dapat menerima masukan dan ukurannya diatur oleh penulis kursor namun memiliki ukuran kurang dari 44 kali 44 piksel \textit{CSS}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:2.5.5_target_size}. 
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.5]{kriteria-sukses-2-5-5-target-size}  
+    \caption[Kriteria Sukses 2.5.5 - Ukuran Elemen]{Kriteria Sukses 2.5.5 - Ukuran Elemen}
+    \label{fig:2.5.5_target_size}  
+\end{figure} 
+Contoh tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripRequest}.
 
 \paragraph{Kriteria Sukses 2.5.6 \textit{Concurrent Input Mechanisms}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.5.6}
-()\\
+(Sukses)\\
 
-
+Kriteria ini sukses dipatuhi karena konten web BlueTape tidak membatasi penggunaan modalitas masukan yang tersedia pada platform.
 
 \subsection{\textit{Understandable}}
 \label{subsec:kepatuhan_bluetape_understandable}
