@@ -132,8 +132,8 @@ Sukses atau tidaknya aplikasi BlueTape dalam mematuhi kriteria-kriteria sukses d
 
         \midrule
         & 4.1.1 & A & Tidak Sukses \\
-        & 4.1.2 & A & \\
-        & 4.1.3 & AA & \\
+        & 4.1.2 & A & Tidak Sukses \\
+        & 4.1.3 & AA & Tidak Sukses \\
 
         \bottomrule
     
@@ -609,14 +609,26 @@ Kriteria ini sukses dipatuhi karena setiap konten tambahan yang muncul sesaat ke
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.1.1}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena bagian navigasi menu tidak dapat dioperasikan dengan menggunakan \textit{keyboard}. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:2.1.1_keyboard}.
+Kriteria ini tidak sukses dipatuhi karena terdapat fungsionalitas konten yang tidak dapat dioperasikan melalui \textit{keyboard}, antara lain:
 
-\begin{figure}[H]
-	\centering  
-	\includegraphics[scale=0.5]{kriteria-sukses-2-1-1-keyboard}  
-    \caption[Kriteria Sukses 2.1.1 - Navigasi Dengan \textit{Keyboard}]{Kriteria Sukses 2.1.1 - Navigasi Dengan \textit{Keyboard}}
-    \label{fig:2.1.1_keyboard}  
-\end{figure} 
+\begin{itemize}
+    \item Pada bagian navigasi menu, pengguna tidak dapat memilih halaman yang diinginkan. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:2.1.1_keyboard_1}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-2-1-1-keyboard-1}  
+        \caption[Kriteria Sukses 2.1.1 - Penggunaan \textit{Keyboard} pada Menu Navigasi]{Kriteria Sukses 2.1.1 - Penggunaan \textit{Keyboard} pada Menu Navigasi}
+        \label{fig:2.1.1_keyboard_1}  
+    \end{figure} 
+
+    \item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:2.1.1_keyboard_2}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-2-1-1-keyboard-2}  
+        \caption[Kriteria Sukses 2.1.1 - Penggunaan \textit{Keyboard} pada Halaman Entri Jadwal Dosen]{Kriteria Sukses 2.1.1 - Penggunaan \textit{Keyboard} pada Halaman Entri Jadwal Dosen}
+        \label{fig:2.1.1_keyboard_2}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+\end{itemize}
 
 \paragraph{Kriteria Sukses 2.1.2 \textit{No Keyboard Trap}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.1.2}
@@ -628,14 +640,26 @@ Kriteria ini sukses dipatuhi karena pengguna dapat bernavigasi dari satu kompone
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.1.3}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena bagian navigasi menu tidak dapat dioperasikan dengan menggunakan \textit{keyboard}. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:2.1.3_keyboard_no_exception}.
+Kriteria ini tidak sukses dipatuhi karena terdapat fungsionalitas konten yang tidak dapat dioperasikan melalui \textit{keyboard}, antara lain:
 
-\begin{figure}[H]
-	\centering  
-	\includegraphics[scale=0.5]{kriteria-sukses-2-1-3-keyboard-no-exception}  
-    \caption[Kriteria Sukses 2.1.3 - Navigasi Dengan \textit{Keyboard}]{Kriteria Sukses 2.1.3 - Navigasi Dengan \textit{Keyboard}}
-    \label{fig:2.1.3_keyboard_no_exception}  
-\end{figure} 
+\begin{itemize}
+    \item Pada bagian navigasi menu, pengguna tidak dapat memilih halaman yang diinginkan. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:2.1.3_keyboard_1}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-2-1-3-keyboard-no-exception-1}  
+        \caption[Kriteria Sukses 2.1.3 - Penggunaan \textit{Keyboard} pada Menu Navigasi]{Kriteria Sukses 2.1.3 - Penggunaan \textit{Keyboard} pada Menu Navigasi}
+        \label{fig:2.1.3_keyboard_no_exception_1}  
+    \end{figure} 
+
+    \item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:2.1.3_keyboard_2}.
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-2-1-3-keyboard-no-exception-2}  
+        \caption[Kriteria Sukses 2.1.3 - Penggunaan \textit{Keyboard} pada Halaman Entri Jadwal Dosen]{Kriteria Sukses 2.1.3 - Penggunaan \textit{Keyboard} pada Halaman Entri Jadwal Dosen}
+        \label{fig:2.1.3_keyboard_no_exception_2}  
+    \end{figure} 
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+\end{itemize}
 
 \paragraph{Kriteria Sukses 2.1.4 \textit{Character Key Shortcuts}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.1.4}
@@ -1305,3 +1329,93 @@ Kriteria ini sukses dipatuhi karena pada halaman yang mewajibkan pengguna mengir
 \paragraph{Kriteria Sukses 4.1.1 \textit{Parsing}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_4.1.1}
 (Tidak Sukses)\\
+
+Kriteria ini tidak sukses dipatuhi karena terdapat beberapa kesalahan, antara lain:
+
+\begin{itemize}
+    \item Pada halaman cetak transkrip, terdapat penggunaan \textit{tag "time"} yang kurang tepat yaitu tidak terdapat \textit{tag} akhir. Letak kesalahan dapat dilihat pada potongan kode \ref{lst:4.1.1_parsing_halaman_cetak_transkrip}.
+    \begin{lstlisting}[label={lst:4.1.1_parsing_halaman_cetak_transkrip}, language=HTML, caption=Kriteria Sukses 4.1.1 - Kesalahan Elemen pada Halaman Cetak Transkrip]
+        <td>DPS</td>
+        <td><time datetime="2019-11-17 17:55:16">
+            Minggu, 17 November 2019</td>
+        <td>Selesai</td>
+    \end{lstlisting}
+    Tautan untuk halaman yang bermasalah: 
+    
+    \url{https://bluetape.azurewebsites.net/TranskripRequest}.
+    
+    \item Pada halaman manajemen cetak transkrip, terdapat penggunaan atribut \textit{"readonly"} yang kurang tepat yaitu terdapat nilai \textit{"true"} untuk atribut tersebut. Letak kesalahan dapat dilihat pada potongan kode \ref{lst:4.1.1_parsing_halaman_manajemen_cetak_transkrip}.
+    \begin{lstlisting}[label={lst:4.1.1_parsing_halaman_manajemen_cetak_transkrip}, language=HTML, caption=Kriteria Sukses 4.1.1 - Kesalahan Elemen pada Halaman Manajemen Cetak Transkrip]
+        <label>Email penjawab:
+            <input type="text" value="7315020@student.unpar.ac.id"
+            readonly="true"/>
+        </label>
+    \end{lstlisting}
+    Tautan untuk halaman yang bermasalah: 
+    
+    \url{https://bluetape.azurewebsites.net/TranskripManage}.
+
+    \item Pada halaman manajemen perubahan kuliah, terdapat penggunaan atribut \textit{"readonly"} yang kurang tepat yaitu terdapat nilai \textit{"true"} untuk atribut tersebut. Letak kesalahan dapat dilihat pada potongan kode \ref{lst:4.1.1_parsing_halaman_manajemen_perubahan_kuliah}.
+    \begin{lstlisting}[label={lst:4.1.1_parsing_halaman_manajemen_perubahan_kuliah}, language=HTML, caption=Kriteria Sukses 4.1.1 - Kesalahan Elemen pada Halaman Manajemen Perubahan Kuliah]
+        <label>Email penjawab:
+            <input type="text" value="7315020@student.unpar.ac.id" 
+            readonly="true"/>
+        </label>
+    \end{lstlisting}
+    Tautan untuk halaman yang bermasalah: 
+    
+    \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
+
+    \item Pada halaman entri jadwal dosen, terdapat elemen \textit{"HTML"} yang penempatannya tidak tepat yaitu \textit{tag "div"} berada sebelum \textit{tag "body"}. Letak kesalahan dapat dilihat pada potongan kode \ref{lst:4.1.1_parsing_halaman_entri_jadwal_dosen}.
+    \begin{lstlisting}[label={lst:4.1.1_parsing_halaman_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 4.1.1 - Kesalahan Elemen pada Halaman Entri Jadwal Dosen]
+        </head>
+        <div class="row">
+        </div>        
+        <body>
+    \end{lstlisting}
+    Tautan untuk halaman yang bermasalah: 
+    
+    \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+
+    \item Pada halaman lihat jadwal dosen, terdapat \textit{tag "a"} yang memiliki atribut yang tidak tepat yaitu atribut \textit{"a"}. Letak kesalahan dapat dilihat pada potongan kode \ref{lst:4.1.1_parsing_halaman_lihat_jadwal_dosen}. Selain itu, terdapat \textit{tag "div"} buka yang tidak disertai dengan \textit{tag "div"} tutup karena jumlah keduanya tidak sama.
+    \begin{lstlisting}[label={lst:4.1.1_parsing_halaman_lihat_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 4.1.1 - Kesalahan Elemen pada Halaman Lihat Jadwal Dosen]
+        <li class="tabs-title">
+            <a a href="#hal1">Hizkia Steven</a>
+        </li>
+        <li class="tabs-title">
+            <a a href="#hal2">Hizkia Steven</a>
+        </li>
+    \end{lstlisting}
+    Tautan untuk halaman yang bermasalah: 
+    
+    \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
+
+\end{itemize}
+
+\paragraph{Kriteria Sukses 4.1.2 \textit{Name, Role, Value}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_4.1.2}
+(Tidak Sukses)\\
+
+Kriteria ini tidak sukses dipatuhi karena pada halaman lihat jadwal dosen terdapat \textit{tag "a"} yang belum memiliki atribut \textit{role} yang tepat, yaitu pada bagian nama dosen yang sedang dipilih untuk ditampilkan jadwalnya. Letak kesalahan dapat dilihat pada potongan kode \ref{lst:4.1.2_role_halaman_lihat_jadwal_dosen}.
+
+\begin{lstlisting}[label={lst:4.1.2_role_halaman_lihat_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 4.1.1 - Atribut \textit{Role} pada Halaman Lihat Jadwal Dosen]
+    <li class="tabs-title is-active">
+        <a href="#hal0" aria-selected="true">HIZKIA STEVEN</a>
+    </li> 
+\end{lstlisting}
+Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
+
+\paragraph{Kriteria Sukses 4.1.3 \textit{Status Messages}}
+\label{par:kepatuhan_bluetape_kriteria_sukses_4.1.3}
+(Tidak Sukses)\\
+
+Kriteria ini tidak sukses dipatuhi karena setiap pesan status yang ditampilkan kepada pengguna tidak memiliki atribute \textit{"role"} dengan nilai \textit{"alert"} sehingga teknologi alat bantu tidak dapat mengidentifikasi serta menginformasikan pesan tersebut kepada pengguna. Letak kesalahan dapat dilihat pada potongan kode \ref{lst:4.1.3_pesan_status}.
+
+\begin{lstlisting}[label={lst:4.1.3_pesan_status}, language=PHP, caption=Kriteria Sukses 4.1.3 - Atribut pada Pesan Status]
+    <?php if (isset($_SESSION['error'])): ?>
+        <div class="callout alert"><?= $_SESSION['error'] ?></div>
+    <?php endif; ?>
+    <?php if (isset($_SESSION['info'])): ?>
+        <div class="callout primary"><?= $_SESSION['info'] ?></div>
+    <?php endif; ?>
+\end{lstlisting}
