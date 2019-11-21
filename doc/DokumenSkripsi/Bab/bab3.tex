@@ -109,13 +109,13 @@ Sukses atau tidaknya aplikasi BlueTape dalam mematuhi kriteria-kriteria sukses d
         & 3.2.1 & A & Sukses \\
         & 3.2.2 & A & Sukses \\
         & 3.2.3 & AA & Sukses \\
-        & 3.2.4 & AA & \\
+        & 3.2.4 & AA & Tidak Sukses \\
         & 3.2.5 & AAA & Sukses \\
         & 3.3.1 & A & Sukses \\
         & 3.3.2 & A & Tidak Sukses\\
         & 3.3.3 & AA & Sukses \\
         & 3.3.4 & AA & Sukses \\
-        & 3.3.5 & AAA & \\
+        & 3.3.5 & AAA & Tidak Sukses \\
         & 3.3.6 & AAA & Sukses \\
 
         \bottomrule
@@ -235,7 +235,7 @@ Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat kon
 
 Kriteria ini tidak sukses dipatuhi karena:
 \begin{itemize}
-    \item Terdapat penggunaan \textit{tag heading} yang tidak tepat secara struktur pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, manajemen perubahan kuliah, dan entri jadwal dosen. Contohnya dapat dilihat pada potongan kode \ref{lst:1.3.1_heading_tidak_tepat} yang menampilkan kesalahan penggunaan \textit{tag heading} pada halaman cetak transkrip.
+    \item Terdapat penggunaan \textit{tag heading} yang tidak tepat secara struktur pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, manajemen perubahan kuliah, dan entri jadwal dosen. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.1_heading_tidak_tepat} yang menampilkan kesalahan penggunaan \textit{tag heading} pada halaman cetak transkrip.
     \begin{lstlisting}[label={lst:1.3.1_heading_tidak_tepat}, language=HTML, caption=Kriteria Sukses 1.3.1 - Penggunaan \textit{Heading} Tidak Tepat]
         <div class="callout">
             <h5>Permohonan Baru</h5>
@@ -244,7 +244,7 @@ Kriteria ini tidak sukses dipatuhi karena:
     Contoh tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripRequest}.
 
     \item Pada halaman manajemen cetak transkrip, kolom masukan NPM tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom masukan tersebut. Kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.1_label_masukan_manajemen_cetak_transkrip}.
-    \begin{lstlisting}[label={lst:1.3.1_label_masukan_manajemen_cetak_transkrip}, language=HTML, caption=Kriteria Sukses 1.3.1 - Tidak Terdapat Label Pada Kolom Masukan di Halaman Manajemen Cetak Transkrip]
+    \begin{lstlisting}[label={lst:1.3.1_label_masukan_manajemen_cetak_transkrip}, language=HTML, caption=Kriteria Sukses 1.3.1 - Tidak Terdapat Label pada Kolom Masukan di Halaman Manajemen Cetak Transkrip]
         <span class="input-group-label">Cari NPM:</span>
         <input name="npm" class="input-group-field" type="text"
         placeholder="2013730013" maxlength="10" minlength="10"
@@ -254,7 +254,7 @@ Kriteria ini tidak sukses dipatuhi karena:
     Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripManage}.
 
     \item Pada halaman entri jadwal dosen, setiap kolom masukkan tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom-kolom masukan tersebut. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.1_label_masukan_entri_jadwal_dosen}.
-    \begin{lstlisting}[label={lst:1.3.1_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 1.3.1 - Tidak Terdapat Label Pada Kolom Masukan di Halaman Entri Jadwal Dosen]
+    \begin{lstlisting}[label={lst:1.3.1_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 1.3.1 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
         <input type="hidden" 
         name="<?= $this->security->get_csrf_token_name() ?>"
         value="<?= $this->security->get_csrf_hash() ?>" />
@@ -274,7 +274,7 @@ Kriteria ini sukses dipatuhi karena pada setiap halaman web BlueTape sudah memii
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.3}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah terdapat satu atau lebih komponen untuk mengoperasikan konten yang hanya mengandalkan satu komponen karakteristik indra yaitu bentuk. Komponen-komponen ini terletak pada kolom "Aksi" dan hanya ditampilkan dalam rupa ikon tanpa memiliki keterangan lebih detail. Contohnya dapat dilihat pada potongan kode \ref{lst:1.3.3_ikon_tanpa_keterangan}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.3.3_sensory_characteristics}.
+Kriteria ini tidak sukses dipatuhi karena pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah terdapat satu atau lebih komponen untuk mengoperasikan konten yang hanya mengandalkan satu komponen karakteristik indra yaitu bentuk. Komponen-komponen ini terletak pada kolom "Aksi" dan hanya ditampilkan dalam rupa ikon tanpa memiliki keterangan lebih detail. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.3_ikon_tanpa_keterangan}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.3.3_sensory_characteristics}.
 
 \begin{lstlisting}[label={lst:1.3.3_ikon_tanpa_keterangan}, language=HTML, caption=Kriteria Sukses 1.3.3 - Ikon Tanpa Keterangan]
     <td>
@@ -300,7 +300,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman cetak transkrip, manajeme
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.5]{kriteria-sukses-1-3-3-sensory-characteristics}  
-    \caption[Kriteria Sukses 1.3.3 - Ikon Pada Bagian Aksi]{Kriteria Sukses 1.3.3 - Ikon Pada Bagian Aksi}
+    \caption[Kriteria Sukses 1.3.3 - Ikon pada Bagian Aksi]{Kriteria Sukses 1.3.3 - Ikon pada Bagian Aksi}
     \label{fig:1.3.3_sensory_characteristics}  
 \end{figure} 
 Contoh tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
@@ -318,7 +318,7 @@ Kriteria ini sukses dipatuhi karena konten pada halaman web BlueTape dapat disaj
 Kriteria ini tidak sukses dipatuhi karena terdapat kolom-kolom masukan yang tidak memiliki label yang terasosiasi dengan kolom-kolom tersebut, meskipun setiap kolom masukan sudah memiliki atribut \textit{"autocomplete"} yang aktif. Bagian-bagian yang bermasalah, antara lain:
 \begin{itemize}
     \item Pada halaman manajemen cetak transkrip, kolom masukan NPM tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom masukan tersebut. Kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.5_label_masukan_manajemen_cetak_transkrip}.
-    \begin{lstlisting}[label={lst:1.3.5_label_masukan_manajemen_cetak_transkrip}, language=HTML, caption=Kriteria Sukses 1.3.5 - Tidak Terdapat Label Pada Kolom Masukan di Halaman Manajemen Cetak Transkrip]
+    \begin{lstlisting}[label={lst:1.3.5_label_masukan_manajemen_cetak_transkrip}, language=HTML, caption=Kriteria Sukses 1.3.5 - Tidak Terdapat Label pada Kolom Masukan di Halaman Manajemen Cetak Transkrip]
         <span class="input-group-label">Cari NPM:</span>
         <input name="npm" class="input-group-field" type="text"
         placeholder="2013730013" maxlength="10" minlength="10"
@@ -328,7 +328,7 @@ Kriteria ini tidak sukses dipatuhi karena terdapat kolom-kolom masukan yang tida
     Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripManage}.
 
     \item Pada halaman entri jadwal dosen, setiap kolom masukkan tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom-kolom masukan tersebut. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.5_label_masukan_entri_jadwal_dosen}.
-    \begin{lstlisting}[label={lst:1.3.5_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 1.3.5 - Tidak Terdapat Label Pada Kolom Masukan di Halaman Entri Jadwal Dosen]
+    \begin{lstlisting}[label={lst:1.3.5_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 1.3.5 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
         <input type="hidden" 
         name="<?= $this->security->get_csrf_token_name() ?>"
         value="<?= $this->security->get_csrf_hash() ?>" />
@@ -376,7 +376,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-1}  
-        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman \textit{login}]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman \textit{login}}
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman \textit{login}]{Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman \textit{login}}
         \label{fig:1.4.3_contrast_minimum_1}  
     \end{figure} 
     Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net}.
@@ -385,7 +385,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-2}  
-        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Cetak Transkrip]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Cetak Transkrip}
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman Cetak Transkrip]{Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman Cetak Transkrip}
         \label{fig:1.4.3_contrast_minimum_2}  
     \end{figure} 
     Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripRequest}.
@@ -394,7 +394,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-3}  
-        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Manajemen Cetak Transkrip]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Manajemen Cetak Transkrip}
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman Manajemen Cetak Transkrip]{Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman Manajemen Cetak Transkrip}
         \label{fig:1.4.3_contrast_minimum_3}  
     \end{figure} 
     Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripManage}.
@@ -403,25 +403,29 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-4}  
-        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Perubahan Kuliah]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Perubahan Kuliah}
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman Perubahan Kuliah]{Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman Perubahan Kuliah}
         \label{fig:1.4.3_contrast_minimum_4}  
     \end{figure} 
-    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/PerubahanKuliahRequest}.
+    Tautan untuk halaman yang bermasalah: 
+
+    \url{https://bluetape.azurewebsites.net/PerubahanKuliahRequest}.
     
     \item Halaman manajemen perubahan kuliah: Teks "Terkonfirmasi" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1,84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3,47:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_5}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-5}  
-        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Manajemen Perubahan Kuliah]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Manajemen Perubahan Kuliah}
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman Manajemen Perubahan Kuliah]{Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman Manajemen Perubahan Kuliah}
         \label{fig:1.4.3_contrast_minimum_5}  
     \end{figure} 
-    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
+    Tautan untuk halaman yang bermasalah: 
+    
+    \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
 
     \item Halaman entri jadwal dosen: Teks "Tambah" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete All" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Save" pada bagian "Edit Jadwal" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_6}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-6}  
-        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Entri Jadwal Dosen]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Entri Jadwal Dosen}
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman Entri Jadwal Dosen]{Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman Entri Jadwal Dosen}
         \label{fig:1.4.3_contrast_minimum_6}  
     \end{figure} 
     Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
@@ -430,7 +434,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-3-contrast-minimum-7}  
-        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Lihat Jadwal Dosen]{Kriteria Sukses 1.4.3 - Kontras Elemen Pada Halaman Lihat Jadwal Dosen}
+        \caption[Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman Lihat Jadwal Dosen]{Kriteria Sukses 1.4.3 - Kontras Elemen pada Halaman Lihat Jadwal Dosen}
         \label{fig:1.4.3_contrast_minimum_7}  
     \end{figure} 
     Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
@@ -459,7 +463,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-1}  
-        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman \textit{login}]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman \textit{login}}
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman \textit{login}]{Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman \textit{login}}
         \label{fig:1.4.6_contrast_enchanced_1}  
     \end{figure} 
     Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net}.
@@ -468,7 +472,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-2}  
-        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Cetak Transkrip]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Cetak Transkrip}
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman Cetak Transkrip]{Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman Cetak Transkrip}
         \label{fig:1.4.6_contrast_enchanced_2}  
     \end{figure} 
     Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripRequest}.
@@ -477,7 +481,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-3}  
-        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Manajemen Cetak Transkrip]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Manajemen Cetak Transkrip}
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman Manajemen Cetak Transkrip]{Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman Manajemen Cetak Transkrip}
         \label{fig:1.4.6_contrast_enchanced_3}  
     \end{figure} 
     Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripManage}.
@@ -486,25 +490,29 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-4}  
-        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Perubahan Kuliah]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Perubahan Kuliah}
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman Perubahan Kuliah]{Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman Perubahan Kuliah}
         \label{fig:1.4.6_contrast_enchanced_4}  
     \end{figure} 
-    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/PerubahanKuliahRequest}.
+    Tautan untuk halaman yang bermasalah: 
+    
+    \url{https://bluetape.azurewebsites.net/PerubahanKuliahRequest}.
     
     \item Halaman manajemen perubahan kuliah: Teks "Terkonfirmasi" di kolom status pada tabel memiliki rasio kontras 1,79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1,84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3,44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3,47:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_5}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-5}  
-        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Manajemen Perubahan Kuliah]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Manajemen Perubahan Kuliah}
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman Manajemen Perubahan Kuliah]{Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman Manajemen Perubahan Kuliah}
         \label{fig:1.4.6_contrast_enchanced_5}  
     \end{figure} 
-    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
+    Tautan untuk halaman yang bermasalah: 
+    
+    \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
 
     \item Halaman entri jadwal dosen: Teks "Tambah" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete All" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Save" pada bagian "Edit Jadwal" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_6}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-6}  
-        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Entri Jadwal Dosen]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Entri Jadwal Dosen}
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman Entri Jadwal Dosen]{Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman Entri Jadwal Dosen}
         \label{fig:1.4.6_contrast_enchanced_6}  
     \end{figure} 
     Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
@@ -513,7 +521,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.5]{kriteria-sukses-1-4-6-contrast-enchanced-7}  
-        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Lihat Jadwal Dosen]{Kriteria Sukses 1.4.6 - Kontras Elemen Pada Halaman Lihat Jadwal Dosen}
+        \caption[Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman Lihat Jadwal Dosen]{Kriteria Sukses 1.4.6 - Kontras Elemen pada Halaman Lihat Jadwal Dosen}
         \label{fig:1.4.6_contrast_enchanced_7}  
     \end{figure} 
     Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
@@ -554,7 +562,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape, bagian navi
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.5]{kriteria-sukses-1-4-10-reflow}  
-    \caption[Kriteria Sukses 1.4.10 - Horizontal \textit{Scroll} Pada Navigasi]{Kriteria Sukses 1.4.10 - Horizontal \textit{Scroll} Pada Navigasi}
+    \caption[Kriteria Sukses 1.4.10 - Horizontal \textit{Scroll} pada Navigasi]{Kriteria Sukses 1.4.10 - Horizontal \textit{Scroll} pada Navigasi}
     \label{fig:1.4.10_reflow}  
 \end{figure} 
 
@@ -567,7 +575,7 @@ Kriteria ini diabaikan karena terlalu sulit untuk melakukan pengukuran dan menda
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.5]{kriteria-sukses-1-4-11-non-text-contrast}  
-    \caption[Kriteria Sukses 1.4.11 - Ikon Pada Bagian Aksi]{Kriteria Sukses 1.4.11 - Ikon Pada Bagian Aksi}
+    \caption[Kriteria Sukses 1.4.11 - Ikon pada Bagian Aksi]{Kriteria Sukses 1.4.11 - Ikon pada Bagian Aksi}
     \label{fig:1.4.11_non_text_contrast}  
 \end{figure} 
 Contoh tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
@@ -751,7 +759,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape hanya tersed
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.5]{kriteria-sukses-2-4-5-multiple-ways}  
-    \caption[Kriteria Sukses 2.4.5 - Menemukan Halaman Web Pada Navigasi]{Kriteria Sukses 2.4.5 - Menemukan Halaman Web Pada Navigasi}
+    \caption[Kriteria Sukses 2.4.5 - Menemukan Halaman Web pada Navigasi]{Kriteria Sukses 2.4.5 - Menemukan Halaman Web pada Navigasi}
     \label{fig:2.4.5_multiple_ways}  
 \end{figure}
 
@@ -761,7 +769,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape hanya tersed
 
 Kriteria ini tidak sukses dipatuhi karena pada halaman entri jadwal dosen, setiap elemen masukan tidak memiliki label yang menjelaskan tujuan dari elemen tersebut. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:2.4.6_label_masukan_entri_jadwal_dosen}.
 
-\begin{lstlisting}[label={lst:2.4.6_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 2.4.6 - Tidak Terdapat Label Pada Kolom Masukan di Halaman Entri Jadwal Dosen]
+\begin{lstlisting}[label={lst:2.4.6_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 2.4.6 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
     <input type="hidden" 
     name="<?= $this->security->get_csrf_token_name() ?>"
     value="<?= $this->security->get_csrf_hash() ?>" />
@@ -814,7 +822,7 @@ Contoh tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.4.10}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena terdapat penggunaan \textit{tag heading} yang tidak tepat secara struktur pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, manajemen perubahan kuliah, dan entri jadwal dosen. Contohnya dapat dilihat pada potongan kode \ref{lst:1.3.1_heading_tidak_tepat} yang menampilkan kesalahan penggunaan \textit{tag heading} pada halaman cetak transkrip.
+Kriteria ini tidak sukses dipatuhi karena terdapat penggunaan \textit{tag heading} yang tidak tepat secara struktur pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, manajemen perubahan kuliah, dan entri jadwal dosen. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.1_heading_tidak_tepat} yang menampilkan kesalahan penggunaan \textit{tag heading} pada halaman cetak transkrip.
 
 \begin{lstlisting}[label={lst:2.4.10_heading_tidak_tepat}, language=HTML, caption=Kriteria Sukses 2.4.10 - Penggunaan \textit{Heading} Tidak Tepat]
     <div class="callout">
@@ -842,16 +850,19 @@ Kriteria ini sukses dipatuhi karena setiap fungsionalitas yang dapat dioperasika
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.5.3}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena setiap komponen masukan yang memiliki label yang menyertakan teks, nama komponen tersebut tidak mengandung teks yang disajikan secara visual. Contohnya dapat dilihat pada potongan kode \ref{lst:2.5.3_teks_label_pada_nama}.
+Kriteria ini tidak sukses dipatuhi karena setiap komponen masukan yang memiliki label yang menyertakan teks, nama komponen tersebut tidak mengandung teks yang disajikan secara visual. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:2.5.3_teks_label_pada_nama}.
 
-\begin{lstlisting}[label={lst:2.5.3_teks_label_pada_nama}, language=HTML, caption=Kriteria Sukses 2.5.3 - Teks Label Pada Atribut Nama]
+\begin{lstlisting}[label={lst:2.5.3_teks_label_pada_nama}, language=HTML, caption=Kriteria Sukses 2.5.3 - Teks Label pada Atribut Nama]
     <div class="large-4 column">
         <label>Yang memohon:
-            <input type="email" name="requestByEmail" value="<?= $requestByEmail ?>" readonly="readonly"/>
+            <input type="email" name="requestByEmail" 
+            value="<?= $requestByEmail ?>" readonly="readonly"/>
         </label>
     </div>
 \end{lstlisting}
-Contoh tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripRequest}.
+Contoh tautan untuk halaman yang bermasalah: 
+
+\url{https://bluetape.azurewebsites.net/TranskripRequest}.
 
 \paragraph{Kriteria Sukses 2.5.4 \textit{Motion Actuation}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.5.4}
@@ -889,7 +900,35 @@ Kriteria ini sukses dipatuhi karena konten web BlueTape tidak membatasi pengguna
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.1.1}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena bahasa manusia \textit{default} yang digunakan pada halaman web BlueTape kurang sesuai dengan konten yang disajikan pada halaman tersebut.
+Kriteria ini tidak sukses dipatuhi karena bahasa manusia \textit{default} yang digunakan pada halaman web BlueTape tidak sesuai dengan konten yang disajikan pada halaman tersebut. Bahasa manusia \textit{default} yang digunakan pada halaman web BlueTape adalah bahasa Inggris sementara konten disajikan dalam bahasa Indonesia. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.1_bahasa_halaman}.
+
+\begin{lstlisting}[label={lst:3.1.1_bahasa_halaman}, language=HTML, caption=Kriteria Sukses 3.1.1 - Bahasa yang Tidak Sesuai]
+    // Setelan bahasa diatur menjadi bahasa Inggris
+    ?><!doctype html>
+        <html class="no-js" lang="en">
+    <?php $this->load->view('templates/head_loggedin'); ?>
+
+    // Konten disajikan dalam bahasa Indonesia
+    <div class="large-4 column">
+        <label>Yang memohon:
+            <input type="email" name="requestByEmail" 
+            value="<?= $requestByEmail ?>" readonly="readonly"/>
+        </label>
+    </div>
+    <div class="large-4 column">
+        <label>NPM:
+            <input type="text" value="<?= $requestByNPM ?>" 
+            readonly="readonly"/>
+        </label>
+    </div>
+    <div class="large-4 column">
+        <label>Nama:
+            <input type="text" name="requestByName" 
+            value="<?= $requestByName ?>" readonly="readonly"/>
+        </label>
+    </div>
+\end{lstlisting}
+Contoh tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripRequest}.
 
 \paragraph{Kriteria Sukses 3.1.2 \textit{Language of Parts}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.1.2}
@@ -898,9 +937,69 @@ Kriteria ini tidak sukses dipatuhi karena bahasa manusia \textit{default} yang d
 Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat konten teks dalam bahasa Inggris namun konten tersebut tidak memiliki atribut \textit{lang}. Konten yang dimaksud adalah:
 
 \begin{itemize}
-    \item Pada bagian navigasi menu terdapat elemen dengan teks "Logout".
-    \item Pada halaman entri jadwal dosen terdapat tombol dengan teks "Delete All".
-    \item Pada halaman entri jadwal dosen bagian "Edit Jadwal" terdapat tombol dengan teks "Save" dan tombol dengan teks "Delete".
+    \item Pada bagian navigasi menu terdapat elemen dengan teks "Logout". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.2_bahasa_pada_navigasi}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.2_language_of_parts_1}. 
+    \begin{lstlisting}[label={lst:3.1.2_bahasa_pada_navigasi}, language=HTML, caption=Kriteria Sukses 3.1.2 - Bahasa yang Tidak Sesuai pada Menu Navigasi]
+        <ul class="menu">
+            <li><a href="/auth/logout">Logout</a></li>
+        </ul>
+    \end{lstlisting}
+    
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-3-1-2-language-of-parts-1}  
+        \caption[Kriteria Sukses 3.1.2 - Bahasa pada Menu Navigasi]{Kriteria Sukses 3.1.2 - Bahasa pada Menu Navigasi}
+        \label{fig:3.1.2_language_of_parts_1}  
+    \end{figure}
+
+    \item Pada halaman entri jadwal dosen terdapat tombol dengan teks "Delete All". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.2_bahasa_pada_halaman_entri_jadwal_dosen_1}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.2_language_of_parts_2}. 
+    \begin{lstlisting}[label={lst:3.1.2_bahasa_pada_halaman_entri_jadwal_dosen_1}, language=HTML, caption=Kriteria Sukses 3.1.2 - Bahasa yang Tidak Sesuai pada Halaman Entri Jadwal Dosen 1]
+        ?>
+        <a href="/EntriJadwalDosen/deleteAll/export/" 
+        class="alert button" onClick="return konfirmasi();">Delete All</a>
+        <a href="/EntriJadwalDosen/export/" 
+        class="button">Ekspor ke XLS</a><
+    \end{lstlisting}
+    
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-3-1-2-language-of-parts-2}  
+        \caption[Kriteria Sukses 3.1.2 - Bahasa pada Halaman Entri Jadwal Dosen 1]{Kriteria Sukses 3.1.2 - Bahasa pada Halaman Entri Jadwal Dosen 1}
+        \label{fig:3.1.2_language_of_parts_2}  
+    \end{figure}
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+
+    \item Pada halaman entri jadwal dosen bagian "Edit Jadwal" terdapat tombol dengan teks "Save" dan tombol dengan teks "Delete". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.2_bahasa_pada_halaman_entri_jadwal_dosen_2}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.2_language_of_parts_3}. 
+    \begin{lstlisting}[label={lst:3.1.2_bahasa_pada_halaman_entri_jadwal_dosen_2}, language=HTML, caption=Kriteria Sukses 3.1.2 - Bahasa yang Tidak Sesuai pada Halaman Entri Jadwal Dosen 2]
+        // Tombol "Save"
+        <div class="large-2 column">
+            <input type="submit" name="submitId
+            <?php echo $dataHariIni->id ?>" class="button" 
+            value="Save">
+            </form>
+        </div>
+
+        // Tombol "Delete"
+        <form name="formDelete<?php echo $dataHariIni->id ?>" 
+        method="POST" 
+        action="/EntriJadwalDosen/delete/<?php echo $dataHariIni->id ?>">    
+            <input type="hidden" 
+            name="<?= $this->security->get_csrf_token_name() ?>" 
+            value="<?= $this->security->get_csrf_hash() ?>" />
+            <input type="submit" 
+            id="deletebtn<?php echo $dataHariIni->id ?>" 
+            name="deletebtn<?php echo $dataHariIni->id ?>" 
+            class="alert button" value="Delete">
+        </form><div>
+    \end{lstlisting}
+    
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-3-1-2-language-of-parts-3}  
+        \caption[Kriteria Sukses 3.1.2 - Bahasa pada Halaman Entri Jadwal Dosen 2]{Kriteria Sukses 3.1.2 - Bahasa pada Halaman Entri Jadwal Dosen 2}
+        \label{fig:3.1.2_language_of_parts_3}  
+    \end{figure}
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+
 \end{itemize}
 
 \paragraph{Kriteria Sukses 3.1.3 \textit{Unusual Words}}
@@ -910,9 +1009,59 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat kon
 Kriteria ini tidak sukses dipatuhi karena terdapat kata-kata yang digunakan dengan cara yang tidak lazim atau terbatas namun tidak tersedia mekanisme untuk mengidentifikasi definisi spesifik dari kata-kata tersebut. Kata-kata yang dimaksud adalah:
 
 \begin{itemize}
-    \item Pada halaman perubahan kuliah, tombol dengan teks "Tambah Pertemuan Ekstra".
-    \item Pada halaman entri jadwal dosen, tombol dengan teks "Ekspor ke XLS".
-    \item Pada halaman lihat jadwal dosen, tombol dengan teks "Ekspor ke XLS".
+    \item Pada halaman perubahan kuliah, tombol dengan teks "Tambah Pertemuan Ekstra". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.3_kata_pada_halaman_perubahan_kuliah}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.3_unusual_words_1}.
+    \begin{lstlisting}[label={lst:3.1.3_kata_pada_halaman_perubahan_kuliah}, language=HTML, caption=Kriteria Sukses 3.1.3 - Kata yang Tak Lazim pada Halaman Perubahan Kuliah]
+        <div class="large-12 column">
+            <input type="submit" class="button" 
+            value="Kirim Permohonan">
+            <a href="#" id="addToButton" 
+            class="button secondary">Tambah Pertemuan Ekstra</a>
+        </div>
+    \end{lstlisting}
+    
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-3-1-3-unusual-words-1}  
+        \caption[Kriteria Sukses 3.1.3 - Kata yang Tak Lazim pada Halaman Perubahan Kuliah]{Kriteria Sukses 3.1.3 - Kata yang Tak Lazim pada Halaman Perubahan Kuliah}
+        \label{fig:3.1.3_unusual_words_1}  
+    \end{figure}
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/PerubahanKuliahRequest}.
+
+    \item Pada halaman entri jadwal dosen, tombol dengan teks "Ekspor ke XLS". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.3_kata_pada_halaman_entri_jadwal_dosen}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.3_unusual_words_2}.
+    \begin{lstlisting}[label={lst:3.1.3_kata_pada_halaman_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 3.1.3 - Kata yang Tak Lazim pada Halaman Entri Jadwal Dosen]
+        <a href="/EntriJadwalDosen/deleteAll/export/"
+        class="alert button" onClick="return konfirmasi();">Delete All</a>
+        <a href="/EntriJadwalDosen/export/" 
+        class="button">Ekspor ke XLS</a>
+        <script>
+    \end{lstlisting}
+    
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-3-1-3-unusual-words-2}  
+        \caption[Kriteria Sukses 3.1.3 - Kata yang Tak Lazim pada Halaman Entri Jadwal Dosen]{Kriteria Sukses 3.1.3 - Kata yang Tak Lazim pada Halaman Entri Jadwal Dosen}
+        \label{fig:3.1.3_unusual_words_2}  
+    \end{figure}
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+
+    \item Pada halaman lihat jadwal dosen, tombol dengan teks "Ekspor ke XLS". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.3_kata_pada_halaman_lihat_jadwal_dosen}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.3_unusual_words_3}.
+    \begin{lstlisting}[label={lst:3.1.3_kata_pada_halaman_lihat_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 3.1.3 - Kata yang Tak Lazim pada Halaman Lihat Jadwal Dosen]
+            <?php
+            }
+            ?>
+        <a href="/LihatJadwalDosen/export/" 
+        class="button">Ekspor ke XLS</a>
+        </div> 
+    \end{lstlisting}
+    
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-3-1-3-unusual-words-3}  
+        \caption[Kriteria Sukses 3.1.3 - Kata yang Tak Lazim pada Halaman Lihat Jadwal Dosen]{Kriteria Sukses 3.1.3 - Kata yang Tak Lazim pada Halaman Lihat Jadwal Dosen}
+        \label{fig:3.1.3_unusual_words_3}  
+    \end{figure}
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
+
 \end{itemize}
 
 \paragraph{Kriteria Sukses 3.1.4 \textit{Abbreviations}}
@@ -922,12 +1071,118 @@ Kriteria ini tidak sukses dipatuhi karena terdapat kata-kata yang digunakan deng
 Kriteria ini tidak sukses dipatuhi karena tidak tersedia mekanisme untuk mengidentifikasi kepanjangan dari singkatan. Singkatan-singkatan yang terdapat pada halaman web BlueTape, antara lain:
 
 \begin{itemize}
-    \item Pada halaman cetak transkrip terdapat singkatan "NPM" dan "DPS".
-    \item Pada halaman manajemen cetak transkrip terdapat singkatan "NPM".
-    \item Pada halaman perubahan kuliah terdapat singkatan "MK".
-    \item Pada halaman manajemen perubahan kuliah terdapat singkatan "MK".
-    \item Pada halaman entri jadwal dosen terdapat singkatan "XLS".
-    \item Pada halaman lihat jadwal dosen terdapat singkatan "XLS".
+    \item Pada halaman cetak transkrip terdapat singkatan "NPM" dan "DPS". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.4_singkatan_pada_halaman_cetak_transkrip}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.4_abbreviations_1}.
+    \begin{lstlisting}[label={lst:3.1.4_singkatan_pada_halaman_cetak_transkrip}, language=HTML, caption=Kriteria Sukses 3.1.4 - Singkatan pada Halaman Cetak Transkrip]
+        // Singkatan "NPM"
+        <div class="large-4 column">
+            <label>NPM:
+                <input type="text" value="<?= $requestByNPM ?>" 
+                readonly="readonly"/>
+            </label>
+        </div>
+        
+        // Singkatan "DPS"
+        <select name="requestType">
+            <option value="DPS">DPS (Seluruh Semester, Bilingual)</option>
+        </select>
+    \end{lstlisting}
+
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-3-1-4-abbreviations-1}  
+        \caption[Kriteria Sukses 3.1.4 - Singkatan pada Halaman Cetak Transkrip]{Kriteria Sukses 3.1.4 - Singkatan pada Halaman Cetak Transkrip}
+        \label{fig:3.1.4_abbreviations_1}  
+    \end{figure}
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripRequest}.
+
+    \item Pada halaman manajemen cetak transkrip terdapat singkatan "NPM". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.4_singkatan_pada_halaman_manajemen_cetak_transkrip}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.4_abbreviations_2}.
+    \begin{lstlisting}[label={lst:3.1.4_singkatan_pada_halaman_manajemen_cetak_transkrip}, language=HTML, caption=Kriteria Sukses 3.1.4 - Singkatan pada Halaman Manajemen Cetak Transkrip]
+        <div class="input-group">
+            <span class="input-group-label">Cari NPM:</span>
+            <input name="npm" class="input-group-field" type="text" 
+            placeholder="2013730013" maxlength="10" minlength="10"
+            <?= $npmQuery === NULL ? '' : " value='$npmQuery'" ?>/>
+    \end{lstlisting}
+
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-3-1-4-abbreviations-2}  
+        \caption[Kriteria Sukses 3.1.4 - Singkatan pada Halaman Manajemen Cetak Transkrip]{Kriteria Sukses 3.1.4 - Singkatan pada Halaman Manajemen Cetak Transkrip}
+        \label{fig:3.1.4_abbreviations_2}  
+    \end{figure}
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/TranskripManage}.
+
+    \item Pada halaman perubahan kuliah terdapat singkatan "MK". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.4_singkatan_pada_halaman_perubahan_kuliah}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.4_abbreviations_3}.
+    \begin{lstlisting}[label={lst:3.1.4_singkatan_pada_halaman_perubahan_kuliah}, language=HTML, caption=Kriteria Sukses 3.1.4 - Singkatan pada Halaman Perubahan Kuliah]
+        <div class="large-2 column">
+            <label>Kode MK:
+                <input type="text" name="mataKuliahCode" required 
+                maxlength="9" pattern="[A-Z]{3}[0-9]{3}([0-9]{3})?" 
+                title="Kode MK dalam format XYZ123"/>
+    \end{lstlisting}
+
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-3-1-4-abbreviations-3}  
+        \caption[Kriteria Sukses 3.1.4 - Singkatan pada Halaman Perubahan Kuliah]{Kriteria Sukses 3.1.4 - Singkatan pada Halaman Perubahan Kuliah}
+        \label{fig:3.1.4_abbreviations_3}  
+    \end{figure}
+    Tautan untuk halaman yang bermasalah: 
+    
+    \url{https://bluetape.azurewebsites.net/PerubahanKuliahRequest}.
+
+    \item Pada halaman manajemen perubahan kuliah terdapat singkatan "MK". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.4_singkatan_pada_halaman_manajemen_perubahan_kuliah}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.4_abbreviations_4}.
+    \begin{lstlisting}[label={lst:3.1.4_singkatan_pada_halaman_manajemen_perubahan_kuliah}, language=HTML, caption=Kriteria Sukses 3.1.4 - Singkatan pada Halaman Manajemen Perubahan Kuliah]
+        <th>Tanggal Permohonan</th>
+        <th>Kode MK</th>
+        <th>Perubahan</th>
+    \end{lstlisting}
+
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-3-1-4-abbreviations-4}  
+        \caption[Kriteria Sukses 3.1.4 - Singkatan pada Halaman Manajemen Perubahan Kuliah]{Kriteria Sukses 3.1.4 - Singkatan pada Halaman Manajemen Perubahan Kuliah}
+        \label{fig:3.1.4_abbreviations_4}  
+    \end{figure}
+    Tautan untuk halaman yang bermasalah: 
+    
+    \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
+
+    \item Pada halaman entri jadwal dosen terdapat singkatan "XLS". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.4_singkatan_pada_halaman_entri_jadwal_dosen}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.4_abbreviations_5}.
+    \begin{lstlisting}[label={lst:3.1.4_singkatan_pada_halaman_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 3.1.4 - Singkatan pada Halaman Entri Jadwal Dosen]
+        <a href="/EntriJadwalDosen/deleteAll/export/" 
+        class="alert button" 
+        onClick="return konfirmasi();">Delete All</a>
+        <a href="/EntriJadwalDosen/export/" 
+        class="button">Ekspor ke XLS</a>
+        <script>
+    \end{lstlisting}
+
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-3-1-4-abbreviations-5}  
+        \caption[Kriteria Sukses 3.1.4 - Singkatan pada Halaman Entri Jadwal Dosen]{Kriteria Sukses 3.1.4 - Singkatan pada Halaman Entri Jadwal Dosen}
+        \label{fig:3.1.4_abbreviations_5}  
+    \end{figure}
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+
+    \item Pada halaman lihat jadwal dosen terdapat singkatan "XLS". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.4_singkatan_pada_halaman_lihat_jadwal_dosen}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.4_abbreviations_6}.
+    \begin{lstlisting}[label={lst:3.1.4_singkatan_pada_halaman_lihat_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 3.1.4 - Singkatan pada Halaman Lihat Jadwal Dosen]
+        <?php
+        }
+        ?>
+        <a href="/LihatJadwalDosen/export/" 
+        class="button">Ekspor ke XLS</a>
+        </div> 
+    \end{lstlisting}
+
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.5]{kriteria-sukses-3-1-4-abbreviations-6}  
+        \caption[Kriteria Sukses 3.1.4 - Singkatan pada Halaman Lihat Jadwal Dosen]{Kriteria Sukses 3.1.4 - Singkatan pada Halaman Lihat Jadwal Dosen}
+        \label{fig:3.1.4_abbreviations_6}  
+    \end{figure}
+    Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
 \end{itemize}
 
 \paragraph{Kriteria Sukses 3.1.5 \textit{Reading Level}}
@@ -965,9 +1220,18 @@ Kriteria ini sukses dipatuhi karena bagian navigasi menu yang muncul berulang pa
 
 \paragraph{Kriteria Sukses 3.2.4 \textit{Consistent Identification}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.2.4}
-()\\
+(Tidak Sukses)\\
 
+Kriteria ini tidak sukses dipatuhi karena terdapat tombol yang memiliki fungsionalitas yang sama yaitu untuk menghapus namun diidentifikasikan dengan nama yang berbeda. Tombol yang dimaksud adalah tombol "Delete" pada bagian "Edit Jadwal" di halaman entri jadwal dosen. Tombol dengan fungsionalitas yang sama di halaman lain diidentifikasi dengan nama "Hapus". Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.2.4_consistent_identification}. 
 
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.5]{kriteria-sukses-3-2-4-consistent-identification}  
+	\caption[Kriteria Sukses 3.2.4 - Identifikasi pada Tombol]{Kriteria Sukses 3.2.4 - Identifikasi pada Tombol}
+	\label{fig:3.2.4_consistent_identification}  
+\end{figure}
+
+Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
 
 \paragraph{Kriteria Sukses 3.2.5 \textit{Change on Request}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.2.5}
@@ -988,7 +1252,16 @@ Kriteria ini sukses dipatuhi karena ketika terdapat eror masukan yang terdeteksi
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.3.2}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman entri jadwal dosen, setiap elemen masukan tidak memiliki label yang menjelaskan tujuan dari elemen tersebut.
+Kriteria ini tidak sukses dipatuhi karena pada halaman entri jadwal dosen, setiap elemen masukan tidak memiliki label yang menjelaskan tujuan dari elemen tersebut. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:3.3.2_label_masukan_entri_jadwal_dosen}.
+
+\begin{lstlisting}[label={lst:3.3.2_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 3.3.2 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
+    <input type="hidden" 
+    name="<?= $this->security->get_csrf_token_name() ?>"
+    value="<?= $this->security->get_csrf_hash() ?>" />
+    Hari
+    <select name="hari">
+\end{lstlisting}
+Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
 
 \paragraph{Kriteria Sukses 3.3.3 \textit{Error Suggestion}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.3.3}
@@ -1004,9 +1277,18 @@ Kriteria ini sukses dipatuhi karena pada halaman yang mengirim tanggapan penggun
 
 \paragraph{Kriteria Sukses 3.3.5 \textit{Help}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.3.5}
-()\\
+(Tidak Sukses)\\
 
+Kriteria ini tidak sukses dipatuhi karena pada halaman entri jadwal dosen, setiap elemen masukan tidak memiliki label yang menjelaskan tujuan dari elemen tersebut. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:3.3.5_label_masukan_entri_jadwal_dosen}.
 
+\begin{lstlisting}[label={lst:3.3.5_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 3.3.5 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
+    <input type="hidden" 
+    name="<?= $this->security->get_csrf_token_name() ?>"
+    value="<?= $this->security->get_csrf_hash() ?>" />
+    Hari
+    <select name="hari">
+\end{lstlisting}
+Tautan untuk halaman yang bermasalah: \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
 
 \paragraph{Kriteria Sukses 3.3.6 \textit{Error Prevention (All)}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.3.6}
