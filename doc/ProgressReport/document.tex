@@ -114,6 +114,709 @@ Detail bagian pekerjaan skripsi sesuai dengan rencana kerja/laporan perkembangan
 		\item \textbf{Melakukan studi literatur mengenai \textit{WCAG} 2.1.}\\
 		{\bf Status :} Ada sejak rencana kerja skripsi.\\
 		{\bf Hasil :} Sudah dilakukan. Hasil yang didapat dari mempelajari \textit{WCAG} 2.1 adalah sebagai berikut:
+
+		%2.1 WCAG 2.1%
+		\section*{\textit{WCAG 2.1}}
+		\label{sec:wcag_2.1} 
+		\textit{Web Content Accessibility Guidelines (WCAG)} 2.1 adalah versi ketiga dari \textit{WCAG} yang dirilis pada tanggal 5 Juni 2018 \cite{WCAG:2.1}. Versi pertama dari \textit{WCAG} adalah \textit{WCAG} 1.0 yang dirilis pada tanggal 5 Mei 1999 dan versi kedua adalah \textit{WCAG} 2.0 yang dirilis pada tanggal 11 Desember 2008. \textit{WCAG} 2.1 dikembangkan oleh World Wide Web Consortium (W3C) melalui kerja sama dengan individu dan organisasi di seluruh dunia, dengan tujuan memberikan standar bersama untuk aksesibilitas konten web yang memenuhi kebutuhan individu, organisasi, dan pemerintah internasional. 
+
+		\textit{WCAG} 2.1 dibuat untuk meningkatkan versi sebelumnya yaitu \textit{WCAG} 2.0. Pada \textit{WCAG} 2.1 terdapat penambahan kriteria sukses baru beserta definisi-definisi pendukungnya, pedoman untuk mengatur penambahan, dan beberapa tambahan pada bagian tingkat kepatuhan. Dalam \textit{WCAG} 2.1 terdapat 3 tingkat kriteria sukses yaitu A, AA, dan AAA yang digunakan sebagai acuan untuk menilai tingkat kepatuhan sebuah situs web terhadap \textit{WCAG} 2.1.
+
+		%2.1.1 Perceivable%
+		\subsection*{\textit{Perceivable}}
+		\label{sec:perceivable}
+		Informasi dan komponen antarmuka pengguna harus dapat disajikan kepada pengguna dengan cara yang bisa dipahami.
+
+		%2.1.1.1 Text Alternatives%
+		\subsubsection*{\textit{Text Alternatives}}
+		\label{sec:text_alternatives}
+		Untuk setiap konten yang bukan merupakan teks perlu disediakan teks alternatif.
+
+		\paragraph{Kriteria Sukses 1.1.1 \textit{Non-text Content}}
+		\label{sec:kriteria_sukses_1.1.1}
+		(Level A)\\
+
+		Semua konten bukan teks yang disajikan ke pengguna mempunyai teks alternatif yang menyajikan informasi dengan tujuan yang sama, kecuali untuk situasi-situasi berikut:
+		\begin{itemize}
+			\item Kontrol, masukan: Bila konten bukan teks merupakan kontrol atau bila konten tersebut menerima masukan dari pengguna, maka konten tersebut harus mempunyai nama yang menjelaskan tujuannya.
+			\item Media berbasis waktu: Jika konten bukan teks merupakan media berbasis waktu, maka setidaknya teks alternatif harus menyediakan identifikasi deskriptif dari konten tersebut.
+			\item Tes: Jika konten bukan teks merupakan tes atau latihan, yang akan mengungkap jawabannya jika disajikan dalam bentuk teks, maka setidaknya teks alternatif harus menyajikan identifikasi deskriptif dari konten tersebut.
+			\item Indra: Jika maksud utama konten bukan teks dibuat untuk menciptakan pengalaman sensorik tertentu, maka setidaknya teks alternatif harus menyediakan identifikasi deskriptif untuk konten tersebut.
+			\item \textit{CAPTCHA}: Jika tujuan dari konten bukan teks adalah untuk mengonfirmasi bahwa konten sedang diakses oleh manusia dan bukan oleh komputer, maka tersedia teks alternatif yang mengidentifikasi dan menjelaskan tujuan dari konten tersebut, dan tersedia bentuk alternatif dari \textit{CAPTCHA} yang menggunakan mode keluaran untuk berbagai jenis persepsi sensoris agar dapat mengakomodasi berbagai disabilitas.
+			\item Dekorasi, pemformatan, tak kentara: Jika konten bukan teks hanya merupakan dekorasi yang digunakan hanya untuk format visual atau tidak disajikan kepada pengguna, maka konten tersebut diimplementasikan dengan cara yang dapat diabaikan oleh teknologi alat bantu.
+		\end{itemize}
+		%End of 2.1.1.1 Text Alternatives%
+
+		%2.1.1.2 Time-based Media%
+		\subsubsection*{\textit{Time-based Media}}
+		\label{sec:time_based_media}
+		Tersedia alternatif untuk media berbasis waktu.
+
+		\paragraph{Kriteria Sukses 1.2.1 \textit{Audio-only and Video-only (Prerecorded)}}
+		\label{sec:kriteria_sukses_1.2.1}
+		(Level A)\\
+
+		Untuk media rekaman berupa audio saja dan video saja, ketentuan berikut ini berlaku, kecuali bila audio atau video tersebut merupakan media alternatif untuk teks dan dilabeli dengan jelas:
+		\begin{itemize}
+			\item Rekaman audio saja: Tersedia alternatif untuk media berbasis waktu yang isinya mewakili informasi yang sama dengan konten rekaman audio saja.
+			\item Rekaman video saja: Tersedia alternatif untuk media berbasis waktu atau trek audio yang isinya mewakili informasi yang sama dengan konten rekaman video saja.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 1.2.2 \textit{Captions (Prerecorded)}}
+		\label{sec:kriteria_sukses_1.2.2}
+		(Level A)\\
+
+		Takarir disediakan untuk semua konten rekaman audio, kecuali bila media tersebut merupakan media alternatif untuk teks dan dilabeli dengan jelas.
+
+		\paragraph{Kriteria Sukses 1.2.3 \textit{Audio Description or Media Alternative (Prerecorded)}}
+		\label{sec:kriteria_sukses_1.2.3}
+		(Level A)\\
+
+		Tersedia alternatif untuk media berbasis waktu atau deskripsi audio dari konten video rekaman, kecuali bila media tersebut merupakan media alternatif untuk teks dan dilabeli dengan jelas.
+
+		\paragraph{Kriteria Sukses 1.2.4 \textit{Captions (Live)}}
+		\label{sec:kriteria_sukses_1.2.4}
+		(Level AA)\\
+
+		Takarir disediakan untuk semua konten audio siaran langsung.
+
+		\paragraph{Kriteria Sukses 1.2.5 \textit{Audio Description (Prerecorded)}}
+		\label{sec:kriteria_sukses_1.2.5}
+		(Level AA)\\
+
+		Deskripsi audio disediakan untuk semua konten rekaman video.
+
+		\paragraph{Kriteria Sukses 1.2.6 \textit{Sign Language (Prerecorded)}}
+		\label{sec:kriteria_sukses_1.2.6}
+		(Level AAA)\\
+
+		Penafsiran bahasa isyarat disediakan untuk semua konten rekaman audio. 
+
+		\paragraph{Kriteria Sukses 1.2.7 \textit{Extended Audio Description (Prerecorded)}}
+		\label{sec:kriteria_sukses_1.2.7}
+		(Level AAA)\\
+
+		Ketika jeda dalam audio latar depan tidak memadai bagi deskripsi audio untuk menyampaikan maksud video, deskripsi audio tambahan disediakan untuk semua konten rekaman video.
+
+		\paragraph{Kriteria Sukses 1.2.8 \textit{Media Alternative (Prerecorded)}}
+		\label{sec:kriteria_sukses_1.2.8}
+		(Level AAA)\\
+
+		Tersedia alternatif untuk media berbasis waktu untuk semua media rekaman dan untuk semua media rekaman video saja.
+
+		\paragraph{Kriteria Sukses 1.2.9 \textit{Audio-only (Live)}}
+		\label{sec:kriteria_sukses_1.2.9}
+		(Level AAA)\\
+
+		Tersedia alternatif untuk media berbasis waktu yang menyajikan informasi yang sama dengan konten siaran langsung audio saja.
+		%End of 2.1.1.2 Time-based Media%
+
+		%2.1.1.3 Adaptable%
+		\subsubsection*{\textit{Adaptable}}
+		\label{sec:adaptable}
+		Buat konten yang dapat disajikan dalam berbagai cara (misalnya tata letak yang lebih sederhana) tanpa kehilangan informasi atau struktur konten tersebut.
+
+		\paragraph{Kriteria Sukses 1.3.1 \textit{Info and Relationships}}
+		\label{sec:kriteria_sukses_1.3.1}
+		(Level A)\\
+
+		Informasi, struktur, dan hubungan antar konten yang disampaikan melalui presentasi dapat ditentukan secara terprogram atau tersedia dalam bentuk teks. 
+
+		\paragraph{Kriteria Sukses 1.3.2 \textit{Meaningful Sequence}}
+		\label{sec:kriteria_sukses_1.3.2}
+		(Level A)\\
+
+		Ketika urutan konten yang disajikan memengaruhi maknanya, urutan membaca yang benar dapat ditentukan secara terprogram.
+
+		\paragraph{Kriteria Sukses 1.3.3 \textit{Sensory Characteristics}}
+		\label{sec:kriteria_sukses_1.3.3}
+		(Level A)\\
+
+		Instruksi yang disediakan untuk memahami maupun mengoperasikan konten, tidak hanya mengandalkan satu komponen karakteristik indra seperti bentuk, ukuran, lokasi visual, orientasi, atau suara.
+
+		\paragraph{Kriteria Sukses 1.3.4 \textit{Orientation}}
+		\label{sec:kriteria_sukses_1.3.4}
+		(Level AA)\\
+
+		Konten tidak membatasi tampilan dan operasinya hanya untuk satu orientasi tampilan, seperti \textit{portrait} atau \textit{landscape}, kecuali jika orientasi tampilan tertentu bersifat esensial.
+
+		\paragraph{Kriteria Sukses 1.3.5 \textit{Identify Input Purpose}}
+		\label{sec:kriteria_sukses_1.3.5}
+		(Level AA)\\
+
+		Tujuan dari setiap bidang masukan yang mengumpulkan informasi tentang pengguna dapat ditentukan secara terprogram ketika:
+		\begin{itemize}
+			\item Area masukan menyajikan tujuan yang dapat diidentifikasi oleh agen pengguna dan teknologi alat bantu sehingga memungkinkan lebih banyak orang untuk mengerti dan menggunakan konten.
+			\item Konten diimplementasikan menggunakan teknologi dengan dukungan untuk mengidentifikasi makna yang diharapkan untuk formulir masukan data.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 1.3.6 \textit{Identify Purpose}}
+		\label{sec:kriteria_sukses_1.3.6}
+		(Level AAA)\\
+
+		Pada konten yang diimplementasikan dengan menggunakan bahasa markah, tujuan dari komponen antarmuka pengguna, ikon, dan bidang konten dapat ditentukan secara terprogram.
+		%End of 2.1.1.3 Adaptable%
+
+		%2.1.1.4 Distinguishable%
+		\subsubsection*{\textit{Distinguishable}}
+		\label{sec:distinguishable}
+		Beri kemudahan bagi pengguna untuk melihat dan mendengar konten, termasuk memisahkan latar depan dari latar belakang.
+
+		\paragraph{Kriteria Sukses 1.4.1 \textit{Use of Color}}
+		\label{sec:kriteria_sukses_1.4.1}
+		(Level A)\\
+
+		Warna tidak digunakan sebagai satu-satunya cara yang digunakan untuk menyampaikan informasi secara visual, menandai suatu tindakan, meminta respons, atau membedakan elemen visual.
+
+		\paragraph{Kriteria Sukses 1.4.2 \textit{Audio Control}}
+		\label{sec:kriteria_sukses_1.4.2}
+		(Level A)\\
+
+		Jika ada audio apa pun di halaman web yang diputar otomatis selama lebih dari 3 detik, maka harus tersedia mekanisme untuk memberi jeda atau memberhentikan audio tersebut, atau tersedia mekanisme untuk mengendalikan volume audio yang terpisah dari tingkat volume sistem secara keseluruhan.
+
+		\paragraph{Kriteria Sukses 1.4.3 \textit{Contrast (Minimum)}}
+		\label{sec:kriteria_sukses_1.4.3}
+		(Level AA)\\
+
+		Presentasi visual dari teks dan gambar teks memiliki rasio kontras setidaknya 4,5:1, kecuali untuk ketentuan berikut:
+
+		\begin{itemize}
+			\item Teks berukuran besar: Teks berukuran besar dan gambar teks berukuran besar memiliki rasio kontras setidaknya 3:1.
+			\item Insidental: Teks atau gambar teks yang hanya merupakan dekorasi yang tidak tampak kepada siapa pun atau bagian gambar yang mengandung konten visual lain yang signifikan, tidak wajib memenuhi persyaratan kontras apa pun.
+			\item Berjenis logo: Teks yang merupakan bagian dari logo atau nama merek tidak wajib memiliki persyaratan kontras apa pun.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 1.4.4 \textit{Resize text}}
+		\label{sec:kriteria_sukses_1.4.4}
+		(Level AA)\\
+
+		Selain takarir dan gambar teks, teks dapat diubah ukurannya tanpa teknologi alat bantu hingga dengan 200 persen, tanpa kehilangan fungsionalitas ataupun konten.
+
+		\paragraph{Kriteria Sukses 1.4.5 \textit{Images of Text}}
+		\label{sec:kriteria_sukses_1.4.5}
+		(Level AA)\\
+
+		Jika teknologi yang digunakan dapat menyajikan presentasi visual, maka yang digunakan untuk menyampaikan informasi adalah teks, bukan gambar teks, kecuali untuk ketentuan berikut:
+
+		\begin{itemize}
+			\item Dapat disesuaikan: Gambar teks dapat disesuaikan secara visual sesuai kebutuhan pengguna;
+			\item Esensial: Penyajian tertentu dari teks bersifat esensial terhadap informasi yang disampaikan.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 1.4.6 \textit{Contrast (Enhanced)}}
+		\label{sec:kriteria_sukses_1.4.6}
+		(Level AAA)\\
+
+		Presentasi visual dari teks dan gambar teks memiliki rasio kontras setidaknya 7:1, kecuali untuk ketentuan berikut:
+
+		\begin{itemize}
+			\item Teks berukuran besar: Teks berukuran besar dan gambar teks berukuran besar memiliki rasio kontras setidaknya 4,5:1.
+			\item Insidental: Teks atau gambar teks yang hanya merupakan dekorasi yang tidak tampak kepada siapa pun atau bagian gambar yang mengandung konten visual lain yang signifikan, tidak wajib memenuhi persyaratan kontras apa pun.
+			\item Berjenis logo: Teks yang merupakan bagian dari logo atau nama merek tidak wajib memiliki persyaratan kontras apa pun.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 1.4.7 \textit{Low or No Background Audio}}
+		\label{sec:kriteria_sukses_1.4.7}
+		(Level AAA)\\
+
+		Untuk konten rekaman audio yang (1) utamanya mengandung ucapan di latar depan, (2) bukan merupakan audio untuk \textit{CAPTCHA} atau audio untuk logo, dan (3) bukan merupakan vokalisasi untuk expresi musikal seperti nyanyian atau rap, setidaknya salah satu dari ketentuan berikut berlaku:
+
+		\begin{itemize}
+			\item Tanpa latar belakang: Audio tidak mengandung suara latar belakang.
+			\item Dapat dimatikan: Suara latar belakang dapat dimatikan.
+			\item 20 dB: Suara latar belakang setidaknya 20 desibel lebih rendah dari konten ucapan di latar depan, kecuali untuk suara-suara yang muncul sesekali dan hanya berdurasi satu atau dua detik.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 1.4.8 \textit{Visual Presentation}}
+		\label{sec:kriteria_sukses_1.4.8}
+		(Level AAA)\\
+
+		Untuk presentasi visual dari kumpulan teks, tersedia mekanisme untuk mencapai tujuan-tujuan berikut:
+
+		\begin{itemize}
+			\item Warna latar depan dan belakang dapat dipilih oleh pengguna.
+			\item Lebarnya tidak lebih dari 80 karakter atau \textit{glyphs} (40 jika karakter \textit{CJK}).
+			\item Teks tidak rata kiri-kanan.
+			\item Awal paragraf menjorok masuk minimal satu setengah spasi, jarak setiap paragraf minimal satu setengah kali jarak setiap baris.
+			\item Teks dapat diperbesar hingga 200 persen tanpa teknologi alat bantu, namun tetap memungkinkan pengguna untuk membaca baris teks tersebut tanpa perlu melakukan \textit{scroll} halaman secara horizontal.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 1.4.9 \textit{Images of Text (No Exception)}}
+		\label{sec:kriteria_sukses_1.4.9}
+		(Level AAA)\\
+
+		Gambar teks hanya digunakan untuk dekorasi semata atau ketika penyajian tertentu dari teks bersifat esensial dalam menyampaikan informasi.
+
+		\paragraph{Kriteria Sukses 1.4.10 \textit{Reflow}}
+		\label{sec:kriteria_sukses_1.4.10}
+		(Level AA)\\
+
+		Konten dapat disajikan tanpa kehilangan fungsionalitas ataupun konten, dan tanpa memerlukan \textit{scrolling} dalam dua dimensi untuk:
+
+		\begin{itemize}
+			\item Konten \textit{scrolling} vertikal dengan lebar setara 320 piksel \textit{CSS};
+			\item Konten \textit{scrolling} horizontal dengan tinggi setara 256 piksel \textit{CSS}.
+		\end{itemize}
+
+		Kecuali untuk bagian-bagian konten yang memerlukan tata letak dua dimensi untuk makna atau penggunaan.
+
+		\paragraph{Kriteria Sukses 1.4.11 \textit{Non-text Contrast}}
+		\label{sec:kriteria_sukses_1.4.11}
+		(Level AA)\\
+
+		Presentasi visual pada poin-poin berikut memiliki rasio kontras setidaknya 3:1 terhadap warna yang bedekatan:
+
+		\begin{itemize}
+			\item Komponen antarmuka pengguna: Informasi visual dibutuhkan untuk mengidentifikasi keadaan dan komponen antarmuka pengguna, kecuali untuk komponen yang tidak aktif atau ketika penampilan komponen ditentukan oleh agen pengguna dan tidak dimodifikasi oleh penulis.
+			\item Objek grafis: Bagian grafis dibutuhkan untuk memahami konten, kecuali ketika penyajian grafis tertentu bersifat esensial untuk informasi yang disampaikan.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 1.4.12 \textit{Text Spacing}}
+		\label{sec:kriteria_sukses_1.4.12}
+		(Level AA)\\
+
+		Pada konten yang diimplementasikan dengan menggunakan bahasa markah yang mendukung properti \textit{style} teks berikut, tidak ada fungsionalitas atau konten yang hilang ketika mengatur ketentuan-ketentuan berikut tanpa mengubah properti \textit{style} lainnya:
+
+		\begin{itemize}
+			\item Tinggi baris (jarak antara baris) setidaknya 1,5 kali ukuran tulisan;
+			\item Jarak antara paragraf setidaknya 2 kali ukuran tulisan;
+			\item Jarak antara huruf setidaknya 0,12 kali ukuran tulisan;
+			\item Jarak antara kata setidaknya 0,16 kali ukuran tulisan.
+		\end{itemize}
+
+		Pengecualian: Konten teks yang tidak menggunakan satu atau lebih properti \textit{style} teks ini, dapat menyesuaikan dengan menggunakan properti yang tersedia untuk teks tersebut.
+
+		\paragraph{Kriteria Sukses 1.4.13 \textit{Content on Hover or Focus}}
+		\label{sec:kriteria_sukses_1.4.13}
+		(Level AA)\\
+
+		Ketika menerima lalu menghapus penunjuk kursor atau fokus \textit{keyboard} memicu konten tambahan untuk muncul sesaat, ketentuan berikut ini berlaku:
+
+		\begin{itemize}
+			\item Dapat disingkirkan: Tersedia mekanisme untuk menyingkirkan konten tambahan tanpa perlu memindahkan penunjuk kursor atau fokus \textit{keyboard}, kecuali jika konten tambahan menginformasikan kesalahan masukan atau tidak menghalangi maupun mengganti konten lain;
+			\item Dapat ditunjuk: Jika penunjuk kursor dapat memicu konten tambahan, maka kursor dapat dipindahkan ke konten tambahan tanpa membuat konten tambahan tersebut menghilang;
+			\item Persisten: Konten tambahan tetap tampak sampai penunjuk atau pemicu fokus dihapus, disingkirkan pengguna, atau informasinya sudah tidak valid.
+		\end{itemize}
+
+		Pengecualian: Presentasi visual pada konten tambahan diatur oleh agen pengguna dan tidak dimodifikasi oleh penulis.
+
+		%End of 2.1.1.4 Distinguishable%
+
+		%End of 2.1.1 Perceivable%
+
+		%2.1.2 Operable%
+		\subsection*{\textit{Operable}}
+		\label{sec:operable}
+		Komponen antarmuka pengguna dan navigasi harus bisa dioperasikan.
+
+		%2.1.2.1 Keyboard Accessible%
+		\subsubsection*{\textit{Keyboard Accessible}}
+		\label{sec:keyboard_accessible}
+		Pastikan semua fungsionalitas bisa diakses dengan \textit{keyboard}.
+
+		\paragraph{Kriteria Sukses 2.1.1 \textit{Keyboard}}
+		\label{sec:kriteria_sukses_2.1.1}
+		(Level A)\\
+
+		Semua fungsionalitas konten dapat dioperasikan melalui antarmuka \textit{keyboard} tanpa perlu mengatur jeda antar ketukan tombol, kecuali bila fungsi tersebut membutuhkan masukan yang bergantung pada jalur gerakan pengguna dan bukan hanya pada titik akhir.
+
+		\paragraph{Kriteria Sukses 2.1.2 \textit{No Keyboard Trap}}
+		\label{sec:kriteria_sukses_2.1.2}
+		(Level A)\\
+
+		Jika fokus \textit{keyboard} dapat dipindahkan ke komponen tertentu dengan menggunakan antarmuka \textit{keyboard}, maka fokus dapat dipindahkan dari komponen tersebut hanya dengan menggunakan antarmuka \textit{keyboard}. Jika dibutuhkan tindakan yang lebih dari sekadar menekan tombol panah atau \textit{tab} atau metode-metode keluar standar lainnya, maka pengguna akan diberi tahu tentang metode tersebut.
+
+		\paragraph{Kriteria Sukses 2.1.3 \textit{Keyboard (No Exception)}}
+		\label{sec:kriteria_sukses_2.1.3}
+		(Level AAA)\\
+
+		Semua fungsionalitas konten dapat dioperasikan melalui antarmuka \textit{keyboard} tanpa perlu mengatur jeda antar ketukan tombol.
+
+		\paragraph{Kriteria Sukses 2.1.4 \textit{Character Key Shortcuts}}
+		\label{sec:kriteria_sukses_2.1.4}
+		(Level A)\\
+
+		Jika pintasan \textit{keyboard} yang diterapkan dalam konten hanya menggunakan huruf (termasuk huruf besar dan kecil), tanda baca, angka, atau karakter simbol, maka setidaknya salah satu dari ketentuan berikut ini berlaku:
+		\begin{itemize}
+			\item Dapat dinonaktifkan: Tersedia mekanisme untuk menonaktifkan pintasan;
+			\item Dipetakan kembali: Tersedia mekanisme untuk memetakan kembali pintasan untuk menggunakan satu atau lebih karakter \textit{keyboard} yang tidak dapat dicetak (misalnya: \textit(CTRL, ALT, SHIFT));
+			\item Hanya aktif saat mendapat fokus: Pintasan \textit{keyboard} untuk komponen antarmuka pengguna hanya aktif ketika komponen tersebut mendapat fokus.
+		\end{itemize}
+		%End of 2.1.2.1 Keyboard Accessible%
+
+		%2.1.2.2 Enough Time%
+		\subsubsection*{\textit{Enough Time}}
+		\label{sec:enough_time}
+		Sediakan cukup waktu agar pengguna bisa membaca dan memanfaatkan konten.
+
+		\paragraph{Kriteria Sukses 2.2.1 \textit{Timing Adjustable}}
+		\label{sec:kriteria_sukses_2.2.1}
+		(Level A)\\
+
+		Untuk setiap batas waktu yang ditentukan oleh konten, setidaknya salah satu dari ketentuan berikut berlaku:
+		\begin{itemize}
+			\item Dapat dinonaktifkan: Pengguna dapat menonaktifkan batas waktu sebelum mencapai batas tersebut; atau
+			\item Dapat disesuaikan: Pengguna diizinkan untuk menyesuaikan batas waktu sebelum mencapai batas tersebut, dengan waktu tambahan setidaknya sepuluh kali dari setelan batas waktu; atau
+			\item Dapat diperpanjang: Pengguna diberi peringatan ketika batas waktu hampir habis dan diberikan waktu setidaknya dua puluh detik untuk memperpanjang batas waktu tersebut dengan tindakan yang sederhana (misalnya menekan tombol spasi), dan pengguna diizinkan untuk menambah batas waktu tersebut setidaknya sepuluh kali lipat; atau
+			\item Perkecualian waktu riil: Batas waktu merupakan bagian yang wajib dari kejadian waktu riil (misalnya pelelangan), dan mustahil untuk menyediakan alternatif untuk batas waktu tersebut; atau
+			\item Perkecualian penting: Batas waktu bersifat esensial dan jika diperpanjang maka akan menyalahi inti dari kegiatan tersebut; atau
+			\item Perkecualian dua puluh jam: Batas waktu yang diberikan lebih dari dua puluh jam.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 2.2.2 \textit{Pause, Stop, Hide}}
+		\label{sec:kriteria_sukses_2.2.2}
+		(Level A)\\
+
+		Untuk informasi yang bergerak, berkelip, bergulir, atau diperbarui otomatis, semua ketentuan berikut berlaku:
+		\begin{itemize}
+			\item Bergerak, berkelip, bergulir: Untuk informasi apa pun yang bergerak, berkelip, atau bergulir yang (1) mulainya otomatis, (2) terjadi lebih dari lima detik, dan (3) disajikan paralel dengan konten lain, tersedia mekanisme bagi pengguna untuk memberi jeda, memberhentikan, atau menyembunyikan informasi tersebut; kecuali bila aktivitas bergerak, berkelip, atau bergulir tersebut merupakan bagian dari aktivitas yang esensial; dan
+			\item Diperbarui otomatis: Untuk informasi apa pun yang diperbarui otomatis, yaitu yang (1) mulainya otomatis dan (2) disajikan paralel dengan konten lain, tersedia mekanisme bagi pengguna untuk memberi jeda, memberhentikan, atau menyembunyikan informasi tersebut; atau terdapat cara untuk mengendalikan frekuensi pembaruan tersebut, kecuali jika pembaruan otomatis tersebut merupakan bagian dari aktivitas yang esensial.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 2.2.3 \textit{No Timing}}
+		\label{sec:kriteria_sukses_2.2.3}
+		(Level AAA)\\
+
+		Waktu bukanlah bagian esensial dari kejadian atau aktivitas yang disajikan oleh konten, kecuali untuk \textit(synchronized media) yang tidak interaktif dan kejadian waktu riil.
+
+		\paragraph{Kriteria Sukses 2.2.4 \textit{Interruptions}}
+		\label{sec:kriteria_sukses_2.2.4}
+		(Level AAA)\\
+
+		Interupsi dapat ditunda atau dihentikan oleh pengguna, kecuali bila interupsi melibatkan keadaan darurat.
+
+		\paragraph{Kriteria Sukses 2.2.5 \textit{Re-authenticating}}
+		\label{sec:kriteria_sukses_2.2.5}
+		(Level AAA)\\
+
+		Ketika sesi autentikasi berakhir, pengguna dapat melanjutkan aktivitas tanpa kehilangan data setelah melakukan autentikasi ulang.
+
+		\paragraph{Kriteria Sukses 2.2.6 \textit{Timeouts}}
+		\label{sec:kriteria_sukses_2.2.6}
+		(Level AAA)\\
+
+		Pengguna diberi peringatan mengenai durasi ketidakaktifan pengguna yang dapat menyebabkan data hilang, kecuali jika data tersebut disimpan lebih dari dua puluh jam ketika pengguna tidak melakukan tindakan apa pun.
+		%End of 2.1.2.2 Enough Time%
+
+		%2.1.2.3 Seizures and Physical Reactions%
+		\subsubsection*{\textit{Seizures and Physical Reactions}}
+		\label{sec:seizures_and_physical_reactions}
+		Jangan merancang konten yang dapat menyebabkan kejang atau reaksi fisik.
+
+		\paragraph{Kriteria Sukses 2.3.1 \textit{Three Flashes or Below Threshold}}
+		\label{sec:kriteria_sukses_2.3.1}
+		(Level A)\\
+
+		Halaman web tidak mengandung apa pun yang berkelip lebih dari tiga kali dalam jangka waktu satu detik, atau kelipan di bawah ambang batas kelipan biasa dan kelipan merah.
+
+		\paragraph{Kriteria Sukses 2.3.2 \textit{Three Flashes}}
+		\label{sec:kriteria_sukses_2.3.2}
+		(Level AAA)\\
+
+		Halaman web tidak mengandung apa pun yang berkelip lebih dari tiga kali dalam jangka waktu satu detik.
+
+		\paragraph{Kriteria Sukses 2.3.3 \textit{Animation from Interactions}}
+		\label{sec:kriteria_sukses_2.3.3}
+		(Level AAA)\\
+
+		Animasi gerak yang dipicu oleh interaksi dapat dinonaktifkan, kecuali jika animasi itu esensial untuk fungsionalitas atau informasi yang disampaikan.
+		%End of 2.1.2.3 Seizures and Physical Reactions%
+
+		%2.1.2.4 Navigable%
+		\subsubsection*{\textit{Navigable}}
+		\label{sec:navigable}
+		Sediakan cara yang mudah untuk membantu pengguna bernavigasi, menemukan konten, dan menentukan di mana mereka berada.
+
+		\paragraph{Kriteria Sukses 2.4.1 \textit{Bypass Blocks}}
+		\label{sec:kriteria_sukses_2.4.1}
+		(Level A)\\
+
+		Tersedia mekanisme untuk melompati beberapa area konten yang berulang pada beberapa halaman web.
+
+		\paragraph{Kriteria Sukses 2.4.2 \textit{Page Titled}}
+		\label{sec:kriteria_sukses_2.4.2}
+		(Level A)\\
+
+		Halaman web memiliki judul yang menjelaskan topik atau tujuan.
+
+		\paragraph{Kriteria Sukses 2.4.3 \textit{Focus Order}}
+		\label{sec:kriteria_sukses_2.4.3}
+		(Level A)\\
+
+		Bila halaman web dapat dinavigasi secara berurutan dan urutan navigasi memengaruhi makna atau operasi, maka komponen yang memang dapat difokus akan menerima fokus sesuai urutan yang mempertahankan makna dan pengoperasian.
+
+		\paragraph{Kriteria Sukses 2.4.4 \textit{Link Purpose (In Context)}}
+		\label{sec:kriteria_sukses_2.4.4}
+		(Level A)\\
+
+		Tujuan tiap tautan dapat ditentukan dari teks pada tautan saja atau dari kombinasi teks pada tautan dengan konteks tautan yang ditentukan secara terprogram, kecuali bila tujuan tautan akan bersifat ambigu bagi pengguna secara umum.
+
+		\paragraph{Kriteria Sukses 2.4.5 \textit{Multiple Ways}}
+		\label{sec:kriteria_sukses_2.4.5}
+		(Level AA)\\
+
+		Tersedia lebih dari satu cara untuk menemukan halaman web dalam sekumpulan halaman web kecuali bila halaman web tersebut merupakan hasil dari, atau langkah ke-sekian dari suatu proses.
+
+		\paragraph{Kriteria Sukses 2.4.6 \textit{Headings and Labels}}
+		\label{sec:kriteria_sukses_2.4.6}
+		(Level AA)\\
+		Kepala tulisan dan label menjabarkan topik atau tujuan.
+
+		\paragraph{Kriteria Sukses 2.4.7 \textit{Focus Visible}}
+		\label{sec:kriteria_sukses_2.4.7}
+		(Level AA)\\
+
+		Setiap antarmuka pengguna yang dapat dioperasikan dengan \textit{keyboard} memiliki mode operasi yang memungkinkan indikator fokus dari \textit{keyboard} terlihat dengan jelas.
+
+		\paragraph{Kriteria Sukses 2.4.8 \textit{Location}}
+		\label{sec:kriteria_sukses_2.4.8}
+		(Level AAA)\\
+
+		Tersedia informasi mengenai lokasi pengguna dalam sekumpulan halaman web.
+
+		\paragraph{Kriteria Sukses 2.4.9 \textit{Link Purpose (Link Only)}}
+		\label{sec:kriteria_sukses_2.4.9}
+		(Level AAA)\\
+
+		Tersedia mekanisme untuk memungkinkan tujuan tiap tautan diidentifikasi dari teks pada tautan saja, kecuali bila tujuan tautan tersebut akan bersifat ambigu bagi pengguna secara umum.
+
+		\paragraph{Kriteria Sukses 2.4.10 \textit{Section Headings}}
+		\label{sec:kriteria_sukses_2.4.10}
+		(Level AAA)\\
+
+		Kepala tulisan tiap-tiap bagian digunakan untuk mengatur konten.
+		%End of 2.1.2.4 Navigable%
+
+		%2.1.2.5 Input Modalities%
+		\subsubsection*{\textit{Input Modalities}}
+		\label{sec:input_modalities}
+		Permudah pengguna untuk mengoperasikan fungsionalitas melalui berbagai masukan di luar \textit{keyboard}.
+
+		\paragraph{Kriteria Sukses 2.5.1 \textit{Pointer Gestures}}
+		\label{sec:kriteria_sukses_2.5.1}
+		(Level A)\\
+
+		Semua fungsionalitas yang menggunakan \textit{multipoint} atau gestur berbasis \textit{path} dapat dioperasikan dengan kursor tunggal tanpa gestur berbasis \textit{path}, kecuali jika \textit{multipoint} atau gestur berbasis \textit{path} tersebut esensial.
+
+		\paragraph{Kriteria Sukses 2.5.2 \textit{Pointer Cancellation}}
+		\label{sec:kriteria_sukses_2.5.2}
+		(Level A)\\
+
+		Untuk fungsionalitas yang dapat dioperasikan dengan kursor tunggal, setidaknya salah satu dari ketentuan berikut berlaku:
+		\begin{itemize}
+			\item Tidak ada \textit{down-event}: \textit{Down-event} pada kursor tidak digunakan untuk menjalankan fungsi apa pun;
+			\item Dapat dibatalkan atau dikembalikan: Penyelesaian fungsi terjadi pada \textit{up-event}, dan tersedia mekanisme untuk membatalkan fungsi jika fungsi tersebut belum selesai atau untuk membalikkan fungsi jika fungsi tersebut sudah selesai;
+			\item \textit{Up reversal}: \textit{Up-event} membalikkan setiap hasil dari \textit{down-event} sebelumnya;
+			\item Esensial: Menyelesaikan fungsi pada \textit{down-event} adalah hal yang esensial.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 2.5.3 \textit{Label in Name}}
+		\label{sec:kriteria_sukses_2.5.3}
+		(Level A)\\
+
+		Untuk komponen antarmuka pengguna dengan label yang menyertakan teks atau gambar teks, nama komponen tersebut mengandung teks yang disajikan secara visual. 
+
+		\paragraph{Kriteria Sukses 2.5.4 \textit{Motion Actuation}}
+		\label{sec:kriteria_sukses_2.5.4}
+		(Level A)\\
+
+		Fungsionalitas yang dapat dioperasikan oleh gerakan alat atau gerakan pengguna dapat juga dioperasikan oleh komponen antarmuka pengguna dan respon terhadap gerakan dapat dinonaktifkan untuk mencegah aksi yang tidak disengaja, kecuali saat:
+		\begin{itemize}
+			\item Antarmuka mendukung: Gerakan digunakan untuk mengoperasikan fungsionalitas melalui antarmuka yang mendukung aksesibilitas;
+			\item Esensial: Gerakan adalah hal yang esensial untuk fungsi tersebut dan penonaktifan respon terhadap gerakan akan membatalkan aktivitas yang sedang berlangsung.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 2.5.5 \textit{Target Size}}
+		\label{sec:kriteria_sukses_2.5.5}
+		(Level AAA)\\
+
+		Ukuran target untuk masukan kursor tidak kurang dari 44 kali 44 piksel \textit{CSS} kecuali jika:
+
+		\begin{itemize}
+			\item Setara: Pada halaman yang sama tersedia kontrol atau tautan yang setara untuk target, dengan ukuran tidak kurang dari 44 kali 44 piksel \textit{CSS};  
+			\item Terdapat dalam barisan: Target berada dalam kalimat atau blok teks;
+			\item Kontrol agen pengguna: Ukuran target ditentukan oleh agen pengguna dan tidak dimodifikasi oleh penulis;
+			\item Esensial: Penyajian khusus dari target bersifat esensial untuk informasi yang disampaikan.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 2.5.6 \textit{Concurrent Input Mechanisms}}
+		\label{sec:kriteria_sukses_2.5.6}
+		(Level AAA)\\
+
+		Konten web tidak membatasi penggunaan modalitas masukan yang tersedia pada platform kecuali jika pembatasan tersebut esensial dan diperlukan untuk memastikan keamanan konten atau untuk mematuhi pengaturan pengguna.
+		%End of 2.1.2.5 Input Modalities%
+
+		%End of 2.1.2 Operable%
+
+		%2.1.3 Understandable%
+		\subsection*{\textit{Understandable}}
+		\label{sec:understandable}
+		Informasi dan pengoperasian antarmuka pengguna harus dapat dimengerti.
+
+		%2.1.3.1 Readable%
+		\subsubsection*{\textit{Readable}}
+		\label{sec:readable}
+		Buat konten teks mudah dibaca dan dimengerti.
+
+		\paragraph{Kriteria Sukses 3.1.1 \textit{Language of Page}}
+		\label{sec:kriteria_sukses_3.1.1}
+		(Level A)\\
+
+		Bahasa manusia \textit{default} untuk setiap halaman web dapat ditentukan secara terprogram.
+
+		\paragraph{Kriteria Sukses 3.1.2 \textit{Language of Parts}}
+		\label{sec:kriteria_sukses_3.1.2}
+		(Level AA)\\
+
+		Bahasa manusia pada setiap bagian atau frasa yang terdapat dalam konten dapat ditentukan secara terprogram kecuali untuk nama diri, istilah teknis, kata dari bahasa yang tidak tentu, dan kata atau frasa yang telah menjadi bagian dari bahasa daerah dari teks yang ada di sekelilingnya.
+
+		\paragraph{Kriteria Sukses 3.1.3 \textit{Unusual Words}}
+		\label{sec:kriteria_sukses_3.1.3}
+		(Level AAA)\\
+
+		Tersedia mekanisme untuk mengidentifikasi definisi spesifik dari kata atau frasa yang digunakan dengan cara yang tidak lazim atau terbatas, termasuk idiom dan jargon.
+
+		\paragraph{Kriteria Sukses 3.1.4 \textit{Abbreviations}}
+		\label{sec:kriteria_sukses_3.1.4}
+		(Level AAA)\\
+
+		Tersedia mekanisme untuk mengidentifikasi kepanjangan dari singkatan.
+
+		\paragraph{Kriteria Sukses 3.1.5 \textit{Reading Level}}
+		\label{sec:kriteria_sukses_3.1.5}
+		(Level AAA)\\
+
+		Ketika teks yang tersaji cukup kompleks dan membutuhkan kemampuan membaca yang lebih tinggi dari rata-rata, versi konten yang lebih mudah dimengerti haruslah tersedia bagi pengguna.
+
+		\paragraph{Kriteria Sukses 3.1.6 \textit{Pronunciation}}
+		\label{sec:kriteria_sukses_3.1.6}
+		(Level AAA)\\
+
+		Tersedia mekanisme untuk mengidentifikasi pengucapan suatu kata apabila makna kata tersebut bersifat ambigu ketika cara mengucapkannya tidak diketahui.
+		%End of 2.1.3.1 Readable%
+
+		%2.1.3.2 Predictable%
+		\subsubsection*{\textit{Predictable}}
+		\label{sec:predictable}
+		Pastikan halaman situs web tampak dan dapat dioperasikan dengan cara-cara yang mudah ditebak.
+
+		\paragraph{Kriteria Sukses 3.2.1 \textit{On Focus}}
+		\label{sec:kriteria_sukses_3.2.1}
+		(Level A)\\
+
+		Saat komponen antarmuka pengguna menerima fokus, komponen tersebut tidak menyebabkan perubahan konteks.
+
+		\paragraph{Kriteria Sukses 3.2.2 \textit{On Input}}
+		\label{sec:kriteria_sukses_3.2.2}
+		(Level A)\\
+
+		Mengubah setelan komponen antarmuka pengguna tidak otomatis menyebabkan perubahan konteks kecuali bila pengguna telah diperingati akan perilaku semacam ini sebelum menggunakan komponen tersebut.
+
+		\paragraph{Kriteria Sukses 3.2.3 \textit{Consistent Navigation}}
+		\label{sec:kriteria_sukses_3.2.3}
+		(Level AA)\\
+
+		Mekanisme navigasi yang muncul berulang pada tiap halaman web dalam sekumpulan halaman web, muncul dalam urutan relatif yang sama setiap kali tampak, kecuali jika ada perubahan yang dilakukan pengguna.
+
+		\paragraph{Kriteria Sukses 3.2.4 \textit{Consistent Identification}}
+		\label{sec:kriteria_sukses_3.2.4}
+		(Level AA)\\
+
+		Komponen-komponen yang memiliki fungsionalitas yang sama dalam sekumpulan halaman web diidentifikasikan secara konsisten.
+
+		\paragraph{Kriteria Sukses 3.2.5 \textit{Change on Request}}
+		\label{sec:kriteria_sukses_3.2.5}
+		(Level AAA)\\
+
+		Perubahan konteks hanya terjadi bila dilakukan oleh pengguna atau ada mekanisme yang tersedia untuk menonaktifkan perubahan tersebut.
+		%End of 2.1.3.2 Predictable%
+
+		%2.1.3.3 Input Assistance%
+		\subsubsection*{\textit{Input Assistance}}
+		\label{sec:input_assistance}
+		Bantu pengguna menghindari kesalahan dan mengoreksi kesalahan tersebut.
+
+		\paragraph{Kriteria Sukses 3.3.1 \textit{Error Identification}}
+		\label{sec:kriteria_sukses_3.3.1}
+		(Level A)\\
+
+		Jika eror masukan terdeteksi otomatis, \textit{item} yang eror harus diidentifikasi dan eror harus dijabarkan kepada pengguna dalam bentuk teks.
+
+		\paragraph{Kriteria Sukses 3.3.2 \textit{Labels or Instructions}}
+		\label{sec:kriteria_sukses_3.3.2}
+		(Level A)\\
+
+		Label atau instruksi tersedia ketika konten membutuhkan masukan dari pengguna.
+
+		\paragraph{Kriteria Sukses 3.3.3 \textit{Error Suggestion}}
+		\label{sec:kriteria_sukses_3.3.3}
+		(Level AA)\\
+
+		Jika eror masukan terdeteksi otomatis dan saran untuk mengoreksi eror tersebut diketahui, maka saran disajikan kepada pengguna, kecuali bila saran tersebut akan mengacaukan keamanan atau tujuan dari konten.
+
+		\paragraph{Kriteria Sukses 3.3.4 \textit{Error Prevention (Legal, Financial, Data)\\}}
+		\label{sec:kriteria_sukses_3.3.4}
+		(Level AA)\\
+
+		Untuk halaman web yang mengirim tanggapan pengguna atau yang menyebabkan terjadinya komitmen hukum atau transaksi keuangan bagi pengguna, setidaknya salah satu dari ketentuan berikut berlaku:
+		\begin{itemize}
+			\item Bisa dibatalkan: Data yang akan dikirim bisa dibatalkan.
+			\item Diperiksa: Data yang dimasukkan oleh pengguna diperiksa apa ada eror masukan atau tidak dan pengguna dipersilakan untuk mengoreksinya.
+			\item Dikonfirmasi: Tersedia mekanisme untuk meninjau, mengonfirmasi, dan mengoreksi informasi sebelum informasi tersebut dikirim.
+		\end{itemize}
+
+		\paragraph{Kriteria Sukses 3.3.5 \textit{Help}}
+		\label{sec:kriteria_sukses_3.3.5}
+		(Level AAA)\\
+
+		Tersedia bantuan terkait konteks yang sedang berjalan.
+
+		\paragraph{Kriteria Sukses 3.3.6 \textit{Error Prevention (All)}}
+		\label{sec:kriteria_sukses_3.3.6}
+		(Level AAA)\\
+
+		Untuk halaman web yang mewajibkan pengguna mengirim informasi, setidaknya salah satu dari ketentuan berikut berlaku:
+		\begin{itemize}
+			\item Bisa dibatalkan: Data yang akan dikirim bisa dibatalkan.
+			\item Diperiksa: Data yang dimasukkan oleh pengguna diperiksa apa ada eror masukan atau tidak dan pengguna dipersilakan untuk mengoreksinya.
+			\item Dikonfirmasi: Tersedia mekanisme untuk meninjau, mengonfirmasi, dan mengoreksi informasi sebelum informasi tersebut dikirim.
+		\end{itemize}
+		%End of 2.1.3.3 Input Assistance%
+
+		%End of 2.1.3 Understandable%
+
+		%2.1.4 Robust%
+		\subsection*{\textit{Robust}}
+		\label{sec:robust}
+		Konten harus cukup andal sehingga dapat ditafsirkan oleh berbagai agen pengguna, termasuk teknologi alat bantu.
+
+		%2.1.4.1 Compatible%
+		\subsubsection*{\textit{Compatible}}
+		\label{sec:compatible}
+		Maksimalkan kompatibilitas dengan agen pengguna saat ini maupun saat yang akan datang, termasuk teknologi alat bantu.
+
+		\paragraph{Kriteria Sukses 4.1.1 \textit{Parsing}}
+		\label{sec:kriteria_sukses_4.1.1}
+		(Level A)\\
+
+		Pada konten yang diimplementasikan dengan menggunakan bahasa markah, setiap elemen memiliki \textit{tag} awal dan akhir yang lengkap, setiap elemen disusun berlapis sesuai spesifikasi masing-masing, setiap elemen tidak mengandung atribut yang sama dua kali, dan setiap \textit{ID} bersifat unik kecuali jika ada spesifikasi yang mengizinkan.
+
+		\paragraph{Kriteria Sukses 4.1.2 \textit{Name, Role, Value}}
+		\label{sec:kriteria_sukses_4.1.2}
+		(Level A)\\
+
+		Untuk semua komponen antarmuka pengguna, nama dan peran dapat ditentukan secara terprogram. Keadaan, properti, dan nilai yang dapat ditentukan oleh pengguna juga harus dapat ditentukan secara terprogram. Notifikasi perubahan terhadap \textit{item-item} ini harus tersedia untuk agen pengguna termasuk juga teknologi alat bantu.
+
+		\paragraph{Kriteria Sukses 4.1.3 \textit{Status Messages}}
+		\label{sec:kriteria_sukses_4.1.3}
+		(Level AA)\\
+
+		Pada konten yang diimplementasikan dengan menggunakan bahasa markah, pesan status dapat ditentukan secara terprogram melalui peran atau sifat sedemikian rupa sehingga dapat disajikan kepada pengguna oleh teknologi alat bantu tanpa perlu menerima fokus.
+		%End of 2.1.4.1 Compatible%
+
+		%End of 2.1.4 Robust%
+
+		%End of WCAG 2.1%
 		
 		\item \textbf{Mengukur tingkat kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1.}\\
 		{\bf Status :} Ada sejak rencana kerja skripsi.\\
