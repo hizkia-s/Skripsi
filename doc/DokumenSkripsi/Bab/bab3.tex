@@ -25,7 +25,7 @@ Sukses atau tidaknya aplikasi BlueTape dalam mematuhi kriteria-kriteria sukses d
         1.2.9 & Sukses & AAA \\
         1.3.1 & Tidak Sukses & A \\
         1.3.2 & Sukses & A \\
-        1.3.3 & Tidak Sukses & A \\
+        1.3.3 & Sukses & A \\
         1.3.4 & Sukses & AA \\
         1.3.5 & Tidak Sukses & AA \\
         1.3.6 & Tidak Sukses & AAA \\
@@ -158,21 +158,52 @@ Sukses atau tidaknya aplikasi BlueTape dalam mematuhi kriteria-kriteria sukses d
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.1.1}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada tampilan \textit{mobile}, di setiap halaman selain halaman \textit{login} terdapat tombol yang berperan sebagai kontrol namun tidak memiliki nama yang menjelaskan tujuannya. Tombol yang dimaksud hanya menampilkan tiga garis horizontal berwarna putih dan berfungsi untuk menampilkan bagian menu ketika ditekan. Bagian yang bermasalah dapat dilihat pada potongan kode \ref{lst:1.1.1_tombol_tanpa_nama}. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.1.1_non_text_content}. Contoh tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripRequest}.
+Kriteria ini tidak sukses dipatuhi karena: 
 
-\begin{lstlisting}[frame=single, label={lst:1.1.1_tombol_tanpa_nama}, language=HTML, caption=Kriteria Sukses 1.1.1 - Tombol Tanpa Nama]
-    <div class="title-bar" data-responsive-toggle="navigation-menu" data-hide-for="medium">
-        <button class="menu-icon" type="button" data-toggle></button>
-        <div class="title-bar-title"><img src="/public/img/logo.png" class="textsized" alt="B"/></div>
-    </div>
-\end{lstlisting}
+\begin{itemize}
+    \item Pada tampilan \textit{mobile}, di setiap halaman selain halaman \textit{login} terdapat tombol yang berperan sebagai kontrol namun tidak memiliki nama yang menjelaskan tujuannya. Tombol yang dimaksud hanya menampilkan tiga garis horizontal berwarna putih dan berfungsi untuk menampilkan bagian menu ketika ditekan. Bagian yang bermasalah dapat dilihat pada potongan kode \ref{lst:1.1.1_tombol_tanpa_nama}. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.1.1_non_text_content_1}. Contoh tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripRequest}.
+    \begin{lstlisting}[frame=single, label={lst:1.1.1_tombol_tanpa_nama}, language=HTML, caption=Kriteria Sukses 1.1.1 - Tombol Tanpa Nama]
+        <div class="title-bar" data-responsive-toggle="navigation-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title"><img src="/public/img/logo.png" class="textsized" alt="B"/></div>
+        </div>
+    \end{lstlisting}
+    
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.3, frame]{kriteria-sukses-1-1-1-non-text-content-1}  
+        \caption[Kriteria Sukses 1.1.1 - Tombol Tanpa Nama]{Kriteria Sukses 1.1.1 - Tombol Tanpa Nama}
+        \label{fig:1.1.1_non_text_content_1}  
+    \end{figure}
 
-\begin{figure}[H]
-    \centering  
-    \includegraphics[scale=0.3, frame]{kriteria-sukses-1-1-1-non-text-content}  
-    \caption[Kriteria Sukses 1.1.1 - Tombol Tanpa Nama]{Kriteria Sukses 1.1.1 - Tombol Tanpa Nama}
-    \label{fig:1.1.1_non_text_content}  
-\end{figure} 
+    \item Pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah terdapat konten berupa ikon yang tidak memiliki nama yang dapat diidentifikasi. Konten-konten ini terletak pada kolom "Aksi". Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.1.1_ikon_tanpa_nama}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.1.1_non_text_content_2}. Contoh tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
+    \begin{lstlisting}[frame=single, label={lst:1.1.1_ikon_tanpa_nama}, language=HTML, caption=Kriteria Sukses 1.1.1 - Ikon Tanpa Nama]
+        <td>
+            <a data-open="detail12">
+                <i class="fi-eye"></i>
+            </a>
+            <a target="_blank" href="/PerubahanKuliahManage/printview/12">
+                <i class="fi-print"></i>
+            </a>
+            <a data-open="konfirmasi12">
+                <i class="fi-like"></i>
+            </a>  
+            <a data-open="tolak12">
+                <i class="fi-dislike"></i>
+            </a>
+            <a data-open="hapus12">
+                <i class="fi-trash"></i>
+            </a>
+        </td>
+    \end{lstlisting}
+    
+    \begin{figure}[H]
+        \centering  
+        \includegraphics[scale=0.3, frame]{kriteria-sukses-1-1-1-non-text-content-2}  
+        \caption[Kriteria Sukses 1.1.1 - Ikon pada Bagian Aksi]{Kriteria Sukses 1.1.1 - Ikon pada Bagian Aksi}
+        \label{fig:1.1.1_non_text_content_2}  
+    \end{figure} 
+\end{itemize}
 
 \subsubsection{\textit{Time-based Media}}
 \label{subsubsec:kepatuhan_bluetape_time_based_media}
@@ -254,7 +285,7 @@ Kriteria ini tidak sukses dipatuhi karena:
         <div class="input-group-button">
     \end{lstlisting}
 
-    \item Pada halaman entri jadwal dosen, setiap kolom masukkan tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom-kolom masukan tersebut. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.1_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+    \item Pada halaman entri jadwal dosen, setiap kolom masukan tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom-kolom masukan tersebut. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.1_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
     \begin{lstlisting}[frame=single, label={lst:1.3.1_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 1.3.1 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
         <input type="hidden" name="csrf_token" value="3c159eae7bc953dd591b679c080ed066"/>
         Hari
@@ -270,36 +301,10 @@ Kriteria ini sukses dipatuhi karena pada setiap halaman web BlueTape sudah memii
 
 \paragraph{Kriteria Sukses 1.3.3 \textit{Sensory Characteristics}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.3}
-(Tidak Sukses)\\
+(Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah terdapat satu atau lebih komponen untuk mengoperasikan konten yang hanya mengandalkan satu komponen karakteristik indra yaitu bentuk. Komponen-komponen ini terletak pada kolom "Aksi" dan hanya ditampilkan dalam rupa ikon tanpa memiliki keterangan lebih detail. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.3_ikon_tanpa_keterangan}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.3.3_sensory_characteristics}. Contoh tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
-
-\begin{lstlisting}[frame=single, label={lst:1.3.3_ikon_tanpa_keterangan}, language=HTML, caption=Kriteria Sukses 1.3.3 - Ikon Tanpa Keterangan]
-    <td>
-        <a data-open="detail12">
-            <i class="fi-eye"></i>
-        </a>
-        <a target="_blank" href="/PerubahanKuliahManage/printview/12">
-            <i class="fi-print"></i>
-        </a>
-        <a data-open="konfirmasi12">
-            <i class="fi-like"></i>
-        </a>  
-        <a data-open="tolak12">
-            <i class="fi-dislike"></i>
-        </a>
-        <a data-open="hapus12">
-            <i class="fi-trash"></i>
-        </a>
-    </td>
-\end{lstlisting}
-
-\begin{figure}[H]
-    \centering  
-    \includegraphics[scale=0.3, frame]{kriteria-sukses-1-3-3-sensory-characteristics}  
-    \caption[Kriteria Sukses 1.3.3 - Ikon pada Bagian Aksi]{Kriteria Sukses 1.3.3 - Ikon pada Bagian Aksi}
-    \label{fig:1.3.3_sensory_characteristics}  
-\end{figure} 
+Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat instruksi yang hanya mengandalkan satu komponen karakteristik indra seperti bentuk, ukuran, lokasi visual, orientasi,
+atau suara.
 
 \paragraph{Kriteria Sukses 1.3.4 \textit{Orientation}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.4}
@@ -320,7 +325,7 @@ Kriteria ini tidak sukses dipatuhi karena terdapat kolom-kolom masukan yang tida
         <div class="input-group-button">
     \end{lstlisting}
     
-    \item Pada halaman entri jadwal dosen, setiap kolom masukkan tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom-kolom masukan tersebut. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.5_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+    \item Pada halaman entri jadwal dosen, setiap kolom masukan tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom-kolom masukan tersebut. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.3.5_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
     \begin{lstlisting}[frame=single, label={lst:1.3.5_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 1.3.5 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
         <input type="hidden" name="csrf_token" value="3c159eae7bc953dd591b679c080ed066" />
         Hari
@@ -1277,12 +1282,17 @@ Kriteria ini tidak sukses dipatuhi karena terdapat beberapa kesalahan, antara la
 \label{par:kepatuhan_bluetape_kriteria_sukses_4.1.2}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman lihat jadwal dosen terdapat \textit{tag "a"} yang belum memiliki atribut \textit{role} yang tepat, yaitu pada bagian nama dosen yang sedang dipilih untuk ditampilkan jadwalnya. Letak kesalahan dapat dilihat pada potongan kode \ref{lst:4.1.2_role_halaman_lihat_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
+Kriteria ini tidak sukses dipatuhi karena pada halaman lihat jadwal dosen terdapat \textit{tag "ul"} yang belum memiliki atribut \textit{role} yang tepat, yaitu pada bagian list nama dosen. \textit{Tag "ul"} tersebut seharusnya memiliki atribut \textit{role="tablist"} karena bagian tersebut berisi elemen-elemen dengan atribute \textit{role="tab"}. Letak kesalahan dapat dilihat pada potongan kode \ref{lst:4.1.2_role_halaman_lihat_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
 
 \begin{lstlisting}[frame=single, label={lst:4.1.2_role_halaman_lihat_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 4.1.1 - Atribut \textit{Role} pada Halaman Lihat Jadwal Dosen]
-    <li class="tabs-title is-active">
-        <a href="#hal0" aria-selected="true">HIZKIA STEVEN</a>
-    </li> 
+    <div class="large-12 column">
+        <ul class="tabs" data-tabs id="tab_jadwal">
+        ::before
+        <li class="tabs-title is-active" role="presentation">
+            <a href="#hal0" aria-selected="true" role="tab" 
+            aria-controls="hal0" id="hal0-label">
+                HIZKIA STEVEN
+            </a>
 \end{lstlisting}
 
 \paragraph{Kriteria Sukses 4.1.3 \textit{Status Messages}}
@@ -1299,3 +1309,71 @@ Kriteria ini tidak sukses dipatuhi karena setiap pesan status yang ditampilkan k
         <div class="callout primary"><?= $_SESSION['info'] ?></div>
     <?php endif; ?>
 \end{lstlisting}
+
+\section{Peningkatan Poin-Poin yang Tidak Sukses Dipatuhi untuk Kriteria Sukses A}
+\label{sec:peningkatan_kriteria_sukses_a}
+Pada bagian ini akan dibahas secara singkat cara untuk membuat kriteria sukses A pada bagian \ref{sec:kepatuhan_bluetape_terhadap_wcag_2.1} yang belum sukses dipatuhi menjadi sukses dipatuhi.
+
+\subsection{Peningkatan Kriteria Sukses 1.1.1 \textit{Non-text Content}}
+\label{subsec:peningkatan_kriteria_sukses_1.1.1}
+Masalah pada poin ini dapat diperbaiki dengan cara sebagai berikut: 
+
+\begin{itemize}
+    \item Pada tombol menu yang tidak memiliki nama diberikan atribut \textit{aria-label} yang diisi dengan nilai "Tombol Menu". Penambahan atribut \textit{aria-label} akan membuat tombol tersebut dapat diidentifikasi oleh teknologi alat bantu.
+    \item Pada konten berupa ikon yang tidak memiliki nama diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon.
+\end{itemize}item
+
+\subsection{Peningkatan Kriteria Sukses 1.3.1 \textit{Info and Relationships}}
+\label{subsec:peningkatan_kriteria_sukses_1.3.1}
+Masalah pada poin ini dapat diperbaiki dengan cara sebagai berikut:
+
+\begin{itemize}
+    \item Pada penggunaan \textit{tag heading} yang tidak tepat, \textit{tag heading} dapat diubah menjadi berurutan dimulai dari \textit{<h1>} hingga \textit{<h6>}.
+    \item Pada halaman manajemen cetak transkrip, kolom masukan NPM diberi atribut \textit{aria-label} yang diisi dengan nilai "NPM".
+    \item Pada halaman entri jadwal dosen, setiap kolom masukan diberi atribut \textit{id} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{tag label} dan dihubungkan dengan kolom masukan yang bersangkutan.
+\end{itemize}
+
+\subsection{Peningkatan Kriteria Sukses 2.1.1 \textit{Keyboard}}
+\label{subsec:peningkatan_kriteria_sukses_2.1.1}
+Masalah pada poin ini dapat diperbaiki dengan cara sebagai berikut:
+
+\begin{itemize}
+    \item Pada bagian navigasi menu,
+    \item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen, untuk setiap \textit{cell} dalam tabel diberi atribut \textit{tabindex} yang diisi dengan nilai nol. Selanjutnya dibuat kode \textit{JavaScript} untuk memicu aksi membuka kotak dialog ketika tombol "Enter" ditekan pada \textit{cell} yang berisi jadwal dosen.
+\end{itemize}
+
+\subsection{Peningkatan Kriteria Sukses 2.4.1 \textit{Bypass Blocks}}
+\label{subsec:peningkatan_kriteria_sukses_2.4.1}
+Masalah pada poin ini dapat diperbaiki dengan cara membuat mekanisme untuk melompati bagian navigasi menu ketika pengguna sedang bernavigasi menggunakan \textit{keyboard}. Dengan cara ini pengguna dapat langsung menuju ke area yang diinginkan tanpa perlu berulang kali melewati bagian navigasi menu.
+
+\subsection{Peningkatan Kriteria Sukses 2.4.4 \textit{Link Purpose (In Context)}}
+\label{subsec:peningkatan_kriteria_sukses_2.4.4}
+Masalah pada poin ini dapat diperbaiki dengan cara mengganti setiap tautan (\textit{<a>}) menjadi sebuah tombol (\textit{<button>}).
+
+\subsection{Peningkatan Kriteria Sukses 2.5.3 \textit{Label in Name}}
+\label{subsec:peningkatan_kriteria_sukses_2.5.3}
+
+
+\subsection{Peningkatan Kriteria Sukses 3.1.1 \textit{Language of Page}}
+\label{subsec:peningkatan_kriteria_sukses_3.1.1}
+Masalah pada poin ini dapat diperbaiki dengan cara mengganti setelan bahasa manusia \textit{default} dari bahasa Inggris menjadi bahasa Indonesia.
+
+\subsection{Peningkatan Kriteria Sukses 3.3.2 \textit{Labels or Instructions}}
+\label{subsec:peningkatan_kriteria_sukses_3.3.2}
+Masalah pada poin ini dapat diperbaiki dengan cara menambahkan atribut \textit{id} pada setiap kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{tag label} dan dihubungkan dengan kolom masukan yang bersangkutan.
+
+\subsection{Peningkatan Kriteria Sukses 4.1.1 \textit{Parsing}}
+\label{subsec:peningkatan_kriteria_sukses_4.1.1}
+Masalah pada poin ini dapat diperbaiki dengan cara:
+
+\begin{itemize}
+    \item Pada penggunaan \textit{tag "time"} yang kurang tepat di halaman cetak transkrip, bagian yang tidak lengkap cukup ditambahkan \textit{tag "time"}.
+    \item Pada penggunaan atribut \textit{"readonly"} yang kurang tepat di halaman manajemen cetak transkrip dan manajemen perubahan kuliah, nilai \textit{"true"} yang terpasang pada atribut tersebut cukup dihilangkan saja.
+    \item Pada penempatan elemen \textit{"HTML"} yang tidak tepat di halaman entri jadwal dosen, \textit{tag "div"} dipindahkan agar berada sesudah \textit{tag "body"}.
+    \item Pada penggunaan atribut "a" pada \textit{tag "a"} di halaman lihat jadwal dosen, atribut yang kurang tepat tersebut dihapus.
+    \item Pada penggunaan \textit{tag "div"} buka yang tidak disertai dengan \textit{tag "div"} tutup, cukup ditambahkan saja \textit{tag "div"} tutup di tempat yang sesuai.
+\end{itemize}
+
+\subsection{Peningkatan Kriteria Sukses 4.1.2 \textit{Name, Role, Value}}
+\label{subsec:peningkatan_kriteria_sukses_4.1.2}
+Masalah pada poin ini dapat diperbaiki dengan cara menambahkan atribut \textit{role="tablist"} pada \textit{tag "ul"} yang disebutkan.
