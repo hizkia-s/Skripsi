@@ -1,0 +1,739 @@
+\chapter{Implementasi dan Pengujian}
+\label{chap:implementasi_dan_pengujian}
+
+\section{Implementasi}
+\label{sec:implementasi}
+Pada bagian ini akan dibahas perbaikan apa saja yang dilakukan untuk membuat kriteria sukses pada bagian 3.1
+yang belum sukses dipatuhi menjadi sukses dipatuhi.
+
+\subsection{Perbaikan Kriteria Sukses 1.1.1 \textit{Non-text Content}}
+\label{subsec:perbaikan_kriteria_sukses_1.1.1}
+Pada bagian ini dilakukan perbaikan sebagai berikut:
+
+\begin{itemize}
+    \item Pada tombol menu yang tidak memiliki nama diberikan atribut \textit{aria-label} yang diisi dengan nilai "Tombol Menu". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_tombol_tanpa_nama}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_tombol_tanpa_nama}, language=HTML, caption=Perbaikan Kriteria Sukses 1.1.1 - Tombol Tanpa Nama]
+        --- a/www/application/views/templates/topbar_loggedin.php
+        +++ b/www/application/views/templates/topbar_loggedin.php
+        @@ -1,7 +1,7 @@
+         <?php
+         defined('BASEPATH') OR exit('No direct script access allowed');
+         ?><div class="title-bar" data-responsive-toggle="navigation-menu" data-hide-for="medium">
+        -    <button class="menu-icon" type="button" data-toggle></button>
+        +    <button aria-label="tombol menu" class="menu-icon" type="button" data-toggle></button>
+             <div class="title-bar-title"><img src="/public/img/logo.png" class="textsized" alt="B"/></div>
+         </div>
+    \end{lstlisting}
+
+    \item Pada konten berupa ikon yang tidak memiliki nama di halaman cetak transkrip diberikan atribut \textit{aria-label} yang diisi dengan nilai "Lihat Detail Permohonan". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama_cetak_transkrip}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_cetak_transkrip}, language=HTML, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Cetak Transkrip]
+        --- a/www/application/views/TranskripRequest/main.php
+        +++ b/www/application/views/TranskripRequest/main.php
+        @@ -126,7 +126,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+        -                                        <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+        +                                        <a aria-label="lihat detail permohonan" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+    \end{lstlisting}
+
+    \item Pada konten berupa ikon yang tidak memiliki nama di halaman manajemen cetak transkrip diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_cetak_transkrip}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_cetak_transkrip}, language=HTML, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Manajemen Cetak Transkrip]
+        --- a/www/application/views/TranskripManage/main.php
+        +++ b/www/application/views/TranskripManage/main.php
+        @@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>                                        
+                                            </div>
+        -                                    <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+        +                                    <a aria-label="lihat detail permohonan" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+                                            <div class="reveal" id="tolak<?= $request->id ?>" data-reveal>
+                                                <h5>Tolak Permohonan</h5>
+                                                <form method="POST" action="/TranskripManage/answer">
+        @@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+        -                                    <a data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
+        +                                    <a aria-label="tolak permohonan" data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
+                                            <div class="reveal" id="cetak<?= $request->id ?>" data-reveal>
+                                                <h5>Cetak Permohonan</h5>
+                                                <?php if ($request->requestByNPM !== NULL): ?>
+        @@ -131,7 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+        -                                    <a data-open="cetak<?= $request->id ?>"><i class="fi-print"></i></a>
+        +                                    <a aria-label="cetak permohonan" data-open="cetak<?= $request->id ?>"><i class="fi-print"></i></a>
+                                            <div class="reveal" id="hapus<?= $request->id ?>" data-reveal>
+                                                <h5>Hapus Permohonan</h5>
+                                                <form method="POST" action="/TranskripManage/remove">
+        @@ -146,7 +146,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+        -                                    <a data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
+        +                                    <a aria-label="hapus permohonan" data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+    \end{lstlisting}
+
+    \item Pada konten berupa ikon yang tidak memiliki nama di halaman perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai "Lihat Detail Permohonan". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama_perubahan_kuliah}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_perubahan_kuliah}, language=HTML, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Perubahan Kuliah]
+        --- a/www/application/views/PerubahanKuliahRequest/main.php
+        +++ b/www/application/views/PerubahanKuliahRequest/main.php
+        @@ -118,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                             <td><time datetime="<?= $request->answeredDateTime ?>"><?= $request->answeredDateString ?></time></td>
+                                             <td><?= $request->answeredMessage ?></td>
+                                             <td>
+        -                                        <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+        +                                        <a aria-label="lihat detail permohonan" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+                                             </td>
+                                         </tr>
+                                     <?php endforeach; ?>        
+    \end{lstlisting}
+
+    \item Pada konten berupa ikon yang tidak memiliki nama di halaman manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_perubahan_kuliah}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_perubahan_kuliah}, language=HTML, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Manajemen Perubahan Kuliah]
+        --- a/www/application/views/PerubahanKuliahManage/main.php
+        +++ b/www/application/views/PerubahanKuliahManage/main.php
+        @@ -30,11 +30,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                         <td><?= $request->mataKuliahCode ?></td>
+                                         <td><?= PerubahanKuliah_model::CHANGETYPE_TYPES[$request->changeType] ?></td>
+                                         <td>
+        -                                    <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+        -                                    <a target="_blank" href="/PerubahanKuliahManage/printview/<?= $request->id ?>"><i class="fi-print"></i></a>
+        -                                    <a data-open="konfirmasi<?= $request->id ?>"><i class="fi-like"></i></a>                                    
+        -                                    <a data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
+        -                                    <a data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
+        +                                    <a aria-label="lihat detail permohonan" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+        +                                    <a aria-label="cetak permohonan" target="_blank" href="/PerubahanKuliahManage/printview/<?= $request->id ?>"><i class="fi-print"></i></a>
+        +                                    <a aria-label="konfirmasi permohonan" data-open="konfirmasi<?= $request->id ?>"><i class="fi-like"></i></a>                                    
+        +                                    <a aria-label="tolak permohonan" data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
+        +                                    <a aria-label="hapus permohonan" data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
+                                         </td>
+                                     </tr>
+                                 <?php endforeach; ?>
+    \end{lstlisting}
+\end{itemize}
+
+\subsection{Perbaikan Kriteria Sukses 1.3.1 \textit{Info and Relationships}}
+\label{subsec:perbaikan_kriteria_sukses_1.3.1}
+Pada bagian ini dilakukan perbaikan sebagai berikut:
+
+\begin{itemize}
+    \item Pada penggunaan \textit{tag heading} yang tidak tepat, judul yang menggunakan \textit{<h5>} diubah menggunakan \textit{tag heading} yang sesuai struktur \textit{HTML} secara berurutan dimulai dari \textit{<h1>} hingga \textit{<h6>}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.3.1_tag_heading}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_tag_heading}, language=HTML, caption=Perbaikan Kriteria Sukses 1.3.1 - Penggunaan \textit{Heading} Tidak Tepat]
+        --- a/www/application/views/TranskripRequest/main.php
+        +++ b/www/application/views/TranskripRequest/main.php
+        @@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                 <div class="row">
+                     <div class="medium-12 column">
+                         <div class="callout">
+        -                    <h5>Permohonan Baru</h5>
+        +                    <h1>Permohonan Baru</h1>
+                             <?php if (is_array($forbiddenTypes)): ?>
+                                 <form method="POST" action="/TranskripRequest/add">
+                                     <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+        @@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                             <?php endif ?>
+                         </div>
+                         <div class="callout">
+        -                    <h5>Histori Permohonan</h5>
+        +                    <h1>Histori Permohonan</h1>
+                             <table class="stack">
+                                 <thead>
+                                     <tr>
+        @@ -81,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                             <td><?= $request->answeredMessage ?></td>
+                                             <td>
+                                                 <div class="reveal" id="detail<?= $request->id ?>" data-reveal>
+        -                                            <h5>Detail Permohonan #<?= $request->id ?></h5>
+        +                                            <h2>Detail Permohonan #<?= $request->id ?></h2>
+                                                     <table class="stack">
+                                                         <tbody>
+                                                             <tr>
+        
+        --- a/www/application/views/TranskripManage/main.php
+        +++ b/www/application/views/TranskripManage/main.php
+        @@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+        
+                <div class="row">
+                    <div class="callout">
+        -                <h5>Permintaan Transkrip</h5>
+        +                <h1>Permintaan Transkrip</h1>
+                        <form method="GET" action="/TranskripManage">
+                            <div class="input-group">
+                                <span class="input-group-label">Cari NPM:</span>
+        @@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                        <td><?= isset($request->requestByNPM) ? $request->requestByNPM : '-' ?></td>
+                                        <td>
+                                            <div class="reveal" id="detail<?= $request->id ?>" data-reveal>
+        -                                        <h5>Detail Permohonan #<?= $request->id ?></h5>
+        +                                        <h2>Detail Permohonan #<?= $request->id ?></h2>
+                                                <table class="stack">
+                                                    <tbody>
+                                                        <tr>                                                     
+        @@ -85,15 +85,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>                                        
+                                            </div>
+                                            <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+                                            <div class="reveal" id="tolak<?= $request->id ?>" data-reveal>
+        -                                        <h5>Tolak Permohonan</h5>
+        +                                        <h2>Tolak Permohonan</h2>
+                                                <form method="POST" action="/TranskripManage/answer">
+                                                    <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+                                                    <input type="hidden" name="id" value="<?= $request->id ?>"/>
+                                                    <input type="hidden" name="answer" value="rejected"/>
+                                                    <label>Email penjawab:
+                                                        <input type="text" value="<?= $answeredByEmail ?>" readonly="true"/>
+                                                    </label>
+                                                    <label>Alasan penolakan:
+                                                        <input name="answeredMessage" class="input-group-field" type="text" required/>
+        @@ -105,9 +105,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <a data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
+                                            <div class="reveal" id="cetak<?= $request->id ?>" data-reveal>
+        -                                        <h5>Cetak Permohonan</h5>
+        +                                        <h2>Cetak Permohonan</h2>
+                                                <?php if ($request->requestByNPM !== NULL): ?>
+                                                    <a target="_blank" href="<?= sprintf($transkripURLs[$request->requestType], $request->requestByNPM) ?>">Klik untuk membuka DPS/LHS</a>
+                                                <?php else: ?>
+        @@ -131,9 +131,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                            <a data-open="cetak<?= $request->id ?>"><i class="fi-print"></i></a>
+                                                <div class="reveal" id="hapus<?= $request->id ?>" data-reveal>
+        -                                        <h5>Hapus Permohonan</h5>
+        +                                        <h2>Hapus Permohonan</h2>
+                                                    <form method="POST" action="/TranskripManage/remove">
+                                                        <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+                                                        <input type="hidden" name="id" value="<?= $request->id ?>"/>
+
+        --- a/www/application/views/PerubahanKuliahRequest/main.php
+        +++ b/www/application/views/PerubahanKuliahRequest/main.php
+        @@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                    <div class="row">
+                        <div class="large-12 column">
+                            <div class="callout">
+        -                    <h5>Permohonan Baru</h5>
+        +                    <h1>Permohonan Baru</h1>
+                                <form method="POST" action="/PerubahanKuliahRequest/add">
+                                    <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+                                    <div class="row">
+        @@ -93,7 +93,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                </form>
+                            </div>
+                            <div class="callout">
+        -                    <h5>Histori Permohonan</h5>
+        +                    <h1>Histori Permohonan</h1>
+                                <table class="stack">
+                                    <thead>
+                                        <tr>
+        @@ -130,7 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                <?php foreach ($requests as $request): ?>
+        
+                    <div class="reveal" id="detail<?= $request->id ?>" data-reveal>
+        -                <h5>Detail Permohonan #<?= $request->id ?></h5>
+        +                <h2>Detail Permohonan #<?= $request->id ?></h2>
+                        <table class="stack">
+                            <tbody>
+                                <tr>
+
+        --- a/www/application/views/PerubahanKuliahManage/main.php
+        +++ b/www/application/views/PerubahanKuliahManage/main.php
+        @@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+            
+                    <div class="row">
+                        <div class="callout">
+        -                <h5>Permohonan Perubahan Kuliah</h5>
+        +                <h1>Permohonan Perubahan Kuliah</h1>
+                            <table class="stack">
+                                <thead>
+                                    <tr>
+        @@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                <?php foreach ($requests as $request): ?>
+
+                    <div class="reveal" id="detail<?= $request->id ?>" data-reveal>
+        -                <h5>Detail Permohonan #<?= $request->id ?></h5>
+        +                <h2>Detail Permohonan #<?= $request->id ?></h2>
+                        <table class="stack">
+                            <tbody>
+                                <tr>
+        @@ -128,7 +128,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                        </button>
+                    </div>
+                    <div class="reveal" id="konfirmasi<?= $request->id ?>" data-reveal>
+        -                <h5>Konfirmasi Permohonan</h5>
+        +                <h2>Konfirmasi Permohonan</h2>
+                        <form method="POST" action="/PerubahanKuliahManage/answer">
+                            <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+                            <input type="hidden" name="id" value="<?= $request->id ?>"/>
+        @@ -147,7 +147,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                        </button>
+                    </div>        
+                    <div class="reveal" id="tolak<?= $request->id ?>" data-reveal>
+        -                <h5>Tolak Permohonan</h5>
+        +                <h2>Tolak Permohonan</h2>
+                        <form method="POST" action="/PerubahanKuliahManage/answer">
+                            <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+                            <input type="hidden" name="id" value="<?= $request->id ?>"/>
+        @@ -166,7 +166,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                        </button>
+                    </div>
+                    <div class="reveal" id="hapus<?= $request->id ?>" data-reveal>
+        -                <h5>Hapus Permohonan</h5>
+        +                <h2>Hapus Permohonan</h2>
+                        <form method="POST" action="/PerubahanKuliahManage/remove">
+                            <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+                            <input type="hidden" name="id" value="<?= $request->id ?>"/>
+        
+        --- a/www/application/views/EntriJadwalDosen/main.php
+        +++ b/www/application/views/EntriJadwalDosen/main.php
+        @@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                    <div class="row">
+            
+                        <div class="large-12 column callout">
+        -                <h5>Tambah Jadwal</h5>
+        +                <h1>Tambah Jadwal</h1>
+                            <div class="large-4 columns">
+                                <form method="POST" action="/EntriJadwalDosen/add">
+                                    <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+        @@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                            <!-- ===================================================================== Pembentukan Tabel ============================================================================= -->
+            
+                            <div class="large-12 column callout">
+        -                    <h5>Daftar Jadwal</h5>
+        +                    <h1>Daftar Jadwal</h1>
+                                <div class="table-scroll" id="jadwal_table">
+                                    <table border=1 style="border-color:black ; border-collapse:separate">
+                                        <tr>
+        @@ -169,7 +175,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                <button class="close-button" data-close aria-label="Close modal" type="button">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+        -                        <h5> Edit Jadwal </h5>
+        +                        <h2> Edit Jadwal </h2>
+                                <form name="form<?php echo $dataHariIni->id ?>" method="POST" action="/EntriJadwalDosen/update/<?php echo $dataHariIni->id ?>">
+                                    <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+                                    <input type="hidden" name="id_jadwal_parameter" value="<?php echo $dataHariIni->id ?>"> </a> <br>
+    \end{lstlisting}
+
+    \item Pada halaman manajemen cetak transkrip, kolom masukan NPM diberi atribut \textit{id} yang diisi dengan nilai "npm" lalu label "Cari NPM" diubah dari \textit{<span>} menjadi \textit{<label>} dan diberi atribut \textit{for} dengan nilai "npm". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}, language=HTML, caption=Perbaikan Kriteria Sukses 1.3.1 - Tidak Terdapat Label pada Kolom Masukan di Halaman Manajemen Cetak Transkrip]
+        --- a/www/application/views/TranskripManage/main.php
+        +++ b/www/application/views/TranskripManage/main.php
+        @@ -9,11 +9,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                <div class="row">
+                    <div class="callout">
+                        <h5>Permintaan Transkrip</h5>
+                        <form method="GET" action="/TranskripManage">
+                            <div class="input-group">
+        -                        <span class="input-group-label">Cari NPM:</span>
+        -                        <input name="npm" class="input-group-field" type="text" placeholder="2013730013" maxlength="10" minlength="10"<?= $npmQuery === NULL ? '' : " value='$npmQuery'" ?>/>
+        +                        <label for="npm" class="input-group-label">Cari NPM:</label>
+        +                        <input id="npm" name="npm" class="input-group-field" type="text" placeholder="2013730013" maxlength="10" minlength="10"<?= $npmQuery === NULL ? '' : " value='$npmQuery'" ?>/>
+                                <div class="input-group-button">
+                                    <input class="button" type="submit" value="Cari"/>
+                                </div>
+    \end{lstlisting}
+
+    \item Pada halaman entri jadwal dosen, setiap kolom masukan diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Perbaikan Kriteria Sukses 1.3.1 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
+        --- a/www/application/views/EntriJadwalDosen/main.php
+        +++ b/www/application/views/EntriJadwalDosen/main.php
+        @@ -12,12 +12,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                <div class="row">
+        
+                    <div class="large-12 column callout">
+                        <h5>Tambah Jadwal</h5>
+                        <div class="large-4 columns">
+                            <form method="POST" action="/EntriJadwalDosen/add">
+                                <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+        -                        Hari
+        -                        <select name="hari"> 
+        +                        <label for="hari">Hari</label>
+        +                        <select id="hari" name="hari"> 
+                                    <?php
+                                    $hariValue = 0;
+                                    foreach ($namaHari as $hari) {
+        @@ -29,29 +29,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                    }
+                                    ?>
+                                </select><br>
+        -                        Jam Mulai
+        -                        <select name="jam_mulai"> 
+        +                        <label for="jam_mulai">Jam Mulai</label>
+        +                        <select id="jam_mulai" name="jam_mulai"> 
+                                    <?php for ($i = 7; $i <= 16; $i++) { ?>
+                                        <option value="<?php echo $i ?>"> <?php echo $i ?>:00 </option>
+                                    <?php } ?>
+                                </select><br>
+                                </div>
+                                <div class=" large-4 columns">
+        -                            Durasi
+        -                            <select name="durasi"> 
+        +                            <label for="durasi">Durasi</label>
+        +                            <select id="durasi" name="durasi"> 
+                                        <?php for ($i = 1; $i <= 9; $i++) { ?>
+                                            <option value="<?php echo $i ?>"> <?php echo $i ?> jam </option>
+                                        <?php } ?>
+                                    </select><br>
+        -                            Jenis  
+        -                            <select name="jenis_jadwal"> 
+        +                            <label for="jenis_jadwal">Jenis</label>
+        +                            <select id="jenis_jadwal" name="jenis_jadwal"> 
+                                        <option value="konsultasi" style="background-color:yellow"> Konsultasi </option>
+                                        <option value="terjadwal" style="background-color:green;color:white"> Terjadwal</option>
+                                        <option value="kelas" style="background-color:white"> Kelas </option>
+                                    </select>
+                                </div>
+        -                        <div class="large-4 columns">
+        -                            Label <input type="text" name="label_jadwal"><br>
+        +                        <div class="large-4 columns">   
+        +                            <label for="label_jadwal">Label</label>
+        +                            <input id="label_jadwal" type="text" name="label_jadwal"><br>
+                                    <input type="submit" class="button" value="Tambah">
+                                    </form>
+                                </div>
+    \end{lstlisting}
+\end{itemize}
+
+\subsection{Perbaikan Kriteria Sukses 2.1.1 \textit{Keyboard}}
+\label{subsec:perbaikan_kriteria_sukses_2.1.1}
+
+\subsection{Perbaikan Kriteria Sukses 2.4.1 \textit{Bypass Blocks}}
+\label{subsec:perbaikan_kriteria_sukses_2.4.1}
+
+\subsection{Perbaikan Kriteria Sukses 2.4.4 \textit{Link Purpose (In Context)}}
+\label{subsec:perbaikan_kriteria_sukses_2.4.4}
+Pada bagian ini dilakukan perbaikan sebagai berikut:
+
+\begin{itemize}
+    \item Pada tautan berisi ikon yang tidak memiliki teks untuk menjelaskan tujuan tautan tersebut yang terdapat di halaman cetak transkrip diberikan atribut \textit{aria-label} yang diisi dengan nilai "Lihat Detail Permohonan". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.4.4_tautan_tanpa_keterangan_cetak_transkrip}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan_cetak_transkrip}, language=HTML, caption=Perbaikan Kriteria Sukses 2.4.4 - Tautan Tanpa Keterangan di Halaman Manajemen Cetak Transkrip]
+        --- a/www/application/views/TranskripRequest/main.php
+        +++ b/www/application/views/TranskripRequest/main.php
+        @@ -126,7 +126,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+        -                                        <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+        +                                        <a aria-label="lihat detail permohonan" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+    \end{lstlisting}
+
+    \item Pada tautan berisi ikon yang tidak memiliki teks untuk menjelaskan tujuan tautan tersebut yang terdapat di halaman manajemen cetak transkrip diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.4.4_tautan_tanpa_keterangan_manajemen_cetak_transkrip}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan_manajemen_cetak_transkrip}, language=HTML, caption=Perbaikan Kriteria Sukses 2.4.4 - Tautan Tanpa Keterangan di Halaman Manajemen Cetak Transkrip]
+        --- a/www/application/views/TranskripManage/main.php
+        +++ b/www/application/views/TranskripManage/main.php
+        @@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>                                        
+                                            </div>
+        -                                    <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+        +                                    <a aria-label="lihat detail permohonan" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+                                            <div class="reveal" id="tolak<?= $request->id ?>" data-reveal>
+                                                <h5>Tolak Permohonan</h5>
+                                                <form method="POST" action="/TranskripManage/answer">
+        @@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+        -                                    <a data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
+        +                                    <a aria-label="tolak permohonan" data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
+                                            <div class="reveal" id="cetak<?= $request->id ?>" data-reveal>
+                                                <h5>Cetak Permohonan</h5>
+                                                <?php if ($request->requestByNPM !== NULL): ?>
+        @@ -131,7 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+        -                                    <a data-open="cetak<?= $request->id ?>"><i class="fi-print"></i></a>
+        +                                    <a aria-label="cetak permohonan" data-open="cetak<?= $request->id ?>"><i class="fi-print"></i></a>
+                                            <div class="reveal" id="hapus<?= $request->id ?>" data-reveal>
+                                                <h5>Hapus Permohonan</h5>
+                                                <form method="POST" action="/TranskripManage/remove">
+        @@ -146,7 +146,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+        -                                    <a data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
+        +                                    <a aria-label="hapus permohonan" data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+    \end{lstlisting}
+
+    \item Pada tautan berisi ikon yang tidak memiliki teks untuk menjelaskan tujuan tautan tersebut yang terdapat di halaman perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai "Lihat Detail Permohonan". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.4.4_tautan_tanpa_keterangan_perubahan_kuliah}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan_perubahan_kuliah}, language=HTML, caption=Perbaikan Kriteria Sukses 2.4.4 - Tautan Tanpa Keterangan di Halaman Perubahan Kuliah]
+        --- a/www/application/views/PerubahanKuliahRequest/main.php
+        +++ b/www/application/views/PerubahanKuliahRequest/main.php
+        @@ -118,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                             <td><time datetime="<?= $request->answeredDateTime ?>"><?= $request->answeredDateString ?></time></td>
+                                             <td><?= $request->answeredMessage ?></td>
+                                             <td>
+        -                                        <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+        +                                        <a aria-label="lihat detail permohonan" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+                                             </td>
+                                         </tr>
+                                     <?php endforeach; ?>        
+    \end{lstlisting}
+
+    \item Pada tautan berisi ikon yang tidak memiliki teks untuk menjelaskan tujuan tautan tersebut yang terdapat di halaman manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.4.4_tautan_tanpa_keterangan_manajemen_perubahan_kuliah}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan_manajemen_perubahan_kuliah}, language=HTML, caption=Perbaikan Kriteria Sukses 2.4.4 - Tautan Tanpa Keterangan di Halaman Manajemen Perubahan Kuliah]
+        --- a/www/application/views/PerubahanKuliahManage/main.php
+        +++ b/www/application/views/PerubahanKuliahManage/main.php
+        @@ -30,11 +30,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                         <td><?= $request->mataKuliahCode ?></td>
+                                         <td><?= PerubahanKuliah_model::CHANGETYPE_TYPES[$request->changeType] ?></td>
+                                         <td>
+        -                                    <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+        -                                    <a target="_blank" href="/PerubahanKuliahManage/printview/<?= $request->id ?>"><i class="fi-print"></i></a>
+        -                                    <a data-open="konfirmasi<?= $request->id ?>"><i class="fi-like"></i></a>                                    
+        -                                    <a data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
+        -                                    <a data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
+        +                                    <a aria-label="lihat detail permohonan" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+        +                                    <a aria-label="cetak permohonan" target="_blank" href="/PerubahanKuliahManage/printview/<?= $request->id ?>"><i class="fi-print"></i></a>
+        +                                    <a aria-label="konfirmasi permohonan" data-open="konfirmasi<?= $request->id ?>"><i class="fi-like"></i></a>                                    
+        +                                    <a aria-label="tolak permohonan" data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
+        +                                    <a aria-label="hapus permohonan" data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
+                                         </td>
+                                     </tr>
+                                 <?php endforeach; ?>
+    \end{lstlisting}
+\end{itemize}
+
+\subsection{Perbaikan Kriteria Sukses 2.5.3 \textit{Label in Name}}
+\label{subsec:perbaikan_kriteria_sukses_2.5.3}
+
+\subsection{Perbaikan Kriteria Sukses 3.1.1 \textit{Language of Page}}
+\label{subsec:perbaikan_kriteria_sukses_3.1.1}
+Pada bagian ini dilakukan perbaikan dengan mengubah setelan bahasa dari bahasa Inggris menjadi bahasa Indonesia untuk setiap halaman yang ditampilkan kepada pengguna. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_3.1.1_bahasa_halaman}.
+
+\begin{lstlisting}[frame=single, label={lst:perbaikan_3.1.1_bahasa_halaman}, language=HTML, caption=Perbaikan Kriteria Sukses 3.1.1 - Bahasa yang Tidak Sesuai]
+    --- a/www/application/views/auth/login.php
+    +++ b/www/application/views/auth/login.php
+    @@ -1,7 +1,7 @@
+    <?php
+    defined('BASEPATH') OR exit('No direct script access allowed');
+    ?><!doctype html>
+    -<html class="no-js" lang="en">
+    +<html class="no-js" lang="id">
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    --- a/www/application/views/TranskripRequest/main.php
+    +++ b/www/application/views/TranskripRequest/main.php
+    @@ -1,7 +1,7 @@
+     <?php
+     defined('BASEPATH') OR exit('No direct script access allowed');
+     ?><!doctype html>
+    -<html class="no-js" lang="en">
+    +<html class="no-js" lang="id">
+         <?php $this->load->view('templates/head_loggedin'); ?>
+         <body>
+             <?php $this->load->view('templates/topbar_loggedin'); ?>
+
+    --- a/www/application/views/TranskripManage/main.php
+    +++ b/www/application/views/TranskripManage/main.php
+    @@ -1,7 +1,7 @@
+    <?php
+    defined('BASEPATH') OR exit('No direct script access allowed');
+    ?><!doctype html>
+    -<html class="no-js" lang="en">
+    +<html class="no-js" lang="id">
+        <?php $this->load->view('templates/head_loggedin'); ?>
+        <body>
+            <?php $this->load->view('templates/topbar_loggedin'); ?>
+
+    --- a/www/application/views/PerubahanKuliahRequest/main.php
+    +++ b/www/application/views/PerubahanKuliahRequest/main.php
+    @@ -1,7 +1,7 @@
+        <?php
+        defined('BASEPATH') OR exit('No direct script access allowed');
+        ?><!doctype html>
+    -<html class="no-js" lang="en">
+    +<html class="no-js" lang="id">
+            <?php $this->load->view('templates/head_loggedin'); ?>
+            <body>
+                <?php $this->load->view('templates/topbar_loggedin'); ?>
+
+    --- a/www/application/views/PerubahanKuliahManage/main.php
+    +++ b/www/application/views/PerubahanKuliahManage/main.php
+    @@ -1,7 +1,7 @@
+        <?php
+        defined('BASEPATH') OR exit('No direct script access allowed');
+        ?><!doctype html>
+    -<html class="no-js" lang="en">
+    +<html class="no-js" lang="id">
+            <?php $this->load->view('templates/head_loggedin'); ?>
+            <body>
+                <?php $this->load->view('templates/topbar_loggedin'); ?>
+
+    --- a/www/application/views/PerubahanKuliahManage/printview.php
+    +++ b/www/application/views/PerubahanKuliahManage/printview.php
+    @@ -2,7 +2,7 @@
+        defined('BASEPATH') OR exit('No direct script access allowed');
+        setlocale(LC_TIME, 'ind');
+        ?><!doctype html>
+    -<html class="no-js" lang="en">
+    +<html class="no-js" lang="id">
+            <head>
+                <meta charset="utf-8" />
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    --- a/www/application/views/EntriJadwalDosen/main.php
+    +++ b/www/application/views/EntriJadwalDosen/main.php
+    @@ -1,7 +1,7 @@
+        <?php
+        defined('BASEPATH') OR exit('No direct script access allowed');
+        ?><!doctype html>
+    -<html class="no-js" lang="en">
+    +<html class="no-js" lang="id">
+            <?php $this->load->view('templates/script_foundation'); ?>
+            <?php $this->load->view('templates/head_loggedin'); ?>
+            <?php $this->load->view('templates/flashmessage'); ?>
+
+    --- a/www/application/views/LihatJadwalDosen/main.php
+    +++ b/www/application/views/LihatJadwalDosen/main.php
+    @@ -1,7 +1,7 @@
+    <?php
+    defined('BASEPATH') OR exit('No direct script access allowed');
+    ?><!doctype html>
+    -<html class="no-js" lang="en">
+    +<html class="no-js" lang="id">
+        <?php $this->load->view('templates/head_loggedin'); ?>
+        <body>
+            <?php $this->load->view('templates/topbar_loggedin'); ?>
+\end{lstlisting}
+
+\subsection{Perbaikan Kriteria Sukses 3.3.2 \textit{Labels or Instructions}}
+\label{subsec:perbaikan_kriteria_sukses_3.3.2}
+Pada bagian ini dilakukan perbaikan yaitu pada halaman entri jadwal dosen, setiap kolom masukan diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_3.3.2_label_masukan_entri_jadwal_dosen}.
+\begin{lstlisting}[frame=single, label={lst:perbaikan_3.3.2_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Perbaikan Kriteria Sukses 3.3.2 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
+    --- a/www/application/views/EntriJadwalDosen/main.php
+    +++ b/www/application/views/EntriJadwalDosen/main.php
+    @@ -12,12 +12,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+            <div class="row">
+    
+                <div class="large-12 column callout">
+                    <h5>Tambah Jadwal</h5>
+                    <div class="large-4 columns">
+                        <form method="POST" action="/EntriJadwalDosen/add">
+                            <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+    -                        Hari
+    -                        <select name="hari"> 
+    +                        <label for="hari">Hari</label>
+    +                        <select id="hari" name="hari"> 
+                                <?php
+                                $hariValue = 0;
+                                foreach ($namaHari as $hari) {
+    @@ -29,29 +29,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                }
+                                ?>
+                            </select><br>
+    -                        Jam Mulai
+    -                        <select name="jam_mulai"> 
+    +                        <label for="jam_mulai">Jam Mulai</label>
+    +                        <select id="jam_mulai" name="jam_mulai"> 
+                                <?php for ($i = 7; $i <= 16; $i++) { ?>
+                                    <option value="<?php echo $i ?>"> <?php echo $i ?>:00 </option>
+                                <?php } ?>
+                            </select><br>
+                            </div>
+                            <div class=" large-4 columns">
+    -                            Durasi
+    -                            <select name="durasi"> 
+    +                            <label for="durasi">Durasi</label>
+    +                            <select id="durasi" name="durasi"> 
+                                    <?php for ($i = 1; $i <= 9; $i++) { ?>
+                                        <option value="<?php echo $i ?>"> <?php echo $i ?> jam </option>
+                                    <?php } ?>
+                                </select><br>
+    -                            Jenis  
+    -                            <select name="jenis_jadwal"> 
+    +                            <label for="jenis_jadwal">Jenis</label>
+    +                            <select id="jenis_jadwal" name="jenis_jadwal"> 
+                                    <option value="konsultasi" style="background-color:yellow"> Konsultasi </option>
+                                    <option value="terjadwal" style="background-color:green;color:white"> Terjadwal</option>
+                                    <option value="kelas" style="background-color:white"> Kelas </option>
+                                </select>
+                            </div>
+    -                        <div class="large-4 columns">
+    -                            Label <input type="text" name="label_jadwal"><br>
+    +                        <div class="large-4 columns">   
+    +                            <label for="label_jadwal">Label</label>
+    +                            <input id="label_jadwal" type="text" name="label_jadwal"><br>
+                                <input type="submit" class="button" value="Tambah">
+                                </form>
+                            </div>
+\end{lstlisting} 
+
+\subsection{Perbaikan Kriteria Sukses 4.1.1 \textit{Parsing}}
+\label{subsec:perbaikan_kriteria_sukses_4.1.1}
+Pada bagian ini dilakukan perbaikan sebagai berikut:
+
+\begin{itemize}
+    \item Pada penggunaan \textit{tag "time"} buka tidak disertai dengan \textit{tag "time"} tutup di halaman cetak transkrip, bagian yang tidak lengkap ditambahkan \textit{</time>}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_4.1.1_parsing_halaman_cetak_transkrip}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_4.1.1_parsing_halaman_cetak_transkrip}, language=HTML, caption=Perbaikan Kriteria Sukses 4.1.1 - Kesalahan Elemen pada Halaman Cetak Transkrip]
+        --- a/www/application/views/TranskripRequest/main.php
+        +++ b/www/application/views/TranskripRequest/main.php
+        @@ -77,11 +77,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                            <td><span class="<?= $request->labelClass ?> label"><?= $request->status ?></span></td>
+                                            <td><time datetime="<?= $request->requestDateTime ?>"><?= $request->requestDateString ?></time></td>
+                                            <td><?= $request->requestType ?></td>
+        -                                    <td><time datetime="<?= $request->answeredDateTime ?>"><?= $request->answeredDateString ?></td>
+        +                                    <td><time datetime="<?= $request->answeredDateTime ?>"><?= $request->answeredDateString ?></time></td>
+                                            <td><?= $request->answeredMessage ?></td>
+                                            <td>
+                                                <div class="reveal" id="detail<?= $request->id ?>" data-reveal>
+                                                    <h5>Detail Permohonan #<?= $request->id ?></h5>
+                                                    <table class="stack">
+                                                        <tbody>
+                                                            <tr>
+    \end{lstlisting} 
+
+    \item Pada penempatan elemen \textit{"HTML"} yang tidak tepat di halaman entri jadwal dosen, \textit{tag "div"} dipindahkan agar berada sesudah \textit{tag "body"}. \textit{Tag "div"} yang bermasalah ini muncul dari \textit{file} "flashmessage.php" yang dimuat di tempat yang salah. Oleh karena perbaikan yang dilakukan adalah dengan memuat \textit{file} "flashmessage.php" di tempat yang seharusnya. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_4.1.1_parsing_halaman_entri_jadwal_dosen}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_4.1.1_parsing_halaman_entri_jadwal_dosen}, language=HTML, caption=Perbaikan Kriteria Sukses 4.1.1 - Kesalahan Elemen pada Halaman Entri Jadwal Dosen]
+        --- a/www/application/views/EntriJadwalDosen/main.php
+        +++ b/www/application/views/EntriJadwalDosen/main.php
+        @@ -1,23 +1,23 @@
+        <?php
+        defined('BASEPATH') OR exit('No direct script access allowed');
+        ?><!doctype html>
+        <html class="no-js" lang="en">
+            <?php $this->load->view('templates/script_foundation'); ?>
+            <?php $this->load->view('templates/head_loggedin'); ?>
+        -	<?php $this->load->view('templates/flashmessage'); ?>
+            <?php $this->load->helper('url'); ?>
+            <body>
+                <?php $this->load->view('templates/topbar_loggedin'); ?>
+        -
+        +        <?php $this->load->view('templates/flashmessage'); ?>
+        +        
+                <div class="row">
+        
+                    <div class="large-12 column callout">
+                        <h5>Tambah Jadwal</h5>
+                        <div class="large-4 columns">
+                            <form method="POST" action="/EntriJadwalDosen/add">
+                                <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+                                Hari
+                                <select name="hari">  
+                                    <?php
+                                    $hariValue = 0;
+                                    foreach ($namaHari as $hari) {
+    \end{lstlisting} 
+\end{itemize}
