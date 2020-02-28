@@ -840,13 +840,15 @@ Kriteria ini sukses dipatuhi karena setiap fungsionalitas yang dapat dioperasika
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.5.3}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena setiap komponen masukan yang memiliki label yang menyertakan teks, nama komponen tersebut tidak mengandung teks yang disajikan secara visual. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:2.5.3_teks_label_pada_nama}. Contoh tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripRequest}.
+Kriteria ini tidak sukses dipatuhi karena pada halaman manajemen cetak transkrip dan entri jadwal dosen, elemen masukan yang memiliki label yang menyertakan teks tidak memiliki teks nama yang dapat diidentifikasi oleh teknologi alat bantu. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:2.5.3_label_dan_nama_pada_komponen_masukan}. Contoh tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
 
-\begin{lstlisting}[frame=single, label={lst:2.5.3_teks_label_pada_nama}, language=HTML, caption=Kriteria Sukses 2.5.3 - Teks Label pada Atribut Nama]
-    <div class="large-4 column">
-        <label>Yang memohon:
-            <input type="email" name="requestByEmail" value="7315020@student.unpar.ac.id" readonly="readonly"/>
-        </label>
+\begin{lstlisting}[frame=single, label={lst:2.5.3_label_dan_nama_pada_komponen_masukan}, language=HTML, caption=Kriteria Sukses 2.5.3 - Label dan Nama Pada Komponen Masukan]
+    <div class="input-group">
+        <span class="input-group-label">Cari NPM:</span>
+        <input name="npm" class="input-group-field" type="text" placeholder="2013730013" maxlength="10" minlength="10"<?= $npmQuery === NULL ? '' : " value='$npmQuery'" ?>/>
+        <div class="input-group-button">
+            <input class="button" type="submit" value="Cari"/>
+        </div>
     </div>
 \end{lstlisting}
 
@@ -1187,7 +1189,7 @@ Kriteria ini sukses dipatuhi karena ketika terdapat eror masukan yang terdeteksi
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.3.2}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman entri jadwal dosen, setiap elemen masukan tidak memiliki label yang menjelaskan tujuan dari elemen tersebut. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:3.3.2_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+Kriteria ini tidak sukses dipatuhi karena pada halaman manajemen cetak transkrip dan entri jadwal dosen, setiap elemen masukan tidak memiliki label yang menjelaskan tujuan dari elemen tersebut. Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:3.3.2_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
 
 \begin{lstlisting}[frame=single, label={lst:3.3.2_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Kriteria Sukses 3.3.2 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
     <input type="hidden" name="csrf_token" value="3c159eae7bc953dd591b679c080ed066"/>
@@ -1317,7 +1319,7 @@ Masalah pada poin ini dapat diperbaiki dengan cara mengganti setiap tautan (\tex
 
 \subsection{Peningkatan Kriteria Sukses 2.5.3 \textit{Label in Name}}
 \label{subsec:peningkatan_kriteria_sukses_2.5.3}
-
+Masalah pada poin ini dapat diperbaiki dengan cara menambahkan atribut \textit{id} pada setiap kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{tag label} dan dihubungkan dengan kolom masukan yang bersangkutan.
 
 \subsection{Peningkatan Kriteria Sukses 3.1.1 \textit{Language of Page}}
 \label{subsec:peningkatan_kriteria_sukses_3.1.1}

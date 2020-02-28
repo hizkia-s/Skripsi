@@ -12,7 +12,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \begin{itemize}
     \item Pada tombol menu yang tidak memiliki nama diberikan atribut \textit{aria-label} yang diisi dengan nilai "Tombol Menu". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_tombol_tanpa_nama}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_tombol_tanpa_nama}, language=HTML, caption=Perbaikan Kriteria Sukses 1.1.1 - Tombol Tanpa Nama]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_tombol_tanpa_nama}, language=diff, caption=Perbaikan Kriteria Sukses 1.1.1 - Tombol Tanpa Nama]
         --- a/www/application/views/templates/topbar_loggedin.php
         +++ b/www/application/views/templates/topbar_loggedin.php
         @@ -1,7 +1,7 @@
@@ -26,7 +26,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
     \end{lstlisting}
 
     \item Pada konten berupa ikon yang tidak memiliki nama di halaman cetak transkrip diberikan atribut \textit{aria-label} yang diisi dengan nilai "Lihat Detail Permohonan". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama_cetak_transkrip}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_cetak_transkrip}, language=HTML, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Cetak Transkrip]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Cetak Transkrip]
         --- a/www/application/views/TranskripRequest/main.php
         +++ b/www/application/views/TranskripRequest/main.php
         @@ -126,7 +126,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
@@ -41,7 +41,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
     \end{lstlisting}
 
     \item Pada konten berupa ikon yang tidak memiliki nama di halaman manajemen cetak transkrip diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_cetak_transkrip}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_cetak_transkrip}, language=HTML, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Manajemen Cetak Transkrip]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Manajemen Cetak Transkrip]
         --- a/www/application/views/TranskripManage/main.php
         +++ b/www/application/views/TranskripManage/main.php
         @@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
@@ -83,7 +83,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
     \end{lstlisting}
 
     \item Pada konten berupa ikon yang tidak memiliki nama di halaman perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai "Lihat Detail Permohonan". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama_perubahan_kuliah}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_perubahan_kuliah}, language=HTML, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Perubahan Kuliah]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_perubahan_kuliah}, language=diff, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Perubahan Kuliah]
         --- a/www/application/views/PerubahanKuliahRequest/main.php
         +++ b/www/application/views/PerubahanKuliahRequest/main.php
         @@ -118,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
@@ -98,7 +98,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
     \end{lstlisting}
 
     \item Pada konten berupa ikon yang tidak memiliki nama di halaman manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_perubahan_kuliah}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_perubahan_kuliah}, language=HTML, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Manajemen Perubahan Kuliah]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_perubahan_kuliah}, language=diff, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Manajemen Perubahan Kuliah]
         --- a/www/application/views/PerubahanKuliahManage/main.php
         +++ b/www/application/views/PerubahanKuliahManage/main.php
         @@ -30,11 +30,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
@@ -127,7 +127,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \begin{itemize}
     \item Pada penggunaan \textit{tag heading} yang tidak tepat, judul yang menggunakan \textit{<h5>} diubah menggunakan \textit{tag heading} yang sesuai struktur \textit{HTML} secara berurutan dimulai dari \textit{<h1>} hingga \textit{<h6>}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.3.1_tag_heading}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_tag_heading}, language=HTML, caption=Perbaikan Kriteria Sukses 1.3.1 - Penggunaan \textit{Heading} Tidak Tepat]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_tag_heading}, language=diff, caption=Perbaikan Kriteria Sukses 1.3.1 - Penggunaan \textit{Heading} Tidak Tepat]
         --- a/www/application/views/TranskripRequest/main.php
         +++ b/www/application/views/TranskripRequest/main.php
         @@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
@@ -328,7 +328,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
     \end{lstlisting}
 
     \item Pada halaman manajemen cetak transkrip, kolom masukan NPM diberi atribut \textit{id} yang diisi dengan nilai "npm" lalu label "Cari NPM" diubah dari \textit{<span>} menjadi \textit{<label>} dan diberi atribut \textit{for} dengan nilai "npm". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}, language=HTML, caption=Perbaikan Kriteria Sukses 1.3.1 - Tidak Terdapat Label pada Kolom Masukan di Halaman Manajemen Cetak Transkrip]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 1.3.1 - Tidak Terdapat Label pada Kolom Masukan di Halaman Manajemen Cetak Transkrip]
         --- a/www/application/views/TranskripManage/main.php
         +++ b/www/application/views/TranskripManage/main.php
         @@ -9,11 +9,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
@@ -347,7 +347,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
     \end{lstlisting}
 
     \item Pada halaman entri jadwal dosen, setiap kolom masukan diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Perbaikan Kriteria Sukses 1.3.1 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 1.3.1 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
         --- a/www/application/views/EntriJadwalDosen/main.php
         +++ b/www/application/views/EntriJadwalDosen/main.php
         @@ -12,12 +12,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
@@ -409,6 +409,41 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \subsection{Perbaikan Kriteria Sukses 2.1.1 \textit{Keyboard}}
 \label{subsec:perbaikan_kriteria_sukses_2.1.1}
+Pada bagian ini dilakukan perbaikan sebagai berikut:
+
+\begin{itemize}
+    \item Pada bagian navigasi menu,
+    \item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen, setiap \textit{cell} dalam tabel diberi atribut \textit{tabindex} yang diisi dengan nilai nol. Selanjutnya dibuat kode \textit{JavaScript} untuk memicu aksi membuka kotak dialog ketika tombol "Enter" ditekan pada \textit{cell} yang berisi jadwal dosen. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 2.1.1 - Penggunaan \textit{Keyboard} pada Halaman Entri Jadwal Dosen]
+        --- a/www/application/views/EntriJadwalDosen/main.php
+        +++ b/www/application/views/EntriJadwalDosen/main.php
+        @@ -77,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                        echo "<tr><td>" . $i . "-" . ($i + 1);
+                                        $cellColID = 1;
+                                        for ($j = 0; $j < 5; $j++) {
+        -                                    echo"<td align='center' id='cell" . $cellRowID . "-" . $cellColID . "'>" . "</td>";
+        +                                    echo"<td tabindex='0' align='center' id='cell" . $cellRowID . "-" . $cellColID . "'>" . "</td>";
+                                            $cellColID++;
+                                        }
+                                        $cellRowID++;
+        @@ -116,6 +116,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                var $menuName = "#edit_menu<?php echo $dataHariIni->id ?>";
+                                                $($menuName).foundation('open');
+                                            });
+        +
+        +                                    // membuat cell-cell dalam tabel dapat diakses menggunakan keyboard
+        +                                    $($cellLocation).keyup(function(e){
+        +                                        if(e.keyCode == 13){
+        +                                            var $menuName = "#edit_menu<?php echo $dataHariIni->id ?>";
+        +                                            $($menuName).foundation('open');
+        +                                        }
+        +                                    })
+                                        </script>
+                                        <?php
+                                    }
+    \end{lstlisting}
+\end{itemize}
+
 
 \subsection{Perbaikan Kriteria Sukses 2.4.1 \textit{Bypass Blocks}}
 \label{subsec:perbaikan_kriteria_sukses_2.4.1}
@@ -419,7 +454,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \begin{itemize}
     \item Pada tautan berisi ikon yang tidak memiliki teks untuk menjelaskan tujuan tautan tersebut yang terdapat di halaman cetak transkrip diberikan atribut \textit{aria-label} yang diisi dengan nilai "Lihat Detail Permohonan". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.4.4_tautan_tanpa_keterangan_cetak_transkrip}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan_cetak_transkrip}, language=HTML, caption=Perbaikan Kriteria Sukses 2.4.4 - Tautan Tanpa Keterangan di Halaman Manajemen Cetak Transkrip]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 2.4.4 - Tautan Tanpa Keterangan di Halaman Manajemen Cetak Transkrip]
         --- a/www/application/views/TranskripRequest/main.php
         +++ b/www/application/views/TranskripRequest/main.php
         @@ -126,7 +126,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
@@ -434,7 +469,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
     \end{lstlisting}
 
     \item Pada tautan berisi ikon yang tidak memiliki teks untuk menjelaskan tujuan tautan tersebut yang terdapat di halaman manajemen cetak transkrip diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.4.4_tautan_tanpa_keterangan_manajemen_cetak_transkrip}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan_manajemen_cetak_transkrip}, language=HTML, caption=Perbaikan Kriteria Sukses 2.4.4 - Tautan Tanpa Keterangan di Halaman Manajemen Cetak Transkrip]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan_manajemen_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 2.4.4 - Tautan Tanpa Keterangan di Halaman Manajemen Cetak Transkrip]
         --- a/www/application/views/TranskripManage/main.php
         +++ b/www/application/views/TranskripManage/main.php
         @@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
@@ -476,7 +511,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
     \end{lstlisting}
 
     \item Pada tautan berisi ikon yang tidak memiliki teks untuk menjelaskan tujuan tautan tersebut yang terdapat di halaman perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai "Lihat Detail Permohonan". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.4.4_tautan_tanpa_keterangan_perubahan_kuliah}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan_perubahan_kuliah}, language=HTML, caption=Perbaikan Kriteria Sukses 2.4.4 - Tautan Tanpa Keterangan di Halaman Perubahan Kuliah]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan_perubahan_kuliah}, language=diff, caption=Perbaikan Kriteria Sukses 2.4.4 - Tautan Tanpa Keterangan di Halaman Perubahan Kuliah]
         --- a/www/application/views/PerubahanKuliahRequest/main.php
         +++ b/www/application/views/PerubahanKuliahRequest/main.php
         @@ -118,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
@@ -491,7 +526,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
     \end{lstlisting}
 
     \item Pada tautan berisi ikon yang tidak memiliki teks untuk menjelaskan tujuan tautan tersebut yang terdapat di halaman manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.4.4_tautan_tanpa_keterangan_manajemen_perubahan_kuliah}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan_manajemen_perubahan_kuliah}, language=HTML, caption=Perbaikan Kriteria Sukses 2.4.4 - Tautan Tanpa Keterangan di Halaman Manajemen Perubahan Kuliah]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan_manajemen_perubahan_kuliah}, language=diff, caption=Perbaikan Kriteria Sukses 2.4.4 - Tautan Tanpa Keterangan di Halaman Manajemen Perubahan Kuliah]
         --- a/www/application/views/PerubahanKuliahManage/main.php
         +++ b/www/application/views/PerubahanKuliahManage/main.php
         @@ -30,11 +30,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
@@ -516,12 +551,86 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \subsection{Perbaikan Kriteria Sukses 2.5.3 \textit{Label in Name}}
 \label{subsec:perbaikan_kriteria_sukses_2.5.3}
+Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom masukan di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.5.3_label_dan_nama_pada_komponen_masukan}.
+
+\begin{lstlisting}[frame=single, label={lst:perbaikan_2.5.3_label_dan_nama_pada_komponen_masukan}, language=diff, caption=Perbaikan Kriteria Sukses 2.5.3 - Label dan Nama Pada Komponen Masukan]
+    --- a/www/application/views/TranskripManage/main.php
+    +++ b/www/application/views/TranskripManage/main.php
+    @@ -12,8 +12,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                    <h5>Permintaan Transkrip</h5>
+                    <form method="GET" action="/TranskripManage">
+                        <div class="input-group">
+    -                        <span class="input-group-label">Cari NPM:</span>
+    -                        <input name="npm" class="input-group-field" type="text" placeholder="2013730013" maxlength="10" minlength="10"<?= $npmQuery === NULL ? '' : " value='$npmQuery'" ?>/>
+    +                        <label for="npm" class="input-group-label">Cari NPM:</label>
+    +                        <input id="npm" name="npm" class="input-group-field" type="text" placeholder="2013730013" maxlength="10" minlength="10"<?= $npmQuery === NULL ? '' : " value='$npmQuery'" ?>/>
+                            <div class="input-group-button">
+                                <input class="button" type="submit" value="Cari"/>
+                            </div>
+
+    --- a/www/application/views/EntriJadwalDosen/main.php
+    +++ b/www/application/views/EntriJadwalDosen/main.php
+    @@ -12,12 +12,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+            <div class="row">
+    
+                <div class="large-12 column callout">
+                    <h5>Tambah Jadwal</h5>
+                    <div class="large-4 columns">
+                        <form method="POST" action="/EntriJadwalDosen/add">
+                            <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+    -                        Hari
+    -                        <select name="hari"> 
+    +                        <label for="hari">Hari</label>
+    +                        <select id="hari" name="hari"> 
+                                <?php
+                                $hariValue = 0;
+                                foreach ($namaHari as $hari) {
+    @@ -29,29 +29,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                }
+                                ?>
+                            </select><br>
+    -                        Jam Mulai
+    -                        <select name="jam_mulai"> 
+    +                        <label for="jam_mulai">Jam Mulai</label>
+    +                        <select id="jam_mulai" name="jam_mulai"> 
+                                <?php for ($i = 7; $i <= 16; $i++) { ?>
+                                    <option value="<?php echo $i ?>"> <?php echo $i ?>:00 </option>
+                                <?php } ?>
+                            </select><br>
+                            </div>
+                            <div class=" large-4 columns">
+    -                            Durasi
+    -                            <select name="durasi"> 
+    +                            <label for="durasi">Durasi</label>
+    +                            <select id="durasi" name="durasi"> 
+                                    <?php for ($i = 1; $i <= 9; $i++) { ?>
+                                        <option value="<?php echo $i ?>"> <?php echo $i ?> jam </option>
+                                    <?php } ?>
+                                </select><br>
+    -                            Jenis  
+    -                            <select name="jenis_jadwal"> 
+    +                            <label for="jenis_jadwal">Jenis</label>
+    +                            <select id="jenis_jadwal" name="jenis_jadwal"> 
+                                    <option value="konsultasi" style="background-color:yellow"> Konsultasi </option>
+                                    <option value="terjadwal" style="background-color:green;color:white"> Terjadwal</option>
+                                    <option value="kelas" style="background-color:white"> Kelas </option>
+                                </select>
+                            </div>
+    -                        <div class="large-4 columns">
+    -                            Label <input type="text" name="label_jadwal"><br>
+    +                        <div class="large-4 columns">   
+    +                            <label for="label_jadwal">Label</label>
+    +                            <input id="label_jadwal" type="text" name="label_jadwal"><br>
+                                <input type="submit" class="button" value="Tambah">
+                                </form>
+                            </div>
+\end{lstlisting} 
 
 \subsection{Perbaikan Kriteria Sukses 3.1.1 \textit{Language of Page}}
 \label{subsec:perbaikan_kriteria_sukses_3.1.1}
 Pada bagian ini dilakukan perbaikan dengan mengubah setelan bahasa dari bahasa Inggris menjadi bahasa Indonesia untuk setiap halaman yang ditampilkan kepada pengguna. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_3.1.1_bahasa_halaman}.
 
-\begin{lstlisting}[frame=single, label={lst:perbaikan_3.1.1_bahasa_halaman}, language=HTML, caption=Perbaikan Kriteria Sukses 3.1.1 - Bahasa yang Tidak Sesuai]
+\begin{lstlisting}[frame=single, label={lst:perbaikan_3.1.1_bahasa_halaman}, language=diff, caption=Perbaikan Kriteria Sukses 3.1.1 - Bahasa yang Tidak Sesuai]
     --- a/www/application/views/auth/login.php
     +++ b/www/application/views/auth/login.php
     @@ -1,7 +1,7 @@
@@ -621,8 +730,23 @@ Pada bagian ini dilakukan perbaikan dengan mengubah setelan bahasa dari bahasa I
 
 \subsection{Perbaikan Kriteria Sukses 3.3.2 \textit{Labels or Instructions}}
 \label{subsec:perbaikan_kriteria_sukses_3.3.2}
-Pada bagian ini dilakukan perbaikan yaitu pada halaman entri jadwal dosen, setiap kolom masukan diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_3.3.2_label_masukan_entri_jadwal_dosen}.
-\begin{lstlisting}[frame=single, label={lst:perbaikan_3.3.2_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Perbaikan Kriteria Sukses 3.3.2 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
+Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom masukan di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_3.3.2_label_masukan}.
+
+\begin{lstlisting}[frame=single, label={lst:perbaikan_3.3.2_label_masukan}, language=diff, caption=Perbaikan Kriteria Sukses 3.3.2 - Tidak Terdapat Label pada Kolom Masukan]
+    --- a/www/application/views/TranskripManage/main.php
+    +++ b/www/application/views/TranskripManage/main.php
+    @@ -12,8 +12,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                    <h5>Permintaan Transkrip</h5>
+                    <form method="GET" action="/TranskripManage">
+                        <div class="input-group">
+    -                        <span class="input-group-label">Cari NPM:</span>
+    -                        <input name="npm" class="input-group-field" type="text" placeholder="2013730013" maxlength="10" minlength="10"<?= $npmQuery === NULL ? '' : " value='$npmQuery'" ?>/>
+    +                        <label for="npm" class="input-group-label">Cari NPM:</label>
+    +                        <input id="npm" name="npm" class="input-group-field" type="text" placeholder="2013730013" maxlength="10" minlength="10"<?= $npmQuery === NULL ? '' : " value='$npmQuery'" ?>/>
+                            <div class="input-group-button">
+                                <input class="button" type="submit" value="Cari"/>
+                            </div>
+
     --- a/www/application/views/EntriJadwalDosen/main.php
     +++ b/www/application/views/EntriJadwalDosen/main.php
     @@ -12,12 +12,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
@@ -687,7 +811,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \begin{itemize}
     \item Pada penggunaan \textit{tag "time"} buka tidak disertai dengan \textit{tag "time"} tutup di halaman cetak transkrip, bagian yang tidak lengkap ditambahkan \textit{</time>}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_4.1.1_parsing_halaman_cetak_transkrip}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_4.1.1_parsing_halaman_cetak_transkrip}, language=HTML, caption=Perbaikan Kriteria Sukses 4.1.1 - Kesalahan Elemen pada Halaman Cetak Transkrip]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_4.1.1_parsing_halaman_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 4.1.1 - Kesalahan Elemen pada Halaman Cetak Transkrip]
         --- a/www/application/views/TranskripRequest/main.php
         +++ b/www/application/views/TranskripRequest/main.php
         @@ -77,11 +77,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
@@ -706,7 +830,7 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
     \end{lstlisting} 
 
     \item Pada penempatan elemen \textit{"HTML"} yang tidak tepat di halaman entri jadwal dosen, \textit{tag "div"} dipindahkan agar berada sesudah \textit{tag "body"}. \textit{Tag "div"} yang bermasalah ini muncul dari \textit{file} "flashmessage.php" yang dimuat di tempat yang salah. Oleh karena perbaikan yang dilakukan adalah dengan memuat \textit{file} "flashmessage.php" di tempat yang seharusnya. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_4.1.1_parsing_halaman_entri_jadwal_dosen}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_4.1.1_parsing_halaman_entri_jadwal_dosen}, language=HTML, caption=Perbaikan Kriteria Sukses 4.1.1 - Kesalahan Elemen pada Halaman Entri Jadwal Dosen]
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_4.1.1_parsing_halaman_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 4.1.1 - Kesalahan Elemen pada Halaman Entri Jadwal Dosen]
         --- a/www/application/views/EntriJadwalDosen/main.php
         +++ b/www/application/views/EntriJadwalDosen/main.php
         @@ -1,23 +1,23 @@
