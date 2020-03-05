@@ -1266,7 +1266,7 @@ Kriteria ini sukses dipatuhi karena pada halaman web BlueTape digunakan komponen
 \label{par:kepatuhan_bluetape_kriteria_sukses_4.1.3}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena setiap pesan status yang ditampilkan kepada pengguna tidak memiliki atribute \textit{"role"} dengan nilai \textit{"alert"} sehingga teknologi alat bantu tidak dapat mengidentifikasi serta menginformasikan pesan tersebut kepada pengguna. Letak kesalahan dapat dilihat pada potongan kode \ref{lst:4.1.3_pesan_status}.
+Kriteria ini tidak sukses dipatuhi karena setiap pesan status yang ditampilkan kepada pengguna tidak memiliki atribut \textit{"role"} dengan nilai \textit{"alert"} sehingga teknologi alat bantu tidak dapat mengidentifikasi serta menginformasikan pesan tersebut kepada pengguna. Letak kesalahan dapat dilihat pada potongan kode \ref{lst:4.1.3_pesan_status}.
 
 \begin{lstlisting}[frame=single, label={lst:4.1.3_pesan_status}, language=PHP, caption=Kriteria Sukses 4.1.3 - Atribut pada Pesan Status]
     <?php if (isset($_SESSION['error'])): ?>
@@ -1288,7 +1288,7 @@ Masalah pada poin ini dapat diperbaiki dengan cara sebagai berikut:
 \begin{itemize}
     \item Pada tombol menu yang tidak memiliki nama diberikan atribut \textit{aria-label} yang diisi dengan nilai "Tombol Menu". Penambahan atribut \textit{aria-label} akan membuat tombol tersebut dapat diidentifikasi oleh teknologi alat bantu.
     \item Pada konten berupa ikon yang tidak memiliki nama diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon.
-\end{itemize}item
+\end{itemize}
 
 \subsection{Peningkatan Kriteria Sukses 1.3.1 \textit{Info and Relationships}}
 \label{subsec:peningkatan_kriteria_sukses_1.3.1}
@@ -1305,8 +1305,8 @@ Masalah pada poin ini dapat diperbaiki dengan cara sebagai berikut:
 Masalah pada poin ini dapat diperbaiki dengan cara sebagai berikut:
 
 \begin{itemize}
-    \item Pada bagian navigasi menu,
-    \item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen, untuk setiap \textit{cell} dalam tabel diberi atribut \textit{tabindex} yang diisi dengan nilai nol. Selanjutnya dibuat kode \textit{JavaScript} untuk memicu aksi membuka kotak dialog ketika tombol "Enter" ditekan pada \textit{cell} yang berisi jadwal dosen.
+    \item Pada bagian navigasi menu, atribut \textit{data-responsive-menu="dropdown"} dihilangkan karena isi dari elemen yang mengandung atribut tersebut bukanlah sebuah menu \textit{dropdown}.
+    \item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen, setiap \textit{cell} dalam tabel yang berisi jadwal dosen diberi atribut \textit{tabindex} yang diisi dengan nilai nol. Selanjutnya dibuat kode \textit{JavaScript} untuk memicu aksi membuka kotak dialog ketika tombol "Enter" ditekan pada \textit{cell} yang berisi jadwal dosen.
 \end{itemize}
 
 \subsection{Peningkatan Kriteria Sukses 2.4.1 \textit{Bypass Blocks}}
@@ -1315,7 +1315,7 @@ Masalah pada poin ini dapat diperbaiki dengan cara membuat mekanisme untuk melom
 
 \subsection{Peningkatan Kriteria Sukses 2.4.4 \textit{Link Purpose (In Context)}}
 \label{subsec:peningkatan_kriteria_sukses_2.4.4}
-Masalah pada poin ini dapat diperbaiki dengan cara mengganti setiap tautan (\textit{<a>}) menjadi sebuah tombol (\textit{<button>}).
+Masalah pada poin ini dapat diperbaiki dengan cara menambahkan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap tautan.
 
 \subsection{Peningkatan Kriteria Sukses 2.5.3 \textit{Label in Name}}
 \label{subsec:peningkatan_kriteria_sukses_2.5.3}

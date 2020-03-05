@@ -4,7 +4,7 @@
 \section{Implementasi}
 \label{sec:implementasi}
 Pada bagian ini akan dibahas perbaikan apa saja yang dilakukan untuk membuat kriteria sukses pada bagian 3.1
-yang belum sukses dipatuhi menjadi sukses dipatuhi.
+yang belum sukses dipatuhi menjadi sukses dipatuhi. Setiap perubahan kode yang terdapat pada bagian ini ditampilkan dalam format \textit{diff}.
 
 \subsection{Perbaikan Kriteria Sukses 1.1.1 \textit{Non-text Content}}
 \label{subsec:perbaikan_kriteria_sukses_1.1.1}
@@ -412,25 +412,41 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
 Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \begin{itemize}
-    \item Pada bagian navigasi menu,
-    \item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen, setiap \textit{cell} dalam tabel diberi atribut \textit{tabindex} yang diisi dengan nilai nol. Selanjutnya dibuat kode \textit{JavaScript} untuk memicu aksi membuka kotak dialog ketika tombol "Enter" ditekan pada \textit{cell} yang berisi jadwal dosen. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}.
+    \item Pada bagian navigasi menu, atribut \textit{data-responsive-menu="dropdown"} dihilangkan dari elemen \textit{ul} karena isi dari elemen tersebut bukanlah sebuah menu \textit{dropdown}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.1.1_keyboard_menu_navigasi}.
+    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.1.1_keyboard_menu_navigasi}, language=diff, caption=Perbaikan Kriteria Sukses 2.1.1 - Penggunaan \textit{Keyboard} pada Menu Navigasi]
+        diff --git a/www/application/views/templates/topbar_loggedin.php b/www/application/views/templates/topbar_loggedin.php
+        index 51fc11e..bc9f2c0 100644
+        --- a/www/application/views/templates/topbar_loggedin.php
+        +++ b/www/application/views/templates/topbar_loggedin.php
+        @@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+        
+        <div class="top-bar" id="navigation-menu">
+            <div class="top-bar-left">
+        -        <ul class="menu" data-responsive-menu="dropdown">
+        +        <ul class="menu">
+                    <li class="menu-text"><img src="/public/img/logo.png" class="textsized" alt="B"/></li>
+                    <?php foreach ($this->Auth_model->getUserInfo()['modules'] as $module): ?>
+                        <li<?= $module === $currentModule ? ' class="menu-active"' : '' ?>><a href="/<?= $module ?>"><?= $this->config->item('module-names')[$module] ?></a></li>
+    \end{lstlisting}
+
+    \item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen, setiap \textit{cell} dalam tabel yang berisi jadwal dosen diberi atribut \textit{tabindex} yang diisi dengan nilai nol. Selanjutnya dibuat kode \textit{JavaScript} untuk memicu aksi membuka kotak dialog ketika tombol "Enter" ditekan pada \textit{cell} yang berisi jadwal dosen. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}.
     \begin{lstlisting}[frame=single, label={lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 2.1.1 - Penggunaan \textit{Keyboard} pada Halaman Entri Jadwal Dosen]
+        diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
+        index 6392b95..6c0e935 100644
         --- a/www/application/views/EntriJadwalDosen/main.php
         +++ b/www/application/views/EntriJadwalDosen/main.php
-        @@ -77,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
-                                        echo "<tr><td>" . $i . "-" . ($i + 1);
-                                        $cellColID = 1;
-                                        for ($j = 0; $j < 5; $j++) {
-        -                                    echo"<td align='center' id='cell" . $cellRowID . "-" . $cellColID . "'>" . "</td>";
-        +                                    echo"<td tabindex='0' align='center' id='cell" . $cellRowID . "-" . $cellColID . "'>" . "</td>";
-                                            $cellColID++;
-                                        }
-                                        $cellRowID++;
-        @@ -116,6 +116,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
-                                                var $menuName = "#edit_menu<?php echo $dataHariIni->id ?>";
-                                                $($menuName).foundation('open');
-                                            });
-        +
+        @@ -110,12 +110,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+                                                 $("#cell" + i + "-" +<?php echo $colIdx; ?>).remove();
+                                             }
+                                             $($cellLocation).html("<?php echo $dataHariIni->label ?>");
+        +                                    $($cellLocation).attr("tabindex", "0");
+         
+                                             //membuat cell-cell yang telah diwarnai jadi memunculkan pop-up untuk mengedit jadwal ketika diklik oleh mouse
+                                             $(document).on("click", $cellLocation, function () {
+                                                 var $menuName = "#edit_menu<?php echo $dataHariIni->id ?>";
+                                                 $($menuName).foundation('open');
+                                             });
+        +                                    
         +                                    // membuat cell-cell dalam tabel dapat diakses menggunakan keyboard
         +                                    $($cellLocation).keyup(function(e){
         +                                        if(e.keyCode == 13){
@@ -438,9 +454,9 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
         +                                            $($menuName).foundation('open');
         +                                        }
         +                                    })
-                                        </script>
-                                        <?php
-                                    }
+                                         </script>
+                                         <?php
+                                     }
     \end{lstlisting}
 \end{itemize}
 
