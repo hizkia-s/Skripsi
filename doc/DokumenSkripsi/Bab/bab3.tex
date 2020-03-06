@@ -529,7 +529,7 @@ Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat gam
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.4.10}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape, bagian navigasi menu memerlukan \textit{scroll} secara horizontal ketika ditampilkan pada resolusi layar dengan lebar 1280 piksel dan diperbesar hingga 400 persen. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.8_visual_presentation}.
+Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape, bagian menu navigasi memerlukan \textit{scroll} secara horizontal ketika ditampilkan pada resolusi layar dengan lebar 1280 piksel dan diperbesar hingga 400 persen. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.8_visual_presentation}.
 
 \begin{figure}[H]
     \centering  
@@ -583,7 +583,7 @@ Kriteria ini sukses dipatuhi karena setiap konten tambahan yang muncul sesaat ke
 Kriteria ini tidak sukses dipatuhi karena terdapat fungsionalitas konten yang tidak dapat dioperasikan melalui \textit{keyboard}, antara lain:
 
 \begin{itemize}
-    \item Pada bagian navigasi menu, pengguna tidak dapat memilih halaman yang diinginkan. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:2.1.1_keyboard_1}.
+    \item Pada bagian menu navigasi, pengguna tidak dapat memilih halaman yang diinginkan. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:2.1.1_keyboard_1}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-2-1-1-keyboard-1}  
@@ -613,7 +613,7 @@ Kriteria ini sukses dipatuhi karena pengguna dapat bernavigasi dari satu kompone
 Kriteria ini tidak sukses dipatuhi karena terdapat fungsionalitas konten yang tidak dapat dioperasikan melalui \textit{keyboard}, antara lain:
 
 \begin{itemize}
-    \item Pada bagian navigasi menu, pengguna tidak dapat memilih halaman yang diinginkan. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:2.1.3_keyboard_no_exception_1}.
+    \item Pada bagian menu navigasi, pengguna tidak dapat memilih halaman yang diinginkan. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:2.1.3_keyboard_no_exception_1}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-2-1-3-keyboard-no-exception-1}  
@@ -709,7 +709,7 @@ Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat ani
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.4.1}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape tidak tersedia mekanisme untuk melompati beberapa area konten yang berulang pada beberapa halaman web.
+Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape tidak tersedia mekanisme untuk melompati beberapa area konten yang berulang pada beberapa halaman web yaitu bagian menu navigasi.
 
 \paragraph{Kriteria Sukses 2.4.2 \textit{Page Titled}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.4.2}
@@ -920,7 +920,7 @@ Kriteria ini tidak sukses dipatuhi karena bahasa manusia \textit{default} yang d
 Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat konten teks dalam bahasa Inggris namun konten tersebut tidak memiliki atribut \textit{lang}. Konten yang dimaksud adalah:
 
 \begin{itemize}
-    \item Pada bagian navigasi menu terdapat elemen dengan teks "Logout". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.2_bahasa_pada_navigasi}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.2_language_of_parts_1}. 
+    \item Pada bagian menu navigasi terdapat elemen dengan teks "Logout". Letak kesalahan dapat dilihat pada potongan kode \ref{lst:3.1.2_bahasa_pada_navigasi}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:3.1.2_language_of_parts_1}. 
     \begin{lstlisting}[frame=single, label={lst:3.1.2_bahasa_pada_navigasi}, language=HTML, caption=Kriteria Sukses 3.1.2 - Bahasa yang Tidak Sesuai pada Menu Navigasi]
         <ul class="menu">
             <li><a href="/auth/logout">Logout</a></li>
@@ -1155,7 +1155,7 @@ Kriteria ini sukses dipatuhi karena ketika pengguna mengubah setelan komponen an
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.2.3}
 (Sukses)\\
 
-Kriteria ini sukses dipatuhi karena bagian navigasi menu yang muncul berulang pada tiap halaman web BlueTape, muncul dalam urutan relatif yang sama setiap kali tampak.
+Kriteria ini sukses dipatuhi karena bagian menu navigasi yang muncul berulang pada tiap halaman web BlueTape, muncul dalam urutan relatif yang sama setiap kali tampak.
 
 \paragraph{Kriteria Sukses 3.2.4 \textit{Consistent Identification}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.2.4}
@@ -1305,13 +1305,13 @@ Masalah pada poin ini dapat diperbaiki dengan cara sebagai berikut:
 Masalah pada poin ini dapat diperbaiki dengan cara sebagai berikut:
 
 \begin{itemize}
-    \item Pada bagian navigasi menu, atribut \textit{data-responsive-menu="dropdown"} dihilangkan karena isi dari elemen yang mengandung atribut tersebut bukanlah sebuah menu \textit{dropdown}.
+    \item Pada bagian menu navigasi, atribut \textit{data-responsive-menu="dropdown"} dihilangkan karena isi dari elemen yang mengandung atribut tersebut bukanlah sebuah menu \textit{dropdown}.
     \item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen, setiap \textit{cell} dalam tabel yang berisi jadwal dosen diberi atribut \textit{tabindex} yang diisi dengan nilai nol. Selanjutnya dibuat kode \textit{JavaScript} untuk memicu aksi membuka kotak dialog ketika tombol "Enter" ditekan pada \textit{cell} yang berisi jadwal dosen.
 \end{itemize}
 
 \subsection{Peningkatan Kriteria Sukses 2.4.1 \textit{Bypass Blocks}}
 \label{subsec:peningkatan_kriteria_sukses_2.4.1}
-Masalah pada poin ini dapat diperbaiki dengan cara membuat mekanisme untuk melompati bagian navigasi menu ketika pengguna sedang bernavigasi menggunakan \textit{keyboard}. Dengan cara ini pengguna dapat langsung menuju ke area yang diinginkan tanpa perlu berulang kali melewati bagian navigasi menu.
+Masalah pada poin ini dapat diperbaiki dengan cara membuat mekanisme untuk melompati bagian menu navigasi ketika pengguna sedang bernavigasi menggunakan \textit{keyboard}. Dengan cara ini pengguna dapat langsung menuju ke area utama konten tanpa perlu berulang kali melewati bagian menu navigasi.
 
 \subsection{Peningkatan Kriteria Sukses 2.4.4 \textit{Link Purpose (In Context)}}
 \label{subsec:peningkatan_kriteria_sukses_2.4.4}

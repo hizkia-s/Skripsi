@@ -463,6 +463,136 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \subsection{Perbaikan Kriteria Sukses 2.4.1 \textit{Bypass Blocks}}
 \label{subsec:perbaikan_kriteria_sukses_2.4.1}
+Pada bagian ini dilakukan perbaikan dengan membuat sebuah mekanisme untuk melompati bagian menu navigasi ketika pengguna sedang bernavigasi menggunakan \textit{keyboard}. Mekanisme yang dimaksud adalah sebuah elemen yang akan membuat fokus \textit{keyboard} berpindah ke area konten utama ketika pengguna mengaktifkan elemen tersebut. Elemen ini dapat dikenali oleh teknologi alat bantu dan hanya dapat diakses oleh pengguna yang bernavigasi dengan menggunakan \textit{keyboard}. Saat halaman web selesai dimuat, elemen ini akan menjadi yang pertama menerima fokus \textit{keyboard} ketika pengguna menekan tombol \textit{tab}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.4.1_bypass_blocks}.
+\begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.1_bypass_blocks}, language=diff, caption=Perbaikan Kriteria Sukses 2.4.1 - Mekanisme untuk Melompati Area Konten yang Berulang]
+    diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
+    index 6392b95..a62cce4 100644
+    --- a/www/application/views/EntriJadwalDosen/main.php
+    +++ b/www/application/views/EntriJadwalDosen/main.php
+    @@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+        <body>
+            <?php $this->load->view('templates/topbar_loggedin'); ?>
+    
+    -        <div class="row">
+    +        <div id="mainContent" class="row">
+    
+                <div class="large-12 column callout">
+                    <h5>Tambah Jadwal</h5>
+    diff --git a/www/application/views/LihatJadwalDosen/main.php b/www/application/views/LihatJadwalDosen/main.php
+    index ef1be4f..5df2507 100644
+    --- a/www/application/views/LihatJadwalDosen/main.php
+    +++ b/www/application/views/LihatJadwalDosen/main.php
+    @@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+            <?php //$this->load->view('templates/flashmessage'); ?>
+    
+    
+    -        <div class="row">
+    +        <div id="mainContent" class="row">
+    
+                <div class="large-12 column">
+                    <ul class="tabs" data-tabs id="tab_jadwal">
+    diff --git a/www/application/views/PerubahanKuliahManage/main.php b/www/application/views/PerubahanKuliahManage/main.php
+    index 657260b..a64fbf2 100644
+    --- a/www/application/views/PerubahanKuliahManage/main.php
+    +++ b/www/application/views/PerubahanKuliahManage/main.php
+    @@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+            <?php $this->load->view('templates/topbar_loggedin'); ?>
+            <?php $this->load->view('templates/flashmessage'); ?>
+    
+    -        <div class="row">
+    +        <div id="mainContent" class="row">
+                <div class="callout">
+                    <h5>Permohonan Perubahan Kuliah</h5>
+                    <table class="stack">
+    diff --git a/www/application/views/PerubahanKuliahRequest/main.php b/www/application/views/PerubahanKuliahRequest/main.php
+    index 72457a7..dbb9113 100644
+    --- a/www/application/views/PerubahanKuliahRequest/main.php
+    +++ b/www/application/views/PerubahanKuliahRequest/main.php
+    @@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+            <?php $this->load->view('templates/topbar_loggedin'); ?>
+            <?php $this->load->view('templates/flashmessage'); ?>
+    
+    -        <div class="row">
+    +        <div id="mainContent" class="row">
+                <div class="large-12 column">
+                    <div class="callout">
+                        <h5>Permohonan Baru</h5>
+    diff --git a/www/application/views/TranskripManage/main.php b/www/application/views/TranskripManage/main.php
+    index 0970fc2..4d94b34 100644
+    --- a/www/application/views/TranskripManage/main.php
+    +++ b/www/application/views/TranskripManage/main.php
+    @@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+            <?php $this->load->view('templates/topbar_loggedin'); ?>
+            <?php $this->load->view('templates/flashmessage'); ?>
+    
+    -        <div class="row">
+    +        <div id="mainContent" class="row">
+                <div class="callout">
+                    <h5>Permintaan Transkrip</h5>
+                    <form method="GET" action="/TranskripManage">
+    diff --git a/www/application/views/TranskripRequest/main.php b/www/application/views/TranskripRequest/main.php
+    index ada0254..f5beb85 100644
+    --- a/www/application/views/TranskripRequest/main.php
+    +++ b/www/application/views/TranskripRequest/main.php
+    @@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+            <?php $this->load->view('templates/topbar_loggedin'); ?>
+            <?php $this->load->view('templates/flashmessage'); ?>
+    
+    -        <div class="row">
+    +        <div id="mainContent" class="row">
+                <div class="medium-12 column">
+                    <div class="callout">
+                        <h5>Permohonan Baru</h5>
+    diff --git a/www/application/views/templates/script_foundation.php b/www/application/views/templates/script_foundation.php
+    index a93c72a..e5b9251 100644
+    --- a/www/application/views/templates/script_foundation.php
+    +++ b/www/application/views/templates/script_foundation.php
+    @@ -5,3 +5,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    <script src="/public/js/foundation.min.js"></script>
+    <script src="/public/js/app.js"></script>
+    <script src="/public/lib/xdan-datetimepicker/jquery.datetimepicker.full.min.js"></script>
+    +<script>
+    +    $(document).ready(function(){
+    +        var skipToContent = document.createElement("div");
+    +        skipToContent.innerHTML += '<a class="skip-navbar" href="#mainContent">Lompat ke menu utama</a>';
+    +        document.body.insertBefore(skipToContent, document.body.firstChild);
+    +    })
+    +</script>
+    \ No newline at end of file
+    diff --git a/www/public/css/app.css b/www/public/css/app.css
+    index f283c52..b6af0a7 100644
+    --- a/www/public/css/app.css
+    +++ b/www/public/css/app.css
+    @@ -62,3 +62,27 @@ i[class^="fi-"] {
+        margin-left: 10px;
+        margin-right: 10px;    
+    }
+    +
+    +/* Skip Navbar */
+    +a.skip-navbar {
+    +    position: absolute;
+    +    left: -99px;
+    +    top: 0;
+    +    opacity: 0;
+    +    width: 1px;
+    +    height: 1px;
+    +    z-index: -99;
+    +}
+    +
+    +a.skip-navbar:focus, a.skip-navbar:active {
+    +    opacity: 1;
+    +    left: 0;
+    +    background:white;
+    +    color:#000;
+    +    width: auto;
+    +    height: auto;
+    +    margin: 10px;
+    +    padding: 5px;
+    +    font-size: 1.4rem;
+    +    z-index: 99;
+    +}
+    \ No newline at end of file
+\end{lstlisting}
 
 \subsection{Perbaikan Kriteria Sukses 2.4.4 \textit{Link Purpose (In Context)}}
 \label{subsec:perbaikan_kriteria_sukses_2.4.4}
