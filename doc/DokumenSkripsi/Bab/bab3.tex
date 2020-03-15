@@ -158,52 +158,33 @@ Sukses atau tidaknya aplikasi BlueTape dalam mematuhi kriteria-kriteria sukses d
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.1.1}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena: 
+Kriteria ini tidak sukses dipatuhi karena pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah terdapat konten berupa ikon yang tidak memiliki nama yang dapat diidentifikasi. Konten-konten ini terletak pada kolom "Aksi". Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.1.1_ikon_tanpa_nama}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.1.1_non_text_content_2}. Contoh tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
+\begin{lstlisting}[frame=single, label={lst:1.1.1_ikon_tanpa_nama}, language=HTML, caption=Kriteria Sukses 1.1.1 - Ikon Tanpa Nama]
+    <td>
+        <a data-open="detail12">
+            <i class="fi-eye"></i>
+        </a>
+        <a target="_blank" href="/PerubahanKuliahManage/printview/12">
+            <i class="fi-print"></i>
+        </a>
+        <a data-open="konfirmasi12">
+            <i class="fi-like"></i>
+        </a>  
+        <a data-open="tolak12">
+            <i class="fi-dislike"></i>
+        </a>
+        <a data-open="hapus12">
+            <i class="fi-trash"></i>
+        </a>
+    </td>
+\end{lstlisting}
 
-\begin{itemize}
-    \item Pada tampilan \textit{mobile}, di setiap halaman selain halaman \textit{login} terdapat tombol yang berperan sebagai kontrol namun tidak memiliki nama yang menjelaskan tujuannya. Tombol yang dimaksud hanya menampilkan tiga garis horizontal berwarna putih dan berfungsi untuk menampilkan bagian menu ketika ditekan. Bagian yang bermasalah dapat dilihat pada potongan kode \ref{lst:1.1.1_tombol_tanpa_nama}. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.1.1_non_text_content_1}. Contoh tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripRequest}.
-    \begin{lstlisting}[frame=single, label={lst:1.1.1_tombol_tanpa_nama}, language=HTML, caption=Kriteria Sukses 1.1.1 - Tombol Tanpa Nama]
-        <div class="title-bar" data-responsive-toggle="navigation-menu" data-hide-for="medium">
-            <button class="menu-icon" type="button" data-toggle></button>
-            <div class="title-bar-title"><img src="/public/img/logo.png" class="textsized" alt="B"/></div>
-        </div>
-    \end{lstlisting}
-    
-    \begin{figure}[H]
-        \centering  
-        \includegraphics[scale=0.3, frame]{kriteria-sukses-1-1-1-non-text-content-1}  
-        \caption[Kriteria Sukses 1.1.1 - Tombol Tanpa Nama]{Kriteria Sukses 1.1.1 - Tombol Tanpa Nama}
-        \label{fig:1.1.1_non_text_content_1}  
-    \end{figure}
-
-    \item Pada halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah terdapat konten berupa ikon yang tidak memiliki nama yang dapat diidentifikasi. Konten-konten ini terletak pada kolom "Aksi". Contoh kesalahan dapat dilihat pada potongan kode \ref{lst:1.1.1_ikon_tanpa_nama}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.1.1_non_text_content_2}. Contoh tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
-    \begin{lstlisting}[frame=single, label={lst:1.1.1_ikon_tanpa_nama}, language=HTML, caption=Kriteria Sukses 1.1.1 - Ikon Tanpa Nama]
-        <td>
-            <a data-open="detail12">
-                <i class="fi-eye"></i>
-            </a>
-            <a target="_blank" href="/PerubahanKuliahManage/printview/12">
-                <i class="fi-print"></i>
-            </a>
-            <a data-open="konfirmasi12">
-                <i class="fi-like"></i>
-            </a>  
-            <a data-open="tolak12">
-                <i class="fi-dislike"></i>
-            </a>
-            <a data-open="hapus12">
-                <i class="fi-trash"></i>
-            </a>
-        </td>
-    \end{lstlisting}
-    
-    \begin{figure}[H]
-        \centering  
-        \includegraphics[scale=0.3, frame]{kriteria-sukses-1-1-1-non-text-content-2}  
-        \caption[Kriteria Sukses 1.1.1 - Ikon pada Bagian Aksi]{Kriteria Sukses 1.1.1 - Ikon pada Bagian Aksi}
-        \label{fig:1.1.1_non_text_content_2}  
-    \end{figure} 
-\end{itemize}
+\begin{figure}[H]
+    \centering  
+    \includegraphics[scale=0.3, frame]{kriteria-sukses-1-1-1-non-text-content-2}  
+    \caption[Kriteria Sukses 1.1.1 - Ikon pada Bagian Aksi]{Kriteria Sukses 1.1.1 - Ikon pada Bagian Aksi}
+    \label{fig:1.1.1_non_text_content_2}  
+\end{figure} 
 
 \subsubsection{\textit{Time-based Media}}
 \label{subsubsec:kepatuhan_bluetape_time_based_media}

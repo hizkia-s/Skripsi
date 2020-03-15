@@ -4,122 +4,102 @@
 \section{Implementasi}
 \label{sec:implementasi}
 Pada bagian ini akan dibahas perbaikan apa saja yang dilakukan untuk membuat kriteria sukses pada bagian 3.1
-yang belum sukses dipatuhi menjadi sukses dipatuhi. Setiap perubahan kode yang terdapat pada bagian ini ditampilkan dalam format \textit{diff}.
+yang belum sukses dipatuhi menjadi sukses dipatuhi. Setiap perubahan kode yang terdapat pada bagian ini ditampilkan dalam format \textit{diff} dengan jarak \textit{indentation} sebanyak empat spasi atau karakter dari batas ujung paling kiri.
 
 \subsection{Perbaikan Kriteria Sukses 1.1.1 \textit{Non-text Content}}
 \label{subsec:perbaikan_kriteria_sukses_1.1.1}
 Pada bagian ini dilakukan perbaikan sebagai berikut:
 
-\begin{itemize}
-    \item Pada tombol menu yang tidak memiliki nama diberikan atribut \textit{aria-label} yang diisi dengan nilai "Tombol Menu". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_tombol_tanpa_nama}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_tombol_tanpa_nama}, language=diff, caption=Perbaikan Kriteria Sukses 1.1.1 - Tombol Tanpa Nama]
-        --- a/www/application/views/templates/topbar_loggedin.php
-        +++ b/www/application/views/templates/topbar_loggedin.php
-        @@ -1,7 +1,7 @@
-         <?php
-         defined('BASEPATH') OR exit('No direct script access allowed');
-         ?><div class="title-bar" data-responsive-toggle="navigation-menu" data-hide-for="medium">
-        -    <button class="menu-icon" type="button" data-toggle></button>
-        +    <button aria-label="tombol menu" class="menu-icon" type="button" data-toggle></button>
-             <div class="title-bar-title"><img src="/public/img/logo.png" class="textsized" alt="B"/></div>
-         </div>
-    \end{lstlisting}
-
-    \item Pada konten berupa ikon yang tidak memiliki nama di halaman cetak transkrip diberikan atribut \textit{aria-label} yang diisi dengan nilai "Lihat Detail Permohonan". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama_cetak_transkrip}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Cetak Transkrip]
-        --- a/www/application/views/TranskripRequest/main.php
-        +++ b/www/application/views/TranskripRequest/main.php
-        @@ -126,7 +126,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-        -                                        <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
-        +                                        <a aria-label="lihat detail permohonan" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
-    \end{lstlisting}
-
-    \item Pada konten berupa ikon yang tidak memiliki nama di halaman manajemen cetak transkrip diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_cetak_transkrip}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Manajemen Cetak Transkrip]
-        --- a/www/application/views/TranskripManage/main.php
-        +++ b/www/application/views/TranskripManage/main.php
-        @@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>                                        
-                                            </div>
-        -                                    <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
-        +                                    <a aria-label="lihat detail permohonan" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
-                                            <div class="reveal" id="tolak<?= $request->id ?>" data-reveal>
-                                                <h5>Tolak Permohonan</h5>
-                                                <form method="POST" action="/TranskripManage/answer">
-        @@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-        -                                    <a data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
-        +                                    <a aria-label="tolak permohonan" data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
-                                            <div class="reveal" id="cetak<?= $request->id ?>" data-reveal>
-                                                <h5>Cetak Permohonan</h5>
-                                                <?php if ($request->requestByNPM !== NULL): ?>
-        @@ -131,7 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-        -                                    <a data-open="cetak<?= $request->id ?>"><i class="fi-print"></i></a>
-        +                                    <a aria-label="cetak permohonan" data-open="cetak<?= $request->id ?>"><i class="fi-print"></i></a>
-                                            <div class="reveal" id="hapus<?= $request->id ?>" data-reveal>
-                                                <h5>Hapus Permohonan</h5>
-                                                <form method="POST" action="/TranskripManage/remove">
-        @@ -146,7 +146,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-        -                                    <a data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
-        +                                    <a aria-label="hapus permohonan" data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
-    \end{lstlisting}
-
-    \item Pada konten berupa ikon yang tidak memiliki nama di halaman perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai "Lihat Detail Permohonan". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama_perubahan_kuliah}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_perubahan_kuliah}, language=diff, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Perubahan Kuliah]
-        --- a/www/application/views/PerubahanKuliahRequest/main.php
-        +++ b/www/application/views/PerubahanKuliahRequest/main.php
-        @@ -118,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
-                                             <td><time datetime="<?= $request->answeredDateTime ?>"><?= $request->answeredDateString ?></time></td>
-                                             <td><?= $request->answeredMessage ?></td>
-                                             <td>
-        -                                        <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
-        +                                        <a aria-label="lihat detail permohonan" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
-                                             </td>
-                                         </tr>
-                                     <?php endforeach; ?>        
-    \end{lstlisting}
-
-    \item Pada konten berupa ikon yang tidak memiliki nama di halaman manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_perubahan_kuliah}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama_manajemen_perubahan_kuliah}, language=diff, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama di Halaman Manajemen Perubahan Kuliah]
-        --- a/www/application/views/PerubahanKuliahManage/main.php
-        +++ b/www/application/views/PerubahanKuliahManage/main.php
-        @@ -30,11 +30,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
-                                         <td><?= $request->mataKuliahCode ?></td>
-                                         <td><?= PerubahanKuliah_model::CHANGETYPE_TYPES[$request->changeType] ?></td>
-                                         <td>
-        -                                    <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
-        -                                    <a target="_blank" href="/PerubahanKuliahManage/printview/<?= $request->id ?>"><i class="fi-print"></i></a>
-        -                                    <a data-open="konfirmasi<?= $request->id ?>"><i class="fi-like"></i></a>                                    
-        -                                    <a data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
-        -                                    <a data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
-        +                                    <a aria-label="lihat detail permohonan" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
-        +                                    <a aria-label="cetak permohonan" target="_blank" href="/PerubahanKuliahManage/printview/<?= $request->id ?>"><i class="fi-print"></i></a>
-        +                                    <a aria-label="konfirmasi permohonan" data-open="konfirmasi<?= $request->id ?>"><i class="fi-like"></i></a>                                    
-        +                                    <a aria-label="tolak permohonan" data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
-        +                                    <a aria-label="hapus permohonan" data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
-                                         </td>
-                                     </tr>
-                                 <?php endforeach; ?>
-    \end{lstlisting}
-\end{itemize}
+Pada konten berupa ikon yang tidak memiliki nama di halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama}.
+\begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama}, language=diff, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama]
+diff --git a/www/application/views/PerubahanKuliahManage/main.php b/www/application/views/PerubahanKuliahManage/main.php
+index 657260b..43c215f 100644
+--- a/www/application/views/PerubahanKuliahManage/main.php
++++ b/www/application/views/PerubahanKuliahManage/main.php
+@@ -30,11 +30,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    <td><?= $request->mataKuliahCode ?></td>
+    <td><?= PerubahanKuliah_model::CHANGETYPE_TYPES[$request->changeType] ?></td>
+    <td>
+-   <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+-   <a target="_blank" href="/PerubahanKuliahManage/printview/<?= $request->id ?>"><i class="fi-print"></i></a>
+-   <a data-open="konfirmasi<?= $request->id ?>"><i class="fi-like"></i></a>                                    
+-   <a data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
+-   <a data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
++   <a aria-label="lihat detail permohonan <?= $request->requestByName ?>" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
++   <a aria-label="cetak permohonan <?= $request->requestByName ?>" target="_blank" href="/PerubahanKuliahManage/printview/<?= $request->id ?>"><i class="fi-print"></i></a>
++   <a aria-label="konfirmasi permohonan <?= $request->requestByName ?>" data-open="konfirmasi<?= $request->id ?>"><i class="fi-like"></i></a>
++   <a aria-label="tolak permohonan <?= $request->requestByName ?>" data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
++   <a aria-label="hapus permohonan <?= $request->requestByName ?>" data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
+    </td>
+    </tr>
+    <?php endforeach; ?>
+diff --git a/www/application/views/PerubahanKuliahRequest/main.php b/www/application/views/PerubahanKuliahRequest/main.php
+index 72457a7..cd47c17 100644
+--- a/www/application/views/PerubahanKuliahRequest/main.php
++++ b/www/application/views/PerubahanKuliahRequest/main.php
+@@ -118,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    <td><time datetime="<?= $request->answeredDateTime ?>"><?= $request->answeredDateString ?></time></td>
+    <td><?= $request->answeredMessage ?></td>
+    <td>
+-   <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
++   <a aria-label="lihat detail permohonan <?= $request->requestByName ?>" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+    </td>
+    </tr>
+    <?php endforeach; ?>
+diff --git a/www/application/views/TranskripManage/main.php b/www/application/views/TranskripManage/main.php
+index 0970fc2..9f24954 100644
+--- a/www/application/views/TranskripManage/main.php
++++ b/www/application/views/TranskripManage/main.php
+@@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    <span aria-hidden="true">&times;</span>
+    </button>                                        
+    </div>
+-   <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
++   <a aria-label="lihat detail permohonan <?= $request->requestByName ?>" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+    <div class="reveal" id="tolak<?= $request->id ?>" data-reveal>
+    <h5>Tolak Permohonan</h5>
+    <form method="POST" action="/TranskripManage/answer">
+@@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+-   <a data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
++   <a aria-label="tolak permohonan <?= $request->requestByName ?>" data-open="tolak<?= $request->id ?>"><i class="fi-dislike"></i></a>
+    <div class="reveal" id="cetak<?= $request->id ?>" data-reveal>
+    <h5>Cetak Permohonan</h5>
+    <?php if ($request->requestByNPM !== NULL): ?>
+@@ -131,7 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+-   <a data-open="cetak<?= $request->id ?>"><i class="fi-print"></i></a>
++   <a aria-label="cetak permohonan <?= $request->requestByName ?>" data-open="cetak<?= $request->id ?>"><i class="fi-print"></i></a>
+    <div class="reveal" id="hapus<?= $request->id ?>" data-reveal>
+    <h5>Hapus Permohonan</h5>
+    <form method="POST" action="/TranskripManage/remove">
+@@ -146,7 +146,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+-   <a data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
++   <a aria-label="hapus permohonan <?= $request->requestByName ?>" data-open="hapus<?= $request->id ?>"><i class="fi-trash"></i></a>
+    </td>
+    </tr>
+    <?php endforeach; ?>
+diff --git a/www/application/views/TranskripRequest/main.php b/www/application/views/TranskripRequest/main.php
+index ada0254..44598cc 100644
+--- a/www/application/views/TranskripRequest/main.php
++++ b/www/application/views/TranskripRequest/main.php
+@@ -126,7 +126,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+-   <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
++   <a aria-label="lihat detail permohonan <?= $request->requestByName ?>" data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
+    </td>
+    </tr>
+    <?php endforeach; ?>
+\end{lstlisting}
 
 \subsection{Perbaikan Kriteria Sukses 1.3.1 \textit{Info and Relationships}}
 \label{subsec:perbaikan_kriteria_sukses_1.3.1}
@@ -412,54 +392,53 @@ Pada bagian ini dilakukan perbaikan sebagai berikut:
 Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \begin{itemize}
-    \item Pada bagian navigasi menu, atribut \textit{data-responsive-menu="dropdown"} dihilangkan dari elemen \textit{ul} karena isi dari elemen tersebut bukanlah sebuah menu \textit{dropdown}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.1.1_keyboard_menu_navigasi}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.1.1_keyboard_menu_navigasi}, language=diff, caption=Perbaikan Kriteria Sukses 2.1.1 - Penggunaan \textit{Keyboard} pada Menu Navigasi]
-        diff --git a/www/application/views/templates/topbar_loggedin.php b/www/application/views/templates/topbar_loggedin.php
-        index 51fc11e..bc9f2c0 100644
-        --- a/www/application/views/templates/topbar_loggedin.php
-        +++ b/www/application/views/templates/topbar_loggedin.php
-        @@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
-        
-        <div class="top-bar" id="navigation-menu">
-            <div class="top-bar-left">
-        -        <ul class="menu" data-responsive-menu="dropdown">
-        +        <ul class="menu">
-                    <li class="menu-text"><img src="/public/img/logo.png" class="textsized" alt="B"/></li>
-                    <?php foreach ($this->Auth_model->getUserInfo()['modules'] as $module): ?>
-                        <li<?= $module === $currentModule ? ' class="menu-active"' : '' ?>><a href="/<?= $module ?>"><?= $this->config->item('module-names')[$module] ?></a></li>
-    \end{lstlisting}
+\item Pada bagian navigasi menu, atribut \textit{data-responsive-menu="dropdown"} dihilangkan dari elemen \textit{ul} karena isi dari elemen tersebut bukanlah sebuah menu \textit{dropdown}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.1.1_keyboard_menu_navigasi}.
+\begin{lstlisting}[frame=single, label={lst:perbaikan_2.1.1_keyboard_menu_navigasi}, language=diff, caption=Perbaikan Kriteria Sukses 2.1.1 - Penggunaan \textit{Keyboard} pada Menu Navigasi]
+diff --git a/www/application/views/templates/topbar_loggedin.php b/www/application/views/templates/topbar_loggedin.php
+index 51fc11e..bc9f2c0 100644
+--- a/www/application/views/templates/topbar_loggedin.php
++++ b/www/application/views/templates/topbar_loggedin.php
+@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
-    \item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen, setiap \textit{cell} dalam tabel yang berisi jadwal dosen diberi atribut \textit{tabindex} yang diisi dengan nilai nol. Selanjutnya dibuat kode \textit{JavaScript} untuk memicu aksi membuka kotak dialog ketika tombol "Enter" ditekan pada \textit{cell} yang berisi jadwal dosen. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}.
-    \begin{lstlisting}[frame=single, label={lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 2.1.1 - Penggunaan \textit{Keyboard} pada Halaman Entri Jadwal Dosen]
-        diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
-        index 6392b95..6c0e935 100644
-        --- a/www/application/views/EntriJadwalDosen/main.php
-        +++ b/www/application/views/EntriJadwalDosen/main.php
-        @@ -110,12 +110,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
-                                                 $("#cell" + i + "-" +<?php echo $colIdx; ?>).remove();
-                                             }
-                                             $($cellLocation).html("<?php echo $dataHariIni->label ?>");
-        +                                    $($cellLocation).attr("tabindex", "0");
-         
-                                             //membuat cell-cell yang telah diwarnai jadi memunculkan pop-up untuk mengedit jadwal ketika diklik oleh mouse
-                                             $(document).on("click", $cellLocation, function () {
-                                                 var $menuName = "#edit_menu<?php echo $dataHariIni->id ?>";
-                                                 $($menuName).foundation('open');
-                                             });
-        +                                    
-        +                                    // membuat cell-cell dalam tabel dapat diakses menggunakan keyboard
-        +                                    $($cellLocation).keyup(function(e){
-        +                                        if(e.keyCode == 13){
-        +                                            var $menuName = "#edit_menu<?php echo $dataHariIni->id ?>";
-        +                                            $($menuName).foundation('open');
-        +                                        }
-        +                                    })
-                                         </script>
-                                         <?php
-                                     }
-    \end{lstlisting}
+    <div class="top-bar" id="navigation-menu">
+    <div class="top-bar-left">
+-   <ul class="menu" data-responsive-menu="dropdown">
++   <ul class="menu">
+    <li class="menu-text"><img src="/public/img/logo.png" class="textsized" alt="B"/></li>
+    <?php foreach ($this->Auth_model->getUserInfo()['modules'] as $module): ?>
+    <li<?= $module === $currentModule ? ' class="menu-active"' : '' ?>><a href="/<?= $module ?>"><?= $this->config->item('module-names')[$module] ?></a></li>
+\end{lstlisting}
+
+\item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen, setiap \textit{cell} dalam tabel yang berisi jadwal dosen diberi atribut \textit{tabindex} yang diisi dengan nilai nol. Selanjutnya dibuat kode \textit{JavaScript} untuk memicu aksi membuka kotak dialog ketika tombol "Enter" ditekan pada \textit{cell} yang berisi jadwal dosen. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}.
+\begin{lstlisting}[frame=single, label={lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 2.1.1 - Penggunaan \textit{Keyboard} pada Halaman Entri Jadwal Dosen]
+diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
+index 6392b95..6c0e935 100644
+--- a/www/application/views/EntriJadwalDosen/main.php
++++ b/www/application/views/EntriJadwalDosen/main.php
+@@ -110,12 +110,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    $("#cell" + i + "-" +<?php echo $colIdx; ?>).remove();
+    }
+    $($cellLocation).html("<?php echo $dataHariIni->label ?>");
++   $($cellLocation).attr("tabindex", "0");
+
+    //membuat cell-cell yang telah diwarnai jadi memunculkan pop-up untuk mengedit jadwal ketika diklik oleh mouse
+    $(document).on("click", $cellLocation, function () {
+      var $menuName = "#edit_menu<?php echo $dataHariIni->id ?>";
+      $($menuName).foundation('open');
+    });
++
++   // membuat cell-cell dalam tabel dapat diakses menggunakan keyboard
++   $($cellLocation).keyup(function(e){
++   if(e.keyCode == 13){
++   var $menuName = "#edit_menu<?php echo $dataHariIni->id ?>";
++   $($menuName).foundation('open');
++   }
++   })
+    </script>
+    <?php
+    }
+\end{lstlisting}
 \end{itemize}
-
 
 \subsection{Perbaikan Kriteria Sukses 2.4.1 \textit{Bypass Blocks}}
 \label{subsec:perbaikan_kriteria_sukses_2.4.1}
