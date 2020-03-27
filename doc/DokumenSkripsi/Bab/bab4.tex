@@ -964,3 +964,110 @@ index 6392b95..40d0c73 100644
     <div class="row">
 \end{lstlisting} 
 \end{itemize}
+
+\section{Pengujian}
+\label{sec:pengujian}
+Pada bagian ini akan diisi dengan skenario pengujian dan hasil yang didapatkan dari setiap skenario pengujian yang telah dibuat. Tujuannya adalah untuk melihat apakah perbaikan-perbaikan yang telah dilakukan di bagian \ref{sec:implementasi} berhasil atau tidak. Pengujian dilakukan dengan menggunakan perangkat komputer berupa laptop dengan sistem operasi Windows, \textit{browser} Google Chrome, dan \textit{screen reader} ChromeVox sebagai teknologi alat bantu. Pengujian dilakukan pada server lokal milik penguji dan akun yang digunakan oleh penguji memiliki hak akses tak terbatas sehingga dapat menggunakan semua fitur yang terdapat pada halaman web BlueTape.
+
+\subsection{Skenario Pengujian}
+\label{subsec:skenario_pengujian}
+Pada bagian ini akan dituliskan skenario pengujian yang digunakan untuk menguji perbaikan-perbaikan yang telah dilakukan. Setiap skenario pengujian merupakan langkah-langkah yang dituliskan dalam bentuk poin-poin yang menjelaskan cara untuk menggunakan fitur-fitur pada halaman web BlueTape.
+
+\subsubsection{Login}
+\label{subsubsec:skenario_login}
+Langkah-langkah untuk \textit{login} pada halaman web BlueTape adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Membuka halaman web BlueTape dengan menggunakan alamat \url{http://bluetape.localhost/}.
+    \item Menekan tombol "Login dengan Google".
+    \item Memilih akun yang sudah terdaftar pada aplikasi BlueTape.
+\end{enumerate}
+
+\subsubsection{Membuat Permohonan Cetak Transkrip}
+\label{subsubsec:skenario_membuat_permohonan_cetak_transkrip}
+Langkah-langkah untuk membuat permohonan cetak transkrip pada halaman web BlueTape adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Melakukan \textit{login} pada halaman web BlueTape.
+    \item Masuk ke halaman cetak transkrip.
+    \item Mengisi form permohonan cetak transkrip.
+    \item Mengirim permohonan.
+\end{enumerate}
+
+\subsubsection{Melihat Detail Permohonan di Halaman Cetak Transkrip}
+\label{subsubsec:skenario_melihat_detail_permohonan_di_halaman_cetak_transkrip}
+Langkah-langkah untuk melihat detail permohonan di halaman cetak transkrip pada halaman web BlueTape adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Melakukan \textit{login} pada halaman web BlueTape.
+    \item Masuk ke halaman cetak transkrip.
+    \item Mengakses ikon mata yang terdapat pada tabel "Histori Permohonan" sesuai dengan detail permohonan yang ingin dilihat.
+\end{enumerate}
+
+\subsection{Hasil Pengujian}
+\label{subsec:hasil_pengujian}
+Pada bagian ini akan dituliskan hasil dari pengujian yang telah dilakukan berdasarkan skenario pengujian pada bagian \ref{subsubsec:skenario_login}. Hasil pengujian akan dituliskan dalam bentuk tabel yang berisi langkah skenario pengujian, hasil pengujian, dan tindakan yang dilakukan dalam pengujian.
+
+\subsubsection{Login}
+\label{subsubsec:hasil_pengujian_login}
+
+\begin{table}[H]
+    \centering 
+    \caption{Tabel Hasil Pengujian}
+    \label{tab:hasil_pengujian_login}
+    \begin{tabular}{|c|c|p{10cm}|}
+        \toprule
+        Langkah ke & Hasil (sukses/tidak) & Tindakan \\
+
+        \midrule
+        1 & Sukses & Mengetik alamat \url{http://bluetape.localhost/} ketika ChromeVox menyebutkan \textit{"new tab, tab"}, lalu menekan \textit{"enter"}. \\
+        2 & Sukses & Menekan \textit{"enter"} pada saat ChromeVox menyebutkan \textit{"login, Login dengan Google, link"}. \\
+        3 & Sukses & Menekan \textit{"tab"} sebanyak dua kali hingga ChromeVox menyebutkan "Hizkia Steven, 7315020@student.unpar.ac.id", lalu menekan \textit{"enter"}. \\
+
+        \bottomrule
+
+    \end{tabular}
+\end{table}
+
+\subsubsection{Membuat Permohonan Cetak Transkrip}
+\label{subsubsec:hasil_pengujian_membuat_permohonan_cetak_transkrip}
+
+\begin{table}[H]
+    \centering 
+    \caption{Tabel Hasil Pengujian}
+    \label{tab:hasil_pengujian_membuat_permohonan_cetak_transkrip}
+    \begin{tabular}{|c|c|p{10cm}|}
+        \toprule
+        Langkah ke & Hasil (sukses/tidak) & Tindakan \\
+
+        \midrule
+        1 & Sukses & Mengikuti langkah-langkah pada bagian \ref{subsubsec:hasil_pengujian_login}. \\
+        2 & Sukses & Tidak ada karena halaman awal yang ditampilkan setelah berhasil melakukan \textit{login} adalah halaman cetak transkrip. \\
+        3 & Sukses & Menekan \textit{"shift + tab"} sebanyak satu kali hingga ChromeVox menyebutkan "lompat ke menu utama" lalu menekan \textit{"enter"}. Setelah ChromeVox menyebutkan "permohonan baru, \textit{heading} satu", menekan \textit{"tab"} sebanyak lima kali hingga ChromeVox menyebutkan "keperluan, \textit{edit text}" lalu mengetik "Tes Permohonan Baru" untuk mengisi bagian tersebut. \\
+        4 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "kirim permohonan, \textit{button}" lalu menekan \textit{"enter"}. \\
+
+        \bottomrule
+
+    \end{tabular}
+\end{table}
+
+\subsubsection{Melihat Detail Permohonan di Halaman Cetak Transkrip}
+\label{subsubsec:hasil_pengujian_melihat_detail_permohonan_di_halaman_cetak_transkrip}
+
+\begin{table}[H]
+    \centering 
+    \caption{Tabel Hasil Pengujian}
+    \label{tab:hasil_pengujian_melihat_detail_permohonan_di_halaman_cetak_transkrip}
+    \begin{tabular}{|c|c|p{10cm}|}
+        \toprule
+        Langkah ke & Hasil (sukses/tidak) & Tindakan \\
+
+        \midrule
+        1 & Sukses & Mengikuti langkah-langkah pada bagian \ref{subsubsec:hasil_pengujian_login}. \\
+        2 & Sukses & Tidak ada karena halaman awal yang ditampilkan setelah berhasil melakukan \textit{login} adalah halaman cetak transkrip. \\
+        3 &  &  \\
+
+        \bottomrule
+
+    \end{tabular}
+\end{table}
