@@ -4,13 +4,13 @@
 \section{Implementasi}
 \label{sec:implementasi}
 Pada bagian ini akan dibahas perbaikan apa saja yang dilakukan untuk membuat kriteria sukses pada bagian 3.1
-yang belum sukses dipatuhi menjadi sukses dipatuhi. Setiap perubahan kode yang terdapat pada bagian ini ditampilkan dalam format \textit{diff} dengan jarak \textit{indentation} sebanyak empat spasi atau karakter dari batas ujung paling kiri.
+yang belum sukses dipatuhi menjadi sukses dipatuhi. Setiap perubahan kode yang terdapat pada bagian ini ditampilkan dalam format \textit{diff} dan \textit{indentation} pada kode dihilangkan karena keterbatasan tempat. 
 
 \subsection{Perbaikan Kriteria Sukses 1.1.1 \textit{Non-text Content}}
 \label{subsec:perbaikan_kriteria_sukses_1.1.1}
 Pada bagian ini dilakukan perbaikan sebagai berikut:
 
-Pada konten berupa ikon yang tidak memiliki nama di halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama}.
+Pada konten berupa ikon yang tidak memiliki nama di halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama}, language=diff, caption=Perbaikan Kriteria Sukses 1.1.1 - Ikon Tanpa Nama]
 diff --git a/www/application/views/PerubahanKuliahManage/main.php b/www/application/views/PerubahanKuliahManage/main.php
 index 657260b..43c215f 100644
@@ -106,7 +106,7 @@ index ada0254..44598cc 100644
 Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \begin{itemize}
-\item Pada penggunaan \textit{tag heading} yang tidak tepat, judul yang menggunakan \textit{<h5>} diubah menggunakan \textit{tag heading} yang sesuai struktur \textit{HTML} secara berurutan dimulai dari \textit{<h1>} hingga \textit{<h6>}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.3.1_tag_heading}.
+\item Pada penggunaan \textit{tag heading} yang tidak tepat, judul yang menggunakan \texttt{<h5>} diubah menggunakan \textit{tag heading} yang sesuai struktur \textit{HTML} secara berurutan dimulai dari \texttt{<h1>} hingga \texttt{<h6>}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_1.3.1_tag_heading}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_tag_heading}, language=diff, caption=Perbaikan Kriteria Sukses 1.3.1 - Penggunaan \textit{Heading} Tidak Tepat]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
 index 6392b95..7af8ded 100644
@@ -301,7 +301,7 @@ index ada0254..e1a87f0 100644
     <tr>
 \end{lstlisting}
 
-\item Pada halaman manajemen cetak transkrip, kolom masukan NPM diberi atribut \textit{id} yang diisi dengan nilai "npm" lalu label "Cari NPM" diubah dari \textit{<span>} menjadi \textit{<label>} dan diberi atribut \textit{for} dengan nilai "npm". Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}.
+\item Pada halaman manajemen cetak transkrip, kolom masukan NPM diberi atribut \textit{id} yang diisi dengan nilai "npm" lalu label "Cari NPM" diubah dari \texttt{<span>} menjadi \texttt{<label>} dan diberi atribut \textit{for} dengan nilai "npm". Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 1.3.1 - Tidak Terdapat Label pada Kolom Masukan di Halaman Manajemen Cetak Transkrip]
 diff --git a/www/application/views/TranskripManage/main.php b/www/application/views/TranskripManage/main.php
 index 0970fc2..6dffa7d 100644
@@ -320,7 +320,7 @@ index 0970fc2..6dffa7d 100644
 </div>
 \end{lstlisting}
 
-\item Pada halaman entri jadwal dosen, setiap kolom masukan diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}.
+\item Pada halaman entri jadwal dosen, setiap kolom masukan diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 1.3.1 - Tidak Terdapat Label pada Kolom Masukan di Halaman Entri Jadwal Dosen]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
 index 6392b95..f8471cb 100644
@@ -384,7 +384,7 @@ index 6392b95..f8471cb 100644
 Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \begin{itemize}
-\item Pada bagian navigasi menu, atribut \textit{data-responsive-menu="dropdown"} dihilangkan dari elemen \textit{ul} karena isi dari elemen tersebut bukanlah sebuah menu \textit{dropdown}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.1.1_keyboard_menu_navigasi}.
+\item Pada bagian navigasi menu, atribut \textit{data-responsive-menu="dropdown"} dihilangkan dari elemen \textit{ul} karena isi dari elemen tersebut bukanlah sebuah menu \textit{dropdown}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_2.1.1_keyboard_menu_navigasi}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_2.1.1_keyboard_menu_navigasi}, language=diff, caption=Perbaikan Kriteria Sukses 2.1.1 - Penggunaan \textit{Keyboard} pada Menu Navigasi]
 diff --git a/www/application/views/templates/topbar_loggedin.php b/www/application/views/templates/topbar_loggedin.php
 index 51fc11e..bc9f2c0 100644
@@ -401,7 +401,7 @@ index 51fc11e..bc9f2c0 100644
     <li<?= $module === $currentModule ? ' class="menu-active"' : '' ?>><a href="/<?= $module ?>"><?= $this->config->item('module-names')[$module] ?></a></li>
 \end{lstlisting}
 
-\item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen, setiap \textit{cell} dalam tabel yang berisi jadwal dosen diberi atribut \textit{tabindex} yang diisi dengan nilai nol. Selanjutnya dibuat kode \textit{JavaScript} untuk memicu aksi membuka kotak dialog ketika tombol "Enter" ditekan pada \textit{cell} yang berisi jadwal dosen. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}.
+\item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen, setiap \textit{cell} dalam tabel yang berisi jadwal dosen diberi atribut \textit{tabindex} yang diisi dengan nilai nol. Selanjutnya dibuat kode \textit{JavaScript} untuk memicu aksi membuka kotak dialog ketika tombol "Enter" ditekan pada \textit{cell} yang berisi jadwal dosen. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 2.1.1 - Penggunaan \textit{Keyboard} pada Halaman Entri Jadwal Dosen]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
 index 6392b95..6c0e935 100644
@@ -434,7 +434,7 @@ index 6392b95..6c0e935 100644
 
 \subsection{Perbaikan Kriteria Sukses 2.4.1 \textit{Bypass Blocks}}
 \label{subsec:perbaikan_kriteria_sukses_2.4.1}
-Pada bagian ini dilakukan perbaikan dengan membuat sebuah mekanisme untuk melompati bagian menu navigasi ketika pengguna sedang bernavigasi menggunakan \textit{keyboard}. Mekanisme yang dimaksud adalah sebuah elemen yang akan membuat fokus \textit{keyboard} berpindah ke area konten utama ketika pengguna mengaktifkan elemen tersebut. Elemen ini dapat dikenali oleh teknologi alat bantu dan hanya dapat diakses oleh pengguna yang bernavigasi dengan menggunakan \textit{keyboard}. Saat halaman web selesai dimuat, elemen ini akan menjadi yang pertama menerima fokus \textit{keyboard} ketika pengguna menekan tombol \textit{tab}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.4.1_bypass_blocks}.
+Pada bagian ini dilakukan perbaikan dengan membuat sebuah mekanisme untuk melompati bagian menu navigasi ketika pengguna sedang bernavigasi menggunakan \textit{keyboard}. Mekanisme yang dimaksud adalah sebuah elemen yang akan membuat fokus \textit{keyboard} berpindah ke area konten utama ketika pengguna mengaktifkan elemen tersebut. Elemen ini dapat dikenali oleh teknologi alat bantu dan hanya dapat diakses oleh pengguna yang bernavigasi dengan menggunakan \textit{keyboard}. Saat halaman web selesai dimuat, elemen ini akan menjadi yang pertama menerima fokus \textit{keyboard} ketika pengguna menekan tombol \textit{tab}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_2.4.1_bypass_blocks}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.1_bypass_blocks}, language=diff, caption=Perbaikan Kriteria Sukses 2.4.1 - Mekanisme untuk Melompati Area Konten yang Berulang]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
 index 6392b95..a62cce4 100644
@@ -569,7 +569,7 @@ index f283c52..b6af0a7 100644
 \label{subsec:perbaikan_kriteria_sukses_2.4.4}
 Pada bagian ini dilakukan perbaikan sebagai berikut:
 
-Pada tautan berisi ikon yang tidak memiliki teks untuk menjelaskan tujuan tautan tersebut yang terdapat di halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.4.4_tautan_tanpa_keterangan}.
+Pada tautan berisi ikon yang tidak memiliki teks untuk menjelaskan tujuan tautan tersebut yang terdapat di halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_2.4.4_tautan_tanpa_keterangan}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan}, language=diff, caption=Perbaikan Kriteria Sukses 2.4.4 - Tautan Tanpa Keterangan]
 diff --git a/www/application/views/PerubahanKuliahManage/main.php b/www/application/views/PerubahanKuliahManage/main.php
 index 657260b..43c215f 100644
@@ -662,7 +662,7 @@ index ada0254..44598cc 100644
 
 \subsection{Perbaikan Kriteria Sukses 2.5.3 \textit{Label in Name}}
 \label{subsec:perbaikan_kriteria_sukses_2.5.3}
-Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom masukan di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_2.5.3_label_dan_nama_pada_komponen_masukan}.
+Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom masukan di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_2.5.3_label_dan_nama_pada_komponen_masukan}.
 
 \begin{lstlisting}[frame=single, label={lst:perbaikan_2.5.3_label_dan_nama_pada_komponen_masukan}, language=diff, caption=Perbaikan Kriteria Sukses 2.5.3 - Label dan Nama Pada Komponen Masukan]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
@@ -738,7 +738,7 @@ index 0970fc2..6dffa7d 100644
 
 \subsection{Perbaikan Kriteria Sukses 3.1.1 \textit{Language of Page}}
 \label{subsec:perbaikan_kriteria_sukses_3.1.1}
-Pada bagian ini dilakukan perbaikan dengan mengubah setelan bahasa dari bahasa Inggris menjadi bahasa Indonesia untuk setiap halaman yang ditampilkan kepada pengguna. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_3.1.1_bahasa_halaman}.
+Pada bagian ini dilakukan perbaikan dengan mengubah setelan bahasa dari bahasa Inggris menjadi bahasa Indonesia untuk setiap halaman yang ditampilkan kepada pengguna. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_3.1.1_bahasa_halaman}.
 
 \begin{lstlisting}[frame=single, label={lst:perbaikan_3.1.1_bahasa_halaman}, language=diff, caption=Perbaikan Kriteria Sukses 3.1.1 - Bahasa yang Tidak Sesuai]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
@@ -849,7 +849,7 @@ index e4daa52..b2089af 100644
 
 \subsection{Perbaikan Kriteria Sukses 3.3.2 \textit{Labels or Instructions}}
 \label{subsec:perbaikan_kriteria_sukses_3.3.2}
-Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom masukan di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_3.3.2_label_masukan}.
+Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom masukan di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_3.3.2_label_masukan}.
 
 \begin{lstlisting}[frame=single, label={lst:perbaikan_3.3.2_label_masukan}, language=diff, caption=Perbaikan Kriteria Sukses 3.3.2 - Tidak Terdapat Label pada Kolom Masukan]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
@@ -928,7 +928,7 @@ index 0970fc2..6dffa7d 100644
 Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \begin{itemize}
-\item Pada penggunaan \textit{tag "time"} buka yang tidak disertai dengan \textit{tag "time"} tutup di halaman cetak transkrip, bagian yang tidak lengkap ditambahkan \textit{</time>}. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_4.1.1_parsing_halaman_cetak_transkrip}.
+\item Pada penggunaan \textit{tag "time"} buka yang tidak disertai dengan \textit{tag "time"} tutup di halaman cetak transkrip, bagian yang tidak lengkap ditambahkan \texttt{</time>}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_4.1.1_parsing_halaman_cetak_transkrip}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_4.1.1_parsing_halaman_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 4.1.1 - Kesalahan Elemen pada Halaman Cetak Transkrip]
 diff --git a/www/application/views/TranskripRequest/main.php b/www/application/views/TranskripRequest/main.php
 index ada0254..ed45720 100644
@@ -945,7 +945,7 @@ index ada0254..ed45720 100644
     <div class="reveal" id="detail<?= $request->id ?>" data-reveal>
 \end{lstlisting} 
 
-\item Pada penempatan elemen \textit{"HTML"} yang tidak tepat di halaman entri jadwal dosen, \textit{tag "div"} dipindahkan agar berada sesudah \textit{tag "body"}. \textit{Tag "div"} yang bermasalah ini muncul dari \textit{file} "flashmessage.php" yang dimuat di tempat yang salah. Oleh karena perbaikan yang dilakukan adalah dengan memuat \textit{file} "flashmessage.php" di tempat yang seharusnya. Perbaikan yang dilakukan dapat dilihat di \ref{lst:perbaikan_4.1.1_parsing_halaman_entri_jadwal_dosen}.
+\item Pada penempatan elemen \textit{"HTML"} yang tidak tepat di halaman entri jadwal dosen, \textit{tag "div"} dipindahkan agar berada sesudah \textit{tag "body"}. \textit{Tag "div"} yang bermasalah ini muncul dari \textit{file} "flashmessage.php" yang dimuat di tempat yang salah. Oleh karena perbaikan yang dilakukan adalah dengan memuat \textit{file} "flashmessage.php" di tempat yang seharusnya. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_4.1.1_parsing_halaman_entri_jadwal_dosen}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_4.1.1_parsing_halaman_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 4.1.1 - Kesalahan Elemen pada Halaman Entri Jadwal Dosen]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
 index 6392b95..40d0c73 100644
@@ -994,7 +994,7 @@ Langkah-langkah untuk membuat permohonan cetak transkrip pada halaman web BlueTa
     \item Mengirim permohonan.
 \end{enumerate}
 
-\subsubsection{Melihat Detail Permohonan di Halaman Cetak Transkrip}
+\subsubsection{Mengakses Detail Permohonan di Halaman Cetak Transkrip}
 \label{subsubsec:skenario_melihat_detail_permohonan_di_halaman_cetak_transkrip}
 Langkah-langkah untuk melihat detail permohonan di halaman cetak transkrip pada halaman web BlueTape adalah sebagai berikut:
 
@@ -1010,10 +1010,11 @@ Pada bagian ini akan dituliskan hasil dari pengujian yang telah dilakukan berdas
 
 \subsubsection{Login}
 \label{subsubsec:hasil_pengujian_login}
+Berikut adalah tabel hasil pengujian untuk skenario \textit{login}.
 
 \begin{table}[H]
     \centering 
-    \caption{Tabel Hasil Pengujian}
+    \caption{Tabel Hasil Pengujian untuk Skenario \textit{Login}}
     \label{tab:hasil_pengujian_login}
     \begin{tabular}{|c|c|p{10cm}|}
         \toprule
@@ -1031,10 +1032,11 @@ Pada bagian ini akan dituliskan hasil dari pengujian yang telah dilakukan berdas
 
 \subsubsection{Membuat Permohonan Cetak Transkrip}
 \label{subsubsec:hasil_pengujian_membuat_permohonan_cetak_transkrip}
+Berikut adalah tabel hasil pengujian untuk skenario membuat permohonan cetak transkrip.
 
 \begin{table}[H]
     \centering 
-    \caption{Tabel Hasil Pengujian}
+    \caption{Tabel Hasil Pengujian untuk Skenario Membuat Permohonan Cetak Transkrip}
     \label{tab:hasil_pengujian_membuat_permohonan_cetak_transkrip}
     \begin{tabular}{|c|c|p{10cm}|}
         \toprule
@@ -1051,12 +1053,13 @@ Pada bagian ini akan dituliskan hasil dari pengujian yang telah dilakukan berdas
     \end{tabular}
 \end{table}
 
-\subsubsection{Melihat Detail Permohonan di Halaman Cetak Transkrip}
+\subsubsection{Mengakses Detail Permohonan di Halaman Cetak Transkrip}
 \label{subsubsec:hasil_pengujian_melihat_detail_permohonan_di_halaman_cetak_transkrip}
+Berikut adalah tabel hasil pengujian untuk skenario mengakses detail permohonan di halaman cetak transkrip.
 
 \begin{table}[H]
     \centering 
-    \caption{Tabel Hasil Pengujian}
+    \caption{Tabel Hasil Pengujian untuk Skenario Mengakses Detail Permohonan di Halaman Cetak Transkrip}
     \label{tab:hasil_pengujian_melihat_detail_permohonan_di_halaman_cetak_transkrip}
     \begin{tabular}{|c|c|p{10cm}|}
         \toprule
