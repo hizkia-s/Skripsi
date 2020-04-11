@@ -337,7 +337,7 @@ index 6392b95..f8471cb 100644
     <?php
     $hariValue = 0;
     foreach ($namaHari as $hari) {
-    @@ -29,30 +29,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+@@ -29,30 +29,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
     ?>
     </select><br>
@@ -376,6 +376,57 @@ index 6392b95..f8471cb 100644
     </form>
     </div>
     </div>
+@@ -173,8 +174,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    <form name="form<?php echo $dataHariIni->id ?>" method="POST" action="/EntriJadwalDosen/update/<?php echo $dataHariIni->id ?>">
+    <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+    <input type="hidden" name="id_jadwal_parameter" value="<?php echo $dataHariIni->id ?>"> </a> <br>
+-   Hari 
+-   <select name="hari"> 
++   <label for="edit_hari">Hari</label>
++   <select id="edit_hari" name="hari"> 
+    <?php
+    $hariValue = 0;
+    foreach ($namaHari as $hari) {
+@@ -185,14 +186,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    }
+    ?>
+    </select><br>
+-   Jam Mulai
+-   <select name="jam_mulai"> 
++   <label for="edit_jam_mulai">Jam Mulai</label>
++   <select id="edit_jam_mulai" name="jam_mulai"> 
+    <?php
+    for ($i = 7; $i <= 16; $i++) {
+    if ($i == $dataHariIni->jam_mulai) {
+@@ -207,8 +208,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    }
+    ?>
+    </select><br>
+-   Durasi
+-   <select name="durasi"> 
++   <label for="edit_durasi">Durasi</label>
++   <select id="edit_durasi" name="durasi"> 
+    <?php
+    for ($i = 1; $i <= 9; $i++) {
+    if ($i == $dataHariIni->durasi) {
+@@ -223,13 +224,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    }
+    ?>
+    </select><br>
+-   Jenis  
+-   <select name="jenis_jadwal"> 
++   <label for="edit_jenis_jadwal">Jenis</label>
++   <select id="edit_jenis_jadwal" name="jenis_jadwal"> 
+    <option style="background-color:yellow" value="konsultasi" <?php if ($dataHariIni->jenis == 'konsultasi') echo "selected"; ?> > Konsultasi </option>
+    <option style="background-color:green" value="terjadwal" <?php if ($dataHariIni->jenis == 'terjadwal') echo "selected"; ?>> Terjadwal</option>
+    <option style="background-color:white" value="kelas" <?php if ($dataHariIni->jenis == 'kelas') echo "selected"; ?>> Kelas </option>
+    </select>
+-   Label <input type="text" name="label_jadwal" value="<?php echo $dataHariIni->label; ?>"><br> 
++   <label for="edit_label_jadwal">Label</label>
++   <input type="text" id="edit_label_jadwal" name="label_jadwal" value="<?php echo $dataHariIni->label; ?>"><br> 
+    <div class="row large-4 column">
+    <div class="large-2 column">
+    <input type="submit" name="submitId<?php echo $dataHariIni->id ?>" class="button" value="Save  ">
 \end{lstlisting}
 \end{itemize}
 
@@ -719,6 +770,57 @@ index 6392b95..43af850 100644
     </form>
     </div>
     </div>
+@@ -173,8 +174,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    <form name="form<?php echo $dataHariIni->id ?>" method="POST" action="/EntriJadwalDosen/update/<?php echo $dataHariIni->id ?>">
+    <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+    <input type="hidden" name="id_jadwal_parameter" value="<?php echo $dataHariIni->id ?>"> </a> <br>
+-   Hari 
+-   <select name="hari"> 
++   <label for="edit_hari">Hari</label>
++   <select id="edit_hari" name="hari"> 
+    <?php
+    $hariValue = 0;
+    foreach ($namaHari as $hari) {
+@@ -185,14 +186,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    }
+    ?>
+    </select><br>
+-   Jam Mulai
+-   <select name="jam_mulai"> 
++   <label for="edit_jam_mulai">Jam Mulai</label>
++   <select id="edit_jam_mulai" name="jam_mulai"> 
+    <?php
+    for ($i = 7; $i <= 16; $i++) {
+    if ($i == $dataHariIni->jam_mulai) {
+@@ -207,8 +208,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    }
+    ?>
+    </select><br>
+-   Durasi
+-   <select name="durasi"> 
++   <label for="edit_durasi">Durasi</label>
++   <select id="edit_durasi" name="durasi"> 
+    <?php
+    for ($i = 1; $i <= 9; $i++) {
+    if ($i == $dataHariIni->durasi) {
+@@ -223,13 +224,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    }
+    ?>
+    </select><br>
+-   Jenis  
+-   <select name="jenis_jadwal"> 
++   <label for="edit_jenis_jadwal">Jenis</label>
++   <select id="edit_jenis_jadwal" name="jenis_jadwal"> 
+    <option style="background-color:yellow" value="konsultasi" <?php if ($dataHariIni->jenis == 'konsultasi') echo "selected"; ?> > Konsultasi </option>
+    <option style="background-color:green" value="terjadwal" <?php if ($dataHariIni->jenis == 'terjadwal') echo "selected"; ?>> Terjadwal</option>
+    <option style="background-color:white" value="kelas" <?php if ($dataHariIni->jenis == 'kelas') echo "selected"; ?>> Kelas </option>
+    </select>
+-   Label <input type="text" name="label_jadwal" value="<?php echo $dataHariIni->label; ?>"><br> 
++   <label for="edit_label_jadwal">Label</label>
++   <input type="text" id="edit_label_jadwal" name="label_jadwal" value="<?php echo $dataHariIni->label; ?>"><br> 
+    <div class="row large-4 column">
+    <div class="large-2 column">
+    <input type="submit" name="submitId<?php echo $dataHariIni->id ?>" class="button" value="Save  ">
 diff --git a/www/application/views/TranskripManage/main.php b/www/application/views/TranskripManage/main.php
 index 0970fc2..6dffa7d 100644
 --- a/www/application/views/TranskripManage/main.php
@@ -906,6 +1008,57 @@ index 6392b95..43af850 100644
     </form>
     </div>
     </div>
+@@ -173,8 +174,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    <form name="form<?php echo $dataHariIni->id ?>" method="POST" action="/EntriJadwalDosen/update/<?php echo $dataHariIni->id ?>">
+    <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>" />
+    <input type="hidden" name="id_jadwal_parameter" value="<?php echo $dataHariIni->id ?>"> </a> <br>
+-   Hari 
+-   <select name="hari"> 
++   <label for="edit_hari">Hari</label>
++   <select id="edit_hari" name="hari"> 
+    <?php
+    $hariValue = 0;
+    foreach ($namaHari as $hari) {
+@@ -185,14 +186,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    }
+    ?>
+    </select><br>
+-   Jam Mulai
+-   <select name="jam_mulai"> 
++   <label for="edit_jam_mulai">Jam Mulai</label>
++   <select id="edit_jam_mulai" name="jam_mulai"> 
+    <?php
+    for ($i = 7; $i <= 16; $i++) {
+    if ($i == $dataHariIni->jam_mulai) {
+@@ -207,8 +208,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    }
+    ?>
+    </select><br>
+-   Durasi
+-   <select name="durasi"> 
++   <label for="edit_durasi">Durasi</label>
++   <select id="edit_durasi" name="durasi"> 
+    <?php
+    for ($i = 1; $i <= 9; $i++) {
+    if ($i == $dataHariIni->durasi) {
+@@ -223,13 +224,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
+    }
+    ?>
+    </select><br>
+-   Jenis  
+-   <select name="jenis_jadwal"> 
++   <label for="edit_jenis_jadwal">Jenis</label>
++   <select id="edit_jenis_jadwal" name="jenis_jadwal"> 
+    <option style="background-color:yellow" value="konsultasi" <?php if ($dataHariIni->jenis == 'konsultasi') echo "selected"; ?> > Konsultasi </option>
+    <option style="background-color:green" value="terjadwal" <?php if ($dataHariIni->jenis == 'terjadwal') echo "selected"; ?>> Terjadwal</option>
+    <option style="background-color:white" value="kelas" <?php if ($dataHariIni->jenis == 'kelas') echo "selected"; ?>> Kelas </option>
+    </select>
+-   Label <input type="text" name="label_jadwal" value="<?php echo $dataHariIni->label; ?>"><br> 
++   <label for="edit_label_jadwal">Label</label>
++   <input type="text" id="edit_label_jadwal" name="label_jadwal" value="<?php echo $dataHariIni->label; ?>"><br> 
+    <div class="row large-4 column">
+    <div class="large-2 column">
+    <input type="submit" name="submitId<?php echo $dataHariIni->id ?>" class="button" value="Save  ">
 diff --git a/www/application/views/TranskripManage/main.php b/www/application/views/TranskripManage/main.php
 index 0970fc2..6dffa7d 100644
 --- a/www/application/views/TranskripManage/main.php
@@ -991,7 +1144,7 @@ Langkah-langkah untuk membuat permohonan cetak transkrip pada halaman cetak tran
 \begin{enumerate}
     \item Penguji melakukan \textit{login} pada halaman web BlueTape.
     \item Penguji masuk ke halaman cetak transkrip dengan memilih menu "Cetak Transkrip".
-    \item Penguji memilih "DPS (Seluruh Semester, Bilingual)" pada kolom "Tipe Transkrip".
+    \item Penguji memilih opsi "DPS (Seluruh Semester, Bilingual)" pada kolom "Tipe Transkrip".
     \item Penguji mengisi kolom "Keperluan" dengan "Tes Permohonan Baru".
     \item Penguji menekan tombol "Kirim Permohonan" untuk mengirim permohonan.
 \end{enumerate}
@@ -1074,7 +1227,7 @@ Langkah-langkah untuk membuat permohonan perubahan kuliah di halaman perubahan k
     \item Penguji mengisi kolom "Kode MK" dengan "TES123".
     \item Penguji mengisi kolom "Nama Mata Kuliah" dengan "Tes Mata Kuliah".
     \item Penguji mengisi kolom "Kelas" dengan "A".
-    \item Penguji memilih kolom "Diganti" pada kolom "Jenis Perubahan".
+    \item Penguji memilih opsi "Diganti" pada kolom "Jenis Perubahan".
     \item Penguji mengisi kolom "Dari Hari \& Jam" dengan "2020-04-10 09:00".
     \item Penguji mengisi kolom "Dari Ruang" dengan "10316".
     \item Penguji mengisi kolom "Keterangan Tambahan" dengan "Tes Permohonan Perubahan Kuliah".
@@ -1156,10 +1309,14 @@ Langkah-langkah untuk menghapus permohonan perubahan kuliah di halaman manajemen
 Langkah-langkah untuk menambah jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
 
 \begin{enumerate}
-    \item Melakukan \textit{login} pada halaman web BlueTape.
-    \item Masuk ke halaman entri jadwal dosen.
-    \item Mengisi \textit{form} "Tambah Jadwal".
-    \item Menekan tombol "Tambah" untuk menambahkan jadwal.
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
+    \item Penguji memilih opsi "Selasa" pada kolom "Hari".
+    \item Penguji memilih opsi "8:00" pada kolom "Jam Mulai".
+    \item Penguji memilih opsi "2 jam" pada kolom "Durasi".
+    \item Penguji memilih opsi "Kelas" pada kolom "Jenis".
+    \item Penguji mengisi kolom "Label" dengan "Tes Tambah Jadwal".
+    \item Penguji menekan tombol "Tambah" untuk menambahkan jadwal.
 \end{enumerate}
 
 \subsubsection{Mengubah Jadwal Dosen di Halaman Entri Jadwal Dosen}
@@ -1167,11 +1324,15 @@ Langkah-langkah untuk menambah jadwal dosen di halaman entri jadwal dosen adalah
 Langkah-langkah untuk mengubah jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
 
 \begin{enumerate}
-    \item Melakukan \textit{login} pada halaman web BlueTape.
-    \item Masuk ke halaman entri jadwal dosen.
-    \item Mengakses jadwal dosen yang ingin diubah pada tabel "Daftar Jadwal".
-    \item Mengubah isi \textit{form} "\textit{Edit} Jadwal".
-    \item Menekan tombol "\textit{Save}" untuk menyimpan perubahan.
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
+    \item Penguji menekan jadwal dosen pada tabel "Daftar Jadwal".
+    \item Penguji memilih opsi "Senin" pada kolom "Hari".
+    \item Penguji memilih opsi "7:00" pada kolom "Jam Mulai".
+    \item Penguji memilih opsi "1 jam" pada kolom "Durasi".
+    \item Penguji memilih opsi "Konsultasi" pada kolom "Jenis".
+    \item Penguji mengisi kolom "Label" dengan "Tes Ubah Jadwal".
+    \item Penguji menekan tombol "\textit{Save}" untuk menyimpan perubahan.
 \end{enumerate}
 
 \subsubsection{Menghapus Jadwal Dosen di Halaman Entri Jadwal Dosen}
@@ -1179,10 +1340,10 @@ Langkah-langkah untuk mengubah jadwal dosen di halaman entri jadwal dosen adalah
 Langkah-langkah untuk menghapus jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
 
 \begin{enumerate}
-    \item Melakukan \textit{login} pada halaman web BlueTape.
-    \item Masuk ke halaman entri jadwal dosen.
-    \item Mengakses jadwal dosen yang ingin dihapus pada tabel "Daftar Jadwal".
-    \item Menekan tombol "\textit{Delete}".
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
+    \item Penguji menekan jadwal dosen pada tabel "Daftar Jadwal".
+    \item Penguji menekan tombol "\textit{Delete}".
 \end{enumerate}
 
 \subsubsection{Menghapus Seluruh Jadwal Dosen di Halaman Entri Jadwal Dosen}
@@ -1190,10 +1351,11 @@ Langkah-langkah untuk menghapus jadwal dosen di halaman entri jadwal dosen adala
 Langkah-langkah untuk menghapus seluruh jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
 
 \begin{enumerate}
-    \item Melakukan \textit{login} pada halaman web BlueTape.
-    \item Masuk ke halaman entri jadwal dosen.
-    \item Menekan tombol "\textit{Delete All}".
-    \item Melakukan konfirmasi penghapusan dengan menekan tombol "OK" pada kotak pesan yang muncul.
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
+    \item Penguji menekan tombol "\textit{Delete All}".
+    \item Penguji memeriksa pesan konfirmasi penghapusan jadwal pada dialog peringatan yang muncul.
+    \item Penguji melakukan konfirmasi penghapusan dengan menekan tombol "OK".
 \end{enumerate}
 
 \subsubsection{Membuat Dokumen XLS yang Berisi Jadwal Dosen di Halaman Entri Jadwal Dosen}
@@ -1201,20 +1363,21 @@ Langkah-langkah untuk menghapus seluruh jadwal dosen di halaman entri jadwal dos
 Langkah-langkah untuk membuat dokumen XLS yang berisi jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
 
 \begin{enumerate}
-    \item Melakukan \textit{login} pada halaman web BlueTape.
-    \item Masuk ke halaman entri jadwal dosen.
-    \item Menekan tombol "Ekspor ke XLS".
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
+    \item Penguji menekan tombol "Ekspor ke XLS".
 \end{enumerate}
 
-\subsubsection{Mengakses Jadwal Dosen di Halaman Lihat Jadwal Dosen}
-\label{subsubsec:skenario_mengakses_jadwal_dosen_di_halaman_lihat_jadwal_dosen}
-Langkah-langkah untuk mengakses jadwal dosen di halaman lihat jadwal dosen adalah sebagai berikut:
+\subsubsection{Memeriksa Jadwal Dosen di Halaman Lihat Jadwal Dosen}
+\label{subsubsec:skenario_memeriksa_jadwal_dosen_di_halaman_lihat_jadwal_dosen}
+Langkah-langkah untuk memeriksa jadwal dosen di halaman lihat jadwal dosen adalah sebagai berikut:
 
 \begin{enumerate}
-    \item Melakukan \textit{login} pada halaman web BlueTape.
-    \item Masuk ke halaman lihat jadwal dosen.
-    \item Memilih nama dosen yang ingin diketahui jadwalnya.
-    \item Mengakses tabel yang menampilkan jadwal dosen yang telah dipilih.
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman lihat jadwal dosen dengan memilih menu "Lihat Jadwal Dosen".
+    \item Penguji memilih nama dosen yang ingin diketahui jadwalnya.
+    \item Penguji menelusuri tabel yang menampilkan jadwal dosen yang telah dipilih.
+    \item Penguji memeriksa detail jadwal dengan nama "Tes Jadwal".
 \end{enumerate}
 
 \subsubsection{Membuat Dokumen XLS yang Berisi Jadwal Dosen di Halaman Lihat Jadwal Dosen}
@@ -1222,9 +1385,9 @@ Langkah-langkah untuk mengakses jadwal dosen di halaman lihat jadwal dosen adala
 Langkah-langkah untuk membuat dokumen XLS yang berisi jadwal dosen di halaman lihat jadwal dosen adalah sebagai berikut:
 
 \begin{enumerate}
-    \item Melakukan \textit{login} pada halaman web BlueTape.
-    \item Masuk ke halaman lihat jadwal dosen.
-    \item Menekan tombol "Ekspor ke XLS".
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman lihat jadwal dosen dengan memilih menu "Lihat Jadwal Dosen".
+    \item Penguji menekan tombol "Ekspor ke XLS".
 \end{enumerate}
 
 \subsection{Hasil Pengujian}
@@ -1583,6 +1746,176 @@ Berikut adalah tabel hasil pengujian untuk skenario menghapus permohonan perubah
         2 & Sukses & Menekan \textit{"tab"} sebanyak tiga kali hingga ChromeVox menyebutkan "manajemen perubahan kuliah, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "permohonan perubahan kuliah, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak lima kali hingga ChromeVox menyebutkan "hapus permohonan Hizkia Steven, \textit{link has popup}" lalu menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
         4 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak lima kali hingga ChromeVox menyebutkan "hapus, \textit{button}" lalu menekan \textit{"enter"}. \\ 
+
+        \bottomrule
+
+    \end{tabular}
+\end{table}
+
+\subsubsection{Menambah Jadwal Dosen di Halaman Entri Jadwal Dosen}
+\label{subsubsec:hasil_pengujian_menambah_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+Berikut adalah tabel hasil pengujian untuk skenario menambah jadwal dosen di halaman entri jadwal dosen.
+
+\begin{table}[H]
+    \centering 
+    \caption{Tabel Hasil Pengujian untuk Skenario Menambah Jadwal Dosen di Halaman Entri Jadwal Dosen}
+    \label{tab:hasil_pengujian_menambah_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+    \begin{tabular}{|c|c|p{10cm}|}
+        \toprule
+        Langkah ke & Hasil (sukses/tidak) & Tindakan \\
+
+        \midrule
+        1 & Sukses & Mengikuti langkah-langkah pada \textit{subsubsection} \ref{subsubsec:hasil_pengujian_login}. \\
+        2 & Sukses & Menekan \textit{"tab"} sebanyak empat kali hingga ChromeVox menyebutkan "entri jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
+        3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "tambah jadwal, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "hari, senin, \textit{combo box satu of lima}" lalu menekan \textit{"down arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "selasa, \textit{dua of lima}". \\
+        4 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "jam mulai, pukul tujuh, \textit{combo box satu of sepuluh}" lalu menekan \textit{"down arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "pukul delapan, \textit{dua of sepuluh}. \\ 
+        5 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "durasi, satu jam, \textit{combo box satu of sembilan}" lalu menekan \textit{"down arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "dua jam, \textit{dua of sembilan}. \\ 
+        6 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "jenis, konsultasi, \textit{combo box satu of tiga}" lalu menekan \textit{"down arrow"} sebanyak dua kali hingga ChromeVox menyebutkan "kelas, \textit{tiga of tiga}. \\ 
+        7 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "label, \textit{edit text}" lalu mengetik "Tes Tambah Jadwal". \\ 
+        8 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "tambah, \textit{button}" lalu menekan \textit{"enter"}. \\ 
+
+        \bottomrule
+
+    \end{tabular}
+\end{table}
+
+\subsubsection{Mengubah Jadwal Dosen di Halaman Entri Jadwal Dosen}
+\label{subsubsec:hasil_pengujian_mengubah_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+Berikut adalah tabel hasil pengujian untuk skenario mengubah jadwal dosen di halaman entri jadwal dosen.
+
+\begin{table}[H]
+    \centering 
+    \caption{Tabel Hasil Pengujian untuk Skenario Mengubah Jadwal Dosen di Halaman Entri Jadwal Dosen}
+    \label{tab:hasil_pengujian_mengubah_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+    \begin{tabular}{|c|c|p{10cm}|}
+        \toprule
+        Langkah ke & Hasil (sukses/tidak) & Tindakan \\
+
+        \midrule
+        1 & Sukses & Mengikuti langkah-langkah pada \textit{subsubsection} \ref{subsubsec:hasil_pengujian_login}. \\
+        2 & Sukses & Menekan \textit{"tab"} sebanyak empat kali hingga ChromeVox menyebutkan "entri jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
+        3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"}, dilakukan sebanyak dua kali hingga ChromeVox menyebutkan "daftar jadwal, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "tabel, tes tambah jadwal" lalu menekan \textit{"enter"} sebanyak satu kali hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
+        4 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak tiga kali hingga ChromeVox menyebutkan "hari, selasa, \textit{combo box dua of lima}" lalu menekan \textit{"up arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "senin, \textit{satu of lima}. \\
+        5 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "jam mulai, pukul delapan, \textit{combo box dua of sepuluh}" lalu menekan \textit{"up arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "pukul tujuh, \textit{satu of sepuluh}. \\
+        6 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "durasi, dua jam, \textit{combo box dua of sembilan}" lalu menekan \textit{"up arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "satu jam, \textit{satu of sembilan}. \\
+        7 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "jenis, kelas, \textit{combo box tiga of tiga}" lalu menekan \textit{"up arrow"} sebanyak dua kali hingga ChromeVox menyebutkan "konsultasi, \textit{satu of tiga}. \\
+        8 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "label, tes tambah jadwal, \textit{edit text}" lalu mengetik "Tes Ubah Jadwal". \\ 
+        9 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "\textit{save, button}" lalu menekan \textit{"enter"}. \\ 
+
+        \bottomrule
+
+    \end{tabular}
+\end{table}
+
+\subsubsection{Menghapus Jadwal Dosen di Halaman Entri Jadwal Dosen}
+\label{subsubsec:hasil_pengujian_menghapus_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+Berikut adalah tabel hasil pengujian untuk skenario menghapus jadwal dosen di halaman entri jadwal dosen.
+
+\begin{table}[H]
+    \centering 
+    \caption{Tabel Hasil Pengujian untuk Skenario Menghapus Jadwal Dosen di Halaman Entri Jadwal Dosen}
+    \label{tab:hasil_pengujian_menghapus_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+    \begin{tabular}{|c|c|p{10cm}|}
+        \toprule
+        Langkah ke & Hasil (sukses/tidak) & Tindakan \\
+
+        \midrule
+        1 & Sukses & Mengikuti langkah-langkah pada \textit{subsubsection} \ref{subsubsec:hasil_pengujian_login}. \\
+        2 & Sukses & Menekan \textit{"tab"} sebanyak empat kali hingga ChromeVox menyebutkan "entri jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
+        3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"}, dilakukan sebanyak dua kali hingga ChromeVox menyebutkan "daftar jadwal, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "tabel, tes ubah jadwal" lalu menekan \textit{"enter"} sebanyak satu kali hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
+        4 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak sepuluh kali hingga ChromeVox menyebutkan "\textit{delete, button}" lalu menekan \textit{"enter"}. \\
+
+        \bottomrule
+
+    \end{tabular}
+\end{table}
+
+\subsubsection{Menghapus Seluruh Jadwal Dosen di Halaman Entri Jadwal Dosen}
+\label{subsubsec:hasil_pengujian_menghapus_seluruh_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+Berikut adalah tabel hasil pengujian untuk skenario menghapus seluruh jadwal dosen di halaman entri jadwal dosen.
+
+\begin{table}[H]
+    \centering 
+    \caption{Tabel Hasil Pengujian untuk Skenario Menghapus Seluruh Jadwal Dosen di Halaman Entri Jadwal Dosen}
+    \label{tab:hasil_pengujian_menghapus_seluruh_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+    \begin{tabular}{|c|c|p{10cm}|}
+        \toprule
+        Langkah ke & Hasil (sukses/tidak) & Tindakan \\
+
+        \midrule
+        1 & Sukses & Mengikuti langkah-langkah pada \textit{subsubsection} \ref{subsubsec:hasil_pengujian_login}. \\
+        2 & Sukses & Menekan \textit{"tab"} sebanyak empat kali hingga ChromeVox menyebutkan "entri jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
+        3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"}, dilakukan sebanyak dua kali hingga ChromeVox menyebutkan "daftar jadwal, \textit{heading} satu" lalu menekan \textit{"shift + alt + N"} lalu \textit{"L"} sebanyak satu kali hingga ChromeVox menyebutkan "\textit{delete all, link}" lalu menekan \textit{"enter"}. \\
+        4 & Sukses & Menekan \textit{"shift + alt + R"} sebanyak satu kali sehingga ChromeVox membacakan pesan "anda yakin mau menghapus semua data jadwal? aksi ini tidak dapat dibatalkan" pada dialog peringatan. \\
+        5 & Sukses & Menekan \textit{"enter"}. \\
+
+        \bottomrule
+
+    \end{tabular}
+\end{table}
+
+\subsubsection{Membuat Dokumen XLS yang Berisi Jadwal Dosen di Halaman Entri Jadwal Dosen}
+\label{subsubsec:hasil_pengujian_membuat_dokumen_xls_yang_berisi_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+Berikut adalah tabel hasil pengujian untuk skenario membuat dokumen XLS yang berisi jadwal dosen di halaman entri jadwal dosen.
+
+\begin{table}[H]
+    \centering 
+    \caption{Tabel Hasil Pengujian untuk Skenario Membuat Dokumen XLS yang Berisi Jadwal Dosen di Halaman Entri Jadwal Dosen}
+    \label{tab:hasil_pengujian_membuat_dokumen_xls_yang_berisi_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+    \begin{tabular}{|c|c|p{10cm}|}
+        \toprule
+        Langkah ke & Hasil (sukses/tidak) & Tindakan \\
+
+        \midrule
+        1 & Sukses & Mengikuti langkah-langkah pada \textit{subsubsection} \ref{subsubsec:hasil_pengujian_login}. \\
+        2 & Sukses & Menekan \textit{"tab"} sebanyak empat kali hingga ChromeVox menyebutkan "entri jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
+        3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"}, dilakukan sebanyak dua kali hingga ChromeVox menyebutkan "daftar jadwal, \textit{heading} satu" lalu menekan \textit{"shift + alt + N"} lalu \textit{"L"}, dilakukan sebanyak dua kali hingga ChromeVox menyebutkan "\textit{ekspor ke XLS, link}" lalu menekan \textit{"enter"}. \\
+
+        \bottomrule
+
+    \end{tabular}
+\end{table}
+
+\subsubsection{Memeriksa Jadwal Dosen di Halaman Lihat Jadwal Dosen}
+\label{subsubsec:hasil_pengujian_memeriksa_jadwal_dosen_di_halaman_lihat_jadwal_dosen}
+Berikut adalah tabel hasil pengujian untuk skenario memeriksa jadwal dosen di halaman lihat jadwal dosen.
+
+\begin{table}[H]
+    \centering 
+    \caption{Tabel Hasil Pengujian untuk Skenario Memeriksa Jadwal Dosen di Halaman Lihat Jadwal Dosen}
+    \label{tab:hasil_pengujian_memeriksa_jadwal_dosen_di_halaman_lihat_jadwal_dosen}
+    \begin{tabular}{|c|c|p{10cm}|}
+        \toprule
+        Langkah ke & Hasil (sukses/tidak) & Tindakan \\
+
+        \midrule
+        1 & Sukses & Mengikuti langkah-langkah pada \textit{subsubsection} \ref{subsubsec:hasil_pengujian_login}. \\
+        2 & Sukses & Menekan \textit{"tab"} sebanyak lima kali hingga ChromeVox menyebutkan "lihat jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
+        3 & Sukses & Menekan \textit{"shift + alt + L"} lalu \textit{"L"} sebanyak satu kali hingga ChromeVox menyebutkan "\textit{link list, use up and down arrow keys to browse or type to search}" lalu mengetik "hizkia steven", dilanjutkan dengan menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{exited, link list, list with dua items, hizkia steven, tab selected list item}" lalu menekan \textit{"enter"}. \\
+        4 & Suskes & Menekan \textit{"shift + alt + N"} lalu \textit{"T"} sebanyak satu kali hingga ChromeVox menyebutkan "tabel, senin" lalu menekan \textit{"shift + alt + R"} sehingga ChromeVox membacakan isi tabel. \\
+        5 & Sukses & Menekan \textit{"ctrl"} saat ChromeVox menyebutkan "Tes Jadwal" agar ChromeVox berhenti membacakan isi tabel dan berhenti di \textit{cell} "Tes Jadwal". Berikutnya menekan \textit{"shift + alt + back slash"} untuk masuk ke mode tabel, dilanjutkan dengan menekan \textit{"shift + alt + T"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "\textit{row header tujuh delapan, column header senin}". \\
+
+        \bottomrule
+
+    \end{tabular}
+\end{table}
+
+\subsubsection{Membuat Dokumen XLS yang Berisi Jadwal Dosen di Halaman Lihat Jadwal Dosen}
+\label{subsubsec:hasil_pengujian_membuat_dokumen_xls_yang_berisi_jadwal_dosen_di_halaman_lihat_jadwal_dosen}
+Berikut adalah tabel hasil pengujian untuk skenario membuat dokumen XLS yang berisi jadwal dosen di halaman lihat jadwal dosen.
+
+\begin{table}[H]
+    \centering 
+    \caption{Tabel Hasil Pengujian untuk Skenario Membuat Dokumen XLS yang Berisi Jadwal Dosen di Halaman Lihat Jadwal Dosen}
+    \label{tab:hasil_pengujian_membuat_dokumen_xls_yang_berisi_jadwal_dosen_di_halaman_lihat_jadwal_dosen}
+    \begin{tabular}{|c|c|p{10cm}|}
+        \toprule
+        Langkah ke & Hasil (sukses/tidak) & Tindakan \\
+
+        \midrule
+        1 & Sukses & Mengikuti langkah-langkah pada \textit{subsubsection} \ref{subsubsec:hasil_pengujian_login}. \\
+        2 & Sukses & Menekan \textit{"tab"} sebanyak lima kali hingga ChromeVox menyebutkan "lihat jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
+        3 & Sukses & Menekan \textit{"shift + alt + L"} lalu \textit{"L"} sebanyak satu kali hingga ChromeVox menyebutkan "\textit{link list, use up and down arrow keys to browse or type to search}" lalu mengetik "ekspor ke XLS", dilanjutkan dengan menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{exited, link list, ekspor ke XLS, link}" lalu menekan \textit{"enter"}. \\
 
         \bottomrule
 
