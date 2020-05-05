@@ -167,13 +167,184 @@ Jika ada audio apa pun di halaman web yang diputar otomatis selama lebih dari 3 
 \label{sec:kriteria_sukses_1.4.3}
 (Level AA)\\
 
-Presentasi visual dari teks dan gambar teks memiliki rasio kontras setidaknya 4,5:1, kecuali untuk ketentuan berikut:
+Presentasi visual dari teks dan gambar teks memiliki rasio kontras setidaknya 4.5:1, kecuali untuk ketentuan berikut:
 
 \begin{itemize}
 	\item Teks berukuran besar: Teks berukuran besar dan gambar teks berukuran besar memiliki rasio kontras setidaknya 3:1.
 	\item Insidental: Teks atau gambar teks yang hanya merupakan dekorasi yang tidak tampak kepada siapa pun atau bagian gambar yang mengandung konten visual lain yang signifikan, tidak wajib memenuhi persyaratan kontras apa pun.
 	\item Berjenis logo: Teks yang merupakan bagian dari logo atau nama merek tidak wajib memiliki persyaratan kontras apa pun.
 \end{itemize}
+
+Nilai rasio kontras dapat berkisar antara 1 hingga 21 dan biasa dituliskan sebagai 1:1 hingga 21:1. Rasio kontras antara warna latar depan dan warna latar belakang dapat dihitung dengan menggunakan rumus berikut:
+\[
+	Rasio\ kontras = (L1 + 0.05) \div (L2 + 0.05)	
+\]
+
+Di mana L1 adalah \textit{relative luminance} dari warna yang lebih terang dan L2 adalah \textit{relative luminance} dari warna yang lebih gelap.
+
+\textit{Relative luminance} adalah kecerahan relatif di titik mana pun pada ruang warna, dengan nol untuk warna hitam yang paling gelap dan satu untuk warna putih yang paling terang. Untuk ruang warna sRGB, \textit{relative luminance} suatu warna dihitung dengan rumus berikut:
+\[
+	L = 0.2126 \times R + 0.7152 \times G + 0.0722 \times B
+\]
+
+Dengan R, G, dan B didefinisikan sebagai berikut:
+\[
+	R=\left\{
+	\begin{matrix}
+	R_{sRGB}\div 12.92,\ \ R_{sRGB}\le 0.03928 \\ 
+	{{((R}_{sRGB}\ +0.055)\div 1.055)}^{2.4},\ \ R_{sRGB}>0.03928
+	\end{matrix}
+	\right.
+\]
+\[
+	G=\left\{
+	\begin{matrix}
+	G_{sRGB}\div 12.92,\ \ G_{sRGB}\le 0.03928 \\ 
+	{{((G}_{sRGB}\ +0.055)\div 1.055)}^{2.4},\ \ G_{sRGB}>0.03928
+	\end{matrix}
+	\right.
+\]
+\[
+	B=\left\{
+	\begin{matrix}
+	B_{sRGB}\div 12.92,\ \ B_{sRGB}\le 0.03928 \\ 
+	{{((B}_{sRGB}\ +0.055)\div 1.055)}^{2.4},\ \ B_{sRGB}>0.03928
+	\end{matrix}
+	\right.
+\]
+
+dan RsRGB, GsRGB, dan BsRGB didefinisikan sebagai:
+\[
+	R_{sRGB} = R_{8bit}\div 255
+\]
+\[
+	G_{sRGB} = G_{8bit}\div 255
+\]
+\[
+	B_{sRGB} = B_{8bit}\div 255
+\]
+
+Berikut adalah contoh perhitungan rasio kontras untuk warna hitam pada layar yang berwarna putih.
+
+\begin{itemize}
+	\item Latar depan memiliki $R_{8bit}$ = 0, $G_{8bit}$ = 0, dan $B_{8bit}$ = 0, sehinga didapatkan nilai: 
+			\[
+				R_{sRGB} = R_{8bit}\div 255 = 0\div 255 = 0
+			\]
+			\[
+				G_{sRGB} = G_{8bit}\div 255 = 0\div 255 = 0
+			\]
+			\[
+				B_{sRGB} = B_{8bit}\div 255 = 0\div 255 = 0
+			\]
+	\item Latar belakang memiliki $R_{8bit}$ = 255, $G_{8bit}$ = 255, dan $B_{8bit}$ = 255, sehingga didapatkan nilai:
+			\[
+				R_{sRGB} = R_{8bit}\div 255 = 255\div 255 = 1
+			\]
+			\[
+				G_{sRGB} = G_{8bit}\div 255 = 255\div 255 = 1
+			\]
+			\[
+				B_{sRGB} = B_{8bit}\div 255 = 255\div 255 = 1
+			\]
+\end{itemize}
+
+Langkah berikutnya menghitung nilai R, G, dan B untuk latar depan dan latar belakang.
+
+\begin{itemize}
+	\item Latar depan:
+			\[
+				R=\left\{
+				\begin{matrix}
+				0\div 12.92,\ \ 0\le 0.03928 \\ 
+				{{((0}+0.055)\div 1.055)}^{2.4},\ \ 0>0.03928
+				\end{matrix}
+				\right.
+			\]
+			\[
+				R=0\div 12.92 = 0
+			\]
+			\[
+				G=\left\{
+				\begin{matrix}
+				0\div 12.92,\ \ 0\le 0.03928 \\ 
+				{{((0}+0.055)\div 1.055)}^{2.4},\ \ 0>0.03928
+				\end{matrix}
+				\right.
+			\]
+			\[
+				G=0\div 12.92 = 0
+			\]
+			\[
+				B=\left\{
+				\begin{matrix}
+				0\div 12.92,\ \ 0\le 0.03928 \\ 
+				{{((0}+0.055)\div 1.055)}^{2.4},\ \ 0>0.03928
+				\end{matrix}
+				\right.
+			\]
+			\[
+				B=0\div 12.92 = 0
+			\]
+	\item Latar belakang:
+			\[
+				R=\left\{
+				\begin{matrix}
+				1\div 12.92,\ \ 1\le 0.03928 \\ 
+				{{((1}+0.055)\div 1.055)}^{2.4},\ \ 1>0.03928
+				\end{matrix}
+				\right.
+			\]
+			\[
+				R={{((1}+0.055)\div 1.055)}^{2.4} = 1
+			\]
+			\[
+				G=\left\{
+				\begin{matrix}
+				1\div 12.92,\ \ 1\le 0.03928 \\ 
+				{{((1}+0.055)\div 1.055)}^{2.4},\ \ 1>0.03928
+				\end{matrix}
+				\right.
+			\]
+			\[
+				G={{((1}+0.055)\div 1.055)}^{2.4} = 1
+			\]
+			\[
+				B=\left\{
+				\begin{matrix}
+				1\div 12.92,\ \ 1\le 0.03928 \\ 
+				{{((1}+0.055)\div 1.055)}^{2.4},\ \ 1>0.03928
+				\end{matrix}
+				\right.
+			\]
+			\[
+				B={{((1}+0.055)\div 1.055)}^{2.4} = 1
+			\]
+\end{itemize}
+
+Setelah mendapatkan nilai R, G, dan B latar depan dan latar belakang, berikutnya menggunakan nilai tersebut untuk menghitung nilai \textit{relative luminance} (L) latar depan dan latar belakang.
+
+\begin{itemize}
+	\item Latar depan:
+		\[
+			L = 0.2126 \times 0 + 0.7152 \times 0 + 0.0722 \times 0 = 0
+		\]
+	\item Latar belakang:
+		\[
+			L = 0.2126 \times 1 + 0.7152 \times 1 + 0.0722 \times 1 = 1
+		\]
+\end{itemize}
+
+Dari nilai \textit{relative luminance} latar depan dan latar belakang yang telah didapatkan, rasio kontras antara warna latar depan dan latar belakang sudah bisa dihitung sebagai berikut:
+\begin{itemize}
+	\item L1 adalah \textit{relative luminance} warna yang lebih terang, sehingga L1 = L latar belakang = 1.
+	\item L2 adalah \textit{relative luminance} warna yang lebih gelap, sehingga L2 = L latar depan = 0.
+\end{itemize}
+\[
+	Rasio\ kontras = (L1 + 0.05) \div (L2 + 0.05) = (1 + 0.05) \div (0 + 0.05) = 21
+\]
+
+Jadi untuk contoh warna hitam di atas layar berwarna putih, rasio kontras yang didapatkan adalah 1:21. 
 
 \paragraph{Kriteria Sukses 1.4.4 \textit{Resize text}}
 \label{sec:kriteria_sukses_1.4.4}
@@ -199,10 +370,12 @@ Jika teknologi yang digunakan dapat menyajikan presentasi visual, maka yang digu
 Presentasi visual dari teks dan gambar teks memiliki rasio kontras setidaknya 7:1, kecuali untuk ketentuan berikut:
 
 \begin{itemize}
-	\item Teks berukuran besar: Teks berukuran besar dan gambar teks berukuran besar memiliki rasio kontras setidaknya 4,5:1.
+	\item Teks berukuran besar: Teks berukuran besar dan gambar teks berukuran besar memiliki rasio kontras setidaknya 4.5:1.
 	\item Insidental: Teks atau gambar teks yang hanya merupakan dekorasi yang tidak tampak kepada siapa pun atau bagian gambar yang mengandung konten visual lain yang signifikan, tidak wajib memenuhi persyaratan kontras apa pun.
 	\item Berjenis logo: Teks yang merupakan bagian dari logo atau nama merek tidak wajib memiliki persyaratan kontras apa pun.
 \end{itemize}
+
+Perhitungan rasio kontras antara warna latar depan dan warna latar belakang beserta contohnya dapat dilihat pada poin kriteria sukses 1.4.3 \textit{Contrast (Minimum)}.
 
 \paragraph{Kriteria Sukses 1.4.7 \textit{Low or No Background Audio}}
 \label{sec:kriteria_sukses_1.4.7}
@@ -260,6 +433,8 @@ Presentasi visual pada poin-poin berikut memiliki rasio kontras setidaknya 3:1 t
 	\item Objek grafis: Bagian grafis dibutuhkan untuk memahami konten, kecuali ketika penyajian grafis tertentu bersifat esensial untuk informasi yang disampaikan.
 \end{itemize}
 
+Perhitungan rasio kontras antara warna latar depan dan warna latar belakang beserta contohnya dapat dilihat pada poin kriteria sukses 1.4.3 \textit{Contrast (Minimum)}.
+
 \paragraph{Kriteria Sukses 1.4.12 \textit{Text Spacing}}
 \label{sec:kriteria_sukses_1.4.12}
 (Level AA)\\
@@ -267,10 +442,10 @@ Presentasi visual pada poin-poin berikut memiliki rasio kontras setidaknya 3:1 t
 Pada konten yang diimplementasikan dengan menggunakan bahasa markah yang mendukung properti \textit{style} teks berikut, tidak ada fungsionalitas atau konten yang hilang ketika mengatur ketentuan-ketentuan berikut tanpa mengubah properti \textit{style} lainnya:
 
 \begin{itemize}
-	\item Tinggi baris (jarak antara baris) setidaknya 1,5 kali ukuran tulisan;
+	\item Tinggi baris (jarak antara baris) setidaknya 1.5 kali ukuran tulisan;
 	\item Jarak antara paragraf setidaknya 2 kali ukuran tulisan;
-	\item Jarak antara huruf setidaknya 0,12 kali ukuran tulisan;
-	\item Jarak antara kata setidaknya 0,16 kali ukuran tulisan.
+	\item Jarak antara huruf setidaknya 0.12 kali ukuran tulisan;
+	\item Jarak antara kata setidaknya 0.16 kali ukuran tulisan.
 \end{itemize}
 
 Pengecualian: Konten teks yang tidak menggunakan satu atau lebih properti \textit{style} teks ini, dapat menyesuaikan dengan menggunakan properti yang tersedia untuk teks tersebut.

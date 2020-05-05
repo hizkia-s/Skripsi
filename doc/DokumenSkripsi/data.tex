@@ -48,6 +48,42 @@
 \usepackage{verbatim} 		%multiline comment
 \usepackage{pgfplots}
 %\overfullrule=3mm % memperlihatkan overfull 
+% (by Hizkia)
+\usepackage[export]{adjustbox}%memberi border untuk image (by Hizkia)
+\usepackage{amsmath}
+% \usepackage{txfonts}
+\usepackage{mathdots}
+% \usepackage[classicReIm]{kpfonts}
+
+\definecolor{diffstart}{RGB}{169,169,169} %mendefinisikan warna abu-abu
+\definecolor{diffincl}{RGB}{0,128,0} %mendefinisikan warna hijau
+\definecolor{diffrem}{RGB}{255,0,0} %mendefinisikan warna merah
+\definecolor{darkred}{RGB}{196,0,0} %mendefinisikan warna merah tua untuk tabel
+\definecolor{brightred}{RGB}{246,0,0} %mendefinisikan warna merah cerah untuk tabel
+\definecolor{pink}{RGB}{255,143,143} %mendefinisikan warna merah muda untuk tabel
+
+\lstdefinelanguage{diff}{ %mendefinisikan bahasa baru
+	numbers=left,
+	stepnumber=1, 
+	numbersep=5pt,
+	frame=leftline,
+	tabsize=4,
+	breaklines=true,
+	basicstyle=\fontfamily{fvm}\selectfont\tiny,
+	columns=fullflexible, 
+	keepspaces=true,
+	morecomment=[f][\color{diffstart}]{@@},
+	morecomment=[f][\color{diffincl}]{+\ },
+	morecomment=[f][\color{diffrem}]{_\ },
+	rulecolor=\color{black},
+}
+
+\lstset{numbers=left,stepnumber=1, numbersep=5pt, frame=leftline,
+	tabsize=4, breaklines=true, basicstyle=\fontfamily{fvm}\selectfont\tiny, 
+	commentstyle=\itshape\color{gray}, keywordstyle=\bfseries\color{blue}, 
+	identifierstyle=\color{black}, stringstyle=\color{orange},
+	literate=*{-}{-}1{-\,-}{--}1
+} 
 %=============================================================================
 
 %_____________________________________________________________________________
