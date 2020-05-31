@@ -301,8 +301,8 @@ _   <h5>Detail Permohonan #<?= $request->id ?></h5>
     <tr>
 \end{lstlisting}
 
-\item Pada halaman manajemen cetak transkrip, kolom masukan NPM diberi atribut \textit{id} yang diisi dengan nilai "npm" lalu label "Cari NPM" diubah dari \texttt{<span>} menjadi \texttt{<label>} dan diberi atribut \textit{for} dengan nilai "npm". Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}.
-\begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 1.3.1 pada Kolom Masukan di Halaman Manajemen Cetak Transkrip]
+\item Pada halaman manajemen cetak transkrip, kolom \textit{input} NPM diberi atribut \textit{id} yang diisi dengan nilai "npm" lalu label "Cari NPM" diubah dari \texttt{<span>} menjadi \texttt{<label>} dan diberi atribut \textit{for} dengan nilai "npm". Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}.
+\begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 1.3.1 pada Kolom \textit{Input} di Halaman Manajemen Cetak Transkrip]
 diff --git a/www/application/views/TranskripManage/main.php b/www/application/views/TranskripManage/main.php
 index 0970fc2..6dffa7d 100644
 --- a/www/application/views/TranskripManage/main.php
@@ -320,8 +320,8 @@ _   <input name="npm" class="input-group-field" type="text" placeholder="2013730
 </div>
 \end{lstlisting}
 
-\item Pada halaman entri jadwal dosen, setiap kolom masukan diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}.
-\begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 1.3.1 pada Kolom Masukan di Halaman Entri Jadwal Dosen]
+\item Pada halaman entri jadwal dosen, setiap kolom \textit{input} diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom \textit{input} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom \textit{input} yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}.
+\begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 1.3.1 pada Kolom \textit{Input} di Halaman Entri Jadwal Dosen]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
 index 6392b95..f8471cb 100644
 --- a/www/application/views/EntriJadwalDosen/main.php
@@ -713,7 +713,7 @@ _   <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
 
 \subsection{Perbaikan Kriteria Sukses 2.5.3 \textit{Label in Name}}
 \label{subsec:perbaikan_kriteria_sukses_2.5.3}
-Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom masukan di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_2.5.3_label_dan_nama_pada_komponen_masukan}.
+Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom \textit{input} di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom \textit{input} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom \textit{input} yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_2.5.3_label_dan_nama_pada_komponen_masukan}.
 
 \begin{lstlisting}[frame=single, label={lst:perbaikan_2.5.3_label_dan_nama_pada_komponen_masukan}, language=diff, caption=Perbaikan Kriteria Sukses 2.5.3]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
@@ -951,7 +951,7 @@ _   <html class="no-js" lang="en">
 
 \subsection{Perbaikan Kriteria Sukses 3.3.2 \textit{Labels or Instructions}}
 \label{subsec:perbaikan_kriteria_sukses_3.3.2}
-Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom masukan di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom masukan yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_3.3.2_label_masukan}.
+Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom \textit{input} di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom \textit{input} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom \textit{input} yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_3.3.2_label_masukan}.
 
 \begin{lstlisting}[frame=single, label={lst:perbaikan_3.3.2_label_masukan}, language=diff, caption=Perbaikan Kriteria Sukses 3.3.2]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php

@@ -259,14 +259,14 @@ Kriteria ini tidak sukses dipatuhi karena:
             <form method="POST" action="/TranskripRequest/add">
     \end{lstlisting}
 
-    \item Pada halaman manajemen cetak transkrip, kolom masukan NPM tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom masukan tersebut. Kesalahan dapat dilihat pada \textit{listing} \ref{lst:1.3.1_label_masukan_manajemen_cetak_transkrip}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
+    \item Pada halaman manajemen cetak transkrip, kolom \textit{input} NPM tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom \textit{input} tersebut. Kesalahan dapat dilihat pada \textit{listing} \ref{lst:1.3.1_label_masukan_manajemen_cetak_transkrip}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
     \begin{lstlisting}[frame=single, label={lst:1.3.1_label_masukan_manajemen_cetak_transkrip}, language=HTML, caption=Pelanggaran Kriteria Sukses 1.3.1 pada Halaman Manajemen Cetak Transkrip]
         <span class="input-group-label">Cari NPM:</span>
         <input name="npm" class="input-group-field" type="text" placeholder="2013730013" maxlength="10" minlength="10"/>
         <div class="input-group-button">
     \end{lstlisting}
 
-    \item Pada halaman entri jadwal dosen, setiap kolom masukan tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom-kolom masukan tersebut. Contoh kesalahan dapat dilihat pada \textit{listing} \ref{lst:1.3.1_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+    \item Pada halaman entri jadwal dosen, setiap kolom \textit{input} tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom-kolom \textit{input} tersebut. Contoh kesalahan dapat dilihat pada \textit{listing} \ref{lst:1.3.1_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
     \begin{lstlisting}[frame=single, label={lst:1.3.1_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Pelanggaran Kriteria Sukses 1.3.1 pada Halaman Entri Jadwal Dosen]
         <input type="hidden" name="csrf_token" value="3c159eae7bc953dd591b679c080ed066"/>
         Hari
@@ -278,7 +278,7 @@ Kriteria ini tidak sukses dipatuhi karena:
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.2}
 (Sukses)\\
 
-Kriteria ini sukses dipatuhi karena pada setiap halaman web BlueTape sudah memiiliki urutan membaca yang benar dan dapat ditentukan secara terprogram. 
+Kriteria ini sukses dipatuhi karena pada setiap halaman web BlueTape sudah memiiliki urutan membaca yang benar dan dapat ditentukan secara terprogram\footnote{Ditentukan oleh perangkat lunak berdasarkan data dari pembuat konten yang disediakan sedemikian rupa sehingga dapat diidentifikasi oleh beragam \textit{user agent} termasuk teknologi alat bantu yang kemudian disajikan kepada pengguna dengan berbagai macam mode}. 
 
 \paragraph{Kriteria Sukses 1.3.3 \textit{Sensory Characteristics}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.3}
@@ -297,16 +297,16 @@ Kriteria ini sukses dipatuhi karena konten pada halaman web BlueTape dapat disaj
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.5}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena terdapat kolom-kolom masukan yang tidak memiliki label yang terasosiasi dengan kolom-kolom tersebut, meskipun setiap kolom masukan sudah memiliki atribut \textit{"autocomplete"} yang aktif. Bagian-bagian yang bermasalah, antara lain:
+Kriteria ini tidak sukses dipatuhi karena terdapat kolom-kolom \textit{input} yang tidak memiliki label yang terasosiasi dengan kolom-kolom tersebut, meskipun setiap kolom \textit{input} sudah memiliki atribut \textit{"autocomplete"} yang aktif. Bagian-bagian yang bermasalah, antara lain:
 \begin{itemize}
-    \item Pada halaman manajemen cetak transkrip, kolom masukan NPM tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom masukan tersebut. Kesalahan dapat dilihat pada \textit{listing} \ref{lst:1.3.5_label_masukan_manajemen_cetak_transkrip}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
+    \item Pada halaman manajemen cetak transkrip, kolom \textit{input} NPM tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom \textit{input} tersebut. Kesalahan dapat dilihat pada \textit{listing} \ref{lst:1.3.5_label_masukan_manajemen_cetak_transkrip}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
     \begin{lstlisting}[frame=single, label={lst:1.3.5_label_masukan_manajemen_cetak_transkrip}, language=HTML, caption=Pelanggaran Kriteria Sukses 1.3.5 pada Halaman Manajemen Cetak Transkrip]
         <span class="input-group-label">Cari NPM:</span>
         <input name="npm" class="input-group-field" type="text" placeholder="2013730013" maxlength="10" minlength="10"/>
         <div class="input-group-button">
     \end{lstlisting}
     
-    \item Pada halaman entri jadwal dosen, setiap kolom masukan tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom-kolom masukan tersebut. Contoh kesalahan dapat dilihat pada \textit{listing} \ref{lst:1.3.5_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+    \item Pada halaman entri jadwal dosen, setiap kolom \textit{input} tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom-kolom \textit{input} tersebut. Contoh kesalahan dapat dilihat pada \textit{listing} \ref{lst:1.3.5_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
     \begin{lstlisting}[frame=single, label={lst:1.3.5_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Pelanggaran Kriteria Sukses 1.3.5 pada Halaman Entri Jadwal Dosen]
         <input type="hidden" name="csrf_token" value="3c159eae7bc953dd591b679c080ed066" />
         Hari
@@ -348,7 +348,12 @@ Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat kon
 Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beberapa teks dengan rasio kontras kurang dari 4.5:1 untuk teks yang berukuran kurang dari 24 piksel dan tidak \textit{bold}. Nilai rasio kontras didapatkan dengan menggunakan bantuan \textit{extension} axe\footnote{Sebuah alat yang dikembangkan oleh perusahaan Deque Systems untuk membantu melakukan pengecekan aksesibilitas pada halaman web} pada \textit{browser} Google Chrome, penguji bernavigasi ke seluruh halaman web BlueTape lalu menggunakan alat tersebut untuk mendeteksi bagian yang bermasalah. Bagian-bagian yang tidak memenuhi syarat untuk kriteria ini, antara lain:
 
 \begin{itemize}
-    \item Halaman \textit{login}: Teks "\textit{Login} dengan Google" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Petunjuk Penggunaan" memiliki rasio kontras 3.06:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_1}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net}.
+    \item Halaman \textit{login}: 
+    \begin{itemize}
+        \item Teks "\textit{Login} dengan Google" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Petunjuk Penggunaan" memiliki rasio kontras 3.06:1 terhadap warna latar belakangnya.
+    \end{itemize}
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_1}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-3-contrast-minimum-1}  
@@ -356,7 +361,14 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.3_contrast_minimum_1}  
     \end{figure} 
     
-    \item Halaman cetak transkrip: Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya. Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4.44:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_2}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripRequest}.
+    \item Halaman cetak transkrip: 
+    \begin{itemize}
+        \item Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya.
+        \item Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya.
+        \item Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4.44:1 terhadap warna latar belakangnya.
+    \end{itemize}   
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_2}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripRequest}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-3-contrast-minimum-2}  
@@ -364,7 +376,15 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.3_contrast_minimum_2}  
     \end{figure} 
     
-    \item Halaman manajemen cetak transkrip: Teks "Cari" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1.84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_3_1} dan \ref{fig:1.4.3_contrast_minimum_3_2}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
+    \item Halaman manajemen cetak transkrip: 
+    \begin{itemize}
+        \item Teks "Cari" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya.
+        \item Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1.84:1 terhadap warna latar belakangnya.
+        \item Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya.
+        \item Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya.
+    \end{itemize}
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_3_1} dan \ref{fig:1.4.3_contrast_minimum_3_2}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-3-contrast-minimum-3-1}  
@@ -379,7 +399,16 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.3_contrast_minimum_3_2}
     \end{figure} 
 
-    \item Halaman perubahan kuliah: Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tambah Pertemuan Ekstra" memiliki rasio kontras 4.47:1 terhadap warna latar belakangnya. Teks "Hapus" memiliki rasio kontras 4.47:1 terhadap warna latar belakangnya. Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4.44:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya. Teks "Terkonfirmasi" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_4}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/PerubahanKuliahRequest}.
+    \item Halaman perubahan kuliah: 
+    \begin{itemize}
+        \item Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Tambah Pertemuan Ekstra" memiliki rasio kontras 4.47:1 terhadap warna latar belakangnya.
+        \item Teks "Hapus" memiliki rasio kontras 4.47:1 terhadap warna latar belakangnya.
+        \item Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4.44:1 terhadap warna latar belakangnya.
+        \item Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya.
+        \item Teks "Terkonfirmasi" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya.
+    \end{itemize}
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_4}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/PerubahanKuliahRequest}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-3-contrast-minimum-4}  
@@ -387,7 +416,14 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.3_contrast_minimum_4}  
     \end{figure} 
     
-    \item Halaman manajemen perubahan kuliah: Teks "Terkonfirmasi" di kolom status pada tabel memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1.84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_5_1} dan \ref{fig:1.4.3_contrast_minimum_5_2}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
+    \item Halaman manajemen perubahan kuliah: 
+    \begin{itemize}
+        \item Teks "Terkonfirmasi" di kolom status pada tabel memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya.
+        \item Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1.84:1 terhadap warna latar belakangnya.
+        \item Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya.
+        \item Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya.
+    \end{itemize}
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_5_1} dan \ref{fig:1.4.3_contrast_minimum_5_2}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-3-contrast-minimum-5-1}  
@@ -402,7 +438,15 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.3_contrast_minimum_5_2}
     \end{figure} 
 
-    \item Halaman entri jadwal dosen: Teks "Tambah" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete All" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Save" pada bagian "Edit Jadwal" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_6_1} dan \ref{fig:1.4.3_contrast_minimum_6_2}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.	
+    \item Halaman entri jadwal dosen: 
+    \begin{itemize}
+        \item Teks "Tambah" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Delete All" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya.
+        \item Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Save" pada bagian "Edit Jadwal" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Delete" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya.
+    \end{itemize}
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_6_1} dan \ref{fig:1.4.3_contrast_minimum_6_2}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.	
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-3-contrast-minimum-6-1}  
@@ -417,7 +461,13 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.3_contrast_minimum_6_2}  
     \end{figure} 
 
-    \item Halaman lihat jadwal dosen: Teks nama dosen di atas tabel yang sedang dipilih pengguna memiliki rasio kontras 2.47:1 terhadap warna latar belakangnya. Teks nama dosen di atas tabel yang sedang tidak dipilih pengguna memiliki rasio kontras 3.06:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_7}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
+    \item Halaman lihat jadwal dosen: 
+    \begin{itemize}
+        \item Teks nama dosen di atas tabel yang sedang dipilih pengguna memiliki rasio kontras 2.47:1 terhadap warna latar belakangnya.
+        \item Teks nama dosen di atas tabel yang sedang tidak dipilih pengguna memiliki rasio kontras 3.06:1 terhadap warna latar belakangnya.
+        \item Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+    \end{itemize}
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.3_contrast_minimum_7}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-3-contrast-minimum-7}  
@@ -445,7 +495,12 @@ Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat gam
 Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beberapa teks dengan rasio kontras kurang dari 7:1 untuk teks yang berukuran kurang dari 24 piksel dan tidak \textit{bold}. Nilai rasio kontras didapatkan dengan menggunakan bantuan \textit{extension} axe pada \textit{browser} Google Chrome, penguji bernavigasi ke seluruh halaman web BlueTape lalu menggunakan alat tersebut untuk mendeteksi bagian yang bermasalah. Bagian-bagian yang tidak memenuhi syarat untuk kriteria ini, antara lain:
 
 \begin{itemize}
-    \item Halaman \textit{login}: Teks "\textit{Login} dengan Google" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Petunjuk Penggunaan" memiliki rasio kontras 3.06:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_1}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net}.
+    \item Halaman \textit{login}: 
+    \begin{itemize}
+        \item Teks "\textit{Login} dengan Google" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Petunjuk Penggunaan" memiliki rasio kontras 3.06:1 terhadap warna latar belakangnya.
+    \end{itemize}
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_1}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-6-contrast-enchanced-1}  
@@ -453,7 +508,14 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.6_contrast_enchanced_1}  
     \end{figure} 
 
-    \item Halaman cetak transkrip: Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya. Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4.44:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_2}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripRequest}.
+    \item Halaman cetak transkrip: 
+    \begin{itemize}
+        \item Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya.
+        \item Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya.
+        \item Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4.44:1 terhadap warna latar belakangnya.
+    \end{itemize}
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_2}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripRequest}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-6-contrast-enchanced-2}  
@@ -461,7 +523,15 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.6_contrast_enchanced_2}  
     \end{figure} 
     
-    \item Halaman manajemen cetak transkrip: Teks "Cari" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1.84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_3}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
+    \item Halaman manajemen cetak transkrip: 
+    \begin{itemize}
+        \item Teks "Cari" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Tercetak" di kolom status pada tabel memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya.
+        \item Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1.84:1 terhadap warna latar belakangnya.
+        \item Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya.
+        \item Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya.
+    \end{itemize}
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_3}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-6-contrast-enchanced-3-1}  
@@ -476,7 +546,16 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.6_contrast_enchanced_3_2}  
     \end{figure} 
 
-    \item Halaman perubahan kuliah: Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Tambah Pertemuan Ekstra" memiliki rasio kontras 4.47:1 terhadap warna latar belakangnya. Teks "Hapus" memiliki rasio kontras 4.47:1 terhadap warna latar belakangnya. Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4.44:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya. Teks "Terkonfirmasi" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_4}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/PerubahanKuliahRequest}.
+    \item Halaman perubahan kuliah: 
+    \begin{itemize}
+        \item Teks "Kirim Permohonan" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Tambah Pertemuan Ekstra" memiliki rasio kontras 4.47:1 terhadap warna latar belakangnya.
+        \item Teks "Hapus" memiliki rasio kontras 4.47:1 terhadap warna latar belakangnya. 
+        \item Teks "Tunggu" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 4.44:1 terhadap warna latar belakangnya.
+        \item Teks "Ditolak" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya.
+        \item Teks "Terkonfirmasi" di kolom status pada tabel "Histori Permohonan" memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya.
+    \end{itemize}
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_4}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/PerubahanKuliahRequest}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-6-contrast-enchanced-4}  
@@ -484,7 +563,14 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.6_contrast_enchanced_4}  
     \end{figure} 
     
-    \item Halaman manajemen perubahan kuliah: Teks "Terkonfirmasi" di kolom status pada tabel memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya. Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1.84:1 terhadap warna latar belakangnya. Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya. Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_5}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
+    \item Halaman manajemen perubahan kuliah: 
+    \begin{itemize}
+        \item Teks "Terkonfirmasi" di kolom status pada tabel memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya.
+        \item Teks "Menunggu" di kolom status pada tabel memiliki rasio kontras 1.84:1 terhadap warna latar belakangnya.
+        \item Teks "Ditolak" di kolom status pada tabel memiliki rasio kontras 3.44:1 terhadap warna latar belakangnya.
+        \item Teks "Hapus" pada bagian hapus permohonan memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya.
+    \end{itemize}
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_5}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/PerubahanKuliahManage}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-6-contrast-enchanced-5-1}  
@@ -499,7 +585,15 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.6_contrast_enchanced_5_2}  
     \end{figure}
 
-    \item Halaman entri jadwal dosen: Teks "Tambah" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete All" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Save" pada bagian "Edit Jadwal" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Teks "Delete" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_6_1} dan \ref{fig:1.4.6_contrast_enchanced_6_2}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+    \item Halaman entri jadwal dosen: 
+    \begin{itemize}
+        \item Teks "Tambah" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Delete All" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya.
+        \item Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Save" pada bagian "Edit Jadwal" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+        \item Teks "Delete" memiliki rasio kontras 3.47:1 terhadap warna latar belakangnya.
+    \end{itemize}
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_6_1} dan \ref{fig:1.4.6_contrast_enchanced_6_2}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-6-contrast-enchanced-6-1}  
@@ -514,7 +608,13 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.6_contrast_enchanced_6_2}  
     \end{figure} 
 
-    \item Halaman lihat jadwal dosen: Teks nama dosen di atas tabel yang sedang dipilih pengguna memiliki rasio kontras 2.47:1 terhadap warna latar belakangnya. Teks nama dosen di atas tabel yang sedang tidak dipilih pengguna memiliki rasio kontras 3.06:1 terhadap warna latar belakangnya. Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya. Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_7}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
+    \item Halaman lihat jadwal dosen: 
+    \begin{itemize}
+        \item Teks nama dosen di atas tabel yang sedang dipilih pengguna memiliki rasio kontras 2.47:1 terhadap warna latar belakangnya.
+        \item Teks nama dosen di atas tabel yang sedang tidak dipilih pengguna memiliki rasio kontras 3.06:1 terhadap warna latar belakangnya.
+        \item Teks "Ekspor ke XLS" memiliki rasio kontras 3.09:1 terhadap warna latar belakangnya.
+    \end{itemize}
+    Tampilan pada halaman web dapat dilihat pada gambar \ref{fig:1.4.6_contrast_enchanced_7}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
     \begin{figure}[H]
         \centering  
         \includegraphics[scale=0.3, frame]{kriteria-sukses-1-4-6-contrast-enchanced-7}  
@@ -683,15 +783,15 @@ Kriteria ini sukses dipatuhi karena setiap interupsi pada halaman web BlueTape d
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.2.5}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena ketika pengguna akan mengirim data dan sesi autentikasi berakhir, pengguna kehilangan data tersebut setelah melakukan autentikasi ulang.
+Kriteria ini tidak sukses dipatuhi karena ketika pengguna akan mengirim data dan sesi otentikasi berakhir, pengguna kehilangan data tersebut setelah melakukan otentikasi ulang.
 
 \paragraph{Kriteria Sukses 2.2.6 \textit{Timeouts}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.2.6}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena tidak terdapat peringatan untuk pengguna ketika sesi autentikasi akan berakhir yang dapat menyebabkan kehilangan data. Data pengguna tidak disimpan untuk bertahan lebih dari 20 jam ketika pengguna tidak melakukan tindakan apa pun. Pada \textit{listing} \ref{lst:2.2.6_sesi_autentikasi} ditunjukkan bahwa sesi auntentikasi pengguna hanya bertahan selama 2 jam saja ketika pengguna tidak melakukan tindakan apa pun.
+Kriteria ini tidak sukses dipatuhi karena tidak terdapat peringatan untuk pengguna ketika sesi otentikasi akan berakhir yang dapat menyebabkan kehilangan data. Data pengguna tidak disimpan untuk bertahan lebih dari 20 jam ketika pengguna tidak melakukan tindakan apa pun. Pada \textit{listing} \ref{lst:2.2.6_sesi_otentikasi} ditunjukkan bahwa sesi auntentikasi pengguna hanya bertahan selama 2 jam saja ketika pengguna tidak melakukan tindakan apa pun.
 
-\begin{lstlisting}[frame=single, label={lst:2.2.6_sesi_autentikasi}, language=PHP, caption=Pelanggaran Kriteria Sukses 2.2.6 pada Bagian Sesi Autentikasi]
+\begin{lstlisting}[frame=single, label={lst:2.2.6_sesi_otentikasi}, language=PHP, caption=Pelanggaran Kriteria Sukses 2.2.6 pada Bagian Sesi Otentikasi]
     $config['sess_cookie_name'] = 'ci_session';
     $config['sess_expiration'] = 7200;
     $config['sess_save_path'] = NULL;
@@ -777,7 +877,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape hanya tersed
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.4.6}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman entri jadwal dosen, setiap elemen masukan tidak memiliki label yang menjelaskan tujuan dari elemen tersebut. Contoh kesalahan dapat dilihat pada \textit{listing} \ref{lst:2.4.6_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+Kriteria ini tidak sukses dipatuhi karena pada halaman entri jadwal dosen, setiap elemen \textit{input} tidak memiliki label yang menjelaskan tujuan dari elemen tersebut. Contoh kesalahan dapat dilihat pada \textit{listing} \ref{lst:2.4.6_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
 
 \begin{lstlisting}[frame=single, label={lst:2.4.6_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Pelanggaran Kriteria Sukses 2.4.6 pada Halaman Entri Jadwal Dosen]
     <input type="hidden" name="csrf_token" value="3c159eae7bc953dd591b679c080ed066"/>
@@ -856,7 +956,7 @@ Kriteria ini sukses dipatuhi karena setiap fungsionalitas yang dapat dioperasika
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.5.3}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman manajemen cetak transkrip dan entri jadwal dosen, elemen masukan yang memiliki label yang menyertakan teks tidak memiliki teks nama yang dapat diidentifikasi oleh teknologi alat bantu. Contoh kesalahan dapat dilihat pada \textit{listing} \ref{lst:2.5.3_label_dan_nama_pada_komponen_masukan}. Contoh tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
+Kriteria ini tidak sukses dipatuhi karena pada halaman manajemen cetak transkrip dan entri jadwal dosen, elemen \textit{input} yang memiliki label yang menyertakan teks tidak memiliki teks nama yang dapat diidentifikasi oleh teknologi alat bantu. Contoh kesalahan dapat dilihat pada \textit{listing} \ref{lst:2.5.3_label_dan_nama_pada_komponen_masukan}. Contoh tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
 
 \begin{lstlisting}[frame=single, label={lst:2.5.3_label_dan_nama_pada_komponen_masukan}, language=HTML, caption=Pelanggaran Kriteria Sukses 2.5.3 pada Halaman Manajemen Cetak Transkrip]
     <div class="input-group">
@@ -878,7 +978,7 @@ Kriteria ini sukses dipatuhi karena tidak terdapat fungsionalitas yang dapat dio
 \label{par:kepatuhan_bluetape_kriteria_sukses_2.5.5}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena terdapat banyak elemen yang dapat menerima masukan kursor dan ukurannya diatur oleh penulis namun memiliki ukuran kurang dari 44 $\times$ 44 piksel \textit{CSS}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:2.5.5_target_size}. Contoh tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripRequest}.
+Kriteria ini tidak sukses dipatuhi karena terdapat banyak elemen yang dapat menerima \textit{input} kursor dan ukurannya diatur oleh penulis namun memiliki ukuran kurang dari 44 $\times$ 44 piksel \textit{CSS}. Contoh tampilan pada halaman web dapat dilihat pada gambar \ref{fig:2.5.5_target_size}. Contoh tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripRequest}.
 
 \begin{figure}[H]
     \centering  
@@ -1206,13 +1306,13 @@ Kriteria ini sukses dipatuhi karena setiap perubahan konteks hanya terjadi bila 
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.3.1}
 (Sukses)\\
 
-Kriteria ini sukses dipatuhi karena ketika terdapat eror masukan yang terdeteksi otomatis, \textit{item} yang eror diidentifikasi dan eror dijabarkan kepada pengguna dalam bentuk teks.
+Kriteria ini sukses dipatuhi karena ketika terdapat kesalahan \textit{input} yang terdeteksi otomatis, bagian yang bermasalah diidentifikasi dan kesalahan dijabarkan kepada pengguna dalam bentuk teks.
 
 \paragraph{Kriteria Sukses 3.3.2 \textit{Labels or Instructions}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.3.2}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman manajemen cetak transkrip dan entri jadwal dosen, setiap elemen masukan tidak memiliki label yang menjelaskan tujuan dari elemen tersebut. Contoh kesalahan dapat dilihat pada \textit{listing} \ref{lst:3.3.2_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+Kriteria ini tidak sukses dipatuhi karena pada halaman manajemen cetak transkrip dan entri jadwal dosen, setiap elemen \textit{input} tidak memiliki label yang menjelaskan tujuan dari elemen tersebut. Contoh kesalahan dapat dilihat pada \textit{listing} \ref{lst:3.3.2_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
 
 \begin{lstlisting}[frame=single, label={lst:3.3.2_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Pelanggaran Kriteria Sukses 3.3.2 pada Halaman Entri Jadwal Dosen]
     <input type="hidden" name="csrf_token" value="3c159eae7bc953dd591b679c080ed066"/>
@@ -1224,19 +1324,19 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman manajemen cetak transkrip
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.3.3}
 (Sukses)\\
 
-Kriteria ini sukses dipatuhi karena ketika terdapat eror masukan yang terdeteksi otomatis, saran untuk mengoreksi eror tersebut disajikan kepada pengguna.
+Kriteria ini sukses dipatuhi karena ketika terdapat kesalahan \textit{input} yang terdeteksi otomatis, saran untuk mengoreksi kesalahan tersebut disajikan kepada pengguna.
 
 \paragraph{Kriteria Sukses 3.3.4 \textit{Error Prevention (Legal, Financial, Data)}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.3.4}
 (Sukses)\\
 
-Kriteria ini sukses dipatuhi karena pada halaman yang mengirim tanggapan pengguna, data yang dimasukkan oleh pengguna diperiksa terkait eror masukan dan pengguna dipersilakan untuk mengoreksinya.
+Kriteria ini sukses dipatuhi karena pada halaman yang mengirim tanggapan pengguna, data yang dimasukkan oleh pengguna diperiksa terkait kesalahan \textit{input} dan pengguna dipersilakan untuk mengoreksinya.
 
 \paragraph{Kriteria Sukses 3.3.5 \textit{Help}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.3.5}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman entri jadwal dosen, setiap elemen masukan tidak memiliki label yang menjelaskan tujuan dari elemen tersebut. Contoh kesalahan dapat dilihat pada \textit{listing} \ref{lst:3.3.5_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
+Kriteria ini tidak sukses dipatuhi karena pada halaman entri jadwal dosen, setiap elemen \textit{input} tidak memiliki label yang menjelaskan tujuan dari elemen tersebut. Contoh kesalahan dapat dilihat pada \textit{listing} \ref{lst:3.3.5_label_masukan_entri_jadwal_dosen}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/EntriJadwalDosen}.
 
 \begin{lstlisting}[frame=single, label={lst:3.3.5_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Pelanggaran Kriteria Sukses 3.3.5 pada Halaman Entri Jadwal Dosen]
     <input type="hidden" name="csrf_token" value="3c159eae7bc953dd591b679c080ed066"/>
@@ -1248,7 +1348,7 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman entri jadwal dosen, setia
 \label{par:kepatuhan_bluetape_kriteria_sukses_3.3.6}
 (Sukses)\\
 
-Kriteria ini sukses dipatuhi karena pada halaman yang mewajibkan pengguna mengirim informasi, data yang dimasukkan oleh pengguna diperiksa terkait eror masukan dan pengguna dipersilakan untuk mengoreksinya.
+Kriteria ini sukses dipatuhi karena pada halaman yang mewajibkan pengguna mengirim informasi, data yang dimasukkan oleh pengguna diperiksa terkait kesalahan \textit{input} dan pengguna dipersilakan untuk mengoreksinya.
 
 \subsection{\textit{Robust}}
 \label{subsec:kepatuhan_bluetape_robust}
@@ -1283,7 +1383,7 @@ Kriteria ini tidak sukses dipatuhi karena terdapat beberapa kesalahan, antara la
 \label{par:kepatuhan_bluetape_kriteria_sukses_4.1.2}
 (Sukses)\\
 
-Kriteria ini sukses dipatuhi karena pada halaman web BlueTape digunakan komponen antarmuka standar dalam bahasa markah yaitu \textit{HTML} yang sudah memenuhi standar sukses untuk kriteria ini.
+Kriteria ini sukses dipatuhi karena pada halaman web BlueTape digunakan komponen antarmuka standar dalam bahasa \textit{markup} yaitu \textit{HTML} yang sudah memenuhi standar sukses untuk kriteria ini.
 
 \paragraph{Kriteria Sukses 4.1.3 \textit{Status Messages}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_4.1.3}
@@ -1319,8 +1419,8 @@ Masalah pada poin ini dapat diperbaiki dengan cara sebagai berikut:
 
 \begin{itemize}
     \item Pada penggunaan \textit{tag heading} yang tidak tepat, \textit{tag heading} dapat diubah menjadi berurutan dimulai dari \texttt{<h1>} hingga \texttt{<h6>}.
-    \item Pada halaman manajemen cetak transkrip, kolom masukan NPM diberi atribut \textit{id} yang diisi dengan nilai "NPM" lalu label "Cari NPM" diubah dari \texttt{<span>} menjadi \texttt{<label>} dan dihubungkan dengan kolom masukan NPM.
-    \item Pada halaman entri jadwal dosen, setiap kolom masukan diberi atribut \textit{id} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{tag label} dan dihubungkan dengan kolom masukan yang bersangkutan.
+    \item Pada halaman manajemen cetak transkrip, kolom \textit{input} NPM diberi atribut \textit{id} yang diisi dengan nilai "NPM" lalu label "Cari NPM" diubah dari \texttt{<span>} menjadi \texttt{<label>} dan dihubungkan dengan kolom \textit{input} NPM.
+    \item Pada halaman entri jadwal dosen, setiap kolom \textit{input} diberi atribut \textit{id} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{tag label} dan dihubungkan dengan kolom \textit{input} yang bersangkutan.
 \end{itemize}
 
 \subsection{Peningkatan Kriteria Sukses 2.1.1 \textit{Keyboard}}
@@ -1342,7 +1442,7 @@ Masalah pada poin ini dapat diperbaiki dengan cara menambahkan atribut \textit{a
 
 \subsection{Peningkatan Kriteria Sukses 2.5.3 \textit{Label in Name}}
 \label{subsec:peningkatan_kriteria_sukses_2.5.3}
-Masalah pada poin ini dapat diperbaiki dengan cara menambahkan atribut \textit{id} pada setiap kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{tag label} dan dihubungkan dengan kolom masukan yang bersangkutan.
+Masalah pada poin ini dapat diperbaiki dengan cara menambahkan atribut \textit{id} pada setiap kolom \textit{input} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{tag label} dan dihubungkan dengan kolom \textit{input} yang bersangkutan.
 
 \subsection{Peningkatan Kriteria Sukses 3.1.1 \textit{Language of Page}}
 \label{subsec:peningkatan_kriteria_sukses_3.1.1}
@@ -1350,7 +1450,7 @@ Masalah pada poin ini dapat diperbaiki dengan cara mengganti setelan bahasa manu
 
 \subsection{Peningkatan Kriteria Sukses 3.3.2 \textit{Labels or Instructions}}
 \label{subsec:peningkatan_kriteria_sukses_3.3.2}
-Masalah pada poin ini dapat diperbaiki dengan cara menambahkan atribut \textit{id} pada setiap kolom masukan lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{tag label} dan dihubungkan dengan kolom masukan yang bersangkutan.
+Masalah pada poin ini dapat diperbaiki dengan cara menambahkan atribut \textit{id} pada setiap kolom \textit{input} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \textit{tag label} dan dihubungkan dengan kolom \textit{input} yang bersangkutan.
 
 \subsection{Peningkatan Kriteria Sukses 4.1.1 \textit{Parsing}}
 \label{subsec:peningkatan_kriteria_sukses_4.1.1}
