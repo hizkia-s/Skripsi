@@ -9,9 +9,27 @@
 \label{sec:wcag_2.1} 
 \textit{Web Content Accessibility Guidelines (WCAG)} 2.1 adalah versi ketiga dari \textit{WCAG} yang dirilis pada tanggal 5 Juni 2018 \cite{WCAG:2.1}. Versi pertama dari \textit{WCAG} adalah \textit{WCAG} 1.0 yang dirilis pada tanggal 5 Mei 1999 dan versi kedua adalah \textit{WCAG} 2.0 yang dirilis pada tanggal 11 Desember 2008. \textit{WCAG} 2.1 dikembangkan oleh World Wide Web Consortium (W3C) melalui kerja sama dengan individu dan organisasi di seluruh dunia, dengan tujuan memberikan standar bersama untuk aksesibilitas konten web yang memenuhi kebutuhan individu, organisasi, dan pemerintah internasional. 
 
-\textit{WCAG} 2.1 dibuat untuk meningkatkan versi sebelumnya yaitu \textit{WCAG} 2.0. Pada \textit{WCAG} 2.1 terdapat penambahan kriteria sukses baru beserta definisi-definisi pendukungnya, pedoman untuk mengatur penambahan, dan beberapa tambahan pada bagian tingkat kepatuhan. Dalam \textit{WCAG} 2.1 terdapat 3 tingkat kriteria sukses yaitu A, AA, dan AAA yang digunakan sebagai acuan untuk menilai tingkat kepatuhan sebuah situs web terhadap \textit{WCAG} 2.1.
+\textit{WCAG} 2.1 dibuat untuk meningkatkan versi sebelumnya yaitu \textit{WCAG} 2.0. Pada \textit{WCAG} 2.1 terdapat penambahan kriteria sukses baru beserta definisi-definisi pendukungnya, pedoman untuk mengatur penambahan, dan beberapa tambahan pada bagian tingkat kepatuhan. Dalam \textit{WCAG} 2.1 terdapat 3 tingkat kriteria sukses yaitu A, AA, dan AAA yang digunakan sebagai acuan untuk menilai tingkat kepatuhan sebuah situs web terhadap \textit{WCAG} 2.1. Agar suatu halaman web dikatakan mematuhi \textit{WCAG} 2.1, semua persyaratan kepatuhan berikut haruslah dipenuhi:
+\begin{itemize}
+	\item Tingkat Kepatuhan: Salah satu dari tingkat kepatuhan berikut dipenuhi seutuhnya:
+	\begin{itemize}
+		\item Tingkat A: Untuk tingkat A (tingkat paling rendah), diperoleh jika halaman web berhasil mematuhi seluruh kriteria sukses tingkat A atau tersedia versi alternatif yang sesuai.
+		\item Tingkat AA: Untuk tingkat AA, diperoleh jika halaman web berhasil mematuhi seluruh kriteria sukses tingkat A dan AA atau tersedia versi alternatif tingkat AA yang sesuai.
+		\item Tingkat AAA: Untuk tingkat AAA, diperoleh jika halaman web berhasil mematuhi seluruh kriteria sukses tingkat A, AA, dan AAA atau tersedia versi alternatif tingkat AAA yang sesuai.
+	\end{itemize}
+	Sebagai catatan: Tingkat kepatuhan AAA amat tidak dianjurkan untuk diterapkan sebagai kebijakan umum untuk keseluruhan situs web, karena amat tidak mungkin memenuhi semua kriteria sukses tingkat AAA untuk beberapa jenis konten.
+	\item Halaman Lengkap: Tingkat kepatuhan berlaku untuk seluruh halaman web dan tidak boleh ada halaman yang dikecualikan.
+	\item Proses Lengkap: Untuk halaman web yang merupakan satu dari beberapa halaman yang merupakan proses, semua halaman web dalam proses tersebut harus mematuhi tingkat yang ditentukan atau lebih baik.
+	\item \textit{Web Content Technologies}\footnote{Mekanisme untuk \textit{user agent} menyajikan atau menjalankan instruksi yang berupa kode. Meliputi bahasa \textit{markup} format data, atau bahasa pemrograman, contohnya \textit{HTML, CSS, SVG, PNG, PDF, Flash, dan JavaScript}} Mendukung Aksesibilitas: Hanya cara-cara pemanfaatan \textit{Web Content Technologies} yang mendukung aksesibilitas yang dapat diandalkan untuk memenuhi kriteria sukses. Informasi dan fungsionalitas yang tersedia dalam cara yang tidak mendukung aksesibilitas, juga harus tersedia dalam cara yang mendukung aksesibilitas.
+	\item Tidak Menghambat: Jika \textit{Web Content Technologies} yang dimanfaatkan tidak mendukung aksesibilitas, maka pemanfaatan tersebut tidak boleh menghalangi kemampuan pengguna untuk mengakses sisa halaman. Sebagai tambahan, halaman web tersebut secara keseluruhan harus tetap memenuhi persyaratan kepatuhan dalam kondisi-kondisi sebagai berikut:
+	\begin{enumerate}
+		\item \textit{Web Content Technologies} yang tidak diandalkan untuk mematuhi persyaratan kepatuhan, dinyalakan oleh \textit{user agent}\footnote{Perangkat lunak yang mengambil konten web dan menyajikannya kepada pengguna, contohnya \textit{web browsers, media player, plug-ins}, dan program lainnya termasuk juga teknologi alat bantu}.
+		\item \textit{Web Content Technologies} yang tidak diandalkan untuk mematuhi persyaratan kepatuhan, dimatikan oleh \textit{user agent}.
+		\item \textit{Web Content Technologies} yang tidak diandalkan untuk mematuhi persyaratan kepatuhan, tidak didukung oleh \textit{user agent}.
+	\end{enumerate}
+\end{itemize}
 
-Terdapat tujuh puluh delapan poin kriteria sukses yang kemudian dikelompokkan dalam empat kategori besar yaitu \textit{perceivable}, \textit{operable}, \textit{understandable}, dan \textit{robust}. Dalam masing-masing kategori, setiap kriteria sukses dikelompokkan lagi ke dalam kategori-kategori kecil yang lebih spesifik. Pada subbab-subbab berikutnya membahas satu per satu poin kriteria sukses berdasarkan kategorinya.
+Dalam \textit{WCAG} 2.1 terdapat tujuh puluh delapan poin kriteria sukses yang kemudian dikelompokkan dalam empat kategori besar yaitu \textit{perceivable}, \textit{operable}, \textit{understandable}, dan \textit{robust}. Dalam masing-masing kategori, setiap kriteria sukses dikelompokkan lagi ke dalam kategori-kategori kecil yang lebih spesifik. Pada subbab-subbab berikutnya membahas satu per satu poin kriteria sukses berdasarkan kategorinya.
 
 %2.1.1 Perceivable%
 \subsection{\textit{Perceivable}}
