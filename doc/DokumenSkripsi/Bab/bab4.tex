@@ -10,7 +10,7 @@ yang belum sukses dipatuhi menjadi sukses dipatuhi. Setiap perubahan kode yang t
 \label{subsec:perbaikan_kriteria_sukses_1.1.1}
 Pada bagian ini dilakukan perbaikan sebagai berikut:
 
-Pada konten berupa ikon yang tidak memiliki nama di halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama}.
+Pada konten berupa ikon yang tidak memiliki nama di halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat pada \textit{Listing} \ref{lst:perbaikan_1.1.1_ikon_tanpa_nama}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_1.1.1_ikon_tanpa_nama}, language=diff, caption=Perbaikan Kriteria Sukses 1.1.1]
 diff --git a/www/application/views/PerubahanKuliahManage/main.php b/www/application/views/PerubahanKuliahManage/main.php
 index 657260b..43c215f 100644
@@ -106,7 +106,7 @@ _   <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
 Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \begin{itemize}
-\item Pada penggunaan \textit{tag heading} yang tidak tepat, judul yang menggunakan \texttt{<h5>} diubah menggunakan \textit{tag heading} yang sesuai struktur \textit{HTML} secara berurutan dimulai dari \texttt{<h1>} hingga \texttt{<h6>}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_1.3.1_tag_heading}.
+\item Pada penggunaan \textit{tag heading} yang tidak tepat, judul yang menggunakan \texttt{<h5>} diubah menggunakan \textit{tag heading} yang sesuai struktur \textit{HTML} secara berurutan dimulai dari \texttt{<h1>} hingga \texttt{<h6>}. Perbaikan yang dilakukan dapat dilihat pada \textit{Listing} \ref{lst:perbaikan_1.3.1_tag_heading}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_tag_heading}, language=diff, caption=Perbaikan Kriteria Sukses 1.3.1 pada Bagian \textit{Heading}]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
 index 6392b95..7af8ded 100644
@@ -301,7 +301,7 @@ _   <h5>Detail Permohonan #<?= $request->id ?></h5>
     <tr>
 \end{lstlisting}
 
-\item Pada halaman manajemen cetak transkrip, kolom \textit{input} NPM diberi atribut \textit{id} yang diisi dengan nilai "npm" lalu label "Cari NPM" diubah dari \texttt{<span>} menjadi \texttt{<label>} dan diberi atribut \textit{for} dengan nilai "npm". Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}.
+\item Pada halaman manajemen cetak transkrip, kolom \textit{input} NPM diberi atribut \textit{id} yang diisi dengan nilai "npm" lalu label "Cari NPM" diubah dari \texttt{<span>} menjadi \texttt{<label>} dan diberi atribut \textit{for} dengan nilai "npm". Perbaikan yang dilakukan dapat dilihat pada \textit{Listing} \ref{lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_manajemen_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 1.3.1 pada Kolom \textit{Input} di Halaman Manajemen Cetak Transkrip]
 diff --git a/www/application/views/TranskripManage/main.php b/www/application/views/TranskripManage/main.php
 index 0970fc2..6dffa7d 100644
@@ -320,7 +320,7 @@ _   <input name="npm" class="input-group-field" type="text" placeholder="2013730
 </div>
 \end{lstlisting}
 
-\item Pada halaman entri jadwal dosen, setiap kolom \textit{input} diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom \textit{input} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom \textit{input} yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}.
+\item Pada halaman entri jadwal dosen, setiap kolom \textit{input} diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom \textit{input} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom \textit{input} yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{Listing} \ref{lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_1.3.1_label_masukan_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 1.3.1 pada Kolom \textit{Input} di Halaman Entri Jadwal Dosen]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
 index 6392b95..f8471cb 100644
@@ -435,7 +435,7 @@ _   Label <input type="text" name="label_jadwal" value="<?php echo $dataHariIni-
 Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \begin{itemize}
-\item Pada bagian navigasi menu, atribut \textit{data-responsive-menu="dropdown"} dihilangkan dari elemen \textit{ul} karena isi dari elemen tersebut bukanlah sebuah menu \textit{dropdown}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_2.1.1_keyboard_menu_navigasi}.
+\item Pada bagian navigasi menu, atribut \textit{data-responsive-menu="dropdown"} dihilangkan dari elemen \textit{ul} karena isi dari elemen tersebut bukanlah sebuah menu \textit{dropdown}. Perbaikan yang dilakukan dapat dilihat pada \textit{Listing} \ref{lst:perbaikan_2.1.1_keyboard_menu_navigasi}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_2.1.1_keyboard_menu_navigasi}, language=diff, caption=Perbaikan Kriteria Sukses 2.1.1 pada Menu Navigasi]
 diff --git a/www/application/views/templates/topbar_loggedin.php b/www/application/views/templates/topbar_loggedin.php
 index 51fc11e..bc9f2c0 100644
@@ -452,7 +452,7 @@ _   <ul class="menu" data-responsive-menu="dropdown">
     <li<?= $module === $currentModule ? ' class="menu-active"' : '' ?>><a href="/<?= $module ?>"><?= $this->config->item('module-names')[$module] ?></a></li>
 \end{lstlisting}
 
-\item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen, setiap \textit{cell} dalam tabel yang berisi jadwal dosen diberi atribut \textit{tabindex} yang diisi dengan nilai nol. Selanjutnya dibuat kode \textit{JavaScript} untuk memicu aksi membuka kotak dialog ketika tombol "Enter" ditekan pada \textit{cell} yang berisi jadwal dosen. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}.
+\item Pada bagian tabel "Daftar Jadwal" di halaman entri jadwal dosen, setiap \textit{cell} dalam tabel yang berisi jadwal dosen diberi atribut \textit{tabindex} yang diisi dengan nilai nol. Selanjutnya dibuat kode \textit{JavaScript} untuk memicu aksi membuka kotak dialog ketika tombol "Enter" ditekan pada \textit{cell} yang berisi jadwal dosen. Perbaikan yang dilakukan dapat dilihat pada \textit{Listing} \ref{lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_2.1.1_keyboard_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 2.1.1 pada Halaman Entri Jadwal Dosen]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
 index 6392b95..6c0e935 100644
@@ -485,7 +485,7 @@ index 6392b95..6c0e935 100644
 
 \subsection{Perbaikan Kriteria Sukses 2.4.1 \textit{Bypass Blocks}}
 \label{subsec:perbaikan_kriteria_sukses_2.4.1}
-Pada bagian ini dilakukan perbaikan dengan membuat sebuah mekanisme untuk melompati bagian menu navigasi ketika pengguna sedang bernavigasi menggunakan \textit{keyboard}. Mekanisme yang dimaksud adalah sebuah elemen yang akan membuat fokus \textit{keyboard} berpindah ke area konten utama ketika pengguna mengaktifkan elemen tersebut. Elemen ini dapat dikenali oleh teknologi alat bantu dan hanya dapat diakses oleh pengguna yang bernavigasi dengan menggunakan \textit{keyboard}. Saat halaman web selesai dimuat, elemen ini akan menjadi yang pertama menerima fokus \textit{keyboard} ketika pengguna menekan tombol \textit{tab}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_2.4.1_bypass_blocks}.
+Pada bagian ini dilakukan perbaikan dengan membuat sebuah mekanisme untuk melompati bagian menu navigasi ketika pengguna sedang bernavigasi menggunakan \textit{keyboard}. Mekanisme yang dimaksud adalah sebuah elemen yang akan membuat fokus \textit{keyboard} berpindah ke area konten utama ketika pengguna mengaktifkan elemen tersebut. Elemen ini dapat dikenali oleh teknologi alat bantu dan hanya dapat diakses oleh pengguna yang bernavigasi dengan menggunakan \textit{keyboard}. Saat halaman web selesai dimuat, elemen ini akan menjadi yang pertama menerima fokus \textit{keyboard} ketika pengguna menekan tombol \textit{tab}. Perbaikan yang dilakukan dapat dilihat pada \textit{Listing} \ref{lst:perbaikan_2.4.1_bypass_blocks}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.1_bypass_blocks}, language=diff, caption=Perbaikan Kriteria Sukses 2.4.1]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
 index 6392b95..a62cce4 100644
@@ -620,7 +620,7 @@ index f283c52..b6af0a7 100644
 \label{subsec:perbaikan_kriteria_sukses_2.4.4}
 Pada bagian ini dilakukan perbaikan sebagai berikut:
 
-Pada tautan berisi ikon yang tidak memiliki teks untuk menjelaskan tujuan tautan tersebut yang terdapat di halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_2.4.4_tautan_tanpa_keterangan}.
+Pada tautan berisi ikon yang tidak memiliki teks untuk menjelaskan tujuan tautan tersebut yang terdapat di halaman cetak transkrip, manajemen cetak transkrip, perubahan kuliah, dan manajemen perubahan kuliah diberikan atribut \textit{aria-label} yang diisi dengan nilai yang sesuai dengan fungsi setiap konten ikon. Perbaikan yang dilakukan dapat dilihat pada \textit{Listing} \ref{lst:perbaikan_2.4.4_tautan_tanpa_keterangan}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_2.4.4_tautan_tanpa_keterangan}, language=diff, caption=Perbaikan Kriteria Sukses 2.4.4]
 diff --git a/www/application/views/PerubahanKuliahManage/main.php b/www/application/views/PerubahanKuliahManage/main.php
 index 657260b..43c215f 100644
@@ -713,7 +713,7 @@ _   <a data-open="detail<?= $request->id ?>"><i class="fi-eye"></i></a>
 
 \subsection{Perbaikan Kriteria Sukses 2.5.3 \textit{Label in Name}}
 \label{subsec:perbaikan_kriteria_sukses_2.5.3}
-Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom \textit{input} di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom \textit{input} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom \textit{input} yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_2.5.3_label_dan_nama_pada_komponen_masukan}.
+Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom \textit{input} di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom \textit{input} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom \textit{input} yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{Listing} \ref{lst:perbaikan_2.5.3_label_dan_nama_pada_komponen_masukan}.
 
 \begin{lstlisting}[frame=single, label={lst:perbaikan_2.5.3_label_dan_nama_pada_komponen_masukan}, language=diff, caption=Perbaikan Kriteria Sukses 2.5.3]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
@@ -840,7 +840,7 @@ _   <input name="npm" class="input-group-field" type="text" placeholder="2013730
 
 \subsection{Perbaikan Kriteria Sukses 3.1.1 \textit{Language of Page}}
 \label{subsec:perbaikan_kriteria_sukses_3.1.1}
-Pada bagian ini dilakukan perbaikan dengan mengubah setelan bahasa dari bahasa Inggris menjadi bahasa Indonesia untuk setiap halaman yang ditampilkan kepada pengguna. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_3.1.1_bahasa_halaman}.
+Pada bagian ini dilakukan perbaikan dengan mengubah setelan bahasa dari bahasa Inggris menjadi bahasa Indonesia untuk setiap halaman yang ditampilkan kepada pengguna. Perbaikan yang dilakukan dapat dilihat pada \textit{Listing} \ref{lst:perbaikan_3.1.1_bahasa_halaman}.
 
 \begin{lstlisting}[frame=single, label={lst:perbaikan_3.1.1_bahasa_halaman}, language=diff, caption=Perbaikan Kriteria Sukses 3.1.1]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
@@ -951,7 +951,7 @@ _   <html class="no-js" lang="en">
 
 \subsection{Perbaikan Kriteria Sukses 3.3.2 \textit{Labels or Instructions}}
 \label{subsec:perbaikan_kriteria_sukses_3.3.2}
-Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom \textit{input} di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom \textit{input} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom \textit{input} yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_3.3.2_label_masukan}.
+Pada bagian ini dilakukan perbaikan yaitu untuk setiap kolom \textit{input} di halaman manajemen cetak transkrip dan entri jadwal dosen diberi atribut \textit{id} dengan nilai yang sesuai dengan isi kolom \textit{input} lalu setiap judul kolom dibuat sebagai label dengan menggunakan \texttt{<label>} dan dihubungkan dengan kolom \textit{input} yang bersangkutan dengan menggunakan atribut \textit{for}. Perbaikan yang dilakukan dapat dilihat pada \textit{Listing} \ref{lst:perbaikan_3.3.2_label_masukan}.
 
 \begin{lstlisting}[frame=single, label={lst:perbaikan_3.3.2_label_masukan}, language=diff, caption=Perbaikan Kriteria Sukses 3.3.2]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
@@ -1081,7 +1081,7 @@ _   <input name="npm" class="input-group-field" type="text" placeholder="2013730
 Pada bagian ini dilakukan perbaikan sebagai berikut:
 
 \begin{itemize}
-\item Pada penggunaan \textit{tag "time"} buka yang tidak disertai dengan \textit{tag "time"} tutup di halaman cetak transkrip, bagian yang tidak lengkap ditambahkan \texttt{</time>}. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_4.1.1_parsing_halaman_cetak_transkrip}.
+\item Pada penggunaan \textit{tag "time"} buka yang tidak disertai dengan \textit{tag "time"} tutup di halaman cetak transkrip, bagian yang tidak lengkap ditambahkan \texttt{</time>}. Perbaikan yang dilakukan dapat dilihat pada \textit{Listing} \ref{lst:perbaikan_4.1.1_parsing_halaman_cetak_transkrip}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_4.1.1_parsing_halaman_cetak_transkrip}, language=diff, caption=Perbaikan Kriteria Sukses 4.1.1 pada Halaman Cetak Transkrip]
 diff --git a/www/application/views/TranskripRequest/main.php b/www/application/views/TranskripRequest/main.php
 index ada0254..ed45720 100644
@@ -1098,7 +1098,7 @@ _   <td><time datetime="<?= $request->answeredDateTime ?>"><?= $request->answere
     <div class="reveal" id="detail<?= $request->id ?>" data-reveal>
 \end{lstlisting} 
 
-\item Pada penempatan elemen \textit{"HTML"} yang tidak tepat di halaman entri jadwal dosen, \textit{tag "div"} dipindahkan agar berada sesudah \textit{tag "body"}. \textit{Tag "div"} yang bermasalah ini muncul dari \textit{file} "flashmessage.php" yang dimuat di tempat yang salah. Oleh karena perbaikan yang dilakukan adalah dengan memuat \textit{file} "flashmessage.php" di tempat yang seharusnya. Perbaikan yang dilakukan dapat dilihat pada \textit{listing} \ref{lst:perbaikan_4.1.1_parsing_halaman_entri_jadwal_dosen}.
+\item Pada penempatan elemen \textit{"HTML"} yang tidak tepat di halaman entri jadwal dosen, \textit{tag "div"} dipindahkan agar berada sesudah \textit{tag "body"}. \textit{Tag "div"} yang bermasalah ini muncul dari \textit{file} "flashmessage.php" yang dimuat di tempat yang salah. Oleh karena perbaikan yang dilakukan adalah dengan memuat \textit{file} "flashmessage.php" di tempat yang seharusnya. Perbaikan yang dilakukan dapat dilihat pada \textit{Listing} \ref{lst:perbaikan_4.1.1_parsing_halaman_entri_jadwal_dosen}.
 \begin{lstlisting}[frame=single, label={lst:perbaikan_4.1.1_parsing_halaman_entri_jadwal_dosen}, language=diff, caption=Perbaikan Kriteria Sukses 4.1.1 pada Halaman Entri Jadwal Dosen]
 diff --git a/www/application/views/EntriJadwalDosen/main.php b/www/application/views/EntriJadwalDosen/main.php
 index 6392b95..40d0c73 100644
@@ -1122,11 +1122,11 @@ index 6392b95..40d0c73 100644
 \label{sec:pengujian}
 Pada subbab sebelumnya telah dilakukan perbaikan-perbaikan untuk membuat halaman web BlueTape menjadi lebih mudah diakses untuk orang berkebutuhan khusus dalam pengelihatan. Pada subbab ini berisi skenario pengujian dan hasil yang didapatkan dari setiap skenario pengujian yang telah dibuat. Dilakukan pengujian seakan-akan halaman web BlueTape digunakan oleh orang yang tidak bisa melihat untuk menilai apakah perbaikan-perbaikan yang telah dilakukan di subbab \ref{sec:implementasi} berhasil membuat halaman web BlueTape lebih mudah diakses atau tidak. Pengujian dilakukan dengan menggunakan perangkat komputer berupa laptop dengan sistem operasi Windows, \textit{browser} Google Chrome, dan pembaca layar ChromeVox sebagai teknologi alat bantu. Pengujian dilakukan pada server lokal milik penguji dan akun yang digunakan oleh penguji memiliki hak akses tak terbatas sehingga dapat menggunakan semua fitur yang terdapat pada halaman web BlueTape.
 
-\subsection{Skenario Pengujian}
-\label{subsec:skenario_pengujian}
-Pada subbab dituliskan skenario pengujian yang digunakan untuk menguji perbaikan-perbaikan yang telah dilakukan. Setiap skenario pengujian merupakan langkah-langkah yang dituliskan dalam bentuk poin-poin yang menjelaskan cara untuk menggunakan fitur-fitur pada halaman web BlueTape.
+\subsection{Skenario dan Hasil Pengujian}
+\label{subsec:skenario_dan_hasil_pengujian}
+Pada subbab ini dituliskan skenario pengujian yang digunakan untuk menguji perbaikan-perbaikan yang telah dilakukan beserta hasilnya. Setiap skenario pengujian merupakan langkah-langkah yang dituliskan dalam bentuk poin-poin yang menjelaskan cara untuk menggunakan fitur-fitur pada halaman web BlueTape. Hasil pengujian dituliskan dalam bentuk tabel yang berisi langkah skenario pengujian, hasil pengujian, dan tindakan yang dilakukan dalam pengujian.
 
-\subsubsection{Login}
+\subsubsection{Skenario Login dan Hasilnya}
 \label{subsubsec:skenario_login}
 Langkah-langkah untuk \textit{login} pada halaman web BlueTape adalah sebagai berikut:
 
@@ -1137,265 +1137,6 @@ Langkah-langkah untuk \textit{login} pada halaman web BlueTape adalah sebagai be
     \item Penguji masuk ke dalam halaman web BlueTape.
 \end{enumerate}
 
-\subsubsection{Membuat Permohonan Cetak Transkrip}
-\label{subsubsec:skenario_membuat_permohonan_cetak_transkrip}
-Langkah-langkah untuk membuat permohonan cetak transkrip pada halaman cetak transkrip adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman cetak transkrip dengan memilih menu "Cetak Transkrip".
-    \item Penguji memilih opsi "DPS (Seluruh Semester, Bilingual)" pada kolom "Tipe Transkrip".
-    \item Penguji mengisi kolom "Keperluan" dengan "Tes Permohonan Baru".
-    \item Penguji menekan tombol "Kirim Permohonan" untuk mengirim permohonan.
-\end{enumerate}
-
-\subsubsection{Memeriksa Detail Permohonan Cetak Transkrip di Halaman Cetak Transkrip}
-\label{subsubsec:skenario_memeriksa_detail_permohonan_cetak_transkrip_di_halaman_cetak_transkrip}
-Langkah-langkah untuk memeriksa detail permohonan cetak transkrip pada halaman cetak transkrip adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman cetak transkrip dengan memilih menu "Cetak Transkrip".
-    \item Penguji menekan tombol dengan ikon mata yang terdapat pada kolom "Aksi" di tabel "Histori Permohonan".
-    \item Penguji memeriksa detail permohonan.
-\end{enumerate}
-
-\subsubsection{Menyaring Permohonan Cetak Transkrip Berdasarkan NPM}
-\label{subsubsec:skenario_menyaring_permohonan_cetak_transkrip_berdasarkan_npm}
-Langkah-langkah untuk menyaring permohonan cetak transkrip berdasarkan NPM pada halaman manajemen cetak transkrip adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman manajemen cetak transkrip dengan memilih menu "Manajemen Cetak Transkrip".
-    \item Penguji mengisi kolom "Cari NPM" dengan "7315020@student.unpar.ac.id".
-    \item Penguji menekan tombol "Cari" untuk melakukan penyaringan.
-\end{enumerate}
-
-\subsubsection{Memeriksa Detail Permohonan Cetak Transkrip di Halaman Manajemen Cetak Transkrip}
-\label{subsubsec:skenario_memeriksa_detail_permohonan_cetak_transkrip_di_halaman_manajemen_cetak_transkrip}
-Langkah-langkah untuk memeriksa detail permohonan cetak transkrip di halaman manajemen cetak transkrip adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman manajemen cetak transkrip dengan memilih menu "Manajemen Cetak Transkrip".
-    \item Penguji menekan tombol dengan ikon mata yang terdapat pada kolom "Aksi" di tabel "Permintaan Transkrip".
-    \item Penguji memeriksa detail permohonan.
-\end{enumerate}
-
-\subsubsection{Menolak Permohonan Cetak Transkrip di Halaman Manajemen Cetak Transkrip}
-\label{subsubsec:skenario_menolak_permohonan_cetak_transkrip_di_halaman_manajemen_cetak_transkrip}
-Langkah-langkah untuk menolak permohonan cetak transkrip di halaman manajemen cetak transkrip adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman manajemen cetak transkrip dengan memilih menu "Manajemen Cetak Transkrip".
-    \item Penguji menekan tombol dengan ikon ibu jari mengarah ke bawah yang terdapat pada tabel "Permintaan Transkrip".
-    \item Penguji mengisi kolom "Alasan Penolakan" dengan "Tes Tolak Permohonan".
-    \item Penguji menekan tombol "Tolak".
-\end{enumerate}
-
-\subsubsection{Menyetujui Permohonan Cetak Transkrip di Halaman Manajemen Cetak Transkrip}
-\label{subsubsec:skenario_menyetujui_permohonan_cetak_transkrip_di_halaman_manajemen_cetak_transkrip}
-Langkah-langkah untuk menyetujui permohonan cetak transkrip di halaman manajemen cetak transkrip adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman manajemen cetak transkrip dengan memilih menu "Manajemen Cetak Transkrip".
-    \item Penguji menekan tombol dengan ikon mesin cetak yang terdapat pada tabel "Permintaan Transkrip".
-    \item Penguji mengisi kolom "Keterangan Tambahan" dengan "Tes Cetak Permohonan".
-    \item Penguji menekan tombol "Sudah dicetak".
-\end{enumerate}
-
-\subsubsection{Menghapus Permohonan Cetak Transkrip di Halaman Manajemen Cetak Transkrip}
-\label{subsubsec:skenario_menghapus_permohonan_cetak_transkrip_di_halaman_manajemen_cetak_transkrip}
-Langkah-langkah untuk menghapus permohonan cetak transkrip di halaman manajemen cetak transkrip adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman manajemen cetak transkrip dengan memilih menu "Manajemen Cetak Transkrip".
-    \item Penguji menekan tombol dengan ikon keranjang yang terdapat pada tabel "Permintaan Transkrip".
-    \item Penguji menekan tombol "Hapus".
-\end{enumerate}
-
-\subsubsection{Membuat Permohonan Perubahan Kuliah di Halaman Perubahan Kuliah}
-\label{subsubsec:skenario_membuat_permohonan_perubahan_kuliah_di_halaman_perubahan_kuliah}
-Langkah-langkah untuk membuat permohonan perubahan kuliah di halaman perubahan kuliah adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman perubahan kuliah dengan memilih menu "Perubahan Kuliah".
-    \item Penguji mengisi kolom "Kode MK" dengan "TES123".
-    \item Penguji mengisi kolom "Nama Mata Kuliah" dengan "Tes Mata Kuliah".
-    \item Penguji mengisi kolom "Kelas" dengan "A".
-    \item Penguji memilih opsi "Diganti" pada kolom "Jenis Perubahan".
-    \item Penguji mengisi kolom "Dari Hari \& Jam" dengan "2020-04-10 09:00".
-    \item Penguji mengisi kolom "Dari Ruang" dengan "10316".
-    \item Penguji mengisi kolom "Keterangan Tambahan" dengan "Tes Permohonan Perubahan Kuliah".
-    \item Penguji mengisi kolom "Menjadi Hari \& Jam" dengan "2020-04-10 10:00".
-    \item Penguji mengisi kolom "Menjadi Ruang" dengan "10317".
-    \item Penguji menekan tombol "Kirim Permohonan".
-\end{enumerate}
-
-\subsubsection{Memeriksa Detail Permohonan Perubahan Kuliah di Halaman Perubahan Kuliah}
-\label{subsubsec:skenario_memeriksa_detail_permohonan_perubahan_kuliah_di_halaman_perubahan_kuliah}
-Langkah-langkah untuk memeriksa detail permohonan perubahan kuliah di halaman perubahan kuliah adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman perubahan kuliah dengan memilih menu "Perubahan Kuliah".
-    \item Penguji menekan tombol dengan ikon mata yang terdapat pada kolom "Aksi" di tabel "Histori Permohonan".
-    \item Penguji memeriksa detail permohonan.
-\end{enumerate}
-
-\subsubsection{Memeriksa Detail Permohonan Perubahan Kuliah di Halaman Manajemen Perubahan Kuliah}
-\label{subsubsec:skenario_memeriksa_detail_permohonan_perubahan_kuliah_di_halaman_manajemen_perubahan_kuliah}
-Langkah-langkah untuk memeriksa detail permohonan perubahan kuliah di halaman manajemen perubahan kuliah adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman manajemen perubahan kuliah dengan memilih menu "Manajemen Perubahan Kuliah".
-    \item Penguji menekan tombol dengan ikon mata yang terdapat pada tabel "Permohonan Perubahan Kuliah".
-    \item Penguji memeriksa detail permohonan.
-\end{enumerate}
-
-\subsubsection{Membuka dan Memeriksa Halaman \textit{Print-Out} Pengumuman Perubahan Kuliah}
-\label{subsubsec:skenario_membuka_dan_memeriksa_halaman_print_out_pengumuman_perubahan_kuliah}
-Langkah-langkah untuk membuka dan memeriksa halaman \textit{print-out} pengumuman perubahan kuliah adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman manajemen perubahan kuliah dengan memilih menu "Manajemen Perubahan Kuliah".
-    \item Penguji menekan tombol dengan ikon mesin cetak yang terdapat pada tabel "Permohonan Perubahan Kuliah".
-    \item Penguji memeriksa isi \textit{print-out} pengumuman perubahan kuliah.
-\end{enumerate}
-
-\subsubsection{Mengonfirmasi Permohonan Perubahan Kuliah di Halaman Manajemen Perubahan Kuliah}
-\label{subsubsec:skenario_mengonfirmasi_permohonan_perubahan_kuliah_di_halaman_manajemen_perubahan_kuliah}
-Langkah-langkah untuk mengonfirmasi permohonan perubahan kuliah di halaman manajemen perubahan kuliah adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman manajemen perubahan kuliah dengan memilih menu "Manajemen Perubahan Kuliah".
-    \item Penguji menekan tombol dengan ikon ibu jari mengarah ke atas yang terdapat pada tabel "Permohonan Perubahan Kuliah".
-    \item Penguji mengisi kolom "Keterangan" dengan "Tes Kofirmasi Permohonan".
-    \item Penguji menekan tombol "Konfirmasi".
-\end{enumerate}
-
-\subsubsection{Menolak Permohonan Perubahan Kuliah di Halaman Manajemen Perubahan Kuliah}
-\label{subsubsec:skenario_menolak_permohonan_perubahan_kuliah_di_halaman_manajemen_perubahan_kuliah}
-Langkah-langkah untuk menolak permohonan perubahan kuliah di halaman manajemen perubahan kuliah adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman manajemen perubahan kuliah dengan memilih menu "Manajemen Perubahan Kuliah".
-    \item Penguji menekan tombol dengan ikon ibu jari mengarah ke bawah yang terdapat pada tabel "Permohonan Perubahan Kuliah".
-    \item Penguji mengisi kolom "Alasan penolakan" dengan "Tes Tolak Permohonan".
-    \item Penguji menekan tombol "Tolak".
-\end{enumerate}
-
-\subsubsection{Menghapus Permohonan Perubahan Kuliah di Halaman Manajemen Perubahan Kuliah}
-\label{subsubsec:skenario_menghapus_permohonan_perubahan_kuliah_di_halaman_manajemen_perubahan_kuliah}
-Langkah-langkah untuk menghapus permohonan perubahan kuliah di halaman manajemen perubahan kuliah adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman manajemen perubahan kuliah dengan memilih menu "Manajemen Perubahan Kuliah".
-    \item Penguji menekan tombol dengan ikon keranjang yang terdapat pada tabel "Permohonan Perubahan Kuliah".
-    \item Penguji menekan tombol "Hapus".
-\end{enumerate}
-
-\subsubsection{Menambah Jadwal Dosen di Halaman Entri Jadwal Dosen}
-\label{subsubsec:skenario_menambah_jadwal_dosen_di_halaman_entri_jadwal_dosen}
-Langkah-langkah untuk menambah jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
-    \item Penguji memilih opsi "Selasa" pada kolom "Hari".
-    \item Penguji memilih opsi "8:00" pada kolom "Jam Mulai".
-    \item Penguji memilih opsi "2 jam" pada kolom "Durasi".
-    \item Penguji memilih opsi "Kelas" pada kolom "Jenis".
-    \item Penguji mengisi kolom "Label" dengan "Tes Tambah Jadwal".
-    \item Penguji menekan tombol "Tambah" untuk menambahkan jadwal.
-\end{enumerate}
-
-\subsubsection{Mengubah Jadwal Dosen di Halaman Entri Jadwal Dosen}
-\label{subsubsec:skenario_mengubah_jadwal_dosen_di_halaman_entri_jadwal_dosen}
-Langkah-langkah untuk mengubah jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
-    \item Penguji menekan jadwal dosen pada tabel "Daftar Jadwal".
-    \item Penguji memilih opsi "Senin" pada kolom "Hari".
-    \item Penguji memilih opsi "7:00" pada kolom "Jam Mulai".
-    \item Penguji memilih opsi "1 jam" pada kolom "Durasi".
-    \item Penguji memilih opsi "Konsultasi" pada kolom "Jenis".
-    \item Penguji mengisi kolom "Label" dengan "Tes Ubah Jadwal".
-    \item Penguji menekan tombol "\textit{Save}" untuk menyimpan perubahan.
-\end{enumerate}
-
-\subsubsection{Menghapus Jadwal Dosen di Halaman Entri Jadwal Dosen}
-\label{subsubsec:skenario_menghapus_jadwal_dosen_di_halaman_entri_jadwal_dosen}
-Langkah-langkah untuk menghapus jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
-    \item Penguji menekan jadwal dosen pada tabel "Daftar Jadwal".
-    \item Penguji menekan tombol "\textit{Delete}".
-\end{enumerate}
-
-\subsubsection{Menghapus Seluruh Jadwal Dosen di Halaman Entri Jadwal Dosen}
-\label{subsubsec:skenario_menghapus_seluruh_jadwal_dosen_di_halaman_entri_jadwal_dosen}
-Langkah-langkah untuk menghapus seluruh jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
-    \item Penguji menekan tombol "\textit{Delete All}".
-    \item Penguji memeriksa pesan konfirmasi penghapusan jadwal pada dialog peringatan yang muncul.
-    \item Penguji melakukan konfirmasi penghapusan dengan menekan tombol "OK".
-\end{enumerate}
-
-\subsubsection{Membuat Dokumen XLS yang Berisi Jadwal Dosen di Halaman Entri Jadwal Dosen}
-\label{subsubsec:skenario_membuat_dokumen_xls_yang_berisi_jadwal_dosen_di_halaman_entri_jadwal_dosen}
-Langkah-langkah untuk membuat dokumen XLS yang berisi jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
-    \item Penguji menekan tombol "Ekspor ke XLS".
-\end{enumerate}
-
-\subsubsection{Memeriksa Jadwal Dosen di Halaman Lihat Jadwal Dosen}
-\label{subsubsec:skenario_memeriksa_jadwal_dosen_di_halaman_lihat_jadwal_dosen}
-Langkah-langkah untuk memeriksa jadwal dosen di halaman lihat jadwal dosen adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman lihat jadwal dosen dengan memilih menu "Lihat Jadwal Dosen".
-    \item Penguji memilih nama dosen yang ingin diketahui jadwalnya.
-    \item Penguji menelusuri tabel yang menampilkan jadwal dosen yang telah dipilih.
-    \item Penguji memeriksa detail jadwal dengan nama "Tes Jadwal".
-\end{enumerate}
-
-\subsubsection{Membuat Dokumen XLS yang Berisi Jadwal Dosen di Halaman Lihat Jadwal Dosen}
-\label{subsubsec:skenario_membuat_dokumen_xls_yang_berisi_jadwal_dosen_di_halaman_lihat_jadwal_dosen}
-Langkah-langkah untuk membuat dokumen XLS yang berisi jadwal dosen di halaman lihat jadwal dosen adalah sebagai berikut:
-
-\begin{enumerate}
-    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
-    \item Penguji masuk ke halaman lihat jadwal dosen dengan memilih menu "Lihat Jadwal Dosen".
-    \item Penguji menekan tombol "Ekspor ke XLS".
-\end{enumerate}
-
-\subsection{Hasil Pengujian}
-\label{subsec:hasil_pengujian}
-Pada subbab ini dituliskan hasil dari pengujian yang telah dilakukan berdasarkan skenario pengujian pada subbab \ref{subsec:skenario_pengujian}. Hasil pengujian dituliskan dalam bentuk tabel yang berisi langkah skenario pengujian, hasil pengujian, dan tindakan yang dilakukan dalam pengujian.
-
-\subsubsection{Login}
-\label{subsubsec:hasil_pengujian_login}
 Berikut adalah tabel hasil pengujian untuk skenario \textit{login}.
 
 \begin{table}[H]
@@ -1417,8 +1158,18 @@ Berikut adalah tabel hasil pengujian untuk skenario \textit{login}.
     \end{tabular}
 \end{table}
 
-\subsubsection{Membuat Permohonan Cetak Transkrip}
-\label{subsubsec:hasil_pengujian_membuat_permohonan_cetak_transkrip}
+\subsubsection{Skenario Membuat Permohonan Cetak Transkrip dan Hasilnya}
+\label{subsubsec:skenario_membuat_permohonan_cetak_transkrip}
+Langkah-langkah untuk membuat permohonan cetak transkrip pada halaman cetak transkrip adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman cetak transkrip dengan memilih menu "Cetak Transkrip".
+    \item Penguji memilih opsi "DPS (Seluruh Semester, Bilingual)" pada kolom "Tipe Transkrip".
+    \item Penguji mengisi kolom "Keperluan" dengan "Tes Permohonan Baru".
+    \item Penguji menekan tombol "Kirim Permohonan" untuk mengirim permohonan.
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario membuat permohonan cetak transkrip.
 
 \begin{table}[H]
@@ -1430,7 +1181,7 @@ Berikut adalah tabel hasil pengujian untuk skenario membuat permohonan cetak tra
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Tidak ada karena halaman awal yang ditampilkan setelah berhasil melakukan \textit{login} adalah halaman cetak transkrip. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "permohonan baru, \textit{heading} satu". Setelah itu menekan \textit{"tab"} sebanyak empat kali hingga ChromeVox menyebutkan "tipe transkrip, DPS (seluruh semester bilingual), \textit{combo box satu of satu}". \\
         4 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "keperluan, \textit{edit text}" lalu mengetik "Tes Permohonan Baru" untuk mengisi kolom tersebut. \\
@@ -1441,8 +1192,17 @@ Berikut adalah tabel hasil pengujian untuk skenario membuat permohonan cetak tra
     \end{tabular}
 \end{table}
 
-\subsubsection{Memeriksa Detail Permohonan Cetak Transkrip di Halaman Cetak Transkrip}
-\label{subsubsec:hasil_pengujian_memeriksa_detail_permohonan_cetak_transkrip_di_halaman_cetak_transkrip}
+\subsubsection{Skenario Memeriksa Detail Permohonan Cetak Transkrip di Halaman Cetak Transkrip dan Hasilnya}
+\label{subsubsec:skenario_memeriksa_detail_permohonan_cetak_transkrip_di_halaman_cetak_transkrip}
+Langkah-langkah untuk memeriksa detail permohonan cetak transkrip pada halaman cetak transkrip adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman cetak transkrip dengan memilih menu "Cetak Transkrip".
+    \item Penguji menekan tombol dengan ikon mata yang terdapat pada kolom "Aksi" di tabel "Histori Permohonan".
+    \item Penguji memeriksa detail permohonan.
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario memeriksa detail permohonan cetak transkrip di halaman cetak transkrip.
 
 \begin{table}[H]
@@ -1454,7 +1214,7 @@ Berikut adalah tabel hasil pengujian untuk skenario memeriksa detail permohonan 
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Tidak ada karena halaman awal yang ditampilkan setelah berhasil melakukan \textit{login} adalah halaman cetak transkrip. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"}, dilakukan sebanyak dua kali hingga ChromeVox menyebutkan "histori permohonan \textit{heading} satu". Setelah itu menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "lihat detail permohonan Hizkia Steven, \textit{link has popup}" lalu menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
         4 & Sukses & Menekan \textit{"shift + alt + right arrow"} hingga ChromeVox menyebutkan "tabel, \textit{email} pemohon, 7315020@student.unpar.ac.id" lalu menekan \textit{"shift + alt + R"} sehingga ChromeVox membacakan seluruh isi detail permohonan yang dipilih. \\
@@ -1464,8 +1224,17 @@ Berikut adalah tabel hasil pengujian untuk skenario memeriksa detail permohonan 
     \end{tabular}
 \end{table}
 
-\subsubsection{Menyaring Permohonan Cetak Transkrip Berdasarkan NPM}
-\label{subsubsec:hasil_pengujian_menyaring_permohonan_cetak_transkrip_berdasarkan_npm}
+\subsubsection{Skenario Menyaring Permohonan Cetak Transkrip Berdasarkan NPM dan Hasilnya}
+\label{subsubsec:skenario_menyaring_permohonan_cetak_transkrip_berdasarkan_npm}
+Langkah-langkah untuk menyaring permohonan cetak transkrip berdasarkan NPM pada halaman manajemen cetak transkrip adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman manajemen cetak transkrip dengan memilih menu "Manajemen Cetak Transkrip".
+    \item Penguji mengisi kolom "Cari NPM" dengan "7315020@student.unpar.ac.id".
+    \item Penguji menekan tombol "Cari" untuk melakukan penyaringan.
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario menyaring permohonan cetak transkrip berdasarkan NPM pada halaman manajemen cetak transkrip.
 
 \begin{table}[H]
@@ -1477,7 +1246,7 @@ Berikut adalah tabel hasil pengujian untuk skenario menyaring permohonan cetak t
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "manajemen cetak transkrip, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "permintaan transkrip, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "cari NPM \textit{within} 2013730013, \textit{edit text}" dilanjutkan dengan mengetik "2015730020". \\
         4 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "cari, \textit{button}" kemudian menekan \textit{"enter"}. \\
@@ -1487,8 +1256,17 @@ Berikut adalah tabel hasil pengujian untuk skenario menyaring permohonan cetak t
     \end{tabular}
 \end{table}
 
-\subsubsection{Memeriksa Detail Permohonan Cetak Transkrip di Halaman Manajemen Cetak Transkrip}
-\label{subsubsec:hasil_pengujian_memeriksa_detail_permohonan_cetak_transkrip_di_halaman_manajemen_cetak_transkrip}
+\subsubsection{Skenario Memeriksa Detail Permohonan Cetak Transkrip di Halaman Manajemen Cetak Transkrip dan Hasilnya}
+\label{subsubsec:skenario_memeriksa_detail_permohonan_cetak_transkrip_di_halaman_manajemen_cetak_transkrip}
+Langkah-langkah untuk memeriksa detail permohonan cetak transkrip di halaman manajemen cetak transkrip adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman manajemen cetak transkrip dengan memilih menu "Manajemen Cetak Transkrip".
+    \item Penguji menekan tombol dengan ikon mata yang terdapat pada kolom "Aksi" di tabel "Permintaan Transkrip".
+    \item Penguji memeriksa detail permohonan.
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario memeriksa detail permohonan cetak transkrip di halaman manajemen cetak transkrip.
 
 \begin{table}[H]
@@ -1500,7 +1278,7 @@ Berikut adalah tabel hasil pengujian untuk skenario memeriksa detail permohonan 
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "manajemen cetak transkrip, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "permintaan transkrip, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak tiga kali hingga ChromeVox menyebutkan "lihat detail permohonan Hizkia Steven, \textit{link has popup}" lalu menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
         4 & Sukses & Menekan \textit{"shift + alt + right arrow"} hingga ChromeVox menyebutkan "tabel, \textit{email} pemohon, 7315020@student.unpar.ac.id" lalu menekan \textit{"shift + alt + R"} sehingga ChromeVox membacakan seluruh isi detail permohonan yang dipilih. \\
@@ -1510,8 +1288,18 @@ Berikut adalah tabel hasil pengujian untuk skenario memeriksa detail permohonan 
     \end{tabular}
 \end{table}
 
-\subsubsection{Menolak Permohonan Cetak Transkrip di Halaman Manajemen Cetak Transkrip}
-\label{subsubsec:hasil_pengujian_menolak_permohonan_cetak_transkrip_di_halaman_manajemen_cetak_transkrip}
+\subsubsection{Skenario Menolak Permohonan Cetak Transkrip di Halaman Manajemen Cetak Transkrip dan Hasilnya}
+\label{subsubsec:skenario_menolak_permohonan_cetak_transkrip_di_halaman_manajemen_cetak_transkrip}
+Langkah-langkah untuk menolak permohonan cetak transkrip di halaman manajemen cetak transkrip adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman manajemen cetak transkrip dengan memilih menu "Manajemen Cetak Transkrip".
+    \item Penguji menekan tombol dengan ikon ibu jari mengarah ke bawah yang terdapat pada tabel "Permintaan Transkrip".
+    \item Penguji mengisi kolom "Alasan Penolakan" dengan "Tes Tolak Permohonan".
+    \item Penguji menekan tombol "Tolak".
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario menolak permohonan cetak transkrip di halaman manajemen cetak transkrip.
 
 \begin{table}[H]
@@ -1523,7 +1311,7 @@ Berikut adalah tabel hasil pengujian untuk skenario menolak permohonan cetak tra
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "manajemen cetak transkrip, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "permintaan transkrip, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak empat kali hingga ChromeVox menyebutkan "tolak permohonan Hizkia Steven, \textit{link has popup}" lalu menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
         4 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak tiga kali hingga ChromeVox menyebutkan "alasan penolakan, \textit{edit text}" dilanjutkan dengan mengetik "Tes Tolak Permohonan". \\
@@ -1534,8 +1322,18 @@ Berikut adalah tabel hasil pengujian untuk skenario menolak permohonan cetak tra
     \end{tabular}
 \end{table}
 
-\subsubsection{Menyetujui Permohonan Cetak Transkrip di Halaman Manajemen Cetak Transkrip}
-\label{subsubsec:hasil_pengujian_menyetujui_permohonan_cetak_transkrip_di_halaman_manajemen_cetak_transkrip}
+\subsubsection{Skenario Menyetujui Permohonan Cetak Transkrip di Halaman Manajemen Cetak Transkrip dan Hasilnya}
+\label{subsubsec:skenario_menyetujui_permohonan_cetak_transkrip_di_halaman_manajemen_cetak_transkrip}
+Langkah-langkah untuk menyetujui permohonan cetak transkrip di halaman manajemen cetak transkrip adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman manajemen cetak transkrip dengan memilih menu "Manajemen Cetak Transkrip".
+    \item Penguji menekan tombol dengan ikon mesin cetak yang terdapat pada tabel "Permintaan Transkrip".
+    \item Penguji mengisi kolom "Keterangan Tambahan" dengan "Tes Cetak Permohonan".
+    \item Penguji menekan tombol "Sudah dicetak".
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario menyetujui permohonan cetak transkrip di halaman manajemen cetak transkrip.
 
 \begin{table}[H]
@@ -1547,7 +1345,7 @@ Berikut adalah tabel hasil pengujian untuk skenario menyetujui permohonan cetak 
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "manajemen cetak transkrip, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "permintaan transkrip, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak lima kali hingga ChromeVox menyebutkan "cetak permohonan Hizkia Steven, \textit{link has popup}" lalu menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
         4 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak empat kali hingga ChromeVox menyebutkan "keterangan tambahan, \textit{edit text}" dilanjutkan dengan mengetik "Tes Cetak Permohonan". \\
@@ -1558,8 +1356,17 @@ Berikut adalah tabel hasil pengujian untuk skenario menyetujui permohonan cetak 
     \end{tabular}
 \end{table}
 
-\subsubsection{Menghapus Permohonan Cetak Transkrip di Halaman Manajemen Cetak Transkrip}
-\label{subsubsec:hasil_pengujian_menghapus_permohonan_cetak_transkrip_di_halaman_manajemen_cetak_transkrip}
+\subsubsection{Skenario Menghapus Permohonan Cetak Transkrip di Halaman Manajemen Cetak Transkrip dan Hasilnya}
+\label{subsubsec:skenario_menghapus_permohonan_cetak_transkrip_di_halaman_manajemen_cetak_transkrip}
+Langkah-langkah untuk menghapus permohonan cetak transkrip di halaman manajemen cetak transkrip adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman manajemen cetak transkrip dengan memilih menu "Manajemen Cetak Transkrip".
+    \item Penguji menekan tombol dengan ikon keranjang yang terdapat pada tabel "Permintaan Transkrip".
+    \item Penguji menekan tombol "Hapus".
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario menghapus permohonan cetak transkrip di halaman manajemen cetak transkrip.
 
 \begin{table}[H]
@@ -1571,7 +1378,7 @@ Berikut adalah tabel hasil pengujian untuk skenario menghapus permohonan cetak t
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "manajemen cetak transkrip, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "permintaan transkrip, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak enam kali hingga ChromeVox menyebutkan "hapus permohonan Hizkia Steven, \textit{link has popup}" lalu menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
         4 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak empat kali hingga ChromeVox menyebutkan "hapus, \textit{button}" lalu menekan \textit{"enter"}. \\ 
@@ -1581,8 +1388,25 @@ Berikut adalah tabel hasil pengujian untuk skenario menghapus permohonan cetak t
     \end{tabular}
 \end{table}
 
-\subsubsection{Membuat Permohonan Perubahan Kuliah di Halaman Perubahan Kuliah}
-\label{subsubsec:hasil_pengujian_membuat_permohonan_perubahan_kuliah_di_halaman_perubahan_kuliah}
+\subsubsection{Skenario Membuat Permohonan Perubahan Kuliah di Halaman Perubahan Kuliah dan Hasilnya}
+\label{subsubsec:skenario_membuat_permohonan_perubahan_kuliah_di_halaman_perubahan_kuliah}
+Langkah-langkah untuk membuat permohonan perubahan kuliah di halaman perubahan kuliah adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman perubahan kuliah dengan memilih menu "Perubahan Kuliah".
+    \item Penguji mengisi kolom "Kode MK" dengan "TES123".
+    \item Penguji mengisi kolom "Nama Mata Kuliah" dengan "Tes Mata Kuliah".
+    \item Penguji mengisi kolom "Kelas" dengan "A".
+    \item Penguji memilih opsi "Diganti" pada kolom "Jenis Perubahan".
+    \item Penguji mengisi kolom "Dari Hari \& Jam" dengan "2020-04-10 09:00".
+    \item Penguji mengisi kolom "Dari Ruang" dengan "10316".
+    \item Penguji mengisi kolom "Keterangan Tambahan" dengan "Tes Permohonan Perubahan Kuliah".
+    \item Penguji mengisi kolom "Menjadi Hari \& Jam" dengan "2020-04-10 10:00".
+    \item Penguji mengisi kolom "Menjadi Ruang" dengan "10317".
+    \item Penguji menekan tombol "Kirim Permohonan".
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario membuat permohonan perubahan kuliah di halaman perubahan kuliah.
 
 \begin{table}[H]
@@ -1594,7 +1418,7 @@ Berikut adalah tabel hasil pengujian untuk skenario membuat permohonan perubahan
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak dua kali hingga ChromeVox menyebutkan "perubahan kuliah, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "permohonan baru, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak tiga kali hingga ChromeVox menyebutkan "kode mk, \textit{edit text}" dan dilanjutkan dengan mengetik "TES123" untuk mengisi kolom tersebut. \\
         4 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "nama mata kuliah, \textit{edit text}" dan dilanjutkan dengan mengetik "TES123" untuk mengisi kolom tersebut. \\
@@ -1612,8 +1436,17 @@ Berikut adalah tabel hasil pengujian untuk skenario membuat permohonan perubahan
     \end{tabular}
 \end{table}
 
-\subsubsection{Memeriksa Detail Permohonan Perubahan Kuliah di Halaman Perubahan Kuliah}
-\label{subsubsec:hasil_pengujian_memeriksa_detail_permohonan_perubahan_kuliah_di_halaman_perubahan_kuliah}
+\subsubsection{Skenario Memeriksa Detail Permohonan Perubahan Kuliah di Halaman Perubahan Kuliah dan Hasilnya}
+\label{subsubsec:skenario_memeriksa_detail_permohonan_perubahan_kuliah_di_halaman_perubahan_kuliah}
+Langkah-langkah untuk memeriksa detail permohonan perubahan kuliah di halaman perubahan kuliah adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman perubahan kuliah dengan memilih menu "Perubahan Kuliah".
+    \item Penguji menekan tombol dengan ikon mata yang terdapat pada kolom "Aksi" di tabel "Histori Permohonan".
+    \item Penguji memeriksa detail permohonan.
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario memeriksa detail permohonan perubahan kuliah di halaman perubahan kuliah.
 
 \begin{table}[H]
@@ -1625,7 +1458,7 @@ Berikut adalah tabel hasil pengujian untuk skenario memeriksa detail permohonan 
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak dua kali hingga ChromeVox menyebutkan "perubahan kuliah, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"}, dilakukan sebanyak dua kali hingga ChromeVox menyebutkan "histori permohonan, \textit{heading} satu". Setelah itu menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "lihat detail permohonan Hizkia Steven, \textit{link has popup}" lalu menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
         4 & Sukses & Menekan \textit{"shift + alt + right arrow"} hingga ChromeVox menyebutkan "tabel, \textit{email} pemohon, 7315020@student.unpar.ac.id" lalu menekan \textit{"shift + alt + R"} sehingga ChromeVox membacakan seluruh isi detail permohonan yang dipilih. \\
@@ -1635,8 +1468,17 @@ Berikut adalah tabel hasil pengujian untuk skenario memeriksa detail permohonan 
     \end{tabular}
 \end{table}
 
-\subsubsection{Memeriksa Detail Permohonan Perubahan Kuliah di Halaman Manajemen Perubahan Kuliah}
-\label{subsubsec:hasil_pengujian_memeriksa_detail_permohonan_perubahan_kuliah_di_halaman_manajemen_perubahan_kuliah}
+\subsubsection{Skenario Memeriksa Detail Permohonan Perubahan Kuliah di Halaman Manajemen Perubahan Kuliah dan Hasilnya}
+\label{subsubsec:skenario_memeriksa_detail_permohonan_perubahan_kuliah_di_halaman_manajemen_perubahan_kuliah}
+Langkah-langkah untuk memeriksa detail permohonan perubahan kuliah di halaman manajemen perubahan kuliah adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman manajemen perubahan kuliah dengan memilih menu "Manajemen Perubahan Kuliah".
+    \item Penguji menekan tombol dengan ikon mata yang terdapat pada tabel "Permohonan Perubahan Kuliah".
+    \item Penguji memeriksa detail permohonan.
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario memeriksa detail permohonan perubahan kuliah di halaman manajemen perubahan kuliah.
 
 \begin{table}[H]
@@ -1648,7 +1490,7 @@ Berikut adalah tabel hasil pengujian untuk skenario memeriksa detail permohonan 
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak tiga kali hingga ChromeVox menyebutkan "manajemen perubahan kuliah, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "permohonan perubahan kuliah, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "lihat detail permohonan Hizkia Steven, \textit{link has popup}" lalu menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
         4 & Sukses & Menekan \textit{"shift + alt + right arrow"} hingga ChromeVox menyebutkan "tabel, \textit{email} pemohon, 7315020@student.unpar.ac.id" lalu menekan \textit{"shift + alt + R"} sehingga ChromeVox membacakan seluruh isi detail permohonan yang dipilih. \\
@@ -1658,8 +1500,17 @@ Berikut adalah tabel hasil pengujian untuk skenario memeriksa detail permohonan 
     \end{tabular}
 \end{table}
 
-\subsubsection{Membuka dan Memeriksa Halaman \textit{Print-Out} Pengumuman Perubahan Kuliah}
-\label{subsubsec:hasil_pengujian_membuka_dan_memeriksa_halaman_print_out_pengumuman_perubahan_kuliah}
+\subsubsection{Skenario Membuka dan Memeriksa Halaman \textit{Print-Out} Pengumuman Perubahan Kuliah dan Hasilnya}
+\label{subsubsec:skenario_membuka_dan_memeriksa_halaman_print_out_pengumuman_perubahan_kuliah}
+Langkah-langkah untuk membuka dan memeriksa halaman \textit{print-out} pengumuman perubahan kuliah adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman manajemen perubahan kuliah dengan memilih menu "Manajemen Perubahan Kuliah".
+    \item Penguji menekan tombol dengan ikon mesin cetak yang terdapat pada tabel "Permohonan Perubahan Kuliah".
+    \item Penguji memeriksa isi \textit{print-out} pengumuman perubahan kuliah.
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario membuka dan memeriksa halaman \textit{print-out} pengumuman perubahan kuliah.
 
 \begin{table}[H]
@@ -1671,7 +1522,7 @@ Berikut adalah tabel hasil pengujian untuk skenario membuka dan memeriksa halama
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak tiga kali hingga ChromeVox menyebutkan "manajemen perubahan kuliah, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "permohonan perubahan kuliah, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak dua kali hingga ChromeVox menyebutkan "cetak permohonan Hizkia Steven, \textit{link}" lalu menekan \textit{"enter"} sehingga berpindah halaman dan mendengar ChromeVox menyebutkan "pengumuman jadwal kuliah, pengumuman, \textit{heading} satu". \\
         4 & Sukses & Menekan \textit{"shift + alt + R"} sehingga ChromeVox membacakan seluruh isi \textit{print-out} pengumuman perubahan kuliah. \\ 
@@ -1681,8 +1532,18 @@ Berikut adalah tabel hasil pengujian untuk skenario membuka dan memeriksa halama
     \end{tabular}
 \end{table}
 
-\subsubsection{Mengonfirmasi Permohonan Perubahan Kuliah di Halaman Manajemen Perubahan Kuliah}
-\label{subsubsec:hasil_pengujian_mengonfirmasi_permohonan_perubahan_kuliah_di_halaman_manajemen_perubahan_kuliah}
+\subsubsection{Skenario Mengonfirmasi Permohonan Perubahan Kuliah di Halaman Manajemen Perubahan Kuliah dan Hasilnya}
+\label{subsubsec:skenario_mengonfirmasi_permohonan_perubahan_kuliah_di_halaman_manajemen_perubahan_kuliah}
+Langkah-langkah untuk mengonfirmasi permohonan perubahan kuliah di halaman manajemen perubahan kuliah adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman manajemen perubahan kuliah dengan memilih menu "Manajemen Perubahan Kuliah".
+    \item Penguji menekan tombol dengan ikon ibu jari mengarah ke atas yang terdapat pada tabel "Permohonan Perubahan Kuliah".
+    \item Penguji mengisi kolom "Keterangan" dengan "Tes Kofirmasi Permohonan".
+    \item Penguji menekan tombol "Konfirmasi".
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario mengonfirmasi permohonan perubahan kuliah di halaman manajemen perubahan kuliah.
 
 \begin{table}[H]
@@ -1694,7 +1555,7 @@ Berikut adalah tabel hasil pengujian untuk skenario mengonfirmasi permohonan per
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak tiga kali hingga ChromeVox menyebutkan "manajemen perubahan kuliah, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "permohonan perubahan kuliah, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak tiga kali hingga ChromeVox menyebutkan "konfirmasi permohonan Hizkia Steven, \textit{link has popup}" lalu menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
         4 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak tiga kali hingga ChromeVox menyebutkan "keterangan, \textit{edit text}" dilanjutkan dengan mengetik "Tes Konfirmasi Permohonan". \\
@@ -1705,8 +1566,18 @@ Berikut adalah tabel hasil pengujian untuk skenario mengonfirmasi permohonan per
     \end{tabular}
 \end{table}
 
-\subsubsection{Menolak Permohonan Perubahan Kuliah di Halaman Manajemen Perubahan Kuliah}
-\label{subsubsec:hasil_pengujian_menolak_permohonan_perubahan_kuliah_di_halaman_manajemen_perubahan_kuliah}
+\subsubsection{Skenario Menolak Permohonan Perubahan Kuliah di Halaman Manajemen Perubahan Kuliah dan Hasilnya}
+\label{subsubsec:skenario_menolak_permohonan_perubahan_kuliah_di_halaman_manajemen_perubahan_kuliah}
+Langkah-langkah untuk menolak permohonan perubahan kuliah di halaman manajemen perubahan kuliah adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman manajemen perubahan kuliah dengan memilih menu "Manajemen Perubahan Kuliah".
+    \item Penguji menekan tombol dengan ikon ibu jari mengarah ke bawah yang terdapat pada tabel "Permohonan Perubahan Kuliah".
+    \item Penguji mengisi kolom "Alasan penolakan" dengan "Tes Tolak Permohonan".
+    \item Penguji menekan tombol "Tolak".
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario menolak permohonan perubahan kuliah di halaman manajemen perubahan kuliah.
 
 \begin{table}[H]
@@ -1718,7 +1589,7 @@ Berikut adalah tabel hasil pengujian untuk skenario menolak permohonan perubahan
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak tiga kali hingga ChromeVox menyebutkan "manajemen perubahan kuliah, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "permohonan perubahan kuliah, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak empat kali hingga ChromeVox menyebutkan "tolak permohonan Hizkia Steven, \textit{link has popup}" lalu menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
         4 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak tiga kali hingga ChromeVox menyebutkan "alasan penolakan, \textit{edit text}" dilanjutkan dengan mengetik "Tes Tolak Permohonan". \\
@@ -1729,8 +1600,17 @@ Berikut adalah tabel hasil pengujian untuk skenario menolak permohonan perubahan
     \end{tabular}
 \end{table}
 
-\subsubsection{Menghapus Permohonan Perubahan Kuliah di Halaman Manajemen Perubahan Kuliah}
-\label{subsubsec:hasil_pengujian_menghapus_permohonan_perubahan_kuliah_di_halaman_manajemen_perubahan_kuliah}
+\subsubsection{Skenario Menghapus Permohonan Perubahan Kuliah di Halaman Manajemen Perubahan Kuliah dan Hasilnya}
+\label{subsubsec:skenario_menghapus_permohonan_perubahan_kuliah_di_halaman_manajemen_perubahan_kuliah}
+Langkah-langkah untuk menghapus permohonan perubahan kuliah di halaman manajemen perubahan kuliah adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman manajemen perubahan kuliah dengan memilih menu "Manajemen Perubahan Kuliah".
+    \item Penguji menekan tombol dengan ikon keranjang yang terdapat pada tabel "Permohonan Perubahan Kuliah".
+    \item Penguji menekan tombol "Hapus".
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario menghapus permohonan perubahan kuliah di halaman manajemen perubahan kuliah.
 
 \begin{table}[H]
@@ -1742,7 +1622,7 @@ Berikut adalah tabel hasil pengujian untuk skenario menghapus permohonan perubah
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak tiga kali hingga ChromeVox menyebutkan "manajemen perubahan kuliah, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "permohonan perubahan kuliah, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak lima kali hingga ChromeVox menyebutkan "hapus permohonan Hizkia Steven, \textit{link has popup}" lalu menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
         4 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak lima kali hingga ChromeVox menyebutkan "hapus, \textit{button}" lalu menekan \textit{"enter"}. \\ 
@@ -1752,8 +1632,21 @@ Berikut adalah tabel hasil pengujian untuk skenario menghapus permohonan perubah
     \end{tabular}
 \end{table}
 
-\subsubsection{Menambah Jadwal Dosen di Halaman Entri Jadwal Dosen}
-\label{subsubsec:hasil_pengujian_menambah_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+\subsubsection{Skenario Menambah Jadwal Dosen di Halaman Entri Jadwal Dosen dan Hasilnya}
+\label{subsubsec:skenario_menambah_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+Langkah-langkah untuk menambah jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
+    \item Penguji memilih opsi "Selasa" pada kolom "Hari".
+    \item Penguji memilih opsi "8:00" pada kolom "Jam Mulai".
+    \item Penguji memilih opsi "2 jam" pada kolom "Durasi".
+    \item Penguji memilih opsi "Kelas" pada kolom "Jenis".
+    \item Penguji mengisi kolom "Label" dengan "Tes Tambah Jadwal".
+    \item Penguji menekan tombol "Tambah" untuk menambahkan jadwal.
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario menambah jadwal dosen di halaman entri jadwal dosen.
 
 \begin{table}[H]
@@ -1765,7 +1658,7 @@ Berikut adalah tabel hasil pengujian untuk skenario menambah jadwal dosen di hal
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak empat kali hingga ChromeVox menyebutkan "entri jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"} sebanyak satu kali hingga ChromeVox menyebutkan "tambah jadwal, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "hari, senin, \textit{combo box satu of lima}" lalu menekan \textit{"down arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "selasa, \textit{dua of lima}". \\
         4 & Sukses & Menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "jam mulai, pukul tujuh, \textit{combo box satu of sepuluh}" lalu menekan \textit{"down arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "pukul delapan, \textit{dua of sepuluh}. \\ 
@@ -1779,8 +1672,22 @@ Berikut adalah tabel hasil pengujian untuk skenario menambah jadwal dosen di hal
     \end{tabular}
 \end{table}
 
-\subsubsection{Mengubah Jadwal Dosen di Halaman Entri Jadwal Dosen}
-\label{subsubsec:hasil_pengujian_mengubah_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+\subsubsection{Skenario Mengubah Jadwal Dosen di Halaman Entri Jadwal Dosen dan Hasilnya}
+\label{subsubsec:skenario_mengubah_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+Langkah-langkah untuk mengubah jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
+    \item Penguji menekan jadwal dosen pada tabel "Daftar Jadwal".
+    \item Penguji memilih opsi "Senin" pada kolom "Hari".
+    \item Penguji memilih opsi "7:00" pada kolom "Jam Mulai".
+    \item Penguji memilih opsi "1 jam" pada kolom "Durasi".
+    \item Penguji memilih opsi "Konsultasi" pada kolom "Jenis".
+    \item Penguji mengisi kolom "Label" dengan "Tes Ubah Jadwal".
+    \item Penguji menekan tombol "\textit{Save}" untuk menyimpan perubahan.
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario mengubah jadwal dosen di halaman entri jadwal dosen.
 
 \begin{table}[H]
@@ -1792,7 +1699,7 @@ Berikut adalah tabel hasil pengujian untuk skenario mengubah jadwal dosen di hal
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak empat kali hingga ChromeVox menyebutkan "entri jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"}, dilakukan sebanyak dua kali hingga ChromeVox menyebutkan "daftar jadwal, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "tabel, tes tambah jadwal" lalu menekan \textit{"enter"} sebanyak satu kali hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
         4 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak tiga kali hingga ChromeVox menyebutkan "hari, selasa, \textit{combo box dua of lima}" lalu menekan \textit{"up arrow"} sebanyak satu kali hingga ChromeVox menyebutkan "senin, \textit{satu of lima}. \\
@@ -1807,8 +1714,17 @@ Berikut adalah tabel hasil pengujian untuk skenario mengubah jadwal dosen di hal
     \end{tabular}
 \end{table}
 
-\subsubsection{Menghapus Jadwal Dosen di Halaman Entri Jadwal Dosen}
-\label{subsubsec:hasil_pengujian_menghapus_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+\subsubsection{Skenario Menghapus Jadwal Dosen di Halaman Entri Jadwal Dosen dan Hasilnya}
+\label{subsubsec:skenario_menghapus_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+Langkah-langkah untuk menghapus jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
+    \item Penguji menekan jadwal dosen pada tabel "Daftar Jadwal".
+    \item Penguji menekan tombol "\textit{Delete}".
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario menghapus jadwal dosen di halaman entri jadwal dosen.
 
 \begin{table}[H]
@@ -1820,7 +1736,7 @@ Berikut adalah tabel hasil pengujian untuk skenario menghapus jadwal dosen di ha
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak empat kali hingga ChromeVox menyebutkan "entri jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"}, dilakukan sebanyak dua kali hingga ChromeVox menyebutkan "daftar jadwal, \textit{heading} satu" lalu menekan \textit{"tab"} sebanyak satu kali hingga ChromeVox menyebutkan "tabel, tes ubah jadwal" lalu menekan \textit{"enter"} sebanyak satu kali hingga ChromeVox menyebutkan "\textit{entered dialog}". \\
         4 & Sukses & Menekan \textit{"shift + alt + right arrow"} sebanyak sepuluh kali hingga ChromeVox menyebutkan "\textit{delete, button}" lalu menekan \textit{"enter"}. \\
@@ -1830,8 +1746,18 @@ Berikut adalah tabel hasil pengujian untuk skenario menghapus jadwal dosen di ha
     \end{tabular}
 \end{table}
 
-\subsubsection{Menghapus Seluruh Jadwal Dosen di Halaman Entri Jadwal Dosen}
-\label{subsubsec:hasil_pengujian_menghapus_seluruh_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+\subsubsection{Skenario Menghapus Seluruh Jadwal Dosen di Halaman Entri Jadwal Dosen dan Hasilnya}
+\label{subsubsec:skenario_menghapus_seluruh_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+Langkah-langkah untuk menghapus seluruh jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
+    \item Penguji menekan tombol "\textit{Delete All}".
+    \item Penguji memeriksa pesan konfirmasi penghapusan jadwal pada dialog peringatan yang muncul.
+    \item Penguji melakukan konfirmasi penghapusan dengan menekan tombol "OK".
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario menghapus seluruh jadwal dosen di halaman entri jadwal dosen.
 
 \begin{table}[H]
@@ -1843,7 +1769,7 @@ Berikut adalah tabel hasil pengujian untuk skenario menghapus seluruh jadwal dos
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak empat kali hingga ChromeVox menyebutkan "entri jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"}, dilakukan sebanyak dua kali hingga ChromeVox menyebutkan "daftar jadwal, \textit{heading} satu" lalu menekan \textit{"shift + alt + N"} lalu \textit{"L"} sebanyak satu kali hingga ChromeVox menyebutkan "\textit{delete all, link}" lalu menekan \textit{"enter"}. \\
         4 & Sukses & Menekan \textit{"shift + alt + R"} sebanyak satu kali sehingga ChromeVox membacakan pesan "anda yakin mau menghapus semua data jadwal? aksi ini tidak dapat dibatalkan" pada dialog peringatan. \\
@@ -1854,8 +1780,16 @@ Berikut adalah tabel hasil pengujian untuk skenario menghapus seluruh jadwal dos
     \end{tabular}
 \end{table}
 
-\subsubsection{Membuat Dokumen XLS yang Berisi Jadwal Dosen di Halaman Entri Jadwal Dosen}
-\label{subsubsec:hasil_pengujian_membuat_dokumen_xls_yang_berisi_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+\subsubsection{Skenario Membuat Dokumen XLS yang Berisi Jadwal Dosen di Halaman Entri Jadwal Dosen dan Hasilnya}
+\label{subsubsec:skenario_membuat_dokumen_xls_yang_berisi_jadwal_dosen_di_halaman_entri_jadwal_dosen}
+Langkah-langkah untuk membuat dokumen XLS yang berisi jadwal dosen di halaman entri jadwal dosen adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman entri jadwal dosen dengan memilih menu "Entri Jadwal Dosen".
+    \item Penguji menekan tombol "Ekspor ke XLS".
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario membuat dokumen XLS yang berisi jadwal dosen di halaman entri jadwal dosen.
 
 \begin{table}[H]
@@ -1867,7 +1801,7 @@ Berikut adalah tabel hasil pengujian untuk skenario membuat dokumen XLS yang ber
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak empat kali hingga ChromeVox menyebutkan "entri jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + N"} lalu \textit{"H"}, dilakukan sebanyak dua kali hingga ChromeVox menyebutkan "daftar jadwal, \textit{heading} satu" lalu menekan \textit{"shift + alt + N"} lalu \textit{"L"}, dilakukan sebanyak dua kali hingga ChromeVox menyebutkan "\textit{ekspor ke XLS, link}" lalu menekan \textit{"enter"}. \\
 
@@ -1876,8 +1810,18 @@ Berikut adalah tabel hasil pengujian untuk skenario membuat dokumen XLS yang ber
     \end{tabular}
 \end{table}
 
-\subsubsection{Memeriksa Jadwal Dosen di Halaman Lihat Jadwal Dosen}
-\label{subsubsec:hasil_pengujian_memeriksa_jadwal_dosen_di_halaman_lihat_jadwal_dosen}
+\subsubsection{Skenario Memeriksa Jadwal Dosen di Halaman Lihat Jadwal Dosen dan Hasilnya}
+\label{subsubsec:skenario_memeriksa_jadwal_dosen_di_halaman_lihat_jadwal_dosen}
+Langkah-langkah untuk memeriksa jadwal dosen di halaman lihat jadwal dosen adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman lihat jadwal dosen dengan memilih menu "Lihat Jadwal Dosen".
+    \item Penguji memilih nama dosen yang ingin diketahui jadwalnya.
+    \item Penguji menelusuri tabel yang menampilkan jadwal dosen yang telah dipilih.
+    \item Penguji memeriksa detail jadwal dengan nama "Tes Jadwal".
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario memeriksa jadwal dosen di halaman lihat jadwal dosen.
 
 \begin{table}[H]
@@ -1889,7 +1833,7 @@ Berikut adalah tabel hasil pengujian untuk skenario memeriksa jadwal dosen di ha
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak lima kali hingga ChromeVox menyebutkan "lihat jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + L"} lalu \textit{"L"} sebanyak satu kali hingga ChromeVox menyebutkan "\textit{link list, use up and down arrow keys to browse or type to search}" lalu mengetik "hizkia steven", dilanjutkan dengan menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{exited, link list, list with dua items, hizkia steven, tab selected list item}" lalu menekan \textit{"enter"}. \\
         4 & Suskes & Menekan \textit{"shift + alt + N"} lalu \textit{"T"} sebanyak satu kali hingga ChromeVox menyebutkan "tabel, senin" lalu menekan \textit{"shift + alt + R"} sehingga ChromeVox membacakan isi tabel. \\
@@ -1900,8 +1844,16 @@ Berikut adalah tabel hasil pengujian untuk skenario memeriksa jadwal dosen di ha
     \end{tabular}
 \end{table}
 
-\subsubsection{Membuat Dokumen XLS yang Berisi Jadwal Dosen di Halaman Lihat Jadwal Dosen}
-\label{subsubsec:hasil_pengujian_membuat_dokumen_xls_yang_berisi_jadwal_dosen_di_halaman_lihat_jadwal_dosen}
+\subsubsection{Skenario Membuat Dokumen XLS yang Berisi Jadwal Dosen di Halaman Lihat Jadwal Dosen dan Hasilnya}
+\label{subsubsec:skenario_membuat_dokumen_xls_yang_berisi_jadwal_dosen_di_halaman_lihat_jadwal_dosen}
+Langkah-langkah untuk membuat dokumen XLS yang berisi jadwal dosen di halaman lihat jadwal dosen adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Penguji melakukan \textit{login} pada halaman web BlueTape.
+    \item Penguji masuk ke halaman lihat jadwal dosen dengan memilih menu "Lihat Jadwal Dosen".
+    \item Penguji menekan tombol "Ekspor ke XLS".
+\end{enumerate}
+
 Berikut adalah tabel hasil pengujian untuk skenario membuat dokumen XLS yang berisi jadwal dosen di halaman lihat jadwal dosen.
 
 \begin{table}[H]
@@ -1913,7 +1865,7 @@ Berikut adalah tabel hasil pengujian untuk skenario membuat dokumen XLS yang ber
         Langkah ke & Hasil (sukses/tidak) & Tindakan \\
 
         \midrule
-        1 & Sukses & Mengikuti langkah-langkah pada subbab \ref{subsubsec:hasil_pengujian_login}. \\
+        1 & Sukses & Mengikuti langkah-langkah pada Tabel \ref{tab:hasil_pengujian_login} \\
         2 & Sukses & Menekan \textit{"tab"} sebanyak lima kali hingga ChromeVox menyebutkan "lihat jadwal dosen, \textit{link list item}" lalu menekan \textit{"enter"}. \\
         3 & Sukses & Menekan \textit{"shift + alt + L"} lalu \textit{"L"} sebanyak satu kali hingga ChromeVox menyebutkan "\textit{link list, use up and down arrow keys to browse or type to search}" lalu mengetik "ekspor ke XLS", dilanjutkan dengan menekan \textit{"enter"} hingga ChromeVox menyebutkan "\textit{exited, link list, ekspor ke XLS, link}" lalu menekan \textit{"enter"}. \\
 
