@@ -5,23 +5,21 @@
 \label{chap:teori}
 
 %2.1 WCAG 2.1%
-\section{\textit{WCAG 2.1}}
-\label{sec:wcag_2.1} 
-\textit{Web Content Accessibility Guidelines (WCAG)} 2.1 adalah versi ketiga dari \textit{WCAG} yang dirilis pada tanggal 5 Juni 2018 \cite{WCAG:2.1}. Versi pertama dari \textit{WCAG} adalah \textit{WCAG} 1.0 yang dirilis pada tanggal 5 Mei 1999 dan versi kedua adalah \textit{WCAG} 2.0 yang dirilis pada tanggal 11 Desember 2008. \textit{WCAG} 2.1 dikembangkan oleh World Wide Web Consortium (W3C) melalui kerja sama dengan individu dan organisasi di seluruh dunia, dengan tujuan memberikan standar bersama untuk aksesibilitas konten web yang memenuhi kebutuhan individu, organisasi, dan pemerintah internasional. 
-
+\section{\textit{WCAG 2.1} \cite{WCAG:2.1}}
+\label{sec:wcag_2.1}  
 \textit{WCAG} 2.1 dibuat untuk meningkatkan versi sebelumnya yaitu \textit{WCAG} 2.0. Pada \textit{WCAG} 2.1 terdapat penambahan kriteria sukses baru beserta definisi-definisi pendukungnya, pedoman untuk mengatur penambahan, dan beberapa tambahan pada bagian tingkat kepatuhan. Dalam \textit{WCAG} 2.1 terdapat 3 tingkat kriteria sukses yaitu A, AA, dan AAA yang digunakan sebagai acuan untuk menilai tingkat kepatuhan sebuah situs web terhadap \textit{WCAG} 2.1. Agar suatu halaman web dikatakan mematuhi \textit{WCAG} 2.1, semua persyaratan kepatuhan berikut haruslah dipenuhi:
 \begin{itemize}
-	\item Tingkat Kepatuhan: Salah satu dari tingkat kepatuhan berikut dipenuhi seutuhnya:
+	\item Tingkat Kepatuhan; salah satu dari tingkat kepatuhan berikut dipenuhi seutuhnya:
 	\begin{itemize}
 		\item Tingkat A: Untuk tingkat A (tingkat paling rendah), diperoleh jika halaman web berhasil mematuhi seluruh kriteria sukses tingkat A atau tersedia versi alternatif yang sesuai.
 		\item Tingkat AA: Untuk tingkat AA, diperoleh jika halaman web berhasil mematuhi seluruh kriteria sukses tingkat A dan AA atau tersedia versi alternatif tingkat AA yang sesuai.
 		\item Tingkat AAA: Untuk tingkat AAA, diperoleh jika halaman web berhasil mematuhi seluruh kriteria sukses tingkat A, AA, dan AAA atau tersedia versi alternatif tingkat AAA yang sesuai.
 	\end{itemize}
-	Sebagai catatan: Tingkat kepatuhan AAA amat tidak dianjurkan untuk diterapkan sebagai kebijakan umum untuk keseluruhan situs web, karena amat tidak mungkin memenuhi semua kriteria sukses tingkat AAA untuk beberapa jenis konten.
-	\item Halaman Lengkap: Tingkat kepatuhan berlaku untuk seluruh halaman web dan tidak boleh ada halaman yang dikecualikan.
-	\item Proses Lengkap: Untuk halaman web yang merupakan satu dari beberapa halaman yang merupakan proses, semua halaman web dalam proses tersebut harus mematuhi tingkat yang ditentukan atau lebih baik.
-	\item \textit{Web Content Technologies}\footnote{Mekanisme untuk \textit{user agent} menyajikan atau menjalankan instruksi yang berupa kode. Meliputi bahasa \textit{markup}, format data, atau bahasa pemrograman, contohnya \textit{HTML, CSS, SVG, PNG, PDF, Flash, dan JavaScript}} Mendukung Aksesibilitas: Hanya cara-cara pemanfaatan \textit{Web Content Technologies} yang mendukung aksesibilitas yang dapat diandalkan untuk memenuhi kriteria sukses. Informasi dan fungsionalitas yang tersedia dalam cara yang tidak mendukung aksesibilitas, juga harus tersedia dalam cara yang mendukung aksesibilitas.
-	\item Tidak Menghambat: Jika \textit{Web Content Technologies} yang dimanfaatkan tidak mendukung aksesibilitas, maka pemanfaatan tersebut tidak boleh menghalangi kemampuan pengguna untuk mengakses sisa halaman. Sebagai tambahan, halaman web tersebut secara keseluruhan harus tetap memenuhi persyaratan kepatuhan dalam kondisi-kondisi sebagai berikut:
+	Sebagai catatan: tingkat kepatuhan AAA amat tidak dianjurkan untuk diterapkan sebagai kebijakan umum untuk keseluruhan situs web, karena amat tidak mungkin memenuhi semua kriteria sukses tingkat AAA untuk beberapa jenis konten.
+	\item Halaman Lengkap: tingkat kepatuhan berlaku untuk seluruh halaman web dan tidak boleh ada halaman yang dikecualikan.
+	\item Proses Lengkap: untuk halaman web yang merupakan satu dari beberapa halaman yang merupakan proses, semua halaman web dalam proses tersebut harus mematuhi tingkat yang ditentukan atau lebih baik. Contohnya adalah halaman pembayaran pada sebuah website jual beli, seluruh halaman yang merupakan proses dari proses berbelanja tersebut harus mematuhi tingkat kepatuhan yang ditentukan.
+	\item \textit{Web Content Technologies}\footnote{Mekanisme untuk \textit{user agent} menyajikan atau menjalankan instruksi yang berupa kode. Meliputi bahasa \textit{markup}, format data, atau bahasa pemrograman. Contohnya \textit{HTML, CSS, SVG, PNG, PDF, Flash, dan JavaScript}} mendukung aksesibilitas: Hanya cara-cara pemanfaatan \textit{Web Content Technologies} yang mendukung aksesibilitas yang dapat diandalkan untuk memenuhi kriteria sukses. Informasi dan fungsionalitas yang tersedia dalam cara yang tidak mendukung aksesibilitas, juga harus tersedia dalam cara yang mendukung aksesibilitas.
+	\item Tidak Menghambat: jika \textit{Web Content Technologies} yang dimanfaatkan tidak mendukung aksesibilitas, maka pemanfaatan tersebut tidak boleh menghalangi kemampuan pengguna untuk mengakses sisa halaman. Sebagai tambahan, halaman web tersebut secara keseluruhan harus tetap memenuhi persyaratan kepatuhan dalam kondisi-kondisi sebagai berikut:
 	\begin{enumerate}
 		\item \textit{Web Content Technologies} yang tidak diandalkan untuk mematuhi persyaratan kepatuhan, dinyalakan oleh \textit{user agent}\footnote{Perangkat lunak yang mengambil konten web dan menyajikannya kepada pengguna, contohnya \textit{web browsers, media player, plug-ins}, dan program lainnya termasuk juga teknologi alat bantu}.
 		\item \textit{Web Content Technologies} yang tidak diandalkan untuk mematuhi persyaratan kepatuhan, dimatikan oleh \textit{user agent}.
@@ -29,7 +27,7 @@
 	\end{enumerate}
 \end{itemize}
 
-Dalam \textit{WCAG} 2.1 terdapat tujuh puluh delapan poin kriteria sukses yang kemudian dikelompokkan dalam empat kategori besar yaitu \textit{perceivable}, \textit{operable}, \textit{understandable}, dan \textit{robust}. Dalam masing-masing kategori, setiap kriteria sukses dikelompokkan lagi ke dalam kategori-kategori kecil yang lebih spesifik. Pada subbab-subbab berikutnya membahas satu per satu poin kriteria sukses berdasarkan kategorinya.
+Dalam \textit{WCAG} 2.1 terdapat tujuh puluh delapan poin kriteria sukses yang kemudian dikelompokkan dalam empat kategori besar yaitu \textit{perceivable}, \textit{operable}, \textit{understandable}, dan \textit{robust}. Dalam masing-masing kategori, setiap kriteria sukses dikelompokkan lagi ke dalam kategori-kategori kecil yang lebih spesifik. Pembagian dan pengelompokan ini dibuat agar dapat memenuhi berbagai kebutuhan dari khalayak banyak yang sangat beragam yang menggunakan \textit{WCAG} seperti pengembang dan desainer web, pembuat kebijakan, agen pembeli, tenaga pendidik, dan pelajar maupun mahasiswa. Pada subbab-subbab berikutnya membahas satu per satu poin kriteria sukses berdasarkan kategorinya.
 
 %2.1.1 Perceivable%
 \subsection{\textit{Perceivable}}
@@ -51,7 +49,7 @@ Semua konten yang bukan merupakan teks yang disajikan ke pengguna harus mempunya
 	\item Jika konten merupakan media berbasis waktu\footnote{Media yang berkaitan dengan waktu, contohnya rekaman audio dan rekaman video}, maka setidaknya teks alternatif menyediakan identifikasi deskriptif dari konten tersebut.
 	\item Jika konten merupakan tes atau latihan, yang akan mengungkap jawabannya jika disajikan dalam bentuk teks, maka setidaknya teks alternatif menyajikan identifikasi deskriptif dari konten tersebut. Contohnya sebuah latihan menebak gambar yang mengharuskan pengguna untuk memberikan jawaban berdasarkan gambar yang dilihatnya. Dalam hal ini teks alternatif pada gambar tersebut tidak boleh memberikan jawabannya, melainkan memberikan petunjuk mengenai tujuan dari adanya gambar tersebut.
 	\item Jika tujuan utama konten untuk menciptakan pengalaman sensorik tertentu, maka setidaknya teks alternatif menyediakan identifikasi deskriptif untuk konten tersebut. Contohnya adalah sebuah lukisan.
-	\item Jika konten adalah \textit{CAPTCHA} yang bertujuan untuk mengonfirmasi bahwa konten sedang diakses oleh manusia dan bukan oleh komputer, maka tersedia teks alternatif yang menjelaskan tujuan dari konten tersebut, serta tersedia \textit{CAPTCHA} dalam bentuk lain yang memberikan \textit{output} untuk berbagai jenis indra agar dapat mengakomodasi berbagai disabilitas.
+	\item Jika konten adalah \textit{CAPTCHA (Completely Automatic Public Turing Test to Tell Computers and Humans Apart)} yang bertujuan untuk mengonfirmasi bahwa konten sedang diakses oleh manusia dan bukan oleh komputer, maka tersedia teks alternatif yang menjelaskan tujuan dari konten tersebut, serta tersedia \textit{CAPTCHA} dalam bentuk lain yang memberikan \textit{output} untuk berbagai jenis indera agar dapat mengakomodasi berbagai disabilitas.
 	\item Jika konten hanya merupakan dekorasi yang digunakan untuk format visual atau tidak disajikan kepada pengguna, maka konten tersebut diimplementasikan dengan cara yang dapat diabaikan oleh teknologi alat bantu.
 \end{itemize}
 %End of 2.1.1.1 Text Alternatives%
@@ -75,7 +73,7 @@ Untuk media rekaman berupa audio saja dan video saja yang bukan merupakan media 
 \label{sec:kriteria_sukses_1.2.2}
 (Level A)\\
 
-Tersedia \textit{Captions} untuk semua konten rekaman audio, kecuali bila media tersebut merupakan media alternatif untuk teks dan dilabeli dengan jelas.
+Tersedia \textit{captions} untuk semua konten rekaman audio, kecuali bila media tersebut merupakan media alternatif untuk teks dan dilabeli dengan jelas.
 
 \paragraph{Kriteria Sukses 1.2.3 \textit{Audio Description or Media Alternative (Prerecorded)}}
 \label{sec:kriteria_sukses_1.2.3}
@@ -87,7 +85,7 @@ Tersedia alternatif untuk konten yang merupakan media berbasis waktu atau jika k
 \label{sec:kriteria_sukses_1.2.4}
 (Level AA)\\
 
-Tersedia \textit{Captions} untuk semua konten audio yang merupakan siaran langsung.
+Tersedia \textit{captions} untuk semua konten audio yang merupakan siaran langsung.
 
 \paragraph{Kriteria Sukses 1.2.5 \textit{Audio Description (Prerecorded)}}
 \label{sec:kriteria_sukses_1.2.5}
@@ -141,7 +139,7 @@ Jika urutan konten yang disajikan memengaruhi makna konten tersebut, maka urutan
 \label{sec:kriteria_sukses_1.3.3}
 (Level A)\\
 
-Instruksi yang tersedia untuk memahami maupun mengoperasikan konten tidak hanya mengandalkan satu karakteristik indra seperti bentuk, ukuran, lokasi visual, orientasi, atau suara.
+Instruksi yang tersedia untuk memahami maupun mengoperasikan konten tidak hanya mengandalkan satu karakteristik indera seperti bentuk, ukuran, lokasi visual, orientasi, atau suara.
 
 \paragraph{Kriteria Sukses 1.3.4 \textit{Orientation}}
 \label{sec:kriteria_sukses_1.3.4}
@@ -238,129 +236,7 @@ dan RsRGB, GsRGB, dan BsRGB didefinisikan sebagai:
 \]
 \[
 	B_{sRGB} = B_{8bit}\div 255
-\]
-
-Berikut adalah contoh perhitungan rasio kontras untuk warna hitam pada layar yang berwarna putih.
-
-\begin{itemize}
-	\item Latar depan memiliki $R_{8bit}$ = 0, $G_{8bit}$ = 0, dan $B_{8bit}$ = 0, sehinga didapatkan nilai: 
-			\[
-				R_{sRGB} = R_{8bit}\div 255 = 0\div 255 = 0
-			\]
-			\[
-				G_{sRGB} = G_{8bit}\div 255 = 0\div 255 = 0
-			\]
-			\[
-				B_{sRGB} = B_{8bit}\div 255 = 0\div 255 = 0
-			\]
-	\item Latar belakang memiliki $R_{8bit}$ = 255, $G_{8bit}$ = 255, dan $B_{8bit}$ = 255, sehingga didapatkan nilai:
-			\[
-				R_{sRGB} = R_{8bit}\div 255 = 255\div 255 = 1
-			\]
-			\[
-				G_{sRGB} = G_{8bit}\div 255 = 255\div 255 = 1
-			\]
-			\[
-				B_{sRGB} = B_{8bit}\div 255 = 255\div 255 = 1
-			\]
-\end{itemize}
-
-Langkah berikutnya menghitung nilai R, G, dan B untuk latar depan dan latar belakang.
-
-\begin{itemize}
-	\item Latar depan:
-			\[
-				R=\left\{
-				\begin{array}{rr}
-				0\div 12.92,\ \ 0\le 0.03928 \\ 
-				{{((0}+0.055)\div 1.055)}^{2.4},\ \ 0>0.03928
-				\end{array}
-				\right.
-			\]
-			\[
-				R=0\div 12.92 = 0
-			\]
-			\[
-				G=\left\{
-				\begin{array}{rr}
-				0\div 12.92,\ \ 0\le 0.03928 \\ 
-				{{((0}+0.055)\div 1.055)}^{2.4},\ \ 0>0.03928
-				\end{array}
-				\right.
-			\]
-			\[
-				G=0\div 12.92 = 0
-			\]
-			\[
-				B=\left\{
-				\begin{array}{rr}
-				0\div 12.92,\ \ 0\le 0.03928 \\ 
-				{{((0}+0.055)\div 1.055)}^{2.4},\ \ 0>0.03928
-				\end{array}
-				\right.
-			\]
-			\[
-				B=0\div 12.92 = 0
-			\]
-	\item Latar belakang:
-			\[
-				R=\left\{
-				\begin{array}{rr}
-				1\div 12.92,\ \ 1\le 0.03928 \\ 
-				{{((1}+0.055)\div 1.055)}^{2.4},\ \ 1>0.03928
-				\end{array}
-				\right.
-			\]
-			\[
-				R={{((1}+0.055)\div 1.055)}^{2.4} = 1
-			\]
-			\[
-				G=\left\{
-				\begin{array}{rr}
-				1\div 12.92,\ \ 1\le 0.03928 \\ 
-				{{((1}+0.055)\div 1.055)}^{2.4},\ \ 1>0.03928
-				\end{array}
-				\right.
-			\]
-			\[
-				G={{((1}+0.055)\div 1.055)}^{2.4} = 1
-			\]
-			\[
-				B=\left\{
-				\begin{array}{rr}
-				1\div 12.92,\ \ 1\le 0.03928 \\ 
-				{{((1}+0.055)\div 1.055)}^{2.4},\ \ 1>0.03928
-				\end{array}
-				\right.
-			\]
-			\[
-				B={{((1}+0.055)\div 1.055)}^{2.4} = 1
-			\]
-\end{itemize}
-
-Setelah mendapatkan nilai R, G, dan B latar depan dan latar belakang, berikutnya menggunakan nilai tersebut untuk menghitung nilai \textit{relative luminance} (L) latar depan dan latar belakang.
-
-\begin{itemize}
-	\item Latar depan:
-		\[
-			L = 0.2126 \times 0 + 0.7152 \times 0 + 0.0722 \times 0 = 0
-		\]
-	\item Latar belakang:
-		\[
-			L = 0.2126 \times 1 + 0.7152 \times 1 + 0.0722 \times 1 = 1
-		\]
-\end{itemize}
-
-Dari nilai \textit{relative luminance} latar depan dan latar belakang yang telah didapatkan, rasio kontras antara warna latar depan dan latar belakang sudah bisa dihitung sebagai berikut:
-\begin{itemize}
-	\item L1 adalah \textit{relative luminance} warna yang lebih terang, sehingga L1 = L latar belakang = 1.
-	\item L2 adalah \textit{relative luminance} warna yang lebih gelap, sehingga L2 = L latar depan = 0.
-\end{itemize}
-\[
-	Rasio\ kontras = (L1 + 0.05) \div (L2 + 0.05) = (1 + 0.05) \div (0 + 0.05) = 21
-\]
-
-Jadi untuk contoh warna hitam di atas layar berwarna putih, rasio kontras yang didapatkan adalah 1:21. 
+\] 
 
 \paragraph{Kriteria Sukses 1.4.4 \textit{Resize text}}
 \label{sec:kriteria_sukses_1.4.4}
@@ -397,7 +273,7 @@ Perhitungan rasio kontras antara warna latar depan dan warna latar belakang bese
 \label{sec:kriteria_sukses_1.4.7}
 (Level AAA)\\
 
-Untuk konten rekaman audio yang mengandung ucapan di latar depan, bukan merupakan audio untuk \textit{CAPTCHA} atau audio untuk logo, dan bukan merupakan vokalisasi untuk expresi musikal seperti nyanyian atau rap, maka harus memiliki setidaknya salah satu dari ketentuan berikut:
+Untuk konten rekaman audio yang mengandung ucapan di latar depan, bukan merupakan audio untuk \textit{CAPTCHA} atau audio untuk logo, dan bukan merupakan vokalisasi untuk ekspresi musikal seperti nyanyian atau rap, maka harus memiliki setidaknya salah satu dari ketentuan berikut:
 
 \begin{itemize}
 	\item Audio tidak mengandung suara latar belakang.
@@ -929,7 +805,14 @@ Pengguna dapat mengakses aplikasi melalui \url{https://bluetape.azurewebsites.ne
 	\item Pengguna terhubung otomatis dengan akun @gmail.com miliknya (dan ditolak BlueTape): Pengguna harus membuka GMail lalu menekan bagian avatar yang terdapat di kanan atas. Selanjutnya pengguna dapat memilih akun UNPAR yang tepat atau memilih bagian "\textit{Add Account}".
 \end{itemize}
 
-Setelah \textit{login}, pengguna akan menemui beberapa menu, tergantung apakah pengguna adalah mahasiswa, staf TU, dll.
+Setelah \textit{login}, pengguna akan menemui beberapa menu, tergantung apakah pengguna adalah mahasiswa, staf TU, dll. Tampilan halaman login pada web BlueTape dapat dilihat pada Gambar \ref{fig:bluetape_login}.
+
+\begin{figure}[H]
+    \centering  
+    \includegraphics[scale=0.4, frame]{bluetape_login}
+    \caption[Halaman Login Web BlueTape]{Halaman Login Web BlueTape}
+    \label{fig:bluetape_login}
+\end{figure}
 
 \subsection{Pengguna Merupakan Dosen}
 \label{sec:bluetape_dosen}
@@ -946,20 +829,30 @@ Ada kalanya dosen harus mengubah jadwal kuliah secara insidental. Pengguna dapat
 	\item Keterangan.
 \end{itemize}
 
-Jika ada kolom yang belum dapat diisi (misalnya, ruangan baru masih belum diketahui), pengguna dapat mengosongkannya saja.
+Jika ada kolom yang belum dapat diisi (misalnya, ruangan baru masih belum diketahui), pengguna dapat mengosongkannya saja. Pengguna juga dapat membuat lebih dari satu kelas pengganti, caranya yaitu dengan menekan tombol "Tambah Pertemuan Ekstra". Setelah pengguna menekan bagian "Kirim Permohonan", maka permohonan akan dikirimkan kepada Tata Usaha untuk diperiksa, disetujui, dan dicetak sebagai pengumuman. Jika Tata Usaha telah selesai mengonfirmasi (atau menolak), maka pengguna akan mendapatkan notifikasi melalui surel.
 
-Pengguna juga dapat membuat lebih dari satu kelas pengganti, caranya yaitu dengan menekan tombol "Tambah Pertemuan Ekstra".
+Untuk saat ini, pengguna tidak bisa mengubah atau membatalkan permohonan yang sudah dibuat. Untuk mengubah atau membatalkan permohonan, pengguna harus menghubungi Tata Usaha secara langsung untuk menolak permohonan tersebut. Pengguna kemudian dapat membuat permohonan yang baru. Tampilan halaman perubahan kuliah pada web BlueTape dapat dilihat pada Gambar \ref{fig:bluetape_perubahan_kuliah}.
 
-Setelah pengguna menekan bagian "Kirim Permohonan", maka permohonan akan dikirimkan kepada Tata Usaha untuk diperiksa, disetujui, dan dicetak sebagai pengumuman. Jika Tata Usaha telah selesai mengonfirmasi (atau menolak), maka pengguna akan mendapatkan notifikasi melalui surel.
-
-Untuk saat ini, pengguna tidak bisa mengubah atau membatalkan permohonan yang sudah dibuat. Untuk mengubah atau membatalkan permohonan, pengguna harus menghubungi Tata Usaha secara langsung untuk menolak permohonan tersebut. Pengguna kemudian dapat membuat permohonan yang baru.
+\begin{figure}[H]
+    \centering  
+    \includegraphics[scale=0.4, frame]{bluetape_perubahan_kuliah}
+    \caption[Halaman Perubahan Kuliah Web BlueTape]{Halaman Perubahan Kuliah Web BlueTape}
+    \label{fig:bluetape_perubahan_kuliah}
+\end{figure}
 
 \subsection{Pengguna Merupakan Dosen Informatika}
 \label{sec:bluetape_dosen_informatika}
 
 \subsubsection{Entri Jadwal Dosen}
 \label{sec:bluetape_entri_jadwal_dosen}
-Pengguna dapat menggunakan menu ini untuk mengisi jadwal mingguan miliknya. Hasilnya dapat diekspor ke dalam dokumen XLS, atau dapat dilihat oleh mahasiswa Informatika melalui portal BlueTape.
+Pengguna dapat menggunakan menu ini untuk mengisi jadwal mingguan miliknya. Hasilnya dapat diekspor ke dalam dokumen XLS, atau dapat dilihat oleh mahasiswa Informatika melalui portal BlueTape. Tampilan halaman entri jadwal dosen pada web BlueTape dapat dilihat pada Gambar \ref{fig:bluetape_entri_jadwal_dosen}.
+
+\begin{figure}[H]
+    \centering  
+    \includegraphics[scale=0.4, frame]{bluetape_entri_jadwal_dosen}
+    \caption[Halaman Entri Jadwal Dosen Web BlueTape]{Halaman Entri Jadwal Dosen Web BlueTape}
+    \label{fig:bluetape_entri_jadwal_dosen}
+\end{figure}
 
 \paragraph{Tambah Jadwal}
 \label{sec:bluetape_tambah_jadwal}
@@ -1007,7 +900,14 @@ Pengguna hanya dapat mengirimkan permohonan:
 	\item Jika masih ada permohonan yang belum dijawab.
 \end{itemize}
 
-Umumnya, Tata Usaha akan mencetakkan transkrip mahasiswa dalam waktu satu hari kerja. Jika pengguna mengalami kesulitan, pengguna dapat menghubungi petugas Tata Usaha. Setelah permohonan pengguna disetujui dan dicetak (atau ditolak), pengguna akan mendapatkan notifikasi melalui surel.
+Umumnya, Tata Usaha akan mencetakkan transkrip mahasiswa dalam waktu satu hari kerja. Jika pengguna mengalami kesulitan, pengguna dapat menghubungi petugas Tata Usaha. Setelah permohonan pengguna disetujui dan dicetak (atau ditolak), pengguna akan mendapatkan notifikasi melalui surel. Tampilan halaman cetak transkrip pada web BlueTape dapat dilihat pada Gambar \ref{fig:bluetape_cetak_transkrip}.
+
+\begin{figure}[H]
+    \centering  
+    \includegraphics[scale=0.4, frame]{bluetape_cetak_transkrip}
+    \caption[Halaman Cetak Transkrip Web BlueTape]{Halaman Cetak Transkrip Web BlueTape}
+    \label{fig:bluetape_cetak_transkrip}
+\end{figure}
 
 \subsection{Pengguna Merupakan Mahasiswa Informatika}
 \label{sec:bluetape_mahasiswa_informatika}
@@ -1019,7 +919,14 @@ Modul ini digunakan untuk melihat jadwal mingguan seluruh dosen Informatika yang
 
 Pengguna dapat melihat jadwal dosen dengan memilih dosen yang bersangkutan pada seleksi \textit{tab} di bagian atas, jadwal dosen yang bersangkutan akan ditampilkan pada tabel di bagian bawah. Di bawah tabel tersebut, terdapat informasi mengenai waktu terakhir jadwal tersebut diperbarui oleh dosen yang bersangkutan. Informasi ini dapat membantu untuk menentukan, apakah jadwal yang terlihat merupakan jadwal semester lalu, atau sudah diperbarui pada semester ini.
 
-Pengguna dapat menekan tombol "Ekspor ke XLS" untuk mendapatkan jadwal tersebut dalam format XLS, yang kemudian dapat disimpan atau dicetak.
+Pengguna dapat menekan tombol "Ekspor ke XLS" untuk mendapatkan jadwal tersebut dalam format XLS, yang kemudian dapat disimpan atau dicetak. Tampilan halaman lihat jadwal dosen pada web BlueTape dapat dilihat pada Gambar \ref{fig:bluetape_lihat_jadwal_dosen}.
+
+\begin{figure}[H]
+    \centering  
+    \includegraphics[scale=0.4, frame]{bluetape_lihat_jadwal_dosen}
+    \caption[Halaman Lihat Jadwal Dosen Web BlueTape]{Halaman Lihat Jadwal Dosen Web BlueTape}
+    \label{fig:bluetape_lihat_jadwal_dosen}
+\end{figure}
 
 \subsection{Pengguna Merupakan Staf Tata Usaha}
 \label{sec:bluetape_staf_tata_usaha}
@@ -1037,16 +944,34 @@ Ada beberapa tombol yang tersedia untuk setiap permohonan:
 	\item Tombol dengan ikon keranjang, untuk menghapus permohonan secara permanen. Pengguna disarankan untuk tidak pernah menggunakan tombol ini kecuali jika terpaksa.
 \end{itemize}
 
+Tampilan halaman manajemen perubahan kuliah pada web BlueTape dapat dilihat pada Gambar \ref{fig:bluetape_manajemen_perubahan_kuliah}.
+
+\begin{figure}[H]
+    \centering  
+    \includegraphics[scale=0.4, frame]{bluetape_manajemen_perubahan_kuliah}
+    \caption[Halaman Manajemen Perubahan Kuliah Web BlueTape]{Halaman Manajemen Perubahan Kuliah Web BlueTape}
+    \label{fig:bluetape_manajemen_perubahan_kuliah}
+\end{figure}
+
 \subsubsection{Manajemen Cetak Transkrip}
 \label{sec:bluetape_manajemen_cetak_transkrip}
-Daftar permintaan transkrip disajikan dalam bentuk tabel. Hanya informasi penting saja yang ditampilkan, sedangkan untuk melihat detil yang lebih lengkap pengguna dapat menekan tombol dengan ikon mata (detail). Terdapat dua pilihan jawaban yaitu tolak (tombol dengan ikon ibu jari mengarah ke bawah) dan cetak (tombol dengan ikon mesin cetak). Masing-masing memerlukan keterangan tambahan (alasan ditolak atau komentar cetak). Jika memungkinkan, BlueTape akan menampilkan tautan ke halaman DPS mahasiswa yang bersangkutan di dialog cetak.
+Daftar permintaan transkrip disajikan dalam bentuk tabel. Hanya informasi penting saja yang ditampilkan, sedangkan untuk melihat detil yang lebih lengkap pengguna dapat menekan tombol dengan ikon mata (detail). Terdapat dua pilihan jawaban yaitu tolak (tombol dengan ikon ibu jari mengarah ke bawah) dan cetak (tombol dengan ikon mesin cetak). Masing-masing memerlukan keterangan tambahan (alasan ditolak atau komentar cetak). Jika memungkinkan, BlueTape akan menampilkan tautan ke halaman DPS (Daftar Perkembangan Studi) mahasiswa yang bersangkutan di dialog cetak.
 
-Modul ini berguna untuk melakukan manajemen permohonan pencetakan transkrip. Saat pengguna memasuki modul ini, tabel akan menampilkan daftar permohonan, terurut tanggal. Pengguna juga bisa mencari permintaan berdasarkan NPM.
+Modul ini berguna untuk melakukan manajemen permohonan pencetakan transkrip. Saat pengguna memasuki modul ini, tabel akan menampilkan daftar permohonan, terurut tanggal. Pengguna juga bisa mencari permintaan berdasarkan NPM (Nomor Pokok Mahasiswa).
 
 Ada beberapa tombol yang tersedia untuk setiap permohonan:
 \begin{itemize}
 	\item Tombol dengan ikon mata, untuk melihat detail permohonan, berguna untuk memahami permohonan lebih lanjut dan menentukan apakah permohonan disetujui atau tidak.
 	\item Tombol dengan ikon ibu jari mengarah ke bawah, untuk menyatakan bahwa permohonan ini ditolak. Jika permohonan ditolak, maka pengguna harus mengisi bagian alasan agar tidak membingungkan pemohon.
-	\item Tombol dengan ikon mesin cetak, untuk membuka \textit{pop-up} untuk untuk mengonfirmasi bahwa transkrip telah tercetak. Di \textit{pop-up} ini juga akan tersedia tautan menuju halaman pencetakan transkrip pada SIAkad.
+	\item Tombol dengan ikon mesin cetak, untuk membuka \textit{pop-up} untuk untuk mengonfirmasi bahwa transkrip telah tercetak. Di \textit{pop-up} ini juga akan tersedia tautan menuju halaman pencetakan transkrip pada SIAKAD.
 	\item Tombol dengan ikon keranjang, untuk menghapus permohonan secara permanen. Pengguna disarankan untuk tidak pernah menggunakan tombol ini kecuali jika terpaksa.
 \end{itemize} 
+
+Tampilan halaman manajemen cetak transkrip pada web BlueTape dapat dilihat pada Gambar \ref{fig:bluetape_manajemen_cetak_transkrip}.
+
+\begin{figure}[H]
+    \centering  
+    \includegraphics[scale=0.4, frame]{bluetape_manajemen_cetak_transkrip}
+    \caption[Halaman Manajemen Cetak Transkrip Web BlueTape]{Halaman Manajemen Cetak Transkrip Web BlueTape}
+    \label{fig:bluetape_manajemen_cetak_transkrip}
+\end{figure}

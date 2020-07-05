@@ -18,7 +18,7 @@ Pada subbab ini dibahas kriteria-kriteria sukses yang termasuk ke dalam kategori
         Kriteria Sukses & Hasil (sukses/tidak) & Tingkat Kepatuhan \\
 
         \midrule
-        \rowcolor{darkred} 1.1.1 & Tidak Sukses & A \\
+        1.1.1 & Tidak Sukses & A \\
         1.2.1 & Sukses & A \\
         1.2.2 & Sukses & A \\
         1.2.3 & Sukses & A \\
@@ -28,22 +28,22 @@ Pada subbab ini dibahas kriteria-kriteria sukses yang termasuk ke dalam kategori
         1.2.7 & Sukses & AAA \\
         1.2.8 & Sukses & AAA \\
         1.2.9 & Sukses & AAA \\
-        \rowcolor{darkred} 1.3.1 & Tidak Sukses & A \\
+        1.3.1 & Tidak Sukses & A \\
         1.3.2 & Sukses & A \\
         1.3.3 & Sukses & A \\
         1.3.4 & Sukses & AA \\
-        \rowcolor{brightred} 1.3.5 & Tidak Sukses & AA \\
-        \rowcolor{pink} 1.3.6 & Tidak Sukses & AAA \\
+        1.3.5 & Tidak Sukses & AA \\
+        1.3.6 & Tidak Sukses & AAA \\
         1.4.1 & Sukses & A \\
         1.4.2 & Sukses & A \\
-        \rowcolor{brightred} 1.4.3 & Tidak Sukses & AA \\
+        1.4.3 & Tidak Sukses & AA \\
         1.4.4 & Sukses & AA \\
         1.4.5 & Sukses & AA \\
-        \rowcolor{pink} 1.4.6 & Tidak Sukses & AAA \\
+        1.4.6 & Tidak Sukses & AAA \\
         1.4.7 & Sukses & AAA \\
-        \rowcolor{pink} 1.4.8 & Tidak Sukses & AAA \\
+        1.4.8 & Tidak Sukses & AAA \\
         1.4.9 & Sukses & AAA \\
-        \rowcolor{brightred} 1.4.10 & Tidak Sukses & AA \\
+        1.4.10 & Tidak Sukses & AA \\
         1.4.11 & Sukses & AA \\
         1.4.12 & Sukses & AA \\
         1.4.13 & Sukses & AA \\
@@ -166,7 +166,7 @@ Kriteria ini tidak sukses dipatuhi karena:
             <form method="POST" action="/TranskripRequest/add">
     \end{lstlisting}
 
-    \item Pada halaman manajemen cetak transkrip, kolom \textit{input} NPM tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom \textit{input} tersebut. Kesalahan dapat dilihat pada \textit{Listing} \ref{lst:1.3.1_label_masukan_manajemen_cetak_transkrip}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
+    \item Pada halaman manajemen cetak transkrip, kolom \textit{input} NPM tidak memiliki label atau \textit{aria-label}\footnote{Mekanisme untuk menambahkan label dan deskripsi pada elemen web yang digunakan untuk keperluan aksesibilitas} yang bersangkutan dengan kolom \textit{input} tersebut. Kesalahan dapat dilihat pada \textit{Listing} \ref{lst:1.3.1_label_masukan_manajemen_cetak_transkrip}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
     \begin{lstlisting}[frame=single, label={lst:1.3.1_label_masukan_manajemen_cetak_transkrip}, language=HTML, caption=Pelanggaran Kriteria Sukses 1.3.1 pada Halaman Manajemen Cetak Transkrip]
         <span class="input-group-label">Cari NPM:</span>
         <input name="npm" class="input-group-field" type="text" placeholder="2013730013" maxlength="10" minlength="10"/>
@@ -191,7 +191,7 @@ Kriteria ini sukses dipatuhi karena pada setiap halaman web BlueTape sudah memii
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.3}
 (Sukses)\\
 
-Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat instruksi yang hanya mengandalkan satu komponen karakteristik indra seperti bentuk, ukuran, lokasi visual, orientasi, atau suara.
+Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat instruksi yang hanya mengandalkan satu komponen karakteristik indera seperti bentuk, ukuran, lokasi visual, orientasi, atau suara.
 
 \paragraph{Kriteria Sukses 1.3.4 \textit{Orientation}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.3.4}
@@ -252,7 +252,7 @@ Kriteria ini sukses dipatuhi karena pada halaman web BlueTape tidak terdapat kon
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.4.3}
 (Tidak Sukses)\\
 
-Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beberapa teks dengan rasio kontras kurang dari 4.5:1 untuk teks yang berukuran kurang dari 24 piksel dan tidak \textit{bold}. Nilai rasio kontras didapatkan dengan menggunakan bantuan \textit{extension} axe\footnote{Sebuah alat yang dikembangkan oleh perusahaan Deque Systems untuk membantu melakukan pengecekan aksesibilitas pada halaman web} pada \textit{browser} Google Chrome dan dilakukan navigasi ke seluruh halaman web BlueTape dengan menggunakan alat tersebut untuk mendeteksi bagian yang bermasalah. Bagian-bagian yang tidak memenuhi syarat untuk kriteria ini, antara lain:
+Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beberapa teks dengan rasio kontras kurang dari 4.5:1 untuk teks yang berukuran kurang dari 24 piksel dan tidak \textit{bold}. Nilai rasio kontras didapatkan dengan menggunakan bantuan \textit{extension} axe pada \textit{browser} Google Chrome dan dilakukan navigasi ke seluruh halaman web BlueTape dengan menggunakan alat tersebut untuk mendeteksi bagian yang bermasalah. Bagian-bagian yang tidak memenuhi syarat untuk kriteria ini, antara lain:
 
 \begin{itemize}
     \item Halaman \textit{login}: 
@@ -572,7 +572,127 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape, bagian menu
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.4.11}
 (Sukses)\\
 
-Kriteria ini sukses dipatuhi karena pada halaman web BlueTape setiap objek grafis yang berupa ikon sudah memiliki rasio kontras lebih dari 3:1 terhadap warna yang berdekatan.
+Kriteria ini sukses dipatuhi karena pada halaman web BlueTape setiap objek grafis yang berupa ikon sudah memiliki rasio kontras lebih dari 3:1 terhadap warna yang berdekatan. Berikut adalah contoh perhitungan rasio kontras untuk warna hitam pada layar yang berwarna putih.
+
+\begin{itemize}
+	\item Latar depan memiliki $R_{8bit}$ = 0, $G_{8bit}$ = 0, dan $B_{8bit}$ = 0, sehingga didapatkan nilai: 
+			\[
+				R_{sRGB} = R_{8bit}\div 255 = 0\div 255 = 0
+			\]
+			\[
+				G_{sRGB} = G_{8bit}\div 255 = 0\div 255 = 0
+			\]
+			\[
+				B_{sRGB} = B_{8bit}\div 255 = 0\div 255 = 0
+			\]
+	\item Latar belakang memiliki $R_{8bit}$ = 255, $G_{8bit}$ = 255, dan $B_{8bit}$ = 255, sehingga didapatkan nilai:
+			\[
+				R_{sRGB} = R_{8bit}\div 255 = 255\div 255 = 1
+			\]
+			\[
+				G_{sRGB} = G_{8bit}\div 255 = 255\div 255 = 1
+			\]
+			\[
+				B_{sRGB} = B_{8bit}\div 255 = 255\div 255 = 1
+			\]
+\end{itemize}
+
+Langkah berikutnya menghitung nilai R, G, dan B untuk latar depan dan latar belakang.
+
+\begin{itemize}
+	\item Latar depan:
+			\[
+				R=\left\{
+				\begin{array}{rr}
+				0\div 12.92,\ \ 0\le 0.03928 \\ 
+				{{((0}+0.055)\div 1.055)}^{2.4},\ \ 0>0.03928
+				\end{array}
+				\right.
+			\]
+			\[
+				R=0\div 12.92 = 0
+			\]
+			\[
+				G=\left\{
+				\begin{array}{rr}
+				0\div 12.92,\ \ 0\le 0.03928 \\ 
+				{{((0}+0.055)\div 1.055)}^{2.4},\ \ 0>0.03928
+				\end{array}
+				\right.
+			\]
+			\[
+				G=0\div 12.92 = 0
+			\]
+			\[
+				B=\left\{
+				\begin{array}{rr}
+				0\div 12.92,\ \ 0\le 0.03928 \\ 
+				{{((0}+0.055)\div 1.055)}^{2.4},\ \ 0>0.03928
+				\end{array}
+				\right.
+			\]
+			\[
+				B=0\div 12.92 = 0
+			\]
+	\item Latar belakang:
+			\[
+				R=\left\{
+				\begin{array}{rr}
+				1\div 12.92,\ \ 1\le 0.03928 \\ 
+				{{((1}+0.055)\div 1.055)}^{2.4},\ \ 1>0.03928
+				\end{array}
+				\right.
+			\]
+			\[
+				R={{((1}+0.055)\div 1.055)}^{2.4} = 1
+			\]
+			\[
+				G=\left\{
+				\begin{array}{rr}
+				1\div 12.92,\ \ 1\le 0.03928 \\ 
+				{{((1}+0.055)\div 1.055)}^{2.4},\ \ 1>0.03928
+				\end{array}
+				\right.
+			\]
+			\[
+				G={{((1}+0.055)\div 1.055)}^{2.4} = 1
+			\]
+			\[
+				B=\left\{
+				\begin{array}{rr}
+				1\div 12.92,\ \ 1\le 0.03928 \\ 
+				{{((1}+0.055)\div 1.055)}^{2.4},\ \ 1>0.03928
+				\end{array}
+				\right.
+			\]
+			\[
+				B={{((1}+0.055)\div 1.055)}^{2.4} = 1
+			\]
+\end{itemize}
+
+Setelah mendapatkan nilai R, G, dan B latar depan dan latar belakang, berikutnya menggunakan nilai tersebut untuk menghitung nilai \textit{relative luminance} (L) latar depan dan latar belakang.
+
+\begin{itemize}
+	\item Latar depan:
+		\[
+			L = 0.2126 \times 0 + 0.7152 \times 0 + 0.0722 \times 0 = 0
+		\]
+	\item Latar belakang:
+		\[
+			L = 0.2126 \times 1 + 0.7152 \times 1 + 0.0722 \times 1 = 1
+		\]
+\end{itemize}
+
+Dari nilai \textit{relative luminance} latar depan dan latar belakang yang telah didapatkan, rasio kontras antara warna latar depan dan latar belakang sudah bisa dihitung sebagai berikut:
+\begin{itemize}
+	\item L1 adalah \textit{relative luminance} warna yang lebih terang, sehingga L1 = L latar belakang = 1.
+	\item L2 adalah \textit{relative luminance} warna yang lebih gelap, sehingga L2 = L latar depan = 0.
+\end{itemize}
+\[
+	Rasio\ kontras = (L1 + 0.05) \div (L2 + 0.05) = (1 + 0.05) \div (0 + 0.05) = 21
+\]
+
+Jadi untuk contoh warna hitam di atas layar berwarna putih, rasio kontras yang didapatkan adalah 1:21.
 
 \paragraph{Kriteria Sukses 1.4.12 \textit{Text Spacing}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.4.12}
@@ -606,34 +726,34 @@ Pada subbab ini dibahas kriteria-kriteria sukses yang termasuk ke dalam kategori
         Kriteria Sukses & Hasil (sukses/tidak) & Tingkat Kepatuhan\\
 
         \midrule
-        \rowcolor{darkred} 2.1.1 & Tidak Sukses & A \\
+        2.1.1 & Tidak Sukses & A \\
         2.1.2 & Sukses & A \\
-        \rowcolor{pink} 2.1.3 & Tidak Sukses & AAA \\
+        2.1.3 & Tidak Sukses & AAA \\
         2.1.4 & Sukses & A \\
         2.2.1 & Sukses & A \\
         2.2.2 & Sukses & A \\
         2.2.3 & Sukses & AAA \\
         2.2.4 & Sukses & AAA \\
-        \rowcolor{pink} 2.2.5 & Tidak Sukses & AAA \\
-        \rowcolor{pink} 2.2.6 & Tidak Sukses & AAA \\
+        2.2.5 & Tidak Sukses & AAA \\
+        2.2.6 & Tidak Sukses & AAA \\
         2.3.1 & Sukses & A \\
         2.3.2 & Sukses & AAA \\
         2.3.3 & Sukses & AAA \\
-        \rowcolor{darkred} 2.4.1 & Tidak Sukses & A \\
+        2.4.1 & Tidak Sukses & A \\
         2.4.2 & Sukses & A \\
         2.4.3 & Sukses & A \\
-        \rowcolor{darkred} 2.4.4 & Tidak Sukses & A \\
-        \rowcolor{brightred} 2.4.5 & Tidak Sukses & AA \\
-        \rowcolor{brightred} 2.4.6 & Tidak Sukses & AA \\
-        \rowcolor{brightred} 2.4.7 & Tidak Sukses & AA \\
+        2.4.4 & Tidak Sukses & A \\
+        2.4.5 & Tidak Sukses & AA \\
+        2.4.6 & Tidak Sukses & AA \\
+        2.4.7 & Tidak Sukses & AA \\
         2.4.8 & Sukses & AAA \\
-        \rowcolor{pink} 2.4.9 & Tidak Sukses & AAA \\
-        \rowcolor{pink} 2.4.10 & Tidak Sukses & AAA \\
+        2.4.9 & Tidak Sukses & AAA \\
+        2.4.10 & Tidak Sukses & AAA \\
         2.5.1 & Sukses & A \\
         2.5.2 & Sukses & A \\
-        \rowcolor{darkred} 2.5.3 & Tidak Sukses & A \\
+        2.5.3 & Tidak Sukses & A \\
         2.5.4 & Sukses & A \\
-        \rowcolor{pink} 2.5.5 & Tidak Sukses & AAA \\
+        2.5.5 & Tidak Sukses & AAA \\
         2.5.6 & Sukses & AAA \\
 
         \bottomrule
@@ -965,22 +1085,22 @@ Pada subbab ini dibahas kriteria-kriteria sukses yang termasuk ke dalam kategori
         Kriteria Sukses & Hasil (sukses/tidak) & Tingkat Kepatuhan \\
 
         \midrule
-        \rowcolor{darkred} 3.1.1 & Tidak Sukses & A \\
-        \rowcolor{brightred} 3.1.2 & Tidak Sukses & AA \\
-        \rowcolor{pink} 3.1.3 & Tidak Sukses & AAA \\
-        \rowcolor{pink} 3.1.4 & Tidak Sukses & AAA \\
+        3.1.1 & Tidak Sukses & A \\
+        3.1.2 & Tidak Sukses & AA \\
+        3.1.3 & Tidak Sukses & AAA \\
+        3.1.4 & Tidak Sukses & AAA \\
         3.1.5 & Sukses & AAA \\
         3.1.6 & Sukses & AAA \\
         3.2.1 & Sukses & A \\
         3.2.2 & Sukses & A \\
         3.2.3 & Sukses & AA \\
-        \rowcolor{brightred} 3.2.4 & Tidak Sukses & AA \\
+        3.2.4 & Tidak Sukses & AA \\
         3.2.5 & Sukses & AAA \\
         3.3.1 & Sukses & A \\
-        \rowcolor{darkred} 3.3.2 & Tidak Sukses & A \\
+        3.3.2 & Tidak Sukses & A \\
         3.3.3 & Sukses & AA \\
         3.3.4 & Sukses & AA \\
-        \rowcolor{pink} 3.3.5 & Tidak Sukses & AAA \\
+        3.3.5 & Tidak Sukses & AAA \\
         3.3.6 & Sukses & AAA \\
 
         \bottomrule
@@ -1360,9 +1480,9 @@ Pada subbab ini dibahas kriteria-kriteria sukses yang termasuk ke dalam kategori
         Kriteria Sukses & Hasil (sukses/tidak) & Tingkat Kepatuhan\\
 
         \midrule
-        \rowcolor{darkred} 4.1.1 & Tidak Sukses & A \\
+        4.1.1 & Tidak Sukses & A \\
         4.1.2 & Sukses & A \\
-        \rowcolor{brightred} 4.1.3 & Tidak Sukses & AA \\
+        4.1.3 & Tidak Sukses & AA \\
 
         \bottomrule
         \multicolumn{2}{|c|}{Tingkat kepatuhan tertinggi yang dicapai} & - \\

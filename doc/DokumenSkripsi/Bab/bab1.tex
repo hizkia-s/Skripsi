@@ -6,11 +6,15 @@
 \label{sec:latarbelakang}
 Terdapat pengakuan yang berkembang secara global bahwa orang-orang disabilitas memiliki hak yang sama dengan orang lain untuk mengakses teknologi informasi. Pengakuan ini diwujudkan dengan berlakunya undang-undang di Amerika Serikat yang bertujuan untuk membuat web dan teknologi informasi lainnya dapat diakses oleh orang-orang disabilitas. Undang-undang semacam itu telah menyebabkan terciptanya suatu standar, pedoman, dan daftar centang untuk aksesibilitas. Tujuannya adalah untuk mengembangkan pemahaman umum tentang apa yang diperlukan untuk membuat halaman web menjadi mudah diakses oleh orang-orang disabilitas sehingga memungkinkan desainer dan pembuat web untuk memenuhi standar dan pedoman yang telah diciptakan. Untuk membantu para desainer dan pembuat web memenuhi standar dan pedoman ini tersedia alat validasi aksesibilitas web dan pemeriksa aksesibilitas situs web profesional \cite{WebAccessibility-ABroderView}.
 
-\textit{Web Content Accessibility Guidelines (WCAG)} adalah panduan yang berisi rekomendasi-rekomendasi untuk membuat konten web lebih mudah diakses dan digunakan oleh orang-orang, termasuk mereka yang memiliki keterbatasan \cite{WCAG:2.1}. Keterbatasan yang tercakup dalam panduan ini yaitu keterbatasan visual, keterbatasan pendengaran, keterbatasan gerak, keterbatasan berbicara dan berbahasa, keterbatasan belajar, fotosensitif, keterbatasan kognitif, dan kombinasi dari beberapa keterbatasan yang telah disebutkan. Dalam \textit{WCAG} terdapat 3 tingkat kriteria sukses yaitu A, AA, dan AAA. Kriteria sukses adalah pernyataan-pernyataan yang dapat diuji yang dijadikan acuan untuk menilai tingkat kepatuhan sebuah situs web terhadap \textit{WCAG}, contohnya adalah sebuah tulisan harus memiliki rasio kontras yang cukup antara warna latar depan dengan warna latar belakangnya.
+\textit{Web Content Accessibility Guidelines (WCAG)} adalah panduan yang berisi rekomendasi-rekomendasi untuk membuat konten web lebih mudah diakses dan digunakan oleh orang-orang, termasuk mereka yang memiliki keterbatasan \cite{WCAG:2.1}. Keterbatasan yang tercakup dalam panduan ini yaitu keterbatasan visual, keterbatasan pendengaran, keterbatasan gerak, keterbatasan berbicara dan berbahasa, keterbatasan belajar, fotosensitif, keterbatasan kognitif, dan kombinasi dari beberapa keterbatasan yang telah disebutkan. Panduan-panduan dalam \textit{WCAG} ini membahas aksesibilitas konten web untuk \textit{desktop, laptop, tablet}, dan perangkat seluler. Dalam \textit{WCAG} terdapat 3 tingkat kriteria sukses yaitu A, AA, dan AAA. Kriteria sukses adalah pernyataan-pernyataan yang dapat diuji yang dijadikan acuan untuk menilai tingkat kepatuhan sebuah situs web terhadap \textit{WCAG}, contohnya adalah sebuah tulisan harus memiliki rasio kontras yang cukup antara warna latar depan dengan warna latar belakangnya.
 
-BlueTape merupakan aplikasi berbasis web yang dibuat untuk memudahkan berbagai urusan administrasi di Fakultas Teknologi Informasi dan Sains Universitas Katolik Parahyangan \cite{BlueTape}. Konsep aplikasi ini adalah membuat urusan-urusan administrasi dapat dikerjakan melalui situs web sehingga mengurangi penggunaan kertas. Aplikasi ini disediakan untuk digunakan oleh mahasiswa, staf tata usaha, dan dosen. Fitur-fitur yang tersedia pada BlueTape yaitu manajemen cetak transkrip dan manajemen perubahan jadwal kuliah.
+\textit{WCAG} 2.1 adalah versi ketiga dari \textit{WCAG} yang dirilis pada tanggal 5 Juni 2018. Versi pertama dari \textit{WCAG} adalah \textit{WCAG} 1.0 yang dirilis pada tanggal 5 Mei 1999 dan versi kedua adalah \textit{WCAG} 2.0 yang dirilis pada tanggal 11 Desember 2008. \textit{WCAG} 2.1 dikembangkan oleh World Wide Web Consortium (W3C) melalui kerja sama dengan individu dan organisasi di seluruh dunia, dengan tujuan memberikan standar bersama untuk aksesibilitas konten web yang memenuhi kebutuhan individu, organisasi, dan pemerintah internasional.
 
-Pada skripsi ini, akan dilihat sejauh mana tingkat kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1 dan rekomendasi apa saja yang perlu dilakukan untuk menaikkan tingkat kepatuhannya. Selain itu, akan dilakukan pengujian pada situs web tersebut dengan beberapa kondisi keterbatasan yang terdapat dalam \textit{WCAG} 2.1 seperti keterbatasan visual, keterbatasan gerak, keterbatasan pendengaran, dan keterbatasan bahasa.
+\textit{WCAG} memiliki hubungan dengan bidang IMK (Interaksi Manusia dan Komputer) terkait konsep universal desain. Konsep universal desain memiliki arti sebagai sebuah proses dalam mendesain produk sehingga dapat digunakan oleh sebanyak mungkin orang dalam sebanyak mungkin kondisi atau situasi. Prinsip-prinsip dalam konsep ini menekankan aksesibilitas pada sebuah aplikasi atau sistem agar dapat digunakan oleh orang-orang dengan beragam kebutuhan maupun keterbatasan.
+
+Pada skripsi ini, akan dilihat sejauh mana tingkat kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1 dan rekomendasi apa saja yang perlu dilakukan untuk menaikkan tingkat kepatuhannya. Dapat dilakukan pengujian pada situs web tersebut dengan beberapa kondisi keterbatasan yang terdapat dalam \textit{WCAG} 2.1 yang nanti dibatasi seperti keterbatasan visual, keterbatasan gerak, keterbatasan pendengaran, dan keterbatasan bahasa. Dalam pengujian akan digunakan alat bantu yaitu \textit{extension} axe yang merupakan sebuah alat yang dikembangkan oleh perusahaan Deque Systems untuk membantu melakukan pengecekan aksesibilitas pada halaman web.
+
+BlueTape merupakan aplikasi berbasis web yang dibuat untuk memudahkan berbagai prosedur administrasi di Fakultas Teknologi Informasi dan Sains Universitas Katolik Parahyangan \cite{BlueTape}. Konsep aplikasi ini adalah membuat prosedur-prosedur administrasi dapat dikerjakan melalui situs web sehingga mengurangi penggunaan kertas. Aplikasi ini disediakan untuk digunakan oleh mahasiswa, staf tata usaha, dan dosen. Fitur-fitur yang tersedia pada BlueTape yaitu manajemen cetak transkrip dan manajemen perubahan jadwal kuliah.
 
 \section{Rumusan Masalah}
 \label{sec:rumusan}
@@ -25,7 +29,7 @@ Rumusan masalah yang akan dibahas dalam penelitian ini adalah:
 \label{sec:tujuan}
 Tujuan yang ingin dicapai dalam penelitian ini adalah:
 \begin{enumerate}
-	\item Mendapatkan tingkat kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1.
+	\item Mengetahui tingkat kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1.
 	\item Meningkatkan tingkat kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1.
 	\item Mendapatkan pengalaman menggunakan situs web BlueTape yang tingkat kepatuhannya telah ditingkatkan dengan kondisi keterbatasan tertentu seperti yang terdapat dalam \textit{WCAG} 2.1.
 \end{enumerate}
@@ -36,7 +40,7 @@ Pada penelitian ini ditetapkan batasan-batasan masalah sebagai berikut:
 \begin{enumerate}
 	\item Perangkat yang digunakan hanya \textit{Personal Computer} seperti \textit{laptop}.
 	\item Karena keterbatasan waktu, alat, dan sumber daya, kondisi keterbatasan yang diujikan hanya meliputi keterbatasan visual.
-	\item Karena keterbatasan waktu, tingkat kepatuhan BlueTape hanya ditingkatkan menjadi tingkat A.
+	\item Karena keterbatasan waktu, tingkat kepatuhan BlueTape hanya ditingkatkan menjadi \mbox{tingkat A}.
 \end{enumerate}
 
 \section{Metodologi}
@@ -48,7 +52,7 @@ Metode penelitian yang digunakan dalam skripsi ini adalah:
 	\item Menganalisis tingkat kepatuhan situs web BlueTape terhadap \textit{WCAG} 2.1
 	\item Memperbaiki situs web BlueTape sehingga tingkat kepatuhan terhadap \textit{WCAG} 2.1 meningkat.
 	\item Melakukan pengujian dan eksperimen pada situs web BlueTape yang telah diperbarui dengan kondisi keterbatasan visual.
-	\item Menulis dokumen hasil pengujian.
+	\item Menulis dokumen skripsi.
 \end{enumerate}
 
 \section{Sistematika Pembahasan}
