@@ -214,7 +214,7 @@ Kriteria ini sukses dipatuhi karena konten pada halaman web BlueTape dapat disaj
 
 Kriteria ini tidak sukses dipatuhi karena terdapat kolom-kolom \textit{input} yang tidak memiliki label yang terasosiasi dengan kolom-kolom tersebut, meskipun setiap kolom \textit{input} sudah memiliki atribut \textit{"autocomplete"} yang aktif. Bagian-bagian yang bermasalah, antara lain:
 \begin{itemize}
-    \item Pada halaman manajemen cetak transkrip, kolom \textit{input} NPM tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom \textit{input} tersebut. Kesalahan dapat dilihat pada \mbox{\textit{Listing} \ref{lst:1.3.5_label_masukan_manajemen_cetak_transkrip}}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}. \\
+    \item Pada halaman manajemen cetak transkrip, kolom \textit{input} NPM tidak memiliki label atau \textit{aria-label} yang bersangkutan dengan kolom \textit{input} tersebut. Kesalahan dapat dilihat pada \mbox{\textit{Listing} \ref{lst:1.3.5_label_masukan_manajemen_cetak_transkrip}}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/TranskripManage}.
     \begin{lstlisting}[frame=single, label={lst:1.3.5_label_masukan_manajemen_cetak_transkrip}, language=HTML, caption=Pelanggaran Kriteria Sukses 1.3.5 pada Halaman Manajemen Cetak Transkrip]
         <span class="input-group-label">Cari NPM:</span>
         <input name="npm" class="input-group-field" type="text" placeholder="2013730013" maxlength="10" minlength="10"/>
@@ -332,6 +332,8 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.3_contrast_minimum_4}  
     \end{figure} 
     
+    \newpage
+
     \item Halaman manajemen perubahan kuliah: 
     \begin{itemize}
         \item Teks "Terkonfirmasi" di kolom status pada tabel memiliki rasio kontras 1.79:1 terhadap warna latar belakangnya.
@@ -538,6 +540,8 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape terdapat beb
         \label{fig:1.4.6_contrast_enchanced_7}  
     \end{figure} 
 \end{itemize}
+
+\newpage
 
 \paragraph{Kriteria Sukses 1.4.7 \textit{Low or No Background Audio}}
 \label{par:kepatuhan_bluetape_kriteria_sukses_1.4.7}
@@ -975,6 +979,8 @@ Kriteria ini tidak sukses dipatuhi karena pada halaman web BlueTape hanya tersed
 
 Kriteria ini tidak sukses dipatuhi karena pada halaman entri jadwal dosen, setiap elemen \textit{input} tidak memiliki label yang menjelaskan tujuan dari elemen tersebut. Contoh kesalahan dapat dilihat pada \mbox{\textit{Listing} \ref{lst:2.4.6_label_masukan_entri_jadwal_dosen}}. Tautan untuk halaman yang bermasalah dapat dilihat di \mbox{\url{https://bluetape.azurewebsites.net/EntriJadwalDosen}}.
 
+\newpage
+
 \begin{lstlisting}[frame=single, label={lst:2.4.6_label_masukan_entri_jadwal_dosen}, language=HTML, caption=Pelanggaran Kriteria Sukses 2.4.6 pada Halaman Entri Jadwal Dosen]
     <input type="hidden" name="csrf_token" value="3c159eae7bc953dd591b679c080ed066"/>
     Hari
@@ -1368,6 +1374,9 @@ Kriteria ini tidak sukses dipatuhi karena tidak tersedia mekanisme untuk mengide
     \end{figure}
     
     \item Pada halaman lihat jadwal dosen terdapat singkatan "XLS". Letak kesalahan dapat dilihat pada \mbox{\textit{Listing} \ref{lst:3.1.4_singkatan_pada_halaman_lihat_jadwal_dosen}}. Contoh tampilan pada halaman web dapat dilihat pada \mbox{Gambar \ref{fig:3.1.4_abbreviations_6}}. Tautan untuk halaman yang bermasalah dapat dilihat di \url{https://bluetape.azurewebsites.net/LihatJadwalDosen}.
+    
+    \newpage
+
     \begin{lstlisting}[frame=single, label={lst:3.1.4_singkatan_pada_halaman_lihat_jadwal_dosen}, language=HTML, caption=Pelanggaran Kriteria Sukses 3.1.4 pada Halaman Lihat Jadwal Dosen]
         <a href="/LihatJadwalDosen/export/" class="button">
             Ekspor ke XLS
@@ -1565,6 +1574,8 @@ Kriteria ini sukses dipatuhi karena pada halaman web BlueTape digunakan komponen
 (Tidak Sukses)\\
 
 Kriteria ini tidak sukses dipatuhi karena setiap pesan status yang ditampilkan kepada pengguna tidak memiliki atribut \textit{"role"} dengan nilai \textit{"alert"} sehingga teknologi alat bantu tidak dapat mengidentifikasi serta menginformasikan pesan tersebut kepada pengguna. Letak kesalahan dapat dilihat pada \mbox{\textit{Listing} \ref{lst:4.1.3_pesan_status}}.
+
+\newpage
 
 \begin{lstlisting}[frame=single, label={lst:4.1.3_pesan_status}, language=PHP, caption=Pelanggaran Kriteria Sukses 4.1.3 pada Bagian Pesan Status]
     <?php if (isset($_SESSION['error'])): ?>
